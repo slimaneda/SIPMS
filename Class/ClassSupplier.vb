@@ -1,8 +1,6 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.IO
 
-Imports System.IO
-Public Class ClassCustomer
-
+Public Class ClassSupplier
     Public code As Integer
     Public Name As String
     Public Gender As String
@@ -21,8 +19,8 @@ Public Class ClassCustomer
         Try
             Using cmd As New SqlClient.SqlCommand(proc, sqlcon)
                 cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.Add("@Customerid", SqlDbType.Int).Value = code
-                cmd.Parameters.Add("@CustomerName", SqlDbType.NVarChar, 50).Value = Name
+                cmd.Parameters.Add("@Supplierid", SqlDbType.Int).Value = code
+                cmd.Parameters.Add("@SupplierName", SqlDbType.NVarChar, 50).Value = Name
                 cmd.Parameters.Add("@Gender", SqlDbType.NVarChar, 50).Value = Gender
                 cmd.Parameters.Add("@adress", SqlDbType.NVarChar, 50).Value = Adress
                 cmd.Parameters.Add("@city", SqlDbType.NVarChar, 50).Value = City

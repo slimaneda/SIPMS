@@ -75,4 +75,21 @@ Public Class FormItem
 
         End If
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            With OpenFileDialog1
+                .Filter = ("Images |*.png; *.bmp; *.jpg;*.jpeg; *.gif;*.ico;")
+                .FilterIndex = 4
+            End With
+            'Clear the file name
+            OpenFileDialog1.FileName = ""
+            If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+                PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+                PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.ToString())
+        End Try
+    End Sub
 End Class

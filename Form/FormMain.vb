@@ -48,4 +48,8 @@
     Private Sub SupplierPaymentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupplierPaymentToolStripMenuItem.Click
         FormSupplierPayement.ShowDialog()
     End Sub
+
+    Private Sub PurchasBillsuplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PurchasBillsuplierToolStripMenuItem.Click
+        FormPurchasProduct.ShowDialog()
+    End Sub
 End Class

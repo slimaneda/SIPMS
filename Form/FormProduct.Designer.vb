@@ -25,18 +25,18 @@ Partial Class FormProduct
         Panel1 = New Panel()
         Label1 = New Label()
         Panel2 = New Panel()
-        TextBox2 = New TextBox()
+        txt_item = New ComboBox()
+        txt_notes = New TextBox()
         Label10 = New Label()
-        txt_STN = New TextBox()
+        txt_qty = New TextBox()
         Label8 = New Label()
-        txt_TIN = New TextBox()
+        txt_minrecord = New TextBox()
         Label9 = New Label()
         Label4 = New Label()
-        txt_Adress = New TextBox()
+        txt_productname = New TextBox()
         Label3 = New Label()
-        txt_Companyname = New TextBox()
+        txt_Productid = New TextBox()
         Label2 = New Label()
-        ComboBox1 = New ComboBox()
         Panel3 = New Panel()
         btnClose = New Button()
         btnShow = New Button()
@@ -44,9 +44,11 @@ Partial Class FormProduct
         btnUpdate = New Button()
         btnSave = New Button()
         btnNew = New Button()
+        DGV = New DataGridView()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
+        CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -56,7 +58,7 @@ Partial Class FormProduct
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(610, 63)
+        Panel1.Size = New Size(868, 63)
         Panel1.TabIndex = 3
         ' 
         ' Label1
@@ -64,7 +66,7 @@ Partial Class FormProduct
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(180, 18)
+        Label1.Location = New Point(311, 18)
         Label1.Name = "Label1"
         Label1.Size = New Size(171, 24)
         Label1.TabIndex = 0
@@ -73,70 +75,78 @@ Partial Class FormProduct
         ' Panel2
         ' 
         Panel2.BorderStyle = BorderStyle.FixedSingle
-        Panel2.Controls.Add(ComboBox1)
-        Panel2.Controls.Add(TextBox2)
+        Panel2.Controls.Add(txt_item)
+        Panel2.Controls.Add(txt_notes)
         Panel2.Controls.Add(Label10)
-        Panel2.Controls.Add(txt_STN)
+        Panel2.Controls.Add(txt_qty)
         Panel2.Controls.Add(Label8)
-        Panel2.Controls.Add(txt_TIN)
+        Panel2.Controls.Add(txt_minrecord)
         Panel2.Controls.Add(Label9)
         Panel2.Controls.Add(Label4)
-        Panel2.Controls.Add(txt_Adress)
+        Panel2.Controls.Add(txt_productname)
         Panel2.Controls.Add(Label3)
-        Panel2.Controls.Add(txt_Companyname)
+        Panel2.Controls.Add(txt_Productid)
         Panel2.Controls.Add(Label2)
         Panel2.Location = New Point(12, 69)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(354, 313)
+        Panel2.Size = New Size(689, 155)
         Panel2.TabIndex = 4
         ' 
-        ' TextBox2
+        ' txt_item
         ' 
-        TextBox2.Location = New Point(124, 203)
-        TextBox2.Multiline = True
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(196, 75)
-        TextBox2.TabIndex = 21
+        txt_item.FormattingEnabled = True
+        txt_item.Location = New Point(477, 29)
+        txt_item.Name = "txt_item"
+        txt_item.Size = New Size(196, 23)
+        txt_item.TabIndex = 23
+        ' 
+        ' txt_notes
+        ' 
+        txt_notes.Location = New Point(477, 97)
+        txt_notes.Multiline = True
+        txt_notes.Name = "txt_notes"
+        txt_notes.Size = New Size(196, 45)
+        txt_notes.TabIndex = 21
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label10.Location = New Point(54, 234)
+        Label10.Location = New Point(427, 111)
         Label10.Name = "Label10"
         Label10.Size = New Size(42, 15)
         Label10.TabIndex = 20
         Label10.Text = "Notes:"
         ' 
-        ' txt_STN
+        ' txt_qty
         ' 
-        txt_STN.Location = New Point(124, 163)
-        txt_STN.Name = "txt_STN"
-        txt_STN.Size = New Size(196, 23)
-        txt_STN.TabIndex = 11
+        txt_qty.Location = New Point(124, 96)
+        txt_qty.Name = "txt_qty"
+        txt_qty.Size = New Size(196, 23)
+        txt_qty.TabIndex = 11
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label8.Location = New Point(26, 167)
+        Label8.Location = New Point(26, 100)
         Label8.Name = "Label8"
         Label8.Size = New Size(57, 15)
         Label8.TabIndex = 10
         Label8.Text = "Quantity :"
         ' 
-        ' txt_TIN
+        ' txt_minrecord
         ' 
-        txt_TIN.Location = New Point(124, 130)
-        txt_TIN.Name = "txt_TIN"
-        txt_TIN.Size = New Size(196, 23)
-        txt_TIN.TabIndex = 9
+        txt_minrecord.Location = New Point(477, 62)
+        txt_minrecord.Name = "txt_minrecord"
+        txt_minrecord.Size = New Size(196, 23)
+        txt_minrecord.TabIndex = 9
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label9.Location = New Point(26, 134)
+        Label9.Location = New Point(325, 68)
         Label9.Name = "Label9"
         Label9.Size = New Size(144, 15)
         Label9.TabIndex = 8
@@ -146,18 +156,18 @@ Partial Class FormProduct
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(26, 98)
+        Label4.Location = New Point(379, 30)
         Label4.Name = "Label4"
         Label4.Size = New Size(37, 15)
         Label4.TabIndex = 6
         Label4.Text = "Item :"
         ' 
-        ' txt_Adress
+        ' txt_productname
         ' 
-        txt_Adress.Location = New Point(124, 60)
-        txt_Adress.Name = "txt_Adress"
-        txt_Adress.Size = New Size(196, 23)
-        txt_Adress.TabIndex = 3
+        txt_productname.Location = New Point(124, 60)
+        txt_productname.Name = "txt_productname"
+        txt_productname.Size = New Size(196, 23)
+        txt_productname.TabIndex = 3
         ' 
         ' Label3
         ' 
@@ -169,12 +179,12 @@ Partial Class FormProduct
         Label3.TabIndex = 2
         Label3.Text = "Product Name :"
         ' 
-        ' txt_Companyname
+        ' txt_Productid
         ' 
-        txt_Companyname.Location = New Point(124, 27)
-        txt_Companyname.Name = "txt_Companyname"
-        txt_Companyname.Size = New Size(196, 23)
-        txt_Companyname.TabIndex = 1
+        txt_Productid.Location = New Point(124, 27)
+        txt_Productid.Name = "txt_Productid"
+        txt_Productid.Size = New Size(196, 23)
+        txt_Productid.TabIndex = 1
         ' 
         ' Label2
         ' 
@@ -186,14 +196,6 @@ Partial Class FormProduct
         Label2.TabIndex = 0
         Label2.Text = "Product ID :"
         ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(124, 97)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(196, 23)
-        ComboBox1.TabIndex = 23
-        ' 
         ' Panel3
         ' 
         Panel3.BorderStyle = BorderStyle.FixedSingle
@@ -203,9 +205,9 @@ Partial Class FormProduct
         Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(412, 100)
+        Panel3.Location = New Point(707, 109)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(125, 225)
+        Panel3.Size = New Size(131, 236)
         Panel3.TabIndex = 5
         ' 
         ' btnClose
@@ -262,11 +264,21 @@ Partial Class FormProduct
         btnNew.Text = "&New"
         btnNew.UseVisualStyleBackColor = True
         ' 
+        ' DGV
+        ' 
+        DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV.Location = New Point(12, 230)
+        DGV.Name = "DGV"
+        DGV.RowTemplate.Height = 25
+        DGV.Size = New Size(689, 156)
+        DGV.TabIndex = 12
+        ' 
         ' FormProduct
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(610, 395)
+        ClientSize = New Size(868, 406)
+        Controls.Add(DGV)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
@@ -277,24 +289,25 @@ Partial Class FormProduct
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
+        CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txt_notes As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents txt_STN As TextBox
+    Friend WithEvents txt_qty As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txt_TIN As TextBox
+    Friend WithEvents txt_minrecord As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txt_Adress As TextBox
+    Friend WithEvents txt_productname As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txt_Companyname As TextBox
+    Friend WithEvents txt_Productid As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents txt_item As ComboBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnClose As Button
     Friend WithEvents btnShow As Button
@@ -302,4 +315,5 @@ Partial Class FormProduct
     Friend WithEvents btnUpdate As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents btnNew As Button
+    Friend WithEvents DGV As DataGridView
 End Class

@@ -30,6 +30,7 @@ Partial Class FormMain
         btn_customer = New ToolStripMenuItem()
         btn_supplier = New ToolStripMenuItem()
         btn_Product = New ToolStripMenuItem()
+        PurchasBillsuplierToolStripMenuItem = New ToolStripMenuItem()
         PurchasBillToolStripMenuItem = New ToolStripMenuItem()
         SupplierPaymentToolStripMenuItem = New ToolStripMenuItem()
         CustomerReceiptToolStripMenuItem = New ToolStripMenuItem()
@@ -101,7 +102,7 @@ Partial Class FormMain
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {btn_user, btn_items, btn_database, btn_customer, btn_supplier, btn_Product, PurchasBillToolStripMenuItem, SupplierPaymentToolStripMenuItem, CustomerReceiptToolStripMenuItem, ExitToolStripMenuItem1})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {btn_user, btn_items, btn_database, btn_customer, btn_supplier, btn_Product, PurchasBillsuplierToolStripMenuItem, PurchasBillToolStripMenuItem, SupplierPaymentToolStripMenuItem, CustomerReceiptToolStripMenuItem, ExitToolStripMenuItem1})
         MenuStrip1.Location = New Point(0, 24)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(1101, 73)
@@ -110,6 +111,7 @@ Partial Class FormMain
         ' 
         ' btn_user
         ' 
+        btn_user.Enabled = False
         btn_user.Image = CType(resources.GetObject("btn_user.Image"), Image)
         btn_user.ImageAlign = ContentAlignment.TopCenter
         btn_user.ImageScaling = ToolStripItemImageScaling.None
@@ -129,6 +131,7 @@ Partial Class FormMain
         ' 
         ' btn_database
         ' 
+        btn_database.Enabled = False
         btn_database.Image = CType(resources.GetObject("btn_database.Image"), Image)
         btn_database.ImageScaling = ToolStripItemImageScaling.None
         btn_database.Name = "btn_database"
@@ -162,6 +165,15 @@ Partial Class FormMain
         btn_Product.Size = New Size(66, 69)
         btn_Product.Text = "Products"
         btn_Product.TextImageRelation = TextImageRelation.ImageAboveText
+        ' 
+        ' PurchasBillsuplierToolStripMenuItem
+        ' 
+        PurchasBillsuplierToolStripMenuItem.Image = CType(resources.GetObject("PurchasBillsuplierToolStripMenuItem.Image"), Image)
+        PurchasBillsuplierToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
+        PurchasBillsuplierToolStripMenuItem.Name = "PurchasBillsuplierToolStripMenuItem"
+        PurchasBillsuplierToolStripMenuItem.Size = New Size(126, 69)
+        PurchasBillsuplierToolStripMenuItem.Text = "Purchas bill (suplier)"
+        PurchasBillsuplierToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
         ' PurchasBillToolStripMenuItem
         ' 
@@ -732,4 +744,5 @@ Partial Class FormMain
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label11 As Label
     Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents PurchasBillsuplierToolStripMenuItem As ToolStripMenuItem
 End Class

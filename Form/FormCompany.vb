@@ -3,13 +3,19 @@
 Public Class FormCompany
 
     Sub rest()
-        txt_Companyname.Text = ""
-        txt_Adress.Text = ""
-        txt_Contact.Text = ""
-        txt_Email.Text = ""
-        txt_TIN.Text = ""
-        txt_STN.Text = ""
-        txt_CIN.Text = ""
+
+
+
+
+
+
+        For Each clt As Control In Panel2.Controls
+            If TypeOf clt Is TextBox Then
+                clt.Text = ""
+            End If
+        Next
+
+
         PictureBox1.Image = My.Resources.Sans_titre
         txt_Companyname.Focus()
         Show_DGV(DGV1, "Select_Company")
@@ -40,7 +46,7 @@ Public Class FormCompany
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_browse.Click
         Try
             With OpenFileDialog1
                 .Filter = ("Images |*.png; *.bmp; *.jpg;*.jpeg; *.gif;*.ico;")
@@ -57,7 +63,9 @@ Public Class FormCompany
         End Try
     End Sub
 
+
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
         Cls.DeleteCompany("Delete_Company")
         rest()
     End Sub

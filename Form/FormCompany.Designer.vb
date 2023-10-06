@@ -22,12 +22,12 @@ Partial Class FormCompany
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Label1 = New Label()
         DGV1 = New DataGridView()
         Panel2 = New Panel()
-        Button1 = New Button()
+        btn_browse = New Button()
         PictureBox1 = New PictureBox()
         txt_CIN = New TextBox()
         Label7 = New Label()
@@ -84,14 +84,14 @@ Partial Class FormCompany
         DGV1.AllowUserToAddRows = False
         DGV1.AllowUserToDeleteRows = False
         DGV1.BackgroundColor = SystemColors.Control
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle1.BackColor = SystemColors.GradientInactiveCaption
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = Color.White
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DGV1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = Color.White
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         DGV1.Dock = DockStyle.Bottom
         DGV1.EnableHeadersVisualStyles = False
         DGV1.Location = New Point(0, 396)
@@ -106,7 +106,7 @@ Partial Class FormCompany
         ' Panel2
         ' 
         Panel2.BorderStyle = BorderStyle.FixedSingle
-        Panel2.Controls.Add(Button1)
+        Panel2.Controls.Add(btn_browse)
         Panel2.Controls.Add(PictureBox1)
         Panel2.Controls.Add(txt_CIN)
         Panel2.Controls.Add(Label7)
@@ -127,14 +127,14 @@ Partial Class FormCompany
         Panel2.Size = New Size(589, 281)
         Panel2.TabIndex = 2
         ' 
-        ' Button1
+        ' btn_browse
         ' 
-        Button1.Location = New Point(433, 191)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(72, 23)
-        Button1.TabIndex = 15
-        Button1.Text = "&Browse..."
-        Button1.UseVisualStyleBackColor = True
+        btn_browse.Location = New Point(415, 191)
+        btn_browse.Name = "btn_browse"
+        btn_browse.Size = New Size(72, 23)
+        btn_browse.TabIndex = 15
+        btn_browse.Text = "&Browse..."
+        btn_browse.UseVisualStyleBackColor = True
         ' 
         ' PictureBox1
         ' 
@@ -367,7 +367,7 @@ Partial Class FormCompany
     Friend WithEvents Panel2 As Panel
     Friend WithEvents txt_Companyname As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_browse As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents txt_CIN As TextBox
     Friend WithEvents Label7 As Label

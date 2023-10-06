@@ -20,13 +20,15 @@ Module CONNEXION
 
     Public Sub Show_DGV(DGV As DataGridView, num_Proc As String)
         Open_connexion()
+        Try
+            Using dt As New DataTable
+                dt.Clear()
+                Dim da As New SqlClient.SqlDataAdapter(num_Proc, sqlcon)
+                da.Fill(dt)
+                DGV.DataSource = dt.DefaultView
+            End Using
 
-        Using dt As New DataTable
-            dt.Clear()
-            Dim da As New SqlClient.SqlDataAdapter(num_Proc, sqlcon)
-            da.Fill(dt)
-            DGV.DataSource = dt.DefaultView
-        End Using
+        Catch ex As Exception
+        End Try
     End Sub
-
 End Module

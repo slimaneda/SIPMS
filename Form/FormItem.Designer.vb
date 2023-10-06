@@ -22,7 +22,7 @@ Partial Class FormItem
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Label1 = New Label()
         DGV1 = New DataGridView()
@@ -42,6 +42,7 @@ Partial Class FormItem
         Panel4 = New Panel()
         txt_search = New TextBox()
         Label4 = New Label()
+        OpenFileDialog1 = New OpenFileDialog()
         Panel1.SuspendLayout()
         CType(DGV1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -76,14 +77,14 @@ Partial Class FormItem
         DGV1.AllowUserToAddRows = False
         DGV1.AllowUserToDeleteRows = False
         DGV1.BackgroundColor = SystemColors.Control
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = Color.White
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.GradientInactiveCaption
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGV1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         DGV1.Dock = DockStyle.Left
         DGV1.EnableHeadersVisualStyles = False
         DGV1.Location = New Point(0, 63)
@@ -248,6 +249,10 @@ Partial Class FormItem
         Label4.TabIndex = 1
         Label4.Text = "Search Name :"
         ' 
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.FileName = "OpenFileDialog1"
+        ' 
         ' FormItem
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -291,4 +296,5 @@ Partial Class FormItem
     Friend WithEvents Panel4 As Panel
     Friend WithEvents txt_search As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

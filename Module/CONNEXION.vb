@@ -17,6 +17,18 @@ Module CONNEXION
 
     End Sub
 
+    ' num auto
+    Public Function CODE_GEN(TbL_name, ID_) As Integer
+        CODE_GEN = 0
+        Dim dt As New DataTable
+        Dim da As New SqlClient.SqlDataAdapter("SELECT * FROM " & TbL_name & " ORDER BY " & ID_, sqlcon)
+        da.Fill(dt)
+
+        If dt.Rows.Count <> 0 Then
+            Dim I = dt.Rows.Count - 1
+            CODE_GEN = Val(dt.Rows(I).Item(ID_))
+        End If
+    End Function
 
     Public Sub Show_DGV(DGV As DataGridView, num_Proc As String)
         Open_connexion()

@@ -103,8 +103,9 @@ Partial Class FormProductShow
         lbl.AutoSize = True
         lbl.Location = New Point(61, 55)
         lbl.Name = "lbl"
-        lbl.Size = New Size(0, 15)
+        lbl.Size = New Size(12, 15)
         lbl.TabIndex = 20
+        lbl.Text = "s"
         ' 
         ' FormProductShow
         ' 

@@ -28,6 +28,9 @@ Partial Class FormPurchasProduct
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
+        Panel5 = New Panel()
+        btnAdd = New Button()
+        btnRemove = New Button()
         Label10 = New Label()
         txtRemarks = New RichTextBox()
         Panel4 = New Panel()
@@ -37,54 +40,56 @@ Partial Class FormPurchasProduct
         txtGrandTotal = New TextBox()
         txtPaymentDue = New TextBox()
         txtTotalPayment = New TextBox()
-        DataGridView1 = New DataGridView()
+        DGV = New DataGridView()
         PID = New DataGridViewTextBoxColumn()
         Column2 = New DataGridViewTextBoxColumn()
         Column3 = New DataGridViewTextBoxColumn()
         Column4 = New DataGridViewTextBoxColumn()
         Column5 = New DataGridViewTextBoxColumn()
         Column6 = New DataGridViewTextBoxColumn()
-        Column1 = New DataGridViewTextBoxColumn()
+        Column7 = New DataGridViewTextBoxColumn()
+        Column8 = New DataGridViewTextBoxColumn()
+        Column9 = New DataGridViewTextBoxColumn()
+        Column10 = New DataGridViewTextBoxColumn()
+        Column11 = New DataGridViewTextBoxColumn()
+        Column12 = New DataGridViewTextBoxColumn()
         GroupBox2 = New GroupBox()
-        Label12 = New Label()
-        txt_si = New TextBox()
         Label9 = New Label()
         Label6 = New Label()
         Label4 = New Label()
         Label7 = New Label()
         Label8 = New Label()
-        btnRemove = New Button()
         txtTotalAmount = New TextBox()
         txtPricePerQty = New TextBox()
         txtQty = New TextBox()
-        btnAdd = New Button()
         Button1 = New Button()
-        txtProductName = New TextBox()
-        txtProductCode = New TextBox()
+        txtNamePt = New TextBox()
+        txtCodePt = New TextBox()
         GroupBox1 = New GroupBox()
-        txtProductID = New TextBox()
         Label3 = New Label()
         Label2 = New Label()
         Label5 = New Label()
         Label11 = New Label()
         Button4 = New Button()
-        txtSupplierName = New TextBox()
-        txtSupplierID = New TextBox()
-        dtpDate = New DateTimePicker()
-        txtStockID = New TextBox()
+        txtNameSup = New TextBox()
+        txtCodeSup = New TextBox()
+        txtDate = New DateTimePicker()
+        txtCodeFacture = New TextBox()
         Panel3 = New Panel()
+        Button2 = New Button()
         btnGetData = New Button()
         btnClose = New Button()
         btnUpdate = New Button()
         btnSave = New Button()
         btnNew = New Button()
         Panel2 = New Panel()
+        lbl = New Label()
         Label1 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
-        lbl = New Label()
         Panel1.SuspendLayout()
+        Panel5.SuspendLayout()
         Panel4.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox2.SuspendLayout()
         GroupBox1.SuspendLayout()
         Panel3.SuspendLayout()
@@ -95,10 +100,11 @@ Partial Class FormPurchasProduct
         ' 
         Panel1.BackColor = Color.White
         Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(Panel5)
         Panel1.Controls.Add(Label10)
         Panel1.Controls.Add(txtRemarks)
         Panel1.Controls.Add(Panel4)
-        Panel1.Controls.Add(DataGridView1)
+        Panel1.Controls.Add(DGV)
         Panel1.Controls.Add(GroupBox2)
         Panel1.Controls.Add(GroupBox1)
         Panel1.Controls.Add(Panel3)
@@ -106,14 +112,46 @@ Partial Class FormPurchasProduct
         Panel1.Location = New Point(9, 8)
         Panel1.Margin = New Padding(4, 5, 4, 5)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(852, 676)
+        Panel1.Size = New Size(871, 676)
         Panel1.TabIndex = 2
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BorderStyle = BorderStyle.FixedSingle
+        Panel5.Controls.Add(btnAdd)
+        Panel5.Controls.Add(btnRemove)
+        Panel5.Location = New Point(366, 356)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(200, 52)
+        Panel5.TabIndex = 312
+        ' 
+        ' btnAdd
+        ' 
+        btnAdd.FlatStyle = FlatStyle.Popup
+        btnAdd.Location = New Point(113, 13)
+        btnAdd.Margin = New Padding(4, 5, 4, 5)
+        btnAdd.Name = "btnAdd"
+        btnAdd.Size = New Size(63, 24)
+        btnAdd.TabIndex = 6
+        btnAdd.Text = "Add"
+        btnAdd.UseVisualStyleBackColor = True
+        ' 
+        ' btnRemove
+        ' 
+        btnRemove.FlatStyle = FlatStyle.Popup
+        btnRemove.Location = New Point(29, 13)
+        btnRemove.Margin = New Padding(4, 5, 4, 5)
+        btnRemove.Name = "btnRemove"
+        btnRemove.Size = New Size(63, 24)
+        btnRemove.TabIndex = 7
+        btnRemove.Text = "Delete"
+        btnRemove.UseVisualStyleBackColor = True
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label10.Location = New Point(400, 307)
+        Label10.Location = New Point(659, 243)
         Label10.Margin = New Padding(4, 0, 4, 0)
         Label10.Name = "Label10"
         Label10.RightToLeft = RightToLeft.Yes
@@ -123,10 +161,11 @@ Partial Class FormPurchasProduct
         ' 
         ' txtRemarks
         ' 
-        txtRemarks.Location = New Point(13, 322)
+        txtRemarks.Location = New Point(480, 250)
         txtRemarks.Margin = New Padding(4, 5, 4, 5)
         txtRemarks.Name = "txtRemarks"
-        txtRemarks.Size = New Size(444, 89)
+        txtRemarks.ScrollBars = RichTextBoxScrollBars.ForcedVertical
+        txtRemarks.Size = New Size(374, 85)
         txtRemarks.TabIndex = 310
         txtRemarks.Text = ""
         ' 
@@ -140,17 +179,17 @@ Partial Class FormPurchasProduct
         Panel4.Controls.Add(txtGrandTotal)
         Panel4.Controls.Add(txtPaymentDue)
         Panel4.Controls.Add(txtTotalPayment)
-        Panel4.Location = New Point(562, 322)
+        Panel4.Location = New Point(4, 248)
         Panel4.Margin = New Padding(4, 5, 4, 5)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(205, 123)
+        Panel4.Size = New Size(444, 87)
         Panel4.TabIndex = 4
         ' 
         ' Label31
         ' 
         Label31.AutoSize = True
         Label31.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label31.Location = New Point(105, 23)
+        Label31.Location = New Point(319, 22)
         Label31.Margin = New Padding(4, 0, 4, 0)
         Label31.Name = "Label31"
         Label31.RightToLeft = RightToLeft.Yes
@@ -162,7 +201,7 @@ Partial Class FormPurchasProduct
         ' 
         Label34.AutoSize = True
         Label34.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label34.Location = New Point(105, 81)
+        Label34.Location = New Point(177, 42)
         Label34.Margin = New Padding(4, 0, 4, 0)
         Label34.Name = "Label34"
         Label34.RightToLeft = RightToLeft.Yes
@@ -174,7 +213,7 @@ Partial Class FormPurchasProduct
         ' 
         Label35.AutoSize = True
         Label35.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label35.Location = New Point(105, 52)
+        Label35.Location = New Point(321, 54)
         Label35.Margin = New Padding(4, 0, 4, 0)
         Label35.Name = "Label35"
         Label35.RightToLeft = RightToLeft.Yes
@@ -185,7 +224,7 @@ Partial Class FormPurchasProduct
         ' txtGrandTotal
         ' 
         txtGrandTotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtGrandTotal.Location = New Point(24, 23)
+        txtGrandTotal.Location = New Point(238, 20)
         txtGrandTotal.Margin = New Padding(4, 5, 4, 5)
         txtGrandTotal.Name = "txtGrandTotal"
         txtGrandTotal.ReadOnly = True
@@ -196,7 +235,7 @@ Partial Class FormPurchasProduct
         ' txtPaymentDue
         ' 
         txtPaymentDue.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtPaymentDue.Location = New Point(24, 81)
+        txtPaymentDue.Location = New Point(96, 42)
         txtPaymentDue.Margin = New Padding(4, 5, 4, 5)
         txtPaymentDue.Name = "txtPaymentDue"
         txtPaymentDue.ReadOnly = True
@@ -207,7 +246,7 @@ Partial Class FormPurchasProduct
         ' txtTotalPayment
         ' 
         txtTotalPayment.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtTotalPayment.Location = New Point(24, 52)
+        txtTotalPayment.Location = New Point(240, 52)
         txtTotalPayment.Margin = New Padding(4, 5, 4, 5)
         txtTotalPayment.Name = "txtTotalPayment"
         txtTotalPayment.Size = New Size(72, 20)
@@ -215,14 +254,16 @@ Partial Class FormPurchasProduct
         txtTotalPayment.Text = "0"
         txtTotalPayment.TextAlign = HorizontalAlignment.Right
         ' 
-        ' DataGridView1
+        ' DGV
         ' 
-        DataGridView1.AllowUserToAddRows = False
-        DataGridView1.AllowUserToDeleteRows = False
+        DGV.AllowUserToAddRows = False
+        DGV.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = Color.FloralWhite
-        DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridView1.BackgroundColor = Color.White
-        DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DGV.BackgroundColor = Color.White
+        DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = Color.CadetBlue
         DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
@@ -230,10 +271,10 @@ Partial Class FormPurchasProduct
         DataGridViewCellStyle2.SelectionBackColor = Color.LightSteelBlue
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DataGridView1.ColumnHeadersHeight = 24
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {PID, Column2, Column3, Column4, Column5, Column6, Column1})
-        DataGridView1.Cursor = Cursors.Hand
+        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DGV.ColumnHeadersHeight = 31
+        DGV.Columns.AddRange(New DataGridViewColumn() {PID, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12})
+        DGV.Cursor = Cursors.Hand
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = SystemColors.Window
         DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
@@ -241,15 +282,14 @@ Partial Class FormPurchasProduct
         DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        DataGridView1.EnableHeadersVisualStyles = False
-        DataGridView1.GridColor = Color.White
-        DataGridView1.Location = New Point(150, 85)
-        DataGridView1.Margin = New Padding(4, 5, 4, 5)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.ReadOnly = True
-        DataGridView1.RightToLeft = RightToLeft.Yes
-        DataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DGV.DefaultCellStyle = DataGridViewCellStyle3
+        DGV.EnableHeadersVisualStyles = False
+        DGV.GridColor = Color.White
+        DGV.Location = New Point(4, 416)
+        DGV.Margin = New Padding(4, 5, 5, 5)
+        DGV.Name = "DGV"
+        DGV.ReadOnly = True
+        DGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = Color.CadetBlue
         DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
@@ -257,112 +297,121 @@ Partial Class FormPurchasProduct
         DataGridViewCellStyle4.SelectionBackColor = Color.DarkSlateGray
         DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        DataGridView1.RowHeadersWidth = 25
-        DataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DGV.RowHeadersVisible = False
+        DGV.RowHeadersWidth = 30
         DataGridViewCellStyle5.BackColor = Color.White
         DataGridViewCellStyle5.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle5.SelectionBackColor = Color.DarkSlateGray
         DataGridViewCellStyle5.SelectionForeColor = Color.White
-        DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle5
-        DataGridView1.RowTemplate.Height = 18
-        DataGridView1.RowTemplate.Resizable = DataGridViewTriState.False
-        DataGridView1.ScrollBars = ScrollBars.Vertical
-        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView1.Size = New Size(617, 217)
-        DataGridView1.TabIndex = 5
+        DGV.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DGV.RowTemplate.Height = 18
+        DGV.RowTemplate.Resizable = DataGridViewTriState.False
+        DGV.ScrollBars = ScrollBars.Vertical
+        DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DGV.Size = New Size(861, 138)
+        DGV.TabIndex = 5
         ' 
         ' PID
         ' 
-        PID.HeaderText = "رقم الفاتورة"
+        PID.HeaderText = "Code Facture"
         PID.Name = "PID"
         PID.ReadOnly = True
         ' 
         ' Column2
         ' 
-        Column2.HeaderText = "رقم المنتج"
+        Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Column2.HeaderText = "Date Purchas"
         Column2.Name = "Column2"
         Column2.ReadOnly = True
         ' 
         ' Column3
         ' 
-        Column3.HeaderText = "أسم المنتج"
+        Column3.HeaderText = "Code sup"
         Column3.Name = "Column3"
         Column3.ReadOnly = True
         ' 
         ' Column4
         ' 
-        Column4.HeaderText = "الكمية"
+        Column4.HeaderText = "Name Supp"
         Column4.Name = "Column4"
         Column4.ReadOnly = True
         ' 
         ' Column5
         ' 
-        Column5.HeaderText = "سعر الوحدة"
+        Column5.HeaderText = "Code Pt"
         Column5.Name = "Column5"
         Column5.ReadOnly = True
         ' 
         ' Column6
         ' 
-        Column6.HeaderText = "الاجمالى "
+        Column6.HeaderText = "Name Pt"
         Column6.Name = "Column6"
         Column6.ReadOnly = True
         ' 
-        ' Column1
+        ' Column7
         ' 
-        Column1.HeaderText = "id"
-        Column1.Name = "Column1"
-        Column1.ReadOnly = True
+        Column7.HeaderText = "Quantity"
+        Column7.Name = "Column7"
+        Column7.ReadOnly = True
+        ' 
+        ' Column8
+        ' 
+        Column8.HeaderText = "Price "
+        Column8.Name = "Column8"
+        Column8.ReadOnly = True
+        ' 
+        ' Column9
+        ' 
+        Column9.HeaderText = "Total"
+        Column9.Name = "Column9"
+        Column9.ReadOnly = True
+        ' 
+        ' Column10
+        ' 
+        Column10.HeaderText = "Column10"
+        Column10.Name = "Column10"
+        Column10.ReadOnly = True
+        ' 
+        ' Column11
+        ' 
+        Column11.HeaderText = "Column11"
+        Column11.Name = "Column11"
+        Column11.ReadOnly = True
+        ' 
+        ' Column12
+        ' 
+        Column12.HeaderText = "Notes"
+        Column12.Name = "Column12"
+        Column12.ReadOnly = True
         ' 
         ' GroupBox2
         ' 
-        GroupBox2.Controls.Add(Label12)
-        GroupBox2.Controls.Add(txt_si)
         GroupBox2.Controls.Add(Label9)
         GroupBox2.Controls.Add(Label6)
         GroupBox2.Controls.Add(Label4)
         GroupBox2.Controls.Add(Label7)
         GroupBox2.Controls.Add(Label8)
-        GroupBox2.Controls.Add(btnRemove)
         GroupBox2.Controls.Add(txtTotalAmount)
         GroupBox2.Controls.Add(txtPricePerQty)
         GroupBox2.Controls.Add(txtQty)
-        GroupBox2.Controls.Add(btnAdd)
         GroupBox2.Controls.Add(Button1)
-        GroupBox2.Controls.Add(txtProductName)
-        GroupBox2.Controls.Add(txtProductCode)
-        GroupBox2.Location = New Point(13, 420)
+        GroupBox2.Controls.Add(txtNamePt)
+        GroupBox2.Controls.Add(txtCodePt)
+        GroupBox2.Location = New Point(4, 80)
         GroupBox2.Margin = New Padding(4, 5, 4, 5)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Padding = New Padding(4, 5, 4, 5)
         GroupBox2.RightToLeft = RightToLeft.Yes
-        GroupBox2.Size = New Size(444, 190)
+        GroupBox2.Size = New Size(444, 158)
         GroupBox2.TabIndex = 1
         GroupBox2.TabStop = False
         GroupBox2.Text = "بيانات الفاتورة"
         ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Location = New Point(42, 100)
-        Label12.Margin = New Padding(4, 0, 4, 0)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(83, 15)
-        Label12.TabIndex = 36
-        Label12.Text = "STOCK INITIAL"
-        ' 
-        ' txt_si
-        ' 
-        txt_si.Location = New Point(136, 97)
-        txt_si.Margin = New Padding(4, 3, 4, 3)
-        txt_si.Name = "txt_si"
-        txt_si.Size = New Size(63, 23)
-        txt_si.TabIndex = 35
-        ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(360, 150)
+        Label9.Location = New Point(197, 116)
         Label9.Margin = New Padding(4, 0, 4, 0)
         Label9.Name = "Label9"
         Label9.Size = New Size(47, 15)
@@ -409,27 +458,15 @@ Partial Class FormPurchasProduct
         Label8.TabIndex = 31
         Label8.Text = "أسم المنتج :"
         ' 
-        ' btnRemove
-        ' 
-        btnRemove.Enabled = False
-        btnRemove.FlatStyle = FlatStyle.Popup
-        btnRemove.Location = New Point(85, 29)
-        btnRemove.Margin = New Padding(4, 5, 4, 5)
-        btnRemove.Name = "btnRemove"
-        btnRemove.Size = New Size(71, 24)
-        btnRemove.TabIndex = 7
-        btnRemove.Text = "حذف"
-        btnRemove.UseVisualStyleBackColor = True
-        ' 
         ' txtTotalAmount
         ' 
         txtTotalAmount.BackColor = SystemColors.Control
         txtTotalAmount.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtTotalAmount.Location = New Point(272, 155)
+        txtTotalAmount.Location = New Point(33, 114)
         txtTotalAmount.Margin = New Padding(4, 5, 4, 5)
         txtTotalAmount.Name = "txtTotalAmount"
         txtTotalAmount.ReadOnly = True
-        txtTotalAmount.Size = New Size(81, 21)
+        txtTotalAmount.Size = New Size(157, 21)
         txtTotalAmount.TabIndex = 4
         txtTotalAmount.TextAlign = HorizontalAlignment.Right
         ' 
@@ -448,26 +485,16 @@ Partial Class FormPurchasProduct
         ' 
         txtQty.BackColor = SystemColors.ButtonHighlight
         txtQty.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtQty.Location = New Point(272, 95)
+        txtQty.Location = New Point(272, 92)
         txtQty.Margin = New Padding(4, 5, 4, 5)
         txtQty.Name = "txtQty"
         txtQty.Size = New Size(81, 21)
         txtQty.TabIndex = 2
         txtQty.TextAlign = HorizontalAlignment.Right
         ' 
-        ' btnAdd
-        ' 
-        btnAdd.FlatStyle = FlatStyle.Popup
-        btnAdd.Location = New Point(163, 29)
-        btnAdd.Margin = New Padding(4, 5, 4, 5)
-        btnAdd.Name = "btnAdd"
-        btnAdd.Size = New Size(63, 24)
-        btnAdd.TabIndex = 6
-        btnAdd.Text = "إضافة"
-        btnAdd.UseVisualStyleBackColor = True
-        ' 
         ' Button1
         ' 
+        Button1.FlatStyle = FlatStyle.System
         Button1.Location = New Point(233, 29)
         Button1.Margin = New Padding(4, 5, 4, 5)
         Button1.Name = "Button1"
@@ -476,58 +503,48 @@ Partial Class FormPurchasProduct
         Button1.Text = "..."
         Button1.UseVisualStyleBackColor = True
         ' 
-        ' txtProductName
+        ' txtNamePt
         ' 
-        txtProductName.BackColor = SystemColors.Control
-        txtProductName.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtProductName.Location = New Point(85, 60)
-        txtProductName.Margin = New Padding(4, 5, 4, 5)
-        txtProductName.Name = "txtProductName"
-        txtProductName.ReadOnly = True
-        txtProductName.Size = New Size(270, 21)
-        txtProductName.TabIndex = 1
+        txtNamePt.BackColor = SystemColors.Control
+        txtNamePt.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        txtNamePt.Location = New Point(85, 60)
+        txtNamePt.Margin = New Padding(4, 5, 4, 5)
+        txtNamePt.Name = "txtNamePt"
+        txtNamePt.ReadOnly = True
+        txtNamePt.Size = New Size(270, 21)
+        txtNamePt.TabIndex = 1
         ' 
-        ' txtProductCode
+        ' txtCodePt
         ' 
-        txtProductCode.BackColor = SystemColors.Control
-        txtProductCode.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtProductCode.Location = New Point(274, 29)
-        txtProductCode.Margin = New Padding(4, 5, 4, 5)
-        txtProductCode.Name = "txtProductCode"
-        txtProductCode.ReadOnly = True
-        txtProductCode.Size = New Size(81, 21)
-        txtProductCode.TabIndex = 0
+        txtCodePt.BackColor = SystemColors.Control
+        txtCodePt.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        txtCodePt.Location = New Point(274, 29)
+        txtCodePt.Margin = New Padding(4, 5, 4, 5)
+        txtCodePt.Name = "txtCodePt"
+        txtCodePt.ReadOnly = True
+        txtCodePt.Size = New Size(81, 21)
+        txtCodePt.TabIndex = 0
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(txtProductID)
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label5)
         GroupBox1.Controls.Add(Label11)
         GroupBox1.Controls.Add(Button4)
-        GroupBox1.Controls.Add(txtSupplierName)
-        GroupBox1.Controls.Add(txtSupplierID)
-        GroupBox1.Controls.Add(dtpDate)
-        GroupBox1.Controls.Add(txtStockID)
-        GroupBox1.Location = New Point(461, 452)
+        GroupBox1.Controls.Add(txtNameSup)
+        GroupBox1.Controls.Add(txtCodeSup)
+        GroupBox1.Controls.Add(txtDate)
+        GroupBox1.Controls.Add(txtCodeFacture)
+        GroupBox1.Location = New Point(480, 80)
         GroupBox1.Margin = New Padding(4, 5, 4, 5)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(4, 5, 4, 5)
         GroupBox1.RightToLeft = RightToLeft.Yes
-        GroupBox1.Size = New Size(383, 158)
+        GroupBox1.Size = New Size(374, 158)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "بيانات المورد"
-        ' 
-        ' txtProductID
-        ' 
-        txtProductID.Location = New Point(126, 22)
-        txtProductID.Margin = New Padding(4, 5, 4, 5)
-        txtProductID.Name = "txtProductID"
-        txtProductID.Size = New Size(58, 23)
-        txtProductID.TabIndex = 311
-        txtProductID.Visible = False
         ' 
         ' Label3
         ' 
@@ -571,83 +588,98 @@ Partial Class FormPurchasProduct
         ' 
         ' Button4
         ' 
+        Button4.BackgroundImageLayout = ImageLayout.None
+        Button4.FlatStyle = FlatStyle.System
         Button4.Location = New Point(152, 83)
         Button4.Margin = New Padding(4, 5, 4, 5)
         Button4.Name = "Button4"
         Button4.Size = New Size(34, 24)
         Button4.TabIndex = 4
-        Button4.Text = " "
+        Button4.Text = " ..."
         Button4.UseVisualStyleBackColor = True
         ' 
-        ' txtSupplierName
+        ' txtNameSup
         ' 
-        txtSupplierName.BackColor = SystemColors.Control
-        txtSupplierName.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtSupplierName.Location = New Point(63, 114)
-        txtSupplierName.Margin = New Padding(4, 5, 4, 5)
-        txtSupplierName.Name = "txtSupplierName"
-        txtSupplierName.ReadOnly = True
-        txtSupplierName.Size = New Size(221, 21)
-        txtSupplierName.TabIndex = 3
+        txtNameSup.BackColor = SystemColors.Control
+        txtNameSup.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        txtNameSup.Location = New Point(63, 114)
+        txtNameSup.Margin = New Padding(4, 5, 4, 5)
+        txtNameSup.Name = "txtNameSup"
+        txtNameSup.ReadOnly = True
+        txtNameSup.Size = New Size(221, 21)
+        txtNameSup.TabIndex = 3
         ' 
-        ' txtSupplierID
+        ' txtCodeSup
         ' 
-        txtSupplierID.BackColor = SystemColors.Control
-        txtSupplierID.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtSupplierID.Location = New Point(203, 83)
-        txtSupplierID.Margin = New Padding(4, 5, 4, 5)
-        txtSupplierID.Name = "txtSupplierID"
-        txtSupplierID.ReadOnly = True
-        txtSupplierID.Size = New Size(81, 21)
-        txtSupplierID.TabIndex = 2
+        txtCodeSup.BackColor = SystemColors.Control
+        txtCodeSup.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        txtCodeSup.Location = New Point(203, 83)
+        txtCodeSup.Margin = New Padding(4, 5, 4, 5)
+        txtCodeSup.Name = "txtCodeSup"
+        txtCodeSup.ReadOnly = True
+        txtCodeSup.Size = New Size(81, 21)
+        txtCodeSup.TabIndex = 2
         ' 
-        ' dtpDate
+        ' txtDate
         ' 
-        dtpDate.CustomFormat = "dd/MM/yyyy"
-        dtpDate.Format = DateTimePickerFormat.Custom
-        dtpDate.Location = New Point(140, 55)
-        dtpDate.Margin = New Padding(4, 5, 4, 5)
-        dtpDate.Name = "dtpDate"
-        dtpDate.RightToLeft = RightToLeft.No
-        dtpDate.Size = New Size(144, 23)
-        dtpDate.TabIndex = 1
+        txtDate.CustomFormat = "dd/MM/yyyy"
+        txtDate.Format = DateTimePickerFormat.Custom
+        txtDate.Location = New Point(140, 55)
+        txtDate.Margin = New Padding(4, 5, 4, 5)
+        txtDate.Name = "txtDate"
+        txtDate.RightToLeft = RightToLeft.No
+        txtDate.Size = New Size(144, 23)
+        txtDate.TabIndex = 1
         ' 
-        ' txtStockID
+        ' txtCodeFacture
         ' 
-        txtStockID.BackColor = SystemColors.Control
-        txtStockID.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtStockID.Location = New Point(203, 25)
-        txtStockID.Margin = New Padding(4, 5, 4, 5)
-        txtStockID.Name = "txtStockID"
-        txtStockID.ReadOnly = True
-        txtStockID.Size = New Size(81, 21)
-        txtStockID.TabIndex = 0
+        txtCodeFacture.BackColor = SystemColors.Control
+        txtCodeFacture.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        txtCodeFacture.Location = New Point(203, 25)
+        txtCodeFacture.Margin = New Padding(4, 5, 4, 5)
+        txtCodeFacture.Name = "txtCodeFacture"
+        txtCodeFacture.Size = New Size(81, 21)
+        txtCodeFacture.TabIndex = 0
         ' 
         ' Panel3
         ' 
         Panel3.BorderStyle = BorderStyle.FixedSingle
+        Panel3.Controls.Add(Button2)
         Panel3.Controls.Add(btnGetData)
         Panel3.Controls.Add(btnClose)
         Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(10, 85)
+        Panel3.Location = New Point(134, 601)
         Panel3.Margin = New Padding(4, 5, 4, 5)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(129, 205)
+        Panel3.Size = New Size(659, 57)
         Panel3.TabIndex = 2
+        ' 
+        ' Button2
+        ' 
+        Button2.Cursor = Cursors.Hand
+        Button2.FlatStyle = FlatStyle.Popup
+        Button2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Button2.Location = New Point(327, 10)
+        Button2.Margin = New Padding(4, 5, 4, 5)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(96, 32)
+        Button2.TabIndex = 6
+        Button2.Text = "&Delete"
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' btnGetData
         ' 
         btnGetData.Cursor = Cursors.Hand
         btnGetData.FlatStyle = FlatStyle.Popup
         btnGetData.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnGetData.Location = New Point(15, 120)
+        btnGetData.Location = New Point(435, 10)
         btnGetData.Margin = New Padding(4, 5, 4, 5)
         btnGetData.Name = "btnGetData"
         btnGetData.Size = New Size(96, 32)
         btnGetData.TabIndex = 5
-        btnGetData.Text = "&قائمة الفواتير"
+        btnGetData.Text = "&Show Data"
         btnGetData.UseVisualStyleBackColor = True
         ' 
         ' btnClose
@@ -655,38 +687,40 @@ Partial Class FormPurchasProduct
         btnClose.Cursor = Cursors.Hand
         btnClose.FlatStyle = FlatStyle.Popup
         btnClose.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnClose.Location = New Point(15, 156)
+        btnClose.Location = New Point(539, 10)
         btnClose.Margin = New Padding(4, 5, 4, 5)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(96, 32)
         btnClose.TabIndex = 4
-        btnClose.Text = "&إغلاق"
+        btnClose.Text = "&Close"
         btnClose.UseVisualStyleBackColor = True
         ' 
         ' btnUpdate
         ' 
+        btnUpdate.BackColor = Color.Silver
         btnUpdate.Cursor = Cursors.Hand
+        btnUpdate.Enabled = False
         btnUpdate.FlatStyle = FlatStyle.Popup
         btnUpdate.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnUpdate.Location = New Point(15, 83)
+        btnUpdate.Location = New Point(223, 10)
         btnUpdate.Margin = New Padding(4, 5, 4, 5)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(96, 32)
         btnUpdate.TabIndex = 2
-        btnUpdate.Text = "&تحديث"
-        btnUpdate.UseVisualStyleBackColor = True
+        btnUpdate.Text = "&Update"
+        btnUpdate.UseVisualStyleBackColor = False
         ' 
         ' btnSave
         ' 
         btnSave.Cursor = Cursors.Hand
         btnSave.FlatStyle = FlatStyle.Popup
         btnSave.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnSave.Location = New Point(15, 47)
+        btnSave.Location = New Point(119, 10)
         btnSave.Margin = New Padding(4, 5, 4, 5)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(96, 32)
         btnSave.TabIndex = 1
-        btnSave.Text = "&حفظ"
+        btnSave.Text = "&Save"
         btnSave.UseVisualStyleBackColor = True
         ' 
         ' btnNew
@@ -699,7 +733,7 @@ Partial Class FormPurchasProduct
         btnNew.Name = "btnNew"
         btnNew.Size = New Size(96, 32)
         btnNew.TabIndex = 0
-        btnNew.Text = "&جديد"
+        btnNew.Text = "&New"
         btnNew.UseVisualStyleBackColor = True
         ' 
         ' Panel2
@@ -708,28 +742,12 @@ Partial Class FormPurchasProduct
         Panel2.BackgroundImageLayout = ImageLayout.Stretch
         Panel2.Controls.Add(lbl)
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(10, 8)
+        Panel2.Dock = DockStyle.Top
+        Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(4, 5, 4, 5)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(841, 70)
+        Panel2.Size = New Size(869, 70)
         Panel2.TabIndex = 0
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(381, 23)
-        Label1.Margin = New Padding(4, 0, 4, 0)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(119, 24)
-        Label1.TabIndex = 0
-        Label1.Text = "فاتورة مشتريات"
-        ' 
-        ' OpenFileDialog1
-        ' 
-        OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
         ' lbl
         ' 
@@ -743,12 +761,29 @@ Partial Class FormPurchasProduct
         lbl.Size = New Size(0, 24)
         lbl.TabIndex = 1
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.White
+        Label1.Location = New Point(354, 23)
+        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(119, 24)
+        Label1.TabIndex = 0
+        Label1.Text = "فاتورة مشتريات"
+        ' 
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.FileName = "OpenFileDialog1"
+        ' 
         ' FormPurchasProduct
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSlateGray
-        ClientSize = New Size(872, 692)
+        ClientSize = New Size(881, 681)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(4, 5, 4, 5)
@@ -758,9 +793,10 @@ Partial Class FormPurchasProduct
         StartPosition = FormStartPosition.CenterScreen
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel5.ResumeLayout(False)
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()
         GroupBox1.ResumeLayout(False)
@@ -771,7 +807,7 @@ Partial Class FormPurchasProduct
         ResumeLayout(False)
     End Sub
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents txtStockID As TextBox
+    Friend WithEvents txtCodeFacture As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnClose As Button
     Friend WithEvents btnUpdate As Button
@@ -785,7 +821,7 @@ Partial Class FormPurchasProduct
     Friend WithEvents txtGrandTotal As TextBox
     Friend WithEvents txtPaymentDue As TextBox
     Friend WithEvents txtTotalPayment As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGV As DataGridView
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnRemove As Button
     Friend WithEvents txtTotalAmount As TextBox
@@ -793,15 +829,14 @@ Partial Class FormPurchasProduct
     Friend WithEvents txtQty As TextBox
     Friend WithEvents btnAdd As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents txtProductName As TextBox
-    Friend WithEvents txtProductCode As TextBox
+    Friend WithEvents txtNamePt As TextBox
+    Friend WithEvents txtCodePt As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button4 As Button
-    Friend WithEvents txtSupplierName As TextBox
-    Friend WithEvents txtSupplierID As TextBox
-    Friend WithEvents dtpDate As DateTimePicker
+    Friend WithEvents txtNameSup As TextBox
+    Friend WithEvents txtCodeSup As TextBox
+    Friend WithEvents txtDate As DateTimePicker
     Friend WithEvents txtRemarks As RichTextBox
-    Friend WithEvents txtProductID As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
@@ -815,14 +850,19 @@ Partial Class FormPurchasProduct
     Friend WithEvents Label31 As Label
     Friend WithEvents Label34 As Label
     Friend WithEvents Label35 As Label
+    Friend WithEvents lbl As Label
+    Friend WithEvents Panel5 As Panel
     Friend WithEvents PID As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Label12 As Label
-    Friend WithEvents txt_si As TextBox
-    Friend WithEvents lbl As Label
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
+    Friend WithEvents Button2 As Button
 End Class

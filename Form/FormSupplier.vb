@@ -45,6 +45,7 @@ Public Class FormSupplier
     End Sub
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btn_Show.Click
+        FormSupplierShow.lbl.Text = "frmSupplier"
         FormSupplierShow.ShowDialog()
     End Sub
     Private Sub btn_Browse_Click(sender As Object, e As EventArgs) Handles btn_Browse.Click

@@ -29,6 +29,7 @@ Partial Class FormSupplierShow
         Panel2 = New Panel()
         txt_search = New TextBox()
         Label2 = New Label()
+        lbl = New Label()
         CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         Panel2.SuspendLayout()
@@ -97,11 +98,21 @@ Partial Class FormSupplierShow
         Label2.TabIndex = 1
         Label2.Text = "Search Name :"
         ' 
+        ' lbl
+        ' 
+        lbl.AutoSize = True
+        lbl.Location = New Point(68, 33)
+        lbl.Name = "lbl"
+        lbl.Size = New Size(41, 15)
+        lbl.TabIndex = 16
+        lbl.Text = "Label1"
+        ' 
         ' FormSupplierShow
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(966, 450)
+        Controls.Add(lbl)
         Controls.Add(Panel2)
         Controls.Add(Panel3)
         Controls.Add(DGV)
@@ -113,6 +124,7 @@ Partial Class FormSupplierShow
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents DGV As DataGridView
@@ -122,4 +134,5 @@ Partial Class FormSupplierShow
     Friend WithEvents Panel2 As Panel
     Friend WithEvents txt_search As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents lbl As Label
 End Class

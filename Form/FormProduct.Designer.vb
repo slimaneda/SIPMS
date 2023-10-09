@@ -44,11 +44,9 @@ Partial Class FormProduct
         btnUpdate = New Button()
         btnSave = New Button()
         btnNew = New Button()
-        DGV = New DataGridView()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
-        CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -156,7 +154,7 @@ Partial Class FormProduct
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(379, 30)
+        Label4.Location = New Point(400, 30)
         Label4.Name = "Label4"
         Label4.Size = New Size(37, 15)
         Label4.TabIndex = 6
@@ -205,7 +203,7 @@ Partial Class FormProduct
         Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(707, 109)
+        Panel3.Location = New Point(725, 69)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(131, 236)
         Panel3.TabIndex = 5
@@ -264,21 +262,11 @@ Partial Class FormProduct
         btnNew.Text = "&New"
         btnNew.UseVisualStyleBackColor = True
         ' 
-        ' DGV
-        ' 
-        DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV.Location = New Point(12, 230)
-        DGV.Name = "DGV"
-        DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(689, 156)
-        DGV.TabIndex = 12
-        ' 
         ' FormProduct
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(868, 406)
-        Controls.Add(DGV)
+        ClientSize = New Size(868, 310)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
@@ -289,7 +277,6 @@ Partial Class FormProduct
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
-        CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -315,5 +302,4 @@ Partial Class FormProduct
     Friend WithEvents btnUpdate As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents btnNew As Button
-    Friend WithEvents DGV As DataGridView
 End Class

@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 
-Public Class ClassItems
+Public Class ItemsDao
     Public procedure As String
     Public Code_item As Integer
     Public Name_item As String

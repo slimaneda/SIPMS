@@ -32,7 +32,7 @@ Public Class FormCompany
         rest()
 
     End Sub
-    Private Cls As New ClassCompany
+    Private Cls As New CompanDao
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Cls.Name_company = txt_Companyname.Text
         Cls.Adress = txt_Adress.Text

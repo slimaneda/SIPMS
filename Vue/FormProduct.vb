@@ -1,5 +1,5 @@
 ﻿Public Class FormProduct
-    Dim cls As New ClassProduct
+    Dim cls As New ProductDao
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
     End Sub

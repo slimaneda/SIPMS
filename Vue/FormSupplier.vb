@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 
 Public Class FormSupplier
-    Private cls As New ClassSupplier
+    Private cls As New SupplierDao
     Private Sub SetCustomerValue()
 
         cls.code = Val(txt_SupplierID.Text)

@@ -1,6 +1,6 @@
 ﻿Imports System.IO
 
-Public Class ClassSupplier
+Public Class SupplierDao
     Public code As Integer
     Public Name As String
     Public Gender As String

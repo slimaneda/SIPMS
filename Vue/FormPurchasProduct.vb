@@ -114,7 +114,7 @@ Public Class FormPurchasProduct
             DGV.Rows.Remove(row)
         Next
     End Sub
-    Dim cls As New ClassStock
+    Dim cls As New StockDao
 
 
 

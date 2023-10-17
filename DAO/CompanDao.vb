@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 
-Public Class ClassCompany
+Public Class CompanDao
     Private cmd As New SqlCommand
     Private dt As New DataTable
 

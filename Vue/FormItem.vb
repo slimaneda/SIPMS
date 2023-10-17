@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 
 Public Class FormItem
-    Dim cls As New ClassItems
+    Dim cls As New ItemsDao
     Sub rest()
 
         txt_itemname.Text = ""

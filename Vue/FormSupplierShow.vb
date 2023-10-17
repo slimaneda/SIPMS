@@ -1,5 +1,5 @@
 ﻿Public Class FormSupplierShow
-    Dim cls As New ClassSupplier
+    Dim cls As New SupplierDao
     Private Sub FormSupplierShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_searchId.Focus()
 

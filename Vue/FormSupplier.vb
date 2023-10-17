@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
-
-Public Class FormSupplier
+﻿Public Class FormSupplier
     Private cls As New SupplierDao
     Private Sub SetCustomerValue()
 

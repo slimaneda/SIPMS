@@ -3,12 +3,6 @@
 Public Class FormCompany
 
     Sub rest()
-
-
-
-
-
-
         For Each clt As Control In Panel2.Controls
             If TypeOf clt Is TextBox Then
                 clt.Text = ""

@@ -297,4 +297,13 @@ Partial Class FormItem
     Friend WithEvents txt_search As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+
+    Public Sub New()
+
+        ' Cet appel est requis par le concepteur.
+        InitializeComponent()
+
+        ' Ajoutez une initialisation quelconque après l'appel InitializeComponent().
+
+    End Sub
 End Class

@@ -1,5 +1,4 @@
-﻿Imports System.Data.SqlClient
-Public Class ProductDao
+﻿Public Class ProductDao
     Public code As Integer
     Public name As String
     Public notes As String

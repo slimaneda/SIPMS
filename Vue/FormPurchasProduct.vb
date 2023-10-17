@@ -1,5 +1,4 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Runtime.Intrinsics.Arm
 
 Public Class FormPurchasProduct
 
@@ -118,7 +117,7 @@ Public Class FormPurchasProduct
 
 
 
-    Private Sub btnsave1_Click(sender As Object, e As EventArgs) Handles btnsave1.Click
+    Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         sqlcon.Open()
 
         If ValidateData() Then
@@ -286,5 +285,6 @@ Public Class FormPurchasProduct
         Next
         txtCodeFacture.Text = Val(nembreOnly)
     End Sub
+
 
 End Class

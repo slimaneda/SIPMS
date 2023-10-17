@@ -49,29 +49,6 @@ Partial Class FormMain
         TaslManagerToolStripMenuItem = New ToolStripMenuItem()
         SystemInfoToolStripMenuItem = New ToolStripMenuItem()
         AboutToolStripMenuItem1 = New ToolStripMenuItem()
-        FichierToolStripMenuItem = New ToolStripMenuItem()
-        NouvelleToolStripMenuItem = New ToolStripMenuItem()
-        OuvrirToolStripMenuItem = New ToolStripMenuItem()
-        toolStripSeparator = New ToolStripSeparator()
-        EnregistrerToolStripMenuItem = New ToolStripMenuItem()
-        EnregistrersousToolStripMenuItem = New ToolStripMenuItem()
-        toolStripSeparator2 = New ToolStripSeparator()
-        ImprimerToolStripMenuItem = New ToolStripMenuItem()
-        AperçuavantimpressionToolStripMenuItem = New ToolStripMenuItem()
-        toolStripSeparator3 = New ToolStripSeparator()
-        QuitterToolStripMenuItem = New ToolStripMenuItem()
-        ModifierToolStripMenuItem = New ToolStripMenuItem()
-        AnnulerToolStripMenuItem = New ToolStripMenuItem()
-        RétablirToolStripMenuItem = New ToolStripMenuItem()
-        toolStripSeparator4 = New ToolStripSeparator()
-        CouperToolStripMenuItem = New ToolStripMenuItem()
-        CopierToolStripMenuItem = New ToolStripMenuItem()
-        CollerToolStripMenuItem = New ToolStripMenuItem()
-        toolStripSeparator5 = New ToolStripSeparator()
-        SélectionnertoutToolStripMenuItem = New ToolStripMenuItem()
-        OutilsToolStripMenuItem = New ToolStripMenuItem()
-        PersonnaliserToolStripMenuItem = New ToolStripMenuItem()
-        OptionsToolStripMenuItem = New ToolStripMenuItem()
         AideToolStripMenuItem = New ToolStripMenuItem()
         ContenuToolStripMenuItem = New ToolStripMenuItem()
         IndexToolStripMenuItem = New ToolStripMenuItem()
@@ -173,7 +150,7 @@ Partial Class FormMain
         ' ToolStripSeparator1
         ' 
         ToolStripSeparator1.Name = "ToolStripSeparator1"
-        ToolStripSeparator1.Size = New Size(57, 6)
+        ToolStripSeparator1.Size = New Size(177, 6)
         ' 
         ' btn_customer
         ' 
@@ -249,7 +226,7 @@ Partial Class FormMain
         ' 
         ' MenuStrip2
         ' 
-        MenuStrip2.Items.AddRange(New ToolStripItem() {PppppppppToolStripMenuItem, ToolsToolStripMenuItem1, AboutToolStripMenuItem1, FichierToolStripMenuItem, ModifierToolStripMenuItem, OutilsToolStripMenuItem, AideToolStripMenuItem})
+        MenuStrip2.Items.AddRange(New ToolStripItem() {PppppppppToolStripMenuItem, ToolsToolStripMenuItem1, AboutToolStripMenuItem1, AideToolStripMenuItem})
         MenuStrip2.Location = New Point(0, 0)
         MenuStrip2.Name = "MenuStrip2"
         MenuStrip2.ShowItemToolTips = True
@@ -267,19 +244,19 @@ Partial Class FormMain
         ' CompanyToolStripMenuItem1
         ' 
         CompanyToolStripMenuItem1.Name = "CompanyToolStripMenuItem1"
-        CompanyToolStripMenuItem1.Size = New Size(126, 22)
+        CompanyToolStripMenuItem1.Size = New Size(180, 22)
         CompanyToolStripMenuItem1.Text = "Company"
         ' 
         ' ItemsToolStripMenuItem1
         ' 
         ItemsToolStripMenuItem1.Name = "ItemsToolStripMenuItem1"
-        ItemsToolStripMenuItem1.Size = New Size(126, 22)
+        ItemsToolStripMenuItem1.Size = New Size(180, 22)
         ItemsToolStripMenuItem1.Text = "Items"
         ' 
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(126, 22)
+        ExitToolStripMenuItem.Size = New Size(180, 22)
         ExitToolStripMenuItem.Text = "Exit"
         ' 
         ' ToolsToolStripMenuItem1
@@ -332,167 +309,6 @@ Partial Class FormMain
         AboutToolStripMenuItem1.Size = New Size(52, 20)
         AboutToolStripMenuItem1.Text = "About"
         ' 
-        ' FichierToolStripMenuItem
-        ' 
-        FichierToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {NouvelleToolStripMenuItem, OuvrirToolStripMenuItem, toolStripSeparator, EnregistrerToolStripMenuItem, EnregistrersousToolStripMenuItem, toolStripSeparator2, ImprimerToolStripMenuItem, AperçuavantimpressionToolStripMenuItem, toolStripSeparator3, QuitterToolStripMenuItem})
-        FichierToolStripMenuItem.Name = "FichierToolStripMenuItem"
-        FichierToolStripMenuItem.Size = New Size(40, 20)
-        FichierToolStripMenuItem.Text = "FILL"
-        ' 
-        ' NouvelleToolStripMenuItem
-        ' 
-        NouvelleToolStripMenuItem.Image = CType(resources.GetObject("NouvelleToolStripMenuItem.Image"), Image)
-        NouvelleToolStripMenuItem.ImageTransparentColor = Color.Magenta
-        NouvelleToolStripMenuItem.Name = "NouvelleToolStripMenuItem"
-        NouvelleToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.N
-        NouvelleToolStripMenuItem.Size = New Size(205, 22)
-        NouvelleToolStripMenuItem.Text = "&Nouvelle"
-        ' 
-        ' OuvrirToolStripMenuItem
-        ' 
-        OuvrirToolStripMenuItem.Image = CType(resources.GetObject("OuvrirToolStripMenuItem.Image"), Image)
-        OuvrirToolStripMenuItem.ImageTransparentColor = Color.Magenta
-        OuvrirToolStripMenuItem.Name = "OuvrirToolStripMenuItem"
-        OuvrirToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
-        OuvrirToolStripMenuItem.Size = New Size(205, 22)
-        OuvrirToolStripMenuItem.Text = "&Ouvrir"
-        ' 
-        ' toolStripSeparator
-        ' 
-        toolStripSeparator.Name = "toolStripSeparator"
-        toolStripSeparator.Size = New Size(202, 6)
-        ' 
-        ' EnregistrerToolStripMenuItem
-        ' 
-        EnregistrerToolStripMenuItem.Image = CType(resources.GetObject("EnregistrerToolStripMenuItem.Image"), Image)
-        EnregistrerToolStripMenuItem.ImageTransparentColor = Color.Magenta
-        EnregistrerToolStripMenuItem.Name = "EnregistrerToolStripMenuItem"
-        EnregistrerToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.S
-        EnregistrerToolStripMenuItem.Size = New Size(205, 22)
-        EnregistrerToolStripMenuItem.Text = "Enre&gistrer"
-        ' 
-        ' EnregistrersousToolStripMenuItem
-        ' 
-        EnregistrersousToolStripMenuItem.Name = "EnregistrersousToolStripMenuItem"
-        EnregistrersousToolStripMenuItem.Size = New Size(205, 22)
-        EnregistrersousToolStripMenuItem.Text = "&Enregistrer sous"
-        ' 
-        ' toolStripSeparator2
-        ' 
-        toolStripSeparator2.Name = "toolStripSeparator2"
-        toolStripSeparator2.Size = New Size(202, 6)
-        ' 
-        ' ImprimerToolStripMenuItem
-        ' 
-        ImprimerToolStripMenuItem.Image = CType(resources.GetObject("ImprimerToolStripMenuItem.Image"), Image)
-        ImprimerToolStripMenuItem.ImageTransparentColor = Color.Magenta
-        ImprimerToolStripMenuItem.Name = "ImprimerToolStripMenuItem"
-        ImprimerToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.P
-        ImprimerToolStripMenuItem.Size = New Size(205, 22)
-        ImprimerToolStripMenuItem.Text = "&Imprimer"
-        ' 
-        ' AperçuavantimpressionToolStripMenuItem
-        ' 
-        AperçuavantimpressionToolStripMenuItem.Image = CType(resources.GetObject("AperçuavantimpressionToolStripMenuItem.Image"), Image)
-        AperçuavantimpressionToolStripMenuItem.ImageTransparentColor = Color.Magenta
-        AperçuavantimpressionToolStripMenuItem.Name = "AperçuavantimpressionToolStripMenuItem"
-        AperçuavantimpressionToolStripMenuItem.Size = New Size(205, 22)
-        AperçuavantimpressionToolStripMenuItem.Text = "Aperçu a&vant impression"
-        ' 
-        ' toolStripSeparator3
-        ' 
-        toolStripSeparator3.Name = "toolStripSeparator3"
-        toolStripSeparator3.Size = New Size(202, 6)
-        ' 
-        ' QuitterToolStripMenuItem
-        ' 
-        QuitterToolStripMenuItem.Name = "QuitterToolStripMenuItem"
-        QuitterToolStripMenuItem.Size = New Size(205, 22)
-        QuitterToolStripMenuItem.Text = "&Quitter"
-        ' 
-        ' ModifierToolStripMenuItem
-        ' 
-        ModifierToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {AnnulerToolStripMenuItem, RétablirToolStripMenuItem, toolStripSeparator4, CouperToolStripMenuItem, CopierToolStripMenuItem, CollerToolStripMenuItem, toolStripSeparator5, SélectionnertoutToolStripMenuItem})
-        ModifierToolStripMenuItem.Name = "ModifierToolStripMenuItem"
-        ModifierToolStripMenuItem.Size = New Size(64, 20)
-        ModifierToolStripMenuItem.Text = "&Modifier"
-        ' 
-        ' AnnulerToolStripMenuItem
-        ' 
-        AnnulerToolStripMenuItem.Name = "AnnulerToolStripMenuItem"
-        AnnulerToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.Z
-        AnnulerToolStripMenuItem.Size = New Size(164, 22)
-        AnnulerToolStripMenuItem.Text = "&Annuler"
-        ' 
-        ' RétablirToolStripMenuItem
-        ' 
-        RétablirToolStripMenuItem.Name = "RétablirToolStripMenuItem"
-        RétablirToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.Y
-        RétablirToolStripMenuItem.Size = New Size(164, 22)
-        RétablirToolStripMenuItem.Text = "&Rétablir"
-        ' 
-        ' toolStripSeparator4
-        ' 
-        toolStripSeparator4.Name = "toolStripSeparator4"
-        toolStripSeparator4.Size = New Size(161, 6)
-        ' 
-        ' CouperToolStripMenuItem
-        ' 
-        CouperToolStripMenuItem.Image = CType(resources.GetObject("CouperToolStripMenuItem.Image"), Image)
-        CouperToolStripMenuItem.ImageTransparentColor = Color.Magenta
-        CouperToolStripMenuItem.Name = "CouperToolStripMenuItem"
-        CouperToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.X
-        CouperToolStripMenuItem.Size = New Size(164, 22)
-        CouperToolStripMenuItem.Text = "&Couper"
-        ' 
-        ' CopierToolStripMenuItem
-        ' 
-        CopierToolStripMenuItem.Image = CType(resources.GetObject("CopierToolStripMenuItem.Image"), Image)
-        CopierToolStripMenuItem.ImageTransparentColor = Color.Magenta
-        CopierToolStripMenuItem.Name = "CopierToolStripMenuItem"
-        CopierToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.C
-        CopierToolStripMenuItem.Size = New Size(164, 22)
-        CopierToolStripMenuItem.Text = "&Copier"
-        ' 
-        ' CollerToolStripMenuItem
-        ' 
-        CollerToolStripMenuItem.Image = CType(resources.GetObject("CollerToolStripMenuItem.Image"), Image)
-        CollerToolStripMenuItem.ImageTransparentColor = Color.Magenta
-        CollerToolStripMenuItem.Name = "CollerToolStripMenuItem"
-        CollerToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.V
-        CollerToolStripMenuItem.Size = New Size(164, 22)
-        CollerToolStripMenuItem.Text = "&Coller"
-        ' 
-        ' toolStripSeparator5
-        ' 
-        toolStripSeparator5.Name = "toolStripSeparator5"
-        toolStripSeparator5.Size = New Size(161, 6)
-        ' 
-        ' SélectionnertoutToolStripMenuItem
-        ' 
-        SélectionnertoutToolStripMenuItem.Name = "SélectionnertoutToolStripMenuItem"
-        SélectionnertoutToolStripMenuItem.Size = New Size(164, 22)
-        SélectionnertoutToolStripMenuItem.Text = "&Sélectionner tout"
-        ' 
-        ' OutilsToolStripMenuItem
-        ' 
-        OutilsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {PersonnaliserToolStripMenuItem, OptionsToolStripMenuItem})
-        OutilsToolStripMenuItem.Name = "OutilsToolStripMenuItem"
-        OutilsToolStripMenuItem.Size = New Size(50, 20)
-        OutilsToolStripMenuItem.Text = "O&utils"
-        ' 
-        ' PersonnaliserToolStripMenuItem
-        ' 
-        PersonnaliserToolStripMenuItem.Name = "PersonnaliserToolStripMenuItem"
-        PersonnaliserToolStripMenuItem.Size = New Size(144, 22)
-        PersonnaliserToolStripMenuItem.Text = "&Personnaliser"
-        ' 
-        ' OptionsToolStripMenuItem
-        ' 
-        OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        OptionsToolStripMenuItem.Size = New Size(144, 22)
-        OptionsToolStripMenuItem.Text = "&Options"
-        ' 
         ' AideToolStripMenuItem
         ' 
         AideToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ContenuToolStripMenuItem, IndexToolStripMenuItem, RechercherToolStripMenuItem, toolStripSeparator6, ÀproposdeToolStripMenuItem})
@@ -503,30 +319,30 @@ Partial Class FormMain
         ' ContenuToolStripMenuItem
         ' 
         ContenuToolStripMenuItem.Name = "ContenuToolStripMenuItem"
-        ContenuToolStripMenuItem.Size = New Size(147, 22)
+        ContenuToolStripMenuItem.Size = New Size(180, 22)
         ContenuToolStripMenuItem.Text = "Conten&u"
         ' 
         ' IndexToolStripMenuItem
         ' 
         IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        IndexToolStripMenuItem.Size = New Size(147, 22)
+        IndexToolStripMenuItem.Size = New Size(180, 22)
         IndexToolStripMenuItem.Text = "&Index"
         ' 
         ' RechercherToolStripMenuItem
         ' 
         RechercherToolStripMenuItem.Name = "RechercherToolStripMenuItem"
-        RechercherToolStripMenuItem.Size = New Size(147, 22)
+        RechercherToolStripMenuItem.Size = New Size(180, 22)
         RechercherToolStripMenuItem.Text = "&Rechercher"
         ' 
         ' toolStripSeparator6
         ' 
         toolStripSeparator6.Name = "toolStripSeparator6"
-        toolStripSeparator6.Size = New Size(144, 6)
+        toolStripSeparator6.Size = New Size(177, 6)
         ' 
         ' ÀproposdeToolStripMenuItem
         ' 
         ÀproposdeToolStripMenuItem.Name = "ÀproposdeToolStripMenuItem"
-        ÀproposdeToolStripMenuItem.Size = New Size(147, 22)
+        ÀproposdeToolStripMenuItem.Size = New Size(180, 22)
         ÀproposdeToolStripMenuItem.Text = "À pr&opos de..."
         ' 
         ' TabControl1
@@ -553,7 +369,7 @@ Partial Class FormMain
         TabPage1.Location = New Point(4, 24)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(1093, 478)
+        TabPage1.Size = New Size(1098, 478)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Customer Account"
         ' 
@@ -848,7 +664,7 @@ Partial Class FormMain
         TabPage3.Location = New Point(4, 24)
         TabPage3.Name = "TabPage3"
         TabPage3.Padding = New Padding(3)
-        TabPage3.Size = New Size(1093, 478)
+        TabPage3.Size = New Size(1098, 478)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Inventory Data"
         ' 
@@ -991,29 +807,6 @@ Partial Class FormMain
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents PurchasBillsuplierToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents FichierToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NouvelleToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents OuvrirToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents toolStripSeparator As ToolStripSeparator
-    Friend WithEvents EnregistrerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EnregistrersousToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents toolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents ImprimerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AperçuavantimpressionToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents toolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents QuitterToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ModifierToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AnnulerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RétablirToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents toolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents CouperToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CopierToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CollerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents toolStripSeparator5 As ToolStripSeparator
-    Friend WithEvents SélectionnertoutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents OutilsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PersonnaliserToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents OptionsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AideToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContenuToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents IndexToolStripMenuItem As ToolStripMenuItem

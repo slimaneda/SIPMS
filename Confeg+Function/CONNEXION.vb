@@ -6,7 +6,7 @@ Module CONNEXION
 
     Public sqlcon As New SqlConnection
     Public Sub Open_connexion()
-        If sqlcon.State = 1 Then sqlcon.Close() 'Si una conexión está abierta, ciérrela
+        If sqlcon.State = 1 Then sqlcon.Close()
         Try
             sqlcon = New SqlConnection(My.Settings.Sqlcon1)
             sqlcon.Open()
@@ -16,14 +16,5 @@ Module CONNEXION
         End Try
 
     End Sub
-
-    ' num auto
-
-
-
-
-
-
-
 
 End Module

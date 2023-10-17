@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Module ComFunction
-    '---------- function ALLOW  only Numbre  IN TEXTBOX 
+    '                         function ALLOW  only Numbre  IN TEXTBOX 
     Public Sub AllowOnlyNumbre(e As KeyPressEventArgs)
         If (Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) And e.KeyChar <> "."c) Then
             e.Handled = True
@@ -9,7 +9,7 @@ Module ComFunction
     End Sub
 
 
-    '         Numbere Auto index
+    '                           Numbere Auto index
     Public Function CODE_GEN(TbL_name, ID_) As Integer
         CODE_GEN = 0
 
@@ -31,7 +31,7 @@ Module ComFunction
 
     End Function
 
-    '------------ Appearance Data in datagridview 
+    '                            Appearance Data in datagridview 
     Public Sub Show_DGV(DGV As DataGridView, num_Proc As String)
         Open_connexion()
 
@@ -49,7 +49,7 @@ Module ComFunction
         sqlcon.Close()
     End Sub
 
-    '------------ Appearance Data in Combobox 
+    '                              Appearance Data in Combobox 
     Public Sub Show_COMBO(Proc As String, Combo As ComboBox, item As String)
         sqlcon.Open()
         Using cmd As New SqlCommand(Proc, sqlcon)
@@ -62,7 +62,7 @@ Module ComFunction
         sqlcon.Close()
 
     End Sub
-    '--------------- clear textbox
+    '                               clear textbox
     Public Sub ClearTextboxes(control As Control)
         For Each clt As Control In control.Controls
 

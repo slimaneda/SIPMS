@@ -43,7 +43,7 @@ Public Class FormCustomerListe
 
 
         If e.RowIndex >= 0 AndAlso lbl.Text = "FB" Then
-            With frmBilling
+            With FormQuotation
 
 
                 .txtCustomerID.Text = DGV.Rows(e.RowIndex).Cells(0).Value

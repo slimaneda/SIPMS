@@ -39,7 +39,7 @@
     End Sub
 
     Private Sub PurchasBillToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PurchasBillToolStripMenuItem.Click
-        frmBilling.ShowDialog()
+        FormQuotation.ShowDialog()
     End Sub
 
     Private Sub CustomerReceiptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CustomerReceiptToolStripMenuItem.Click

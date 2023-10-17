@@ -6,55 +6,57 @@ Public Class ItemsDao
     Public Code_item As Integer
     Public Name_item As String
     Public DGV As DataGridView
-    Public PictureBox1 As Image
+    Public PictureBox1 As Byte
 
-    Sub Save_Update()
-        sqlcon.Open()
+    Public Function CreateItem(item As Item) As Integer
+        Const procedureName As String = "Insert_Items"
 
-        Using cmd As New SqlClient.SqlCommand(procedure, sqlcon)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add("@Code_item", SqlDbType.Int).Value = Code_item
-            cmd.Parameters.Add("@Name_item", SqlDbType.NVarChar, 100).Value = Name_item
+        Dim args As New Dictionary(Of String, Object) From
+        {
+           {"@d1", item.Code_item},
+           {"@d2", item.Name_item},
+           {"@d3", item.photo}
+        }
 
-            If PictureBox1 IsNot Nothing Then
-                Using ms As New MemoryStream()
-                    PictureBox1.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
-                    cmd.Parameters.Add("@image", SqlDbType.Image).Value = ms.ToArray()
-                End Using
-            Else
-                cmd.Parameters.Add("@image", SqlDbType.Image).Value = DBNull.Value
-            End If
-            cmd.ExecuteNonQuery()
-            sqlcon.Close()
-        End Using
+        Return SqlConnectionManager.ExecuteStoredProcedure(procedureName, args)
+    End Function
 
+    Public Function UpdateItem(item As Item) As Integer
+        Const procedureName As String = "Update_Items"
 
-    End Sub
+        Dim args As New Dictionary(Of String, Object) From
+        {
+           {"@d1", item.Code_item},
+           {"@d2", item.Name_item}
+        }
 
+        Return SqlConnectionManager.ExecuteStoredProcedure(procedureName, args)
+    End Function
 
-    Sub Deletedata(Proc As String)
-        Using cmd As New SqlClient.SqlCommand(Proc, sqlcon)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add("@Code_item", SqlDbType.Int).Value = Code_item
-            cmd.ExecuteNonQuery()
+    Public Function DeleteItem(item As Item) As Integer
+        Const procedureName As String = "Delete_Items"
 
-        End Using
-    End Sub
-    Sub Searchdata(Proc As String)
-        Using cmd As New SqlClient.SqlCommand(Proc, sqlcon)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add("@Name_item", SqlDbType.NVarChar, 100).Value = Name_item
-            cmd.ExecuteNonQuery()
-            Dim dt As New DataTable
-            dt.Clear()
-            Dim da As New SqlClient.SqlDataAdapter(cmd)
-            da.Fill(dt)
-            DGV.DataSource = dt
+        Dim args As New Dictionary(Of String, Object) From
+        {
+           {"@d1", item.Code_item}
+        }
+        Return SqlConnectionManager.ExecuteStoredProcedure(procedureName, args)
+    End Function
 
 
-        End Using
+    Public Function SearchItem(item As Item) As Integer
+        Const procedureName As String = "Delete_Items"
 
-    End Sub
+        Dim args As New Dictionary(Of String, Object) From
+        {
+           {"@d2", item.Name_item}
+        }
+        Return SqlConnectionManager.ExecuteStoredProcedure(procedureName, args)
+    End Function
+
+
+
+
 
 
 

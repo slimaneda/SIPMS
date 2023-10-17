@@ -1,5 +1,4 @@
-﻿Imports System.IO
-Public Class FormCustomers
+﻿Public Class FormCustomers
     Dim cls As New ClassCustomer
     Private Sub SetCustomerValue()
 

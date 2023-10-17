@@ -1,4 +1,4 @@
-﻿Public Class frmBilling
+﻿Public Class FormQuotation
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
     End Sub
@@ -99,7 +99,9 @@
         Compute()
     End Sub
 
-    Private Sub txtCostPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCostPrice.KeyPress, txtQty.KeyPress, txtSellingPrice.KeyPress, txtDiscountPer.KeyPress
+    Private Sub txtCostPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQty.KeyPress, txtSellingPrice.KeyPress, txtDiscountPer.KeyPress
         AllowOnlyNumbre(e)
     End Sub
+
+
 End Class

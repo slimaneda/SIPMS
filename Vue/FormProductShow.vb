@@ -13,7 +13,7 @@
 
     Private Sub DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellClick
         If (e.RowIndex >= 0) AndAlso lbl.Text = "FB" Then
-            With frmBilling
+            With FormQuotation
                 .txtProductCode.Text = DGV.Rows(e.RowIndex).Cells(0).Value
                 .txtProductName.Text = DGV.Rows(e.RowIndex).Cells(1).Value
                 .txtQty.Text = DGV.Rows(e.RowIndex).Cells(2).Value

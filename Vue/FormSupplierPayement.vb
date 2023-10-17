@@ -1,8 +1,4 @@
-﻿Imports System.Data.SqlClient
-Imports System.Runtime.Intrinsics.Arm
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-Public Class FormSupplierPayement
+﻿Public Class FormSupplierPayement
     Public Sub clean()
         clearTextboxes(GroupBox1)
         clearTextboxes(GroupBox2)

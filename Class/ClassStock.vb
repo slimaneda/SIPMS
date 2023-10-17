@@ -2,6 +2,7 @@
 
 
 	Public Code_stockid As Integer
+	Public code_facture As String
 	Public Date_purchase As String
 	Public Code_Sup As Integer
 	Public Name_Sup As String
@@ -23,6 +24,7 @@
 
 
 			cmd.Parameters.Add("Code_fct", SqlDbType.Int).Value = Code_stockid
+			cmd.Parameters.Add("Code_facture", SqlDbType.NVarChar, 50).Value = code_facture
 			cmd.Parameters.Add("Date_purchase", SqlDbType.NVarChar, 50).Value = Date_purchase
 			cmd.Parameters.Add("Code_Sup", SqlDbType.Int).Value = Code_Sup
 			cmd.Parameters.Add("Name_Sup", SqlDbType.NVarChar, 50).Value = Name_Sup

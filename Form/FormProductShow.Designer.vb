@@ -37,11 +37,13 @@ Partial Class FormProductShow
         ' 
         ' DGV
         ' 
+        DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV.Location = New Point(25, 163)
+        DGV.Location = New Point(12, 114)
         DGV.Name = "DGV"
+        DGV.RowHeadersVisible = False
         DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(745, 275)
+        DGV.Size = New Size(433, 176)
         DGV.TabIndex = 13
         ' 
         ' txt_productname
@@ -82,7 +84,7 @@ Partial Class FormProductShow
         ' 
         GroupBox1.Controls.Add(txt_Productid)
         GroupBox1.Controls.Add(Label2)
-        GroupBox1.Location = New Point(146, 33)
+        GroupBox1.Location = New Point(12, 12)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(220, 86)
         GroupBox1.TabIndex = 18
@@ -92,7 +94,7 @@ Partial Class FormProductShow
         ' 
         GroupBox2.Controls.Add(txt_productname)
         GroupBox2.Controls.Add(Label3)
-        GroupBox2.Location = New Point(396, 33)
+        GroupBox2.Location = New Point(238, 12)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Size = New Size(207, 86)
         GroupBox2.TabIndex = 19
@@ -101,7 +103,7 @@ Partial Class FormProductShow
         ' lbl
         ' 
         lbl.AutoSize = True
-        lbl.Location = New Point(61, 55)
+        lbl.Location = New Point(96, 293)
         lbl.Name = "lbl"
         lbl.Size = New Size(12, 15)
         lbl.TabIndex = 20
@@ -111,13 +113,12 @@ Partial Class FormProductShow
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(465, 318)
         Controls.Add(lbl)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Controls.Add(DGV)
         Name = "FormProductShow"
-        Text = "l"
         CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()

@@ -26,8 +26,6 @@ Partial Class FormProduct
         Label1 = New Label()
         Panel2 = New Panel()
         txt_item = New ComboBox()
-        txt_notes = New TextBox()
-        Label10 = New Label()
         txt_qty = New TextBox()
         Label8 = New Label()
         txt_minrecord = New TextBox()
@@ -56,7 +54,7 @@ Partial Class FormProduct
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(868, 63)
+        Panel1.Size = New Size(713, 63)
         Panel1.TabIndex = 3
         ' 
         ' Label1
@@ -64,7 +62,7 @@ Partial Class FormProduct
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(311, 18)
+        Label1.Location = New Point(231, 18)
         Label1.Name = "Label1"
         Label1.Size = New Size(171, 24)
         Label1.TabIndex = 0
@@ -74,8 +72,6 @@ Partial Class FormProduct
         ' 
         Panel2.BorderStyle = BorderStyle.FixedSingle
         Panel2.Controls.Add(txt_item)
-        Panel2.Controls.Add(txt_notes)
-        Panel2.Controls.Add(Label10)
         Panel2.Controls.Add(txt_qty)
         Panel2.Controls.Add(Label8)
         Panel2.Controls.Add(txt_minrecord)
@@ -87,7 +83,7 @@ Partial Class FormProduct
         Panel2.Controls.Add(Label2)
         Panel2.Location = New Point(12, 69)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(689, 155)
+        Panel2.Size = New Size(689, 143)
         Panel2.TabIndex = 4
         ' 
         ' txt_item
@@ -98,29 +94,11 @@ Partial Class FormProduct
         txt_item.Size = New Size(196, 23)
         txt_item.TabIndex = 23
         ' 
-        ' txt_notes
-        ' 
-        txt_notes.Location = New Point(477, 97)
-        txt_notes.Multiline = True
-        txt_notes.Name = "txt_notes"
-        txt_notes.Size = New Size(196, 45)
-        txt_notes.TabIndex = 21
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label10.Location = New Point(427, 111)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(42, 15)
-        Label10.TabIndex = 20
-        Label10.Text = "Notes:"
-        ' 
         ' txt_qty
         ' 
         txt_qty.Location = New Point(124, 96)
         txt_qty.Name = "txt_qty"
-        txt_qty.Size = New Size(196, 23)
+        txt_qty.Size = New Size(83, 23)
         txt_qty.TabIndex = 11
         ' 
         ' Label8
@@ -144,11 +122,11 @@ Partial Class FormProduct
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label9.Location = New Point(325, 68)
+        Label9.Location = New Point(400, 70)
         Label9.Name = "Label9"
-        Label9.Size = New Size(144, 15)
+        Label9.Size = New Size(66, 15)
         Label9.TabIndex = 8
-        Label9.Text = "الحد الادنى للطلب  min record"
+        Label9.Text = "Min record"
         ' 
         ' Label4
         ' 
@@ -156,9 +134,9 @@ Partial Class FormProduct
         Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Label4.Location = New Point(400, 30)
         Label4.Name = "Label4"
-        Label4.Size = New Size(37, 15)
+        Label4.Size = New Size(61, 15)
         Label4.TabIndex = 6
-        Label4.Text = "Item :"
+        Label4.Text = "Category :"
         ' 
         ' txt_productname
         ' 
@@ -181,7 +159,7 @@ Partial Class FormProduct
         ' 
         txt_Productid.Location = New Point(124, 27)
         txt_Productid.Name = "txt_Productid"
-        txt_Productid.Size = New Size(196, 23)
+        txt_Productid.Size = New Size(118, 23)
         txt_Productid.TabIndex = 1
         ' 
         ' Label2
@@ -203,14 +181,14 @@ Partial Class FormProduct
         Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(725, 69)
+        Panel3.Location = New Point(12, 218)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(131, 236)
+        Panel3.Size = New Size(689, 55)
         Panel3.TabIndex = 5
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(21, 191)
+        btnClose.Location = New Point(534, 14)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(90, 23)
         btnClose.TabIndex = 21
@@ -219,7 +197,7 @@ Partial Class FormProduct
         ' 
         ' btnShow
         ' 
-        btnShow.Location = New Point(21, 153)
+        btnShow.Location = New Point(438, 14)
         btnShow.Name = "btnShow"
         btnShow.Size = New Size(90, 23)
         btnShow.TabIndex = 20
@@ -228,7 +206,7 @@ Partial Class FormProduct
         ' 
         ' btnDelete
         ' 
-        btnDelete.Location = New Point(21, 119)
+        btnDelete.Location = New Point(342, 14)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(90, 23)
         btnDelete.TabIndex = 19
@@ -237,7 +215,7 @@ Partial Class FormProduct
         ' 
         ' btnUpdate
         ' 
-        btnUpdate.Location = New Point(21, 86)
+        btnUpdate.Location = New Point(246, 14)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(90, 23)
         btnUpdate.TabIndex = 18
@@ -246,7 +224,7 @@ Partial Class FormProduct
         ' 
         ' btnSave
         ' 
-        btnSave.Location = New Point(21, 48)
+        btnSave.Location = New Point(150, 14)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(90, 23)
         btnSave.TabIndex = 17
@@ -255,7 +233,7 @@ Partial Class FormProduct
         ' 
         ' btnNew
         ' 
-        btnNew.Location = New Point(21, 14)
+        btnNew.Location = New Point(47, 14)
         btnNew.Name = "btnNew"
         btnNew.Size = New Size(90, 23)
         btnNew.TabIndex = 16
@@ -266,7 +244,7 @@ Partial Class FormProduct
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(868, 310)
+        ClientSize = New Size(713, 288)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
@@ -283,8 +261,6 @@ Partial Class FormProduct
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents txt_notes As TextBox
-    Friend WithEvents Label10 As Label
     Friend WithEvents txt_qty As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents txt_minrecord As TextBox

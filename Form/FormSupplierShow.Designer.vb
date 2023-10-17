@@ -101,7 +101,7 @@ Partial Class FormSupplierShow
         ' lbl
         ' 
         lbl.AutoSize = True
-        lbl.Location = New Point(68, 33)
+        lbl.Location = New Point(22, 15)
         lbl.Name = "lbl"
         lbl.Size = New Size(41, 15)
         lbl.TabIndex = 16

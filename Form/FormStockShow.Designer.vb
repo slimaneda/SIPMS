@@ -292,12 +292,12 @@ Partial Class FormStockShow
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(368, 22)
+        Label1.Location = New Point(313, 23)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(168, 24)
+        Label1.Size = New Size(327, 24)
         Label1.TabIndex = 0
-        Label1.Text = "قائمة فواتير المشتريات"
+        Label1.Text = "Forme Show Purchas قائمة المشتريات"
         ' 
         ' FormStockShow
         ' 

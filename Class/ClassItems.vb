@@ -9,6 +9,8 @@ Public Class ClassItems
     Public PictureBox1 As Image
 
     Sub Save_Update()
+        sqlcon.Open()
+
         Using cmd As New SqlClient.SqlCommand(procedure, sqlcon)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add("@Code_item", SqlDbType.Int).Value = Code_item
@@ -23,6 +25,7 @@ Public Class ClassItems
                 cmd.Parameters.Add("@image", SqlDbType.Image).Value = DBNull.Value
             End If
             cmd.ExecuteNonQuery()
+            sqlcon.Close()
         End Using
 
 

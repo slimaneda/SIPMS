@@ -2,15 +2,32 @@
     Dim cls As New ClassSupplier
     Private Sub FormSupplierShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_searchId.Focus()
-        Show_DGV(DGV, "Select_Supplier")
 
+
+        If lbl.Text = "FSP" Then
+            Show_DGV(DGV, "Select_Supplier_Vue")
+        Else
+            Show_DGV(DGV, "Select_Supplier")
+        End If
     End Sub
 
     Private Sub DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellClick
-        If e.RowIndex >= 0 AndAlso lbl.Text = "FPP" Then
-            FormPurchasProduct.txtCodeSup.Text = DGV.Rows(e.RowIndex).Cells(0).Value
-            FormPurchasProduct.txtNameSup.Text = DGV.Rows(e.RowIndex).Cells(1).Value
+        If e.RowIndex >= 0 AndAlso lbl.Text = "FSP" Then
+            Dim row = DGV.Rows(e.RowIndex)
+            With FormSupplierPayement
+                .txtCodeSup.Text = row.Cells(0).Value
+                .txtNameSup.Text = row.Cells(1).Value
+                .txtGrandTotal.Text = row.Cells(4).Value
+            End With
         End If
+        lbl.Text = ""
+        For i = 0 To DGV.Rows.Count - 1
+            If i >= 0 AndAlso lbl.Text = "FPP" Then
+                FormPurchasProduct.txtCodeSup.Text = DGV.Rows(i).Cells(0).Value
+                FormPurchasProduct.txtNameSup.Text = DGV.Rows(i).Cells(1).Value
+            End If
+        Next
+
 
         If e.RowIndex >= 0 AndAlso lbl.Text = "frmSupplier" Then
             FormSupplier.txt_SupplierID.Text = DGV.Rows(e.RowIndex).Cells(0).Value

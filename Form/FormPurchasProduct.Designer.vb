@@ -22,12 +22,19 @@ Partial Class FormPurchasProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
+        Panel6 = New Panel()
+        Button3 = New Button()
+        Button5 = New Button()
+        Button6 = New Button()
+        Button7 = New Button()
+        btnsave1 = New Button()
+        Button9 = New Button()
         Panel5 = New Panel()
         btnAdd = New Button()
         btnRemove = New Button()
@@ -42,6 +49,7 @@ Partial Class FormPurchasProduct
         txtTotalPayment = New TextBox()
         DGV = New DataGridView()
         PID = New DataGridViewTextBoxColumn()
+        Column1 = New DataGridViewTextBoxColumn()
         Column2 = New DataGridViewTextBoxColumn()
         Column3 = New DataGridViewTextBoxColumn()
         Column4 = New DataGridViewTextBoxColumn()
@@ -66,6 +74,7 @@ Partial Class FormPurchasProduct
         txtNamePt = New TextBox()
         txtCodePt = New TextBox()
         GroupBox1 = New GroupBox()
+        TextBox1 = New TextBox()
         Label3 = New Label()
         Label2 = New Label()
         Label5 = New Label()
@@ -76,7 +85,7 @@ Partial Class FormPurchasProduct
         txtDate = New DateTimePicker()
         txtCodeFacture = New TextBox()
         Panel3 = New Panel()
-        Button2 = New Button()
+        btnDelete = New Button()
         btnGetData = New Button()
         btnClose = New Button()
         btnUpdate = New Button()
@@ -87,6 +96,7 @@ Partial Class FormPurchasProduct
         Label1 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
         Panel1.SuspendLayout()
+        Panel6.SuspendLayout()
         Panel5.SuspendLayout()
         Panel4.SuspendLayout()
         CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
@@ -100,6 +110,7 @@ Partial Class FormPurchasProduct
         ' 
         Panel1.BackColor = Color.White
         Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(Panel6)
         Panel1.Controls.Add(Panel5)
         Panel1.Controls.Add(Label10)
         Panel1.Controls.Add(txtRemarks)
@@ -112,8 +123,108 @@ Partial Class FormPurchasProduct
         Panel1.Location = New Point(9, 8)
         Panel1.Margin = New Padding(4, 5, 4, 5)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(871, 676)
+        Panel1.Size = New Size(859, 780)
         Panel1.TabIndex = 2
+        ' 
+        ' Panel6
+        ' 
+        Panel6.BorderStyle = BorderStyle.FixedSingle
+        Panel6.Controls.Add(Button3)
+        Panel6.Controls.Add(Button5)
+        Panel6.Controls.Add(Button6)
+        Panel6.Controls.Add(Button7)
+        Panel6.Controls.Add(btnsave1)
+        Panel6.Controls.Add(Button9)
+        Panel6.Location = New Point(134, 685)
+        Panel6.Margin = New Padding(4, 5, 4, 5)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(659, 57)
+        Panel6.TabIndex = 7
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.WhiteSmoke
+        Button3.Cursor = Cursors.Hand
+        Button3.FlatStyle = FlatStyle.Popup
+        Button3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Button3.Location = New Point(327, 10)
+        Button3.Margin = New Padding(4, 5, 4, 5)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(96, 32)
+        Button3.TabIndex = 6
+        Button3.Text = "&Delete"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Button5
+        ' 
+        Button5.BackColor = Color.WhiteSmoke
+        Button5.Cursor = Cursors.Hand
+        Button5.FlatStyle = FlatStyle.Popup
+        Button5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Button5.Location = New Point(435, 10)
+        Button5.Margin = New Padding(4, 5, 4, 5)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(96, 32)
+        Button5.TabIndex = 5
+        Button5.Text = "&Show Data"
+        Button5.UseVisualStyleBackColor = False
+        ' 
+        ' Button6
+        ' 
+        Button6.BackColor = Color.WhiteSmoke
+        Button6.Cursor = Cursors.Hand
+        Button6.FlatStyle = FlatStyle.Popup
+        Button6.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Button6.Location = New Point(539, 10)
+        Button6.Margin = New Padding(4, 5, 4, 5)
+        Button6.Name = "Button6"
+        Button6.Size = New Size(96, 32)
+        Button6.TabIndex = 4
+        Button6.Text = "&Close"
+        Button6.UseVisualStyleBackColor = False
+        ' 
+        ' Button7
+        ' 
+        Button7.BackColor = Color.WhiteSmoke
+        Button7.Cursor = Cursors.Hand
+        Button7.Enabled = False
+        Button7.FlatStyle = FlatStyle.Popup
+        Button7.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Button7.Location = New Point(223, 10)
+        Button7.Margin = New Padding(4, 5, 4, 5)
+        Button7.Name = "Button7"
+        Button7.Size = New Size(96, 32)
+        Button7.TabIndex = 2
+        Button7.Text = "&Update"
+        Button7.UseVisualStyleBackColor = False
+        ' 
+        ' btnsave1
+        ' 
+        btnsave1.BackColor = Color.IndianRed
+        btnsave1.Cursor = Cursors.Hand
+        btnsave1.FlatStyle = FlatStyle.Popup
+        btnsave1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnsave1.Location = New Point(119, 10)
+        btnsave1.Margin = New Padding(4, 5, 4, 5)
+        btnsave1.Name = "btnsave1"
+        btnsave1.Size = New Size(96, 32)
+        btnsave1.TabIndex = 1
+        btnsave1.Text = "&Save"
+        btnsave1.UseVisualStyleBackColor = False
+        ' 
+        ' Button9
+        ' 
+        Button9.BackColor = Color.WhiteSmoke
+        Button9.Cursor = Cursors.Hand
+        Button9.FlatStyle = FlatStyle.Popup
+        Button9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Button9.Location = New Point(15, 10)
+        Button9.Margin = New Padding(4, 5, 4, 5)
+        Button9.Name = "Button9"
+        Button9.Size = New Size(96, 32)
+        Button9.TabIndex = 0
+        Button9.Text = "&New"
+        Button9.UseVisualStyleBackColor = False
         ' 
         ' Panel5
         ' 
@@ -258,31 +369,31 @@ Partial Class FormPurchasProduct
         ' 
         DGV.AllowUserToAddRows = False
         DGV.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = Color.FloralWhite
-        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.BackColor = Color.FloralWhite
+        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
         DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         DGV.BackgroundColor = Color.White
         DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = Color.CadetBlue
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = Color.LightSteelBlue
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = Color.CadetBlue
+        DataGridViewCellStyle7.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle7.ForeColor = Color.Black
+        DataGridViewCellStyle7.SelectionBackColor = Color.LightSteelBlue
+        DataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.True
+        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         DGV.ColumnHeadersHeight = 31
-        DGV.Columns.AddRange(New DataGridViewColumn() {PID, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12})
+        DGV.Columns.AddRange(New DataGridViewColumn() {PID, Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12})
         DGV.Cursor = Cursors.Hand
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Window
-        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        DGV.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = SystemColors.Window
+        DataGridViewCellStyle8.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        DataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.False
+        DGV.DefaultCellStyle = DataGridViewCellStyle8
         DGV.EnableHeadersVisualStyles = False
         DGV.GridColor = Color.White
         DGV.Location = New Point(4, 416)
@@ -290,21 +401,21 @@ Partial Class FormPurchasProduct
         DGV.Name = "DGV"
         DGV.ReadOnly = True
         DGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = Color.CadetBlue
-        DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = Color.CadetBlue
+        DataGridViewCellStyle9.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle9.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.True
+        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         DGV.RowHeadersVisible = False
         DGV.RowHeadersWidth = 30
-        DataGridViewCellStyle5.BackColor = Color.White
-        DataGridViewCellStyle5.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle5.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle5.SelectionForeColor = Color.White
-        DGV.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.BackColor = Color.White
+        DataGridViewCellStyle10.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle10.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle10.SelectionForeColor = Color.White
+        DGV.RowsDefaultCellStyle = DataGridViewCellStyle10
         DGV.RowTemplate.Height = 18
         DGV.RowTemplate.Resizable = DataGridViewTriState.False
         DGV.ScrollBars = ScrollBars.Vertical
@@ -317,6 +428,13 @@ Partial Class FormPurchasProduct
         PID.HeaderText = "Code Facture"
         PID.Name = "PID"
         PID.ReadOnly = True
+        PID.Visible = False
+        ' 
+        ' Column1
+        ' 
+        Column1.HeaderText = "Facture N°"
+        Column1.Name = "Column1"
+        Column1.ReadOnly = True
         ' 
         ' Column2
         ' 
@@ -369,13 +487,13 @@ Partial Class FormPurchasProduct
         ' 
         ' Column10
         ' 
-        Column10.HeaderText = "Column10"
+        Column10.HeaderText = "Total Payment"
         Column10.Name = "Column10"
         Column10.ReadOnly = True
         ' 
         ' Column11
         ' 
-        Column11.HeaderText = "Column11"
+        Column11.HeaderText = "Total Payment due"
         Column11.Name = "Column11"
         Column11.ReadOnly = True
         ' 
@@ -527,6 +645,7 @@ Partial Class FormPurchasProduct
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(TextBox1)
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label5)
@@ -545,6 +664,16 @@ Partial Class FormPurchasProduct
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "بيانات المورد"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.BackColor = SystemColors.Control
+        TextBox1.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox1.Location = New Point(229, 26)
+        TextBox1.Margin = New Padding(4, 5, 4, 5)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(55, 21)
+        TextBox1.TabIndex = 27
         ' 
         ' Label3
         ' 
@@ -635,16 +764,16 @@ Partial Class FormPurchasProduct
         ' 
         txtCodeFacture.BackColor = SystemColors.Control
         txtCodeFacture.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtCodeFacture.Location = New Point(203, 25)
+        txtCodeFacture.Location = New Point(152, 28)
         txtCodeFacture.Margin = New Padding(4, 5, 4, 5)
         txtCodeFacture.Name = "txtCodeFacture"
-        txtCodeFacture.Size = New Size(81, 21)
+        txtCodeFacture.Size = New Size(55, 21)
         txtCodeFacture.TabIndex = 0
         ' 
         ' Panel3
         ' 
         Panel3.BorderStyle = BorderStyle.FixedSingle
-        Panel3.Controls.Add(Button2)
+        Panel3.Controls.Add(btnDelete)
         Panel3.Controls.Add(btnGetData)
         Panel3.Controls.Add(btnClose)
         Panel3.Controls.Add(btnUpdate)
@@ -656,18 +785,18 @@ Partial Class FormPurchasProduct
         Panel3.Size = New Size(659, 57)
         Panel3.TabIndex = 2
         ' 
-        ' Button2
+        ' btnDelete
         ' 
-        Button2.Cursor = Cursors.Hand
-        Button2.FlatStyle = FlatStyle.Popup
-        Button2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Button2.Location = New Point(327, 10)
-        Button2.Margin = New Padding(4, 5, 4, 5)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(96, 32)
-        Button2.TabIndex = 6
-        Button2.Text = "&Delete"
-        Button2.UseVisualStyleBackColor = True
+        btnDelete.Cursor = Cursors.Hand
+        btnDelete.FlatStyle = FlatStyle.Popup
+        btnDelete.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnDelete.Location = New Point(327, 10)
+        btnDelete.Margin = New Padding(4, 5, 4, 5)
+        btnDelete.Name = "btnDelete"
+        btnDelete.Size = New Size(96, 32)
+        btnDelete.TabIndex = 6
+        btnDelete.Text = "&Delete"
+        btnDelete.UseVisualStyleBackColor = True
         ' 
         ' btnGetData
         ' 
@@ -746,7 +875,7 @@ Partial Class FormPurchasProduct
         Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(4, 5, 4, 5)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(869, 70)
+        Panel2.Size = New Size(857, 70)
         Panel2.TabIndex = 0
         ' 
         ' lbl
@@ -783,7 +912,7 @@ Partial Class FormPurchasProduct
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSlateGray
-        ClientSize = New Size(881, 681)
+        ClientSize = New Size(883, 775)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(4, 5, 4, 5)
@@ -793,6 +922,7 @@ Partial Class FormPurchasProduct
         StartPosition = FormStartPosition.CenterScreen
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel6.ResumeLayout(False)
         Panel5.ResumeLayout(False)
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
@@ -852,7 +982,17 @@ Partial Class FormPurchasProduct
     Friend WithEvents Label35 As Label
     Friend WithEvents lbl As Label
     Friend WithEvents Panel5 As Panel
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents btnsave1 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents PID As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
@@ -864,5 +1004,4 @@ Partial Class FormPurchasProduct
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
 End Class

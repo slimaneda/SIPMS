@@ -31,21 +31,22 @@ Partial Class FormSupplierPayement
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
-        Button2 = New Button()
+        btnClose = New Button()
         Button1 = New Button()
         GroupBox1 = New GroupBox()
+        txtNameSup = New TextBox()
+        btnShow = New Button()
         Label31 = New Label()
-        TextBox1 = New TextBox()
+        txtCodeSup = New TextBox()
         Label3 = New Label()
         Label2 = New Label()
         txtGrandTotal = New TextBox()
-        ComboBox1 = New ComboBox()
         GroupBox2 = New GroupBox()
-        btnListReset1 = New Button()
-        btnListUpdate1 = New Button()
-        btnRemove1 = New Button()
-        btnAdd1 = New Button()
-        DataGridView2 = New DataGridView()
+        btnDelete = New Button()
+        btnUpdate = New Button()
+        btnRemove = New Button()
+        btnAdd = New Button()
+        DGV = New DataGridView()
         Column8 = New DataGridViewTextBoxColumn()
         Column15 = New DataGridViewTextBoxColumn()
         Column16 = New DataGridViewTextBoxColumn()
@@ -65,7 +66,7 @@ Partial Class FormSupplierPayement
         Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         Panel4.SuspendLayout()
         Panel2.SuspendLayout()
         SuspendLayout()
@@ -74,7 +75,7 @@ Partial Class FormSupplierPayement
         ' 
         Panel1.BackColor = Color.White
         Panel1.BorderStyle = BorderStyle.FixedSingle
-        Panel1.Controls.Add(Button2)
+        Panel1.Controls.Add(btnClose)
         Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(GroupBox1)
         Panel1.Controls.Add(GroupBox2)
@@ -85,15 +86,15 @@ Partial Class FormSupplierPayement
         Panel1.Size = New Size(711, 562)
         Panel1.TabIndex = 2
         ' 
-        ' Button2
+        ' btnClose
         ' 
-        Button2.Location = New Point(234, 500)
-        Button2.Margin = New Padding(4, 3, 4, 3)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(105, 43)
-        Button2.TabIndex = 7
-        Button2.Text = "إغلاق"
-        Button2.UseVisualStyleBackColor = True
+        btnClose.Location = New Point(234, 500)
+        btnClose.Margin = New Padding(4, 3, 4, 3)
+        btnClose.Name = "btnClose"
+        btnClose.Size = New Size(105, 43)
+        btnClose.TabIndex = 7
+        btnClose.Text = "إغلاق"
+        btnClose.UseVisualStyleBackColor = True
         ' 
         ' Button1
         ' 
@@ -107,12 +108,13 @@ Partial Class FormSupplierPayement
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(txtNameSup)
+        GroupBox1.Controls.Add(btnShow)
         GroupBox1.Controls.Add(Label31)
-        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Controls.Add(txtCodeSup)
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(txtGrandTotal)
-        GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Location = New Point(10, 91)
         GroupBox1.Margin = New Padding(4, 3, 4, 3)
         GroupBox1.Name = "GroupBox1"
@@ -122,6 +124,28 @@ Partial Class FormSupplierPayement
         GroupBox1.TabIndex = 5
         GroupBox1.TabStop = False
         GroupBox1.Text = "بيانات المورد"
+        ' 
+        ' txtNameSup
+        ' 
+        txtNameSup.Location = New Point(376, 36)
+        txtNameSup.Margin = New Padding(4, 3, 4, 3)
+        txtNameSup.Name = "txtNameSup"
+        txtNameSup.ReadOnly = True
+        txtNameSup.Size = New Size(140, 23)
+        txtNameSup.TabIndex = 89
+        txtNameSup.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' btnShow
+        ' 
+        btnShow.BackgroundImageLayout = ImageLayout.None
+        btnShow.FlatStyle = FlatStyle.System
+        btnShow.Location = New Point(334, 35)
+        btnShow.Margin = New Padding(4, 5, 4, 5)
+        btnShow.Name = "btnShow"
+        btnShow.Size = New Size(34, 24)
+        btnShow.TabIndex = 88
+        btnShow.Text = " ..."
+        btnShow.UseVisualStyleBackColor = True
         ' 
         ' Label31
         ' 
@@ -134,15 +158,15 @@ Partial Class FormSupplierPayement
         Label31.TabIndex = 87
         Label31.Text = "الرصيد الحالى للمورد :"
         ' 
-        ' TextBox1
+        ' txtCodeSup
         ' 
-        TextBox1.Location = New Point(376, 70)
-        TextBox1.Margin = New Padding(4, 3, 4, 3)
-        TextBox1.Name = "TextBox1"
-        TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(140, 23)
-        TextBox1.TabIndex = 3
-        TextBox1.TextAlign = HorizontalAlignment.Center
+        txtCodeSup.Location = New Point(376, 70)
+        txtCodeSup.Margin = New Padding(4, 3, 4, 3)
+        txtCodeSup.Name = "txtCodeSup"
+        txtCodeSup.ReadOnly = True
+        txtCodeSup.Size = New Size(140, 23)
+        txtCodeSup.TabIndex = 3
+        txtCodeSup.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label3
         ' 
@@ -173,24 +197,16 @@ Partial Class FormSupplierPayement
         txtGrandTotal.ReadOnly = True
         txtGrandTotal.Size = New Size(184, 29)
         txtGrandTotal.TabIndex = 0
+        txtGrandTotal.Text = "00"
         txtGrandTotal.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(376, 32)
-        ComboBox1.Margin = New Padding(4, 3, 4, 3)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(140, 23)
-        ComboBox1.TabIndex = 0
         ' 
         ' GroupBox2
         ' 
-        GroupBox2.Controls.Add(btnListReset1)
-        GroupBox2.Controls.Add(btnListUpdate1)
-        GroupBox2.Controls.Add(btnRemove1)
-        GroupBox2.Controls.Add(btnAdd1)
-        GroupBox2.Controls.Add(DataGridView2)
+        GroupBox2.Controls.Add(btnDelete)
+        GroupBox2.Controls.Add(btnUpdate)
+        GroupBox2.Controls.Add(btnRemove)
+        GroupBox2.Controls.Add(btnAdd)
+        GroupBox2.Controls.Add(DGV)
         GroupBox2.Controls.Add(dtpPaymentDate)
         GroupBox2.Controls.Add(Label7)
         GroupBox2.Controls.Add(Panel4)
@@ -208,60 +224,61 @@ Partial Class FormSupplierPayement
         GroupBox2.TabStop = False
         GroupBox2.Text = "معلومات الدفع"
         ' 
-        ' btnListReset1
+        ' btnDelete
         ' 
-        btnListReset1.FlatStyle = FlatStyle.Popup
-        btnListReset1.Location = New Point(519, 143)
-        btnListReset1.Margin = New Padding(4, 3, 4, 3)
-        btnListReset1.Name = "btnListReset1"
-        btnListReset1.Size = New Size(96, 24)
-        btnListReset1.TabIndex = 90
-        btnListReset1.Text = "مسح"
-        btnListReset1.UseVisualStyleBackColor = True
+        btnDelete.FlatStyle = FlatStyle.Popup
+        btnDelete.Location = New Point(519, 143)
+        btnDelete.Margin = New Padding(4, 3, 4, 3)
+        btnDelete.Name = "btnDelete"
+        btnDelete.Size = New Size(96, 24)
+        btnDelete.TabIndex = 90
+        btnDelete.Text = "مسح"
+        btnDelete.UseVisualStyleBackColor = True
         ' 
-        ' btnListUpdate1
+        ' btnUpdate
         ' 
-        btnListUpdate1.Enabled = False
-        btnListUpdate1.FlatStyle = FlatStyle.Popup
-        btnListUpdate1.Location = New Point(518, 232)
-        btnListUpdate1.Margin = New Padding(4, 3, 4, 3)
-        btnListUpdate1.Name = "btnListUpdate1"
-        btnListUpdate1.Size = New Size(96, 24)
-        btnListUpdate1.TabIndex = 89
-        btnListUpdate1.Text = "تحديث"
-        btnListUpdate1.UseVisualStyleBackColor = True
+        btnUpdate.Enabled = False
+        btnUpdate.FlatStyle = FlatStyle.Popup
+        btnUpdate.Location = New Point(518, 232)
+        btnUpdate.Margin = New Padding(4, 3, 4, 3)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.Size = New Size(96, 24)
+        btnUpdate.TabIndex = 89
+        btnUpdate.Text = "تحديث"
+        btnUpdate.UseVisualStyleBackColor = True
         ' 
-        ' btnRemove1
+        ' btnRemove
         ' 
-        btnRemove1.Enabled = False
-        btnRemove1.FlatStyle = FlatStyle.Popup
-        btnRemove1.Location = New Point(518, 202)
-        btnRemove1.Margin = New Padding(4, 3, 4, 3)
-        btnRemove1.Name = "btnRemove1"
-        btnRemove1.Size = New Size(96, 24)
-        btnRemove1.TabIndex = 88
-        btnRemove1.Text = "حذف"
-        btnRemove1.UseVisualStyleBackColor = True
+        btnRemove.Enabled = False
+        btnRemove.FlatStyle = FlatStyle.Popup
+        btnRemove.Location = New Point(518, 202)
+        btnRemove.Margin = New Padding(4, 3, 4, 3)
+        btnRemove.Name = "btnRemove"
+        btnRemove.Size = New Size(96, 24)
+        btnRemove.TabIndex = 88
+        btnRemove.Text = "حذف"
+        btnRemove.UseVisualStyleBackColor = True
         ' 
-        ' btnAdd1
+        ' btnAdd
         ' 
-        btnAdd1.FlatStyle = FlatStyle.Popup
-        btnAdd1.Location = New Point(518, 173)
-        btnAdd1.Margin = New Padding(4, 3, 4, 3)
-        btnAdd1.Name = "btnAdd1"
-        btnAdd1.Size = New Size(96, 24)
-        btnAdd1.TabIndex = 87
-        btnAdd1.Text = "إضافة"
-        btnAdd1.UseVisualStyleBackColor = True
+        btnAdd.FlatStyle = FlatStyle.Popup
+        btnAdd.Location = New Point(518, 173)
+        btnAdd.Margin = New Padding(4, 3, 4, 3)
+        btnAdd.Name = "btnAdd"
+        btnAdd.Size = New Size(96, 24)
+        btnAdd.TabIndex = 87
+        btnAdd.Text = "إضافة"
+        btnAdd.UseVisualStyleBackColor = True
         ' 
-        ' DataGridView2
+        ' DGV
         ' 
-        DataGridView2.AllowUserToAddRows = False
-        DataGridView2.AllowUserToDeleteRows = False
+        DGV.AllowUserToAddRows = False
+        DGV.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = Color.FloralWhite
-        DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridView2.BackgroundColor = Color.White
-        DataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV.BackgroundColor = Color.White
+        DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = Color.CadetBlue
         DataGridViewCellStyle2.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
@@ -269,10 +286,10 @@ Partial Class FormSupplierPayement
         DataGridViewCellStyle2.SelectionBackColor = Color.LightSteelBlue
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DataGridView2.ColumnHeadersHeight = 24
-        DataGridView2.Columns.AddRange(New DataGridViewColumn() {Column8, Column15, Column16})
-        DataGridView2.Cursor = Cursors.Hand
+        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DGV.ColumnHeadersHeight = 24
+        DGV.Columns.AddRange(New DataGridViewColumn() {Column8, Column15, Column16})
+        DGV.Cursor = Cursors.Hand
         DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = SystemColors.Window
         DataGridViewCellStyle5.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
@@ -280,15 +297,15 @@ Partial Class FormSupplierPayement
         DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
-        DataGridView2.DefaultCellStyle = DataGridViewCellStyle5
-        DataGridView2.EnableHeadersVisualStyles = False
-        DataGridView2.GridColor = Color.White
-        DataGridView2.Location = New Point(7, 129)
-        DataGridView2.Margin = New Padding(4, 3, 4, 3)
-        DataGridView2.Name = "DataGridView2"
-        DataGridView2.ReadOnly = True
-        DataGridView2.RightToLeft = RightToLeft.Yes
-        DataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DGV.DefaultCellStyle = DataGridViewCellStyle5
+        DGV.EnableHeadersVisualStyles = False
+        DGV.GridColor = Color.White
+        DGV.Location = New Point(7, 129)
+        DGV.Margin = New Padding(4, 3, 4, 3)
+        DGV.Name = "DGV"
+        DGV.ReadOnly = True
+        DGV.RightToLeft = RightToLeft.Yes
+        DGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = Color.CadetBlue
         DataGridViewCellStyle6.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
@@ -296,20 +313,21 @@ Partial Class FormSupplierPayement
         DataGridViewCellStyle6.SelectionBackColor = Color.DarkSlateGray
         DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
-        DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
-        DataGridView2.RowHeadersWidth = 25
-        DataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DGV.RowHeadersVisible = False
+        DGV.RowHeadersWidth = 30
+        DGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
         DataGridViewCellStyle7.BackColor = Color.White
         DataGridViewCellStyle7.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle7.SelectionBackColor = Color.DarkSlateGray
         DataGridViewCellStyle7.SelectionForeColor = Color.White
-        DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle7
-        DataGridView2.RowTemplate.Height = 18
-        DataGridView2.RowTemplate.Resizable = DataGridViewTriState.False
-        DataGridView2.ScrollBars = ScrollBars.Vertical
-        DataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView2.Size = New Size(504, 127)
-        DataGridView2.TabIndex = 86
+        DGV.RowsDefaultCellStyle = DataGridViewCellStyle7
+        DGV.RowTemplate.Height = 18
+        DGV.RowTemplate.Resizable = DataGridViewTriState.False
+        DGV.ScrollBars = ScrollBars.Vertical
+        DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DGV.Size = New Size(504, 127)
+        DGV.TabIndex = 86
         ' 
         ' Column8
         ' 
@@ -400,6 +418,7 @@ Partial Class FormSupplierPayement
         txtPaymentDue.ReadOnly = True
         txtPaymentDue.Size = New Size(156, 20)
         txtPaymentDue.TabIndex = 2
+        txtPaymentDue.Text = "00"
         txtPaymentDue.TextAlign = HorizontalAlignment.Center
         ' 
         ' txtTotalPayment
@@ -497,7 +516,7 @@ Partial Class FormSupplierPayement
         GroupBox1.PerformLayout()
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
+        CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         Panel2.ResumeLayout(False)
@@ -508,11 +527,11 @@ Partial Class FormSupplierPayement
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents btnListReset1 As Button
-    Friend WithEvents btnListUpdate1 As Button
-    Friend WithEvents btnRemove1 As Button
-    Friend WithEvents btnAdd1 As Button
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnRemove As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents DGV As DataGridView
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
@@ -531,10 +550,10 @@ Partial Class FormSupplierPayement
     Friend WithEvents Label13 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCodeSup As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnClose As Button
     Friend WithEvents Button1 As Button
-
+    Friend WithEvents btnShow As Button
+    Friend WithEvents txtNameSup As TextBox
 End Class

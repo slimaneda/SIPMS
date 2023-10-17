@@ -101,4 +101,8 @@ Public Class FormItem
         txt_Codeitem.Text = CODE_GEN("Items", "Code_item") + 1
         rest()
     End Sub
+
+    Private Sub txt_Codeitem_TextChanged(sender As Object, e As EventArgs) Handles txt_Codeitem.TextChanged
+
+    End Sub
 End Class

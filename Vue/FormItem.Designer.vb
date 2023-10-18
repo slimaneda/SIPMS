@@ -58,7 +58,7 @@ Partial Class FormItem
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(920, 63)
+        Panel1.Size = New Size(744, 63)
         Panel1.TabIndex = 1
         ' 
         ' Label1
@@ -66,7 +66,7 @@ Partial Class FormItem
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(355, 21)
+        Label1.Location = New Point(294, 18)
         Label1.Name = "Label1"
         Label1.Size = New Size(168, 24)
         Label1.TabIndex = 0
@@ -76,6 +76,7 @@ Partial Class FormItem
         ' 
         DGV1.AllowUserToAddRows = False
         DGV1.AllowUserToDeleteRows = False
+        DGV1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV1.BackgroundColor = SystemColors.Control
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter
         DataGridViewCellStyle1.BackColor = SystemColors.GradientInactiveCaption
@@ -85,15 +86,15 @@ Partial Class FormItem
         DataGridViewCellStyle1.SelectionForeColor = Color.White
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
         DGV1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        DGV1.Dock = DockStyle.Left
         DGV1.EnableHeadersVisualStyles = False
-        DGV1.Location = New Point(0, 63)
+        DGV1.Location = New Point(492, 135)
         DGV1.Name = "DGV1"
         DGV1.ReadOnly = True
         DGV1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
         DGV1.RowHeadersVisible = False
         DGV1.RowTemplate.Height = 25
-        DGV1.Size = New Size(307, 387)
+        DGV1.ScrollBars = ScrollBars.Vertical
+        DGV1.Size = New Size(246, 154)
         DGV1.TabIndex = 2
         ' 
         ' Panel2
@@ -105,14 +106,14 @@ Partial Class FormItem
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(txt_Codeitem)
         Panel2.Controls.Add(Label2)
-        Panel2.Location = New Point(331, 136)
+        Panel2.Location = New Point(12, 69)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(565, 225)
+        Panel2.Size = New Size(450, 144)
         Panel2.TabIndex = 3
         ' 
         ' btnBrowse
         ' 
-        btnBrowse.Location = New Point(433, 191)
+        btnBrowse.Location = New Point(344, 113)
         btnBrowse.Name = "btnBrowse"
         btnBrowse.Size = New Size(72, 23)
         btnBrowse.TabIndex = 15
@@ -123,16 +124,16 @@ Partial Class FormItem
         ' 
         PictureBox1.BorderStyle = BorderStyle.FixedSingle
         PictureBox1.Image = My.Resources.Resources.Sans_titre
-        PictureBox1.Location = New Point(385, 33)
+        PictureBox1.Location = New Point(328, 6)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(145, 148)
+        PictureBox1.Size = New Size(106, 98)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 14
         PictureBox1.TabStop = False
         ' 
         ' txt_itemname
         ' 
-        txt_itemname.Location = New Point(137, 118)
+        txt_itemname.Location = New Point(104, 42)
         txt_itemname.Name = "txt_itemname"
         txt_itemname.Size = New Size(196, 23)
         txt_itemname.TabIndex = 3
@@ -141,7 +142,7 @@ Partial Class FormItem
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(36, 121)
+        Label3.Location = New Point(3, 45)
         Label3.Name = "Label3"
         Label3.Size = New Size(74, 15)
         Label3.TabIndex = 2
@@ -149,7 +150,7 @@ Partial Class FormItem
         ' 
         ' txt_Codeitem
         ' 
-        txt_Codeitem.Location = New Point(136, 85)
+        txt_Codeitem.Location = New Point(103, 9)
         txt_Codeitem.Name = "txt_Codeitem"
         txt_Codeitem.Size = New Size(196, 23)
         txt_Codeitem.TabIndex = 1
@@ -158,7 +159,7 @@ Partial Class FormItem
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(36, 88)
+        Label2.Location = New Point(3, 12)
         Label2.Name = "Label2"
         Label2.Size = New Size(69, 15)
         Label2.TabIndex = 0
@@ -172,23 +173,23 @@ Partial Class FormItem
         Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(355, 378)
+        Panel3.Location = New Point(16, 229)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(524, 60)
+        Panel3.Size = New Size(470, 60)
         Panel3.TabIndex = 4
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(399, 15)
+        btnClose.Location = New Point(384, 15)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(90, 23)
+        btnClose.Size = New Size(81, 23)
         btnClose.TabIndex = 21
         btnClose.Text = "&Close"
         btnClose.UseVisualStyleBackColor = True
         ' 
         ' btnDelete
         ' 
-        btnDelete.Location = New Point(303, 15)
+        btnDelete.Location = New Point(288, 15)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(90, 23)
         btnDelete.TabIndex = 19
@@ -197,7 +198,7 @@ Partial Class FormItem
         ' 
         ' btnUpdate
         ' 
-        btnUpdate.Location = New Point(213, 15)
+        btnUpdate.Location = New Point(198, 15)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(90, 23)
         btnUpdate.TabIndex = 18
@@ -206,7 +207,7 @@ Partial Class FormItem
         ' 
         ' btnSave
         ' 
-        btnSave.Location = New Point(117, 15)
+        btnSave.Location = New Point(102, 15)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(90, 23)
         btnSave.TabIndex = 17
@@ -215,7 +216,7 @@ Partial Class FormItem
         ' 
         ' btnNew
         ' 
-        btnNew.Location = New Point(21, 14)
+        btnNew.Location = New Point(6, 14)
         btnNew.Name = "btnNew"
         btnNew.Size = New Size(90, 23)
         btnNew.TabIndex = 16
@@ -227,14 +228,14 @@ Partial Class FormItem
         Panel4.BorderStyle = BorderStyle.FixedSingle
         Panel4.Controls.Add(txt_search)
         Panel4.Controls.Add(Label4)
-        Panel4.Location = New Point(478, 69)
+        Panel4.Location = New Point(492, 68)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(226, 61)
+        Panel4.Size = New Size(246, 61)
         Panel4.TabIndex = 5
         ' 
         ' txt_search
         ' 
-        txt_search.Location = New Point(11, 24)
+        txt_search.Location = New Point(17, 29)
         txt_search.Name = "txt_search"
         txt_search.Size = New Size(196, 23)
         txt_search.TabIndex = 2
@@ -257,7 +258,7 @@ Partial Class FormItem
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(920, 450)
+        ClientSize = New Size(744, 310)
         Controls.Add(Panel4)
         Controls.Add(Panel3)
         Controls.Add(Panel2)

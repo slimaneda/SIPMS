@@ -1,11 +1,13 @@
-﻿Public Class FormCustomers
+﻿Imports System.IO
+
+Public Class FormCustomers
     Private Customer As New Customer
     Private CustomerDAL As New CustomerDAL
 
-    Public Sub New(ByVal item As Item)
-        InitializeComponent()
-        Me.Customer = Customer
-    End Sub
+    'Public Sub New(ByVal Customer As Customer)
+    '    InitializeComponent()
+    '    Me.Customer = Customer
+    'End Sub
 
     Private Sub SetCustomerValue()
         With Customer
@@ -19,7 +21,6 @@
             .State = txt_State.Text
             .Email = txt_Email.Text
             .Notes = txt_Notes.Text
-            .photo = PictureBox1.Image
             If btn_female.Checked = True Then
                 .Gender = "Femal"
             End If
@@ -31,16 +32,27 @@
 
     Private Sub RestForm()
         txt_CustomerID.Focus()
+        ClearTextboxes(GroupBox1)
     End Sub
 
     Private Sub btn_Save_Click(sender As Object, e As EventArgs) Handles btn_Save.Click
         SetCustomerValue()
+        If PictureBox1.Image IsNot Nothing Then
+            Dim ms As New MemoryStream
+            PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
+            Customer.photo = ms.ToArray()
+        End If
         CustomerDAL.Create(Me.Customer)
         txt_CustomerID.Text = CODE_GEN("Customer", "Customer_id") + 1
     End Sub
 
     Private Sub btn_Update_Click(sender As Object, e As EventArgs) Handles btn_Update.Click
         SetCustomerValue()
+        If PictureBox1.Image IsNot Nothing Then
+            Dim ms As New MemoryStream
+            PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
+            Customer.photo = ms.ToArray()
+        End If
         CustomerDAL.Update(Me.Customer)
         FormCustomers_Load(sender, e)
     End Sub

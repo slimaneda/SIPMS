@@ -1,7 +1,7 @@
 ﻿Public Class FormProductShow
 
     Private Sub FormProductShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Show_DGV(DGV, "Select_Pt")
+
         If lbl.Text = "FPP" Or lbl.Text = "b" Then
             Show_DGV(DGV, "Select_Pt")
         End If
@@ -13,11 +13,11 @@
 
     Private Sub DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellClick
         If (e.RowIndex >= 0) AndAlso lbl.Text = "FB" Then
+
             With FormQuotation
                 .txtProductCode.Text = DGV.Rows(e.RowIndex).Cells(0).Value
                 .txtProductName.Text = DGV.Rows(e.RowIndex).Cells(1).Value
                 .txtQty.Text = DGV.Rows(e.RowIndex).Cells(2).Value
-
             End With
             lbl.Text = ""
         End If
@@ -36,9 +36,5 @@
             lbl.Text = ""
         End If
         Me.Close()
-    End Sub
-
-    Private Sub DGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellContentClick
-
     End Sub
 End Class

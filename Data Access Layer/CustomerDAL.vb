@@ -24,6 +24,7 @@
 
         Dim args As New Dictionary(Of String, Object) From
       {
+      {"@Customerid", Customer.code},
          {"@CustomerName", Customer.Name},
          {"@Gender", Customer.Gender},
          {"@adress", Customer.Adress},

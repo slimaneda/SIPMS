@@ -23,6 +23,7 @@
     Private Sub btn_customer_Click(sender As Object, e As EventArgs) Handles btn_customer.Click
         FormCustomers.ShowDialog()
 
+
     End Sub
 
     Private Sub btn_supplier_Click(sender As Object, e As EventArgs) Handles btn_supplier.Click

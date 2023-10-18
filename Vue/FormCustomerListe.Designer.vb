@@ -42,6 +42,7 @@ Partial Class FormCustomerListe
         ' Panel1
         ' 
         Panel1.BackColor = Color.SteelBlue
+        Panel1.Controls.Add(lbl)
         Panel1.Controls.Add(Label1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
@@ -116,36 +117,42 @@ Partial Class FormCustomerListe
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(874, 84)
+        btnClose.Location = New Point(894, 93)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(90, 23)
+        btnClose.Size = New Size(90, 37)
         btnClose.TabIndex = 22
         btnClose.Text = "&Close"
         btnClose.UseVisualStyleBackColor = True
         ' 
         ' DGV
         ' 
+        DGV.AllowUserToAddRows = False
+        DGV.AllowUserToDeleteRows = False
+        DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV.Location = New Point(12, 194)
+        DGV.Dock = DockStyle.Bottom
+        DGV.Location = New Point(0, 161)
         DGV.Name = "DGV"
+        DGV.ReadOnly = True
+        DGV.RowHeadersVisible = False
         DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(972, 280)
+        DGV.Size = New Size(996, 271)
         DGV.TabIndex = 23
         ' 
         ' lbl
         ' 
         lbl.AutoSize = True
-        lbl.Location = New Point(14, 151)
+        lbl.Location = New Point(24, 9)
         lbl.Name = "lbl"
         lbl.Size = New Size(0, 15)
         lbl.TabIndex = 24
+        lbl.Visible = False
         ' 
         ' FormCustomerListe
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(996, 502)
-        Controls.Add(lbl)
+        ClientSize = New Size(996, 432)
         Controls.Add(DGV)
         Controls.Add(btnClose)
         Controls.Add(Panel2)
@@ -161,7 +168,6 @@ Partial Class FormCustomerListe
         Panel2.PerformLayout()
         CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Panel1 As Panel

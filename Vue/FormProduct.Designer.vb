@@ -62,7 +62,7 @@ Partial Class FormProduct
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(231, 18)
+        Label1.Location = New Point(259, 18)
         Label1.Name = "Label1"
         Label1.Size = New Size(171, 24)
         Label1.TabIndex = 0
@@ -122,7 +122,7 @@ Partial Class FormProduct
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label9.Location = New Point(400, 70)
+        Label9.Location = New Point(389, 70)
         Label9.Name = "Label9"
         Label9.Size = New Size(66, 15)
         Label9.TabIndex = 8
@@ -132,11 +132,11 @@ Partial Class FormProduct
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(400, 30)
+        Label4.Location = New Point(375, 30)
         Label4.Name = "Label4"
-        Label4.Size = New Size(61, 15)
+        Label4.Size = New Size(102, 15)
         Label4.TabIndex = 6
-        Label4.Text = "Category :"
+        Label4.Text = "Category (items) :"
         ' 
         ' txt_productname
         ' 

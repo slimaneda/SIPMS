@@ -1,43 +1,37 @@
 ﻿Public Class ProductDAL
-    Public code As Integer
-    Public name As String
-    Public notes As String
-    Public item As String
-    Public minrecord As Decimal
-    Public qty As Decimal
 
+    Public Function create(product As Product) As Integer
+        Const procedureName As String = "Insert_Product"
+        Dim args As New Dictionary(Of String, Object) From
+       {
+             {"@Product_ID", product.Code},
+             {"@Product_Name", product.Name},
+             {"@Item", product.items},
+             {"@Min_record", product.minirecord},
+             {"@Quantity", product.Quantity}
+        }
+        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+    End Function
 
+    Public Function Update(product As Product) As Integer
+        Const procedureName As String = "Update_Product"
+        Dim args As New Dictionary(Of String, Object) From
+       {
+             {"@Product_ID", product.Code},
+             {"@Product_Name", product.Name},
+             {"@Item", product.items},
+             {"@Min_record", product.minirecord},
+             {"@Quantity", product.Quantity}
+        }
+        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+    End Function
 
-
-    Sub deletedata(proc As String)
-        Try
-            Dim cmd As New SqlClient.SqlCommand(proc, sqlcon)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add("@Product_ID", SqlDbType.Int).Value = code
-
-            cmd.ExecuteNonQuery()
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-
-    Sub Save_update(proc As String)
-        Try
-            Using cmd As New SqlClient.SqlCommand(proc, sqlcon)
-                cmd.CommandType = CommandType.StoredProcedure
-
-                cmd.Parameters.Add("@Product_ID", SqlDbType.Int).Value = code
-                cmd.Parameters.Add("@Product_Name", SqlDbType.NVarChar, 50).Value = name
-                cmd.Parameters.Add("@Item", SqlDbType.NVarChar, 50).Value = item
-                cmd.Parameters.Add("@Min_record", SqlDbType.Decimal, 18, 2).Value = minrecord
-                cmd.Parameters.Add("@Quantity", SqlDbType.Decimal, 18, 2).Value = qty
-
-                cmd.ExecuteNonQuery()
-
-            End Using
-        Catch ex As Exception
-
-        End Try
-    End Sub
+    Public Function Delete(product As Product) As Integer
+        Const procedureName As String = "Delete_Product"
+        Dim args As New Dictionary(Of String, Object) From
+       {
+             {"@Product_ID", product.Code}
+             }
+        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+    End Function
 End Class

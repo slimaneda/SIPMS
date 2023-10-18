@@ -10,7 +10,7 @@
 
     Private _Email As String
     Private _Notes As String
-    Private _photo As Image
+    Private _photo As Byte()
     Property code As Integer
         Get
             code = _code
@@ -99,11 +99,11 @@
         End Set
     End Property
 
-    Property photo As Image
+    Property photo As Byte()
         Get
             Return _photo
         End Get
-        Set(value As Image)
+        Set(value As Byte())
             _photo = value
         End Set
     End Property

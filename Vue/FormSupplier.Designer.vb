@@ -35,7 +35,6 @@ Partial Class FormSupplier
         btn_New = New Button()
         btn_female = New RadioButton()
         btn_male = New RadioButton()
-        txt_Zip = New MaskedTextBox()
         txt_Notes = New TextBox()
         Label13 = New Label()
         txt_Email = New TextBox()
@@ -56,6 +55,7 @@ Partial Class FormSupplier
         Label21 = New Label()
         Label22 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
+        txt_zip = New TextBox()
         Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
         Panel5.SuspendLayout()
@@ -85,11 +85,11 @@ Partial Class FormSupplier
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(txt_zip)
         GroupBox1.Controls.Add(txt_SupplierID)
         GroupBox1.Controls.Add(Panel5)
         GroupBox1.Controls.Add(btn_female)
         GroupBox1.Controls.Add(btn_male)
-        GroupBox1.Controls.Add(txt_Zip)
         GroupBox1.Controls.Add(txt_Notes)
         GroupBox1.Controls.Add(Label13)
         GroupBox1.Controls.Add(txt_Email)
@@ -211,14 +211,6 @@ Partial Class FormSupplier
         btn_male.TabStop = True
         btn_male.Text = "Male"
         btn_male.UseVisualStyleBackColor = True
-        ' 
-        ' txt_Zip
-        ' 
-        txt_Zip.Location = New Point(127, 220)
-        txt_Zip.Mask = "00000"
-        txt_Zip.Name = "txt_Zip"
-        txt_Zip.Size = New Size(196, 23)
-        txt_Zip.TabIndex = 46
         ' 
         ' txt_Notes
         ' 
@@ -394,6 +386,13 @@ Partial Class FormSupplier
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
+        ' txt_zip
+        ' 
+        txt_zip.Location = New Point(127, 221)
+        txt_zip.Name = "txt_zip"
+        txt_zip.Size = New Size(196, 23)
+        txt_zip.TabIndex = 50
+        ' 
         ' FormSupplier
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -424,7 +423,6 @@ Partial Class FormSupplier
     Friend WithEvents btn_New As Button
     Friend WithEvents btn_female As RadioButton
     Friend WithEvents btn_male As RadioButton
-    Friend WithEvents txt_Zip As MaskedTextBox
     Friend WithEvents txt_Notes As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents txt_Email As TextBox
@@ -445,4 +443,5 @@ Partial Class FormSupplier
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents txt_zip As TextBox
 End Class

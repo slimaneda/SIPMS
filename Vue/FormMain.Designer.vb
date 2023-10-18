@@ -150,7 +150,7 @@ Partial Class FormMain
         ' ToolStripSeparator1
         ' 
         ToolStripSeparator1.Name = "ToolStripSeparator1"
-        ToolStripSeparator1.Size = New Size(177, 6)
+        ToolStripSeparator1.Size = New Size(57, 6)
         ' 
         ' btn_customer
         ' 
@@ -244,19 +244,19 @@ Partial Class FormMain
         ' CompanyToolStripMenuItem1
         ' 
         CompanyToolStripMenuItem1.Name = "CompanyToolStripMenuItem1"
-        CompanyToolStripMenuItem1.Size = New Size(180, 22)
+        CompanyToolStripMenuItem1.Size = New Size(126, 22)
         CompanyToolStripMenuItem1.Text = "Company"
         ' 
         ' ItemsToolStripMenuItem1
         ' 
         ItemsToolStripMenuItem1.Name = "ItemsToolStripMenuItem1"
-        ItemsToolStripMenuItem1.Size = New Size(180, 22)
+        ItemsToolStripMenuItem1.Size = New Size(126, 22)
         ItemsToolStripMenuItem1.Text = "Items"
         ' 
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(180, 22)
+        ExitToolStripMenuItem.Size = New Size(126, 22)
         ExitToolStripMenuItem.Text = "Exit"
         ' 
         ' ToolsToolStripMenuItem1
@@ -319,30 +319,30 @@ Partial Class FormMain
         ' ContenuToolStripMenuItem
         ' 
         ContenuToolStripMenuItem.Name = "ContenuToolStripMenuItem"
-        ContenuToolStripMenuItem.Size = New Size(180, 22)
+        ContenuToolStripMenuItem.Size = New Size(147, 22)
         ContenuToolStripMenuItem.Text = "Conten&u"
         ' 
         ' IndexToolStripMenuItem
         ' 
         IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        IndexToolStripMenuItem.Size = New Size(180, 22)
+        IndexToolStripMenuItem.Size = New Size(147, 22)
         IndexToolStripMenuItem.Text = "&Index"
         ' 
         ' RechercherToolStripMenuItem
         ' 
         RechercherToolStripMenuItem.Name = "RechercherToolStripMenuItem"
-        RechercherToolStripMenuItem.Size = New Size(180, 22)
+        RechercherToolStripMenuItem.Size = New Size(147, 22)
         RechercherToolStripMenuItem.Text = "&Rechercher"
         ' 
         ' toolStripSeparator6
         ' 
         toolStripSeparator6.Name = "toolStripSeparator6"
-        toolStripSeparator6.Size = New Size(177, 6)
+        toolStripSeparator6.Size = New Size(144, 6)
         ' 
         ' ÀproposdeToolStripMenuItem
         ' 
         ÀproposdeToolStripMenuItem.Name = "ÀproposdeToolStripMenuItem"
-        ÀproposdeToolStripMenuItem.Size = New Size(180, 22)
+        ÀproposdeToolStripMenuItem.Size = New Size(147, 22)
         ÀproposdeToolStripMenuItem.Text = "À pr&opos de..."
         ' 
         ' TabControl1
@@ -375,9 +375,14 @@ Partial Class FormMain
         ' 
         ' DGV
         ' 
+        DGV.AllowUserToAddRows = False
+        DGV.AllowUserToDeleteRows = False
+        DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DGV.Location = New Point(16, 115)
         DGV.Name = "DGV"
+        DGV.ReadOnly = True
+        DGV.RightToLeft = RightToLeft.No
         DGV.RowTemplate.Height = 25
         DGV.Size = New Size(1055, 346)
         DGV.TabIndex = 10
@@ -528,7 +533,6 @@ Partial Class FormMain
         DGV2.Name = "DGV2"
         DGV2.ReadOnly = True
         DGV2.RightToLeft = RightToLeft.No
-        DGV2.RowHeadersVisible = False
         DGV2.RowTemplate.Height = 25
         DGV2.Size = New Size(1055, 346)
         DGV2.TabIndex = 11

@@ -23,8 +23,8 @@
         lbl.Text = ""
         For i = 0 To DGV.Rows.Count - 1
             If i >= 0 AndAlso lbl.Text = "FPP" Then
-                FormPurchasProduct.txtCodeSup.Text = DGV.Rows(i).Cells(0).Value
-                FormPurchasProduct.txtNameSup.Text = DGV.Rows(i).Cells(1).Value
+                FormStock.txtCodeSup.Text = DGV.Rows(i).Cells(0).Value
+                FormStock.txtNameSup.Text = DGV.Rows(i).Cells(1).Value
             End If
         Next
 

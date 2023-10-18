@@ -50,11 +50,13 @@
 
     End Sub
 
-    Sub deletdata(proc As String)
-        Using cmd As New SqlClient.SqlCommand(proc, sqlcon)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add("@code_fct", SqlDbType.Int).Value = Code_stockid
-            cmd.ExecuteNonQuery()
-        End Using
-    End Sub
+    Public Function Delete(stock As Stock) As Integer
+        Const procedureName As String = "Deletedata"
+        Dim args As New Dictionary(Of String, Object) From
+       {
+             {"@d1", stock.Code},
+           {"@type", "STOCK"}
+             }
+        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+    End Function
 End Class

@@ -44,11 +44,12 @@ Public Class SupplierDAL
     End Function
 
     Public Function Delete(Supplier As Supplier)
-        Const procedureName As String = "Delete_Supplier"
+        Const procedureName As String = "Deletedata"
 
         Dim args As New Dictionary(Of String, Object) From
       {
-         {"@Supplierid", Supplier.code}
+         {"@d1", Supplier.code},
+          {"@type", "Supplier"}
            }
         Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
     End Function

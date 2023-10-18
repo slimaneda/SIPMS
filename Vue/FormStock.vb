@@ -1,6 +1,12 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class FormPurchasProduct
+Public Class FormStock
+    Dim stock As New Stock
+    Dim StockDAL As New StockDAL
+    Sub New()
+        InitializeComponent()
+        Me.Stock = Stock
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         FormProductShow.lbl.Text = "FPP"
@@ -16,7 +22,7 @@ Public Class FormPurchasProduct
         Close()
     End Sub
 
-    Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
         sqlcon_Open()
         Dim cmd As New SqlClient.SqlCommand("Srlrct_StockCF", sqlcon)
@@ -24,12 +30,9 @@ Public Class FormPurchasProduct
         cmd.Parameters.Add("@d1", SqlDbType.Int).Value = Val(txtCodeFacture.Text)
         Dim exists = Convert.ToBoolean(cmd.ExecuteScalar())
 
-
         If exists Then
             MsgBox("code fct deja effectuee")
         End If
-
-
 
         If DGV.Rows.Count >= 0 And Not String.IsNullOrEmpty(txtCodeFacture.Text) And Not exists Then
             Dim targetRow As DataGridViewRow = DGV.Rows.Cast(Of DataGridViewRow).FirstOrDefault(Function(r) r.Cells(0).Value.ToString() = txtCodeFacture.Text)
@@ -113,7 +116,7 @@ Public Class FormPurchasProduct
             DGV.Rows.Remove(row)
         Next
     End Sub
-    Dim cls As New StockDAL
+
 
 
 
@@ -183,27 +186,26 @@ Public Class FormPurchasProduct
     Private Sub InsertIntoStock()
 
         For Each row As DataGridViewRow In DGV.Rows
+            With StockDAL
+                .Code_stockid = row.Cells(0).Value    'cls =classStock
+                .code_facture = row.Cells(1).Value
+                .Date_purchase = row.Cells(2).Value
+                .Code_Sup = row.Cells(3).Value
+                .Name_Sup = row.Cells(4).Value
 
+                .Code_pt = row.Cells(5).Value
+                .Name_pt = row.Cells(6).Value
+                .Quantity_Pt = Val(row.Cells(7).Value)
+                .Price_Pt = Val(row.Cells(8).Value)
+                .TOTALamont = Val(row.Cells(9).Value)
 
-            cls.Code_stockid = row.Cells(0).Value    'cls =classStock
-            cls.code_facture = row.Cells(1).Value
-            cls.Date_purchase = row.Cells(2).Value
-            cls.Code_Sup = row.Cells(3).Value
-            cls.Name_Sup = row.Cells(4).Value
+                .TOTALPayement = Val(row.Cells(10).Value)
+                .TOTALPayementdue = Val(row.Cells(11).Value)
 
-            cls.Code_pt = row.Cells(5).Value
-            cls.Name_pt = row.Cells(6).Value
-            cls.Quantity_Pt = Val(row.Cells(7).Value)
-            cls.Price_Pt = Val(row.Cells(8).Value)
-            cls.TOTALamont = Val(row.Cells(9).Value)
+                .NOTES = row.Cells(12).Value
 
-            cls.TOTALPayement = Val(row.Cells(10).Value)
-            cls.TOTALPayementdue = Val(row.Cells(11).Value)
-
-            cls.NOTES = row.Cells(12).Value
-
-            cls.save_Update("Insert_Stock")
-
+                .save_Update("Insert_Stock")
+            End With
         Next
     End Sub
 
@@ -211,18 +213,14 @@ Public Class FormPurchasProduct
 
         Using cmd As New SqlCommand("Insert_SuppAcc", sqlcon)
             cmd.CommandType = CommandType.StoredProcedure
-
             cmd.Parameters.Add("@Sup_id", SqlDbType.Int).Value = txtCodeSup.Text
-
             cmd.Parameters.AddWithValue("@Sup_Name", txtNameSup.Text)
-
             cmd.Parameters.AddWithValue("@Detail", txtDate.Value.Date)
             For i = 0 To DGV.Rows.Count - 1
                 cmd.Parameters.AddWithValue("@inv", "Facture D'achat N° " + DGV.Rows(i).Cells(0).Value)
             Next
             cmd.Parameters.AddWithValue("@debit", Val(txtTotalPayment.Text))
             cmd.Parameters.AddWithValue("@credit", Val(txtGrandTotal.Text))
-
             cmd.ExecuteNonQuery()
 
         End Using
@@ -286,5 +284,10 @@ Public Class FormPurchasProduct
         txtCodeFacture.Text = Val(nembreOnly)
     End Sub
 
-
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        For i = 0 To DGV.Rows.Count - 1
+            StockDAL.Code_stockid = DGV.Rows(i).Cells(0).Value
+            StockDAL.Delete(Me.stock)
+        Next
+    End Sub
 End Class

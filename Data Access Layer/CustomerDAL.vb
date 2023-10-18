@@ -43,7 +43,8 @@
         '  Const procedureName As String = ""
         Dim args As New Dictionary(Of String, Object) From
       {
-         {"@Customerid", Customer.code}
+          {"@d1", Customer.code},
+           {"@type", "Customer"}
         }
         Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
     End Function

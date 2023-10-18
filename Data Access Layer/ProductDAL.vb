@@ -27,10 +27,11 @@
     End Function
 
     Public Function Delete(product As Product) As Integer
-        Const procedureName As String = "Delete_Product"
+        Const procedureName As String = "Deletedata"
         Dim args As New Dictionary(Of String, Object) From
        {
-             {"@Product_ID", product.Code}
+             {"@d1", product.Code},
+           {"@type", "Product"}
              }
         Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
     End Function

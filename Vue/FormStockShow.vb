@@ -14,7 +14,7 @@ Public Class FormStockShow
         For Each row As DataGridViewRow In DGV.Rows
 
 
-            With FormPurchasProduct
+            With FormStock
 
                 .txtCodeFacture.Text = row.Cells(0).Value
                 .txtDate.Text = row.Cells(1).Value

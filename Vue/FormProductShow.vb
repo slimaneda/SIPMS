@@ -22,10 +22,11 @@
             lbl.Text = ""
         End If
         If (e.RowIndex >= 0) AndAlso lbl.Text = "FPP" Then
-
-            FormPurchasProduct.txtCodePt.Text = DGV.Rows(e.RowIndex).Cells(0).Value
-            FormPurchasProduct.txtNamePt.Text = DGV.Rows(e.RowIndex).Cells(1).Value
-            FormPurchasProduct.txtQty.Text = DGV.Rows(e.RowIndex).Cells(4).Value
+            With FormStock
+                .Text = DGV.Rows(e.RowIndex).Cells(0).Value
+                .txtNamePt.Text = DGV.Rows(e.RowIndex).Cells(1).Value
+                .txtQty.Text = DGV.Rows(e.RowIndex).Cells(4).Value
+            End With
             lbl.Text = ""
         End If
         If (e.RowIndex >= 0) AndAlso lbl.Text = "b" Then

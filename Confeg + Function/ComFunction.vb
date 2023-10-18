@@ -33,7 +33,7 @@ Module ComFunction
 
     '                            Appearance Data in datagridview 
     Public Sub Show_DGV(DGV As DataGridView, num_Proc As String)
-        Open_connexion()
+        sqlcon_Open()
 
         DGV.Text = ""
         Try
@@ -46,12 +46,12 @@ Module ComFunction
 
         Catch ex As Exception
         End Try
-        sqlcon.Close()
+        sqlcon_Close()
     End Sub
 
     '                              Appearance Data in Combobox 
     Public Sub Show_COMBO(Proc As String, Combo As ComboBox, item As String)
-        sqlcon.Open()
+        sqlcon_Open()
         Using cmd As New SqlCommand(Proc, sqlcon)
             Dim dr As SqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
             While dr.Read
@@ -59,7 +59,7 @@ Module ComFunction
 
             End While
         End Using
-        sqlcon.Close()
+        sqlcon_Close()
 
     End Sub
     '                               clear textbox

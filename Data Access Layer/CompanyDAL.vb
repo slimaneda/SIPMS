@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 
-Public Class CompanDao
+Public Class CompanyDAL
     Private cmd As New SqlCommand
     Private dt As New DataTable
 
@@ -14,7 +14,7 @@ Public Class CompanDao
     Public Property ST As String
     Public Property CIN As String
     Sub Save(Num_Procedure As String)
-        Open_connexion()
+        sqlcon_Open()
 
         Try
             Using cmd As New SqlClient.SqlCommand(Num_Procedure, sqlcon)
@@ -55,6 +55,8 @@ Public Class CompanDao
 
     End Sub
     Public Sub DeleteCompany(proc As String)
+        sqlcon_Open()
+
         Try
 
             cmd = New SqlCommand(proc, sqlcon)
@@ -70,7 +72,7 @@ Public Class CompanDao
             MsgBox("delete Company .", MessageBoxIcon.Information)
         Catch ex As Exception
             MsgBox(ex.Message, MessageBoxIcon.Error)
-            sqlcon.Close()
+            sqlcon_Close()
         End Try
     End Sub
 

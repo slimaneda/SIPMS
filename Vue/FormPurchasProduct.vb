@@ -18,7 +18,7 @@ Public Class FormPurchasProduct
 
     Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
-        sqlcon.Open()
+        sqlcon_Open()
         Dim cmd As New SqlClient.SqlCommand("Srlrct_StockCF", sqlcon)
         cmd.CommandType = CommandType.StoredProcedure
         cmd.Parameters.Add("@d1", SqlDbType.Int).Value = Val(txtCodeFacture.Text)
@@ -41,7 +41,7 @@ Public Class FormPurchasProduct
             End If
 
         End If
-        sqlcon.Close()
+        sqlcon_Close()
     End Sub
 
 
@@ -113,12 +113,12 @@ Public Class FormPurchasProduct
             DGV.Rows.Remove(row)
         Next
     End Sub
-    Dim cls As New StockDao
+    Dim cls As New StockDAL
 
 
 
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        sqlcon.Open()
+        sqlcon_Open()
 
         If ValidateData() Then
             Try
@@ -126,7 +126,7 @@ Public Class FormPurchasProduct
                 InsertIntoStock()
                 InsertIntoSuppAcc()
                 InsertIntoStockProduct()
-                sqlcon.Close()
+                sqlcon_Close()
                 MsgBox("الحفظ تم بنجاح", MsgBoxStyle.Information)
             Catch ex As Exception
                 MsgBox("حدث خطأ: " & ex.Message, MsgBoxStyle.Critical)

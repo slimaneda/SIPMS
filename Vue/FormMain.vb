@@ -4,10 +4,11 @@
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Open_connexion()
+        sqlcon_Open()
         Show_DGV(DGV, "Select_SupplierSum")
         Show_DGV(DGV2, "Select_Supplier_Vue")
         Show_DGV(DGV3, "Select_StockProductSum")
+        sqlcon_Close()
     End Sub
 
     Private Sub btn_items_Click(sender As Object, e As EventArgs) Handles btn_items.Click

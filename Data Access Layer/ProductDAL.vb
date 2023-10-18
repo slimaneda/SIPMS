@@ -1,4 +1,4 @@
-﻿Public Class ProductDao
+﻿Public Class ProductDAL
     Public code As Integer
     Public name As String
     Public notes As String

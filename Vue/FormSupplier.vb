@@ -1,5 +1,5 @@
 ﻿Public Class FormSupplier
-    Private cls As New SupplierDao
+    Private cls As New SupplierDAL
     Private Sub SetCustomerValue()
 
         cls.code = Val(txt_SupplierID.Text)

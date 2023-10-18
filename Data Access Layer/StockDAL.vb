@@ -1,4 +1,4 @@
-﻿Public Class StockDao
+﻿Public Class StockDAL
 
 
     Public Code_stockid As Integer

@@ -2,7 +2,7 @@
 
 Public Class FormItem
     Private item As New Item
-    Private cls As New ItemsDao
+    Private ItemsDAL As New ItemsDAL
 
     Public Sub New(ByVal item As Item)
         InitializeComponent()
@@ -45,7 +45,8 @@ Public Class FormItem
         End If
         item.Code_item = txt_Codeitem.Text
         item.Name_item = txt_itemname.Text
-        cls.CreateItem(item)
+        ItemsDAL.Create(item)
+        txt_Codeitem.Text = CODE_GEN("Items", "Code_item") + 1
         ResetForm()
     End Sub
 
@@ -57,7 +58,7 @@ Public Class FormItem
         item.Code_item = txt_Codeitem.Text
         item.Name_item = txt_itemname.Text
 
-        cls.UpdateItem(Me.item)
+        ItemsDAL.Update(Me.item)
         Show_DGV(DGV1, "select_items")
     End Sub
 
@@ -68,7 +69,7 @@ Public Class FormItem
             Return
         End If
         item.Code_item = Val(txt_Codeitem.Text)
-        cls.DeleteItem(Me.item)
+        ItemsDAL.Delete(Me.item)
         Show_DGV(DGV1, "select_items")
 
     End Sub
@@ -89,13 +90,18 @@ Public Class FormItem
         End If
     End Sub
 
+    Private Sub txt_search_TextChanged(sender As Object, e As EventArgs) Handles txt_search.TextChanged
+        item.Name_item = txt_itemname.Text
+        Dim result As Integer = ItemsDAL.Search(Me.item)
+
+    End Sub
+
+
+
+
+
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
     End Sub
 
-    Private Sub txt_search_TextChanged(sender As Object, e As EventArgs) Handles txt_search.TextChanged
-        cls.Name_item = txt_search.Text
-        cls.DGV = DGV1
-        cls.Searchdata("Search_item")
-    End Sub
 End Class

@@ -2,13 +2,16 @@
 
 Public Class FormStock
     Dim stock As New Stock
+    Dim Tempstock As New TempStock
     Dim StockDAL As New StockDAL
+    Dim tempStockDAL As New TempStockDAL
     Dim QTY As Double
     Dim PRIC As Double
     Dim TOTAL As Double
     Sub New()
         InitializeComponent()
-        Me.Stock = Stock
+        Me.stock = stock
+        Me.Tempstock = Tempstock
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -120,7 +123,7 @@ Public Class FormStock
         sqlcon_Open()
         If ValidateData() Then
             Try
-                UpdateOrInsertTempStock()  ' save data in tempStock
+                UpdateOrInsertTempStock()  ' save data in tempStock don
                 InsertIntoStock()          ' save data in Stock
                 InsertIntoSuppAcc()         ' save in SuppAcc
                 InsertIntoStockProduct()    ' save in StockProduct
@@ -151,67 +154,23 @@ Public Class FormStock
         Return True
     End Function
 
-    Private Sub UpdateOrInsertTempStock1() ' crude  cree red de ipdate
-
-        stock.CodeStock = txtCodePt.Text
-        Dim exists = Convert.ToBoolean(StockDAL.Reed(Me.stock, "Select_Temp_StockID"))
-        If exists = True Then
-            ' updateProc
-        End If
-        If exists = False Then
-            ' insert
-        End If
-
-
-        Dim selectProc As String = "Select_Temp_StockID" ' reed 
-        Dim updateProc As String = "Update_Tempstock"
-        Dim insertProc As String = "Insert_TempPt"
+    Private Sub UpdateOrInsertTempStock() ' crude  cree red de ipdate
 
         For Each row As DataGridViewRow In DGV.Rows
-            If Not row.IsNewRow Then
-                Using cmd As New SqlCommand(selectProc, sqlcon) ' (1) selecte
-                    cmd.CommandType = CommandType.StoredProcedure
-                    cmd.Parameters.Add("@d1", SqlDbType.Int).Value = txtCodePt.Text
-
-
-
-                    cmd.Parameters.Clear()
-                    cmd.Parameters.Add("@Product_ID", SqlDbType.Int).Value = row.Cells(5).Value
-                    cmd.Parameters.Add("@Quantity", SqlDbType.Decimal, 18, 2).Value = Val(row.Cells(7).Value)
-                    cmd.ExecuteNonQuery()
-                End Using
-            End If
+            Tempstock.Code_Product = row.Cells(5).Value
+            Tempstock.Quantity_Pt = Val(row.Cells(7).Value)
         Next
+
+        Dim exists = Convert.ToBoolean(tempStockDAL.Reed(Me.Tempstock))
+        If exists = True Then
+            tempStockDAL.Update(Me.Tempstock)
+        End If
+        If exists = False Then
+            tempStockDAL.Create(Me.Tempstock)
+        End If
     End Sub
 
 
-    Private Sub UpdateOrInsertTempStock() ' crude  cree red de ipdate
-
-        Dim selectProc As String = "Select_Temp_StockID" ' reed 
-        Dim updateProc As String = "Update_Tempstock"
-        Dim insertProc As String = "Insert_TempPt"
-
-        For Each row As DataGridViewRow In DGV.Rows
-            If Not row.IsNewRow Then
-                Using cmd As New SqlCommand(selectProc, sqlcon) ' (1) selecte
-                    cmd.CommandType = CommandType.StoredProcedure
-                    cmd.Parameters.Add("@d1", SqlDbType.Int).Value = txtCodePt.Text
-
-                    Dim exists = Convert.ToBoolean(cmd.ExecuteScalar())
-                    If exists Then
-                        cmd.CommandText = updateProc                '(2) Update
-                    Else
-                        cmd.CommandText = insertProc                 '(3) Inseret 
-                    End If
-
-                    cmd.Parameters.Clear()
-                    cmd.Parameters.Add("@Product_ID", SqlDbType.Int).Value = row.Cells(5).Value
-                    cmd.Parameters.Add("@Quantity", SqlDbType.Decimal, 18, 2).Value = Val(row.Cells(7).Value)
-                    cmd.ExecuteNonQuery()
-                End Using
-            End If
-        Next
-    End Sub      ' save in tempStock
 
     Private Sub InsertIntoStock()
 
@@ -230,7 +189,7 @@ Public Class FormStock
                 .TOTALamont = Val(row.Cells(9).Value)
 
                 .TOTALPayement = Val(row.Cells(10).Value)
-                .TOTALPayementdue = Val(row.Cells(11).Value)
+                .Rest_NonPayement = Val(row.Cells(11).Value)
 
                 .NOTES = row.Cells(12).Value
             End With
@@ -320,8 +279,7 @@ Public Class FormStock
         Next
     End Sub
 
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
-
-
-
+    End Sub
 End Class

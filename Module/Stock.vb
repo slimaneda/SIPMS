@@ -12,7 +12,7 @@
     Private _TOTALamont As Double
 
     Private _TOTALPayement As Double
-    Private _TOTALPayementdue As Double
+    Private _Rest_NonPayement As Double
 
     Private _NOTES As String
     Property CodeStock As Integer
@@ -104,12 +104,12 @@
             _TOTALPayement = value
         End Set
     End Property
-    Property TOTALPayementdue As Double
+    Property Rest_NonPayement As Double
         Get
-            Return _TOTALPayementdue
+            Return _Rest_NonPayement
         End Get
         Set(value As Double)
-            _TOTALPayementdue = value
+            _Rest_NonPayement = value
         End Set
     End Property
     Property NOTES As String

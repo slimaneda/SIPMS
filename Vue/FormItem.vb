@@ -45,7 +45,10 @@ Public Class FormItem
         End If
         item.Code_item = txt_Codeitem.Text
         item.Name_item = txt_itemname.Text
-        ItemsDAL.Create(item)
+        Try
+            ItemsDAL.Create(item)
+        Catch ex As Exception
+        End Try
         txt_Codeitem.Text = CODE_GEN("Items", "Code_item") + 1
         ResetForm()
     End Sub

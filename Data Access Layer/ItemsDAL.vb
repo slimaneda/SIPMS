@@ -20,7 +20,7 @@
         Dim args As New Dictionary(Of String, Object) From
         {
            {"@d1", item.Code_item},
-           {"@d2", item.Name_item}
+           {"@d2", item.Name_item} ' & //\\ add photo 
         }
 
         Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)

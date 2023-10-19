@@ -1,6 +1,4 @@
-﻿Imports System.Security.Cryptography
-
-Public Class Item
+﻿Public Class Item
     Private _Code_item As Integer
     Private _Name_item As String
     Private _photo As Byte()
@@ -10,7 +8,7 @@ Public Class Item
         Get
             Return _Code_item
         End Get
-        Set(ByVal value As Integer)
+        Set(value As Integer)
             _Code_item = value
         End Set
     End Property

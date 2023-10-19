@@ -23,7 +23,7 @@ Public Class SupplierDAL
         Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
     End Function
 
-    Public Function update(Supplier As Supplier)
+    Public Function Update(Supplier As Supplier)
         Const procedureName As String = "Update_Supplier"
 
         Dim args As New Dictionary(Of String, Object) From

@@ -63,7 +63,7 @@ Public Class FormSupplier
             Supplier.photo = ms.ToArray()
         End If
         SetCustomerValue()
-        SupplierDAL.update(Me.Supplier)
+        SupplierDAL.Update(Me.Supplier)
         RestForm()
     End Sub
 

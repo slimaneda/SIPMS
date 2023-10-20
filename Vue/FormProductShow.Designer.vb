@@ -30,9 +30,11 @@ Partial Class FormProductShow
         GroupBox1 = New GroupBox()
         GroupBox2 = New GroupBox()
         lbl = New Label()
+        DGV1 = New DataGridView()
         CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
+        CType(DGV1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' DGV
@@ -43,7 +45,7 @@ Partial Class FormProductShow
         DGV.Name = "DGV"
         DGV.RowHeadersVisible = False
         DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(433, 176)
+        DGV.Size = New Size(176, 176)
         DGV.TabIndex = 13
         ' 
         ' txt_productname
@@ -109,11 +111,25 @@ Partial Class FormProductShow
         lbl.TabIndex = 20
         lbl.Text = "s"
         ' 
+        ' DGV1
+        ' 
+        DGV1.AllowUserToAddRows = False
+        DGV1.AllowUserToDeleteRows = False
+        DGV1.AllowUserToOrderColumns = True
+        DGV1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV1.Location = New Point(205, 104)
+        DGV1.Name = "DGV1"
+        DGV1.ReadOnly = True
+        DGV1.RowTemplate.Height = 25
+        DGV1.Size = New Size(240, 186)
+        DGV1.TabIndex = 21
+        ' 
         ' FormProductShow
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(465, 318)
+        Controls.Add(DGV1)
         Controls.Add(lbl)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
@@ -124,6 +140,7 @@ Partial Class FormProductShow
         GroupBox1.PerformLayout()
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()
+        CType(DGV1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -136,4 +153,5 @@ Partial Class FormProductShow
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents lbl As Label
+    Friend WithEvents DGV1 As DataGridView
 End Class

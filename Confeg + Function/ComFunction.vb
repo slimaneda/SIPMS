@@ -32,16 +32,18 @@ Module ComFunction
     End Function
 
     '                            Appearance Data in datagridview 
-    Public Sub Show_DGV(DGV As DataGridView, num_Proc As String)
+    Public Sub Show_DGV(datagridview As DataGridView, num_Proc As String)
         sqlcon_Open()
 
-        DGV.Text = ""
+        datagridview.Text = ""
         Try
             Using dt As New DataTable
                 dt.Clear()
                 Dim da As New SqlDataAdapter(num_Proc, sqlcon)
                 da.Fill(dt)
-                DGV.DataSource = dt.DefaultView
+                datagridview.EndEdit()
+                datagridview.ClearSelection()
+                datagridview.DataSource = dt.DefaultView
             End Using
 
         Catch ex As Exception

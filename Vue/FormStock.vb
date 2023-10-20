@@ -20,12 +20,12 @@ Public Class FormStock
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        FormProductShow.lbl.Text = "FPP"
+        FormProductShow.lbl.Text = "FormStock_Product"
         FormProductShow.ShowDialog()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        FormSupplierShow.lbl.Text = "FPP"
+        FormSupplierShow.lbl.Text = "FormStock"
         FormSupplierShow.ShowDialog()
     End Sub
 
@@ -37,7 +37,7 @@ Public Class FormStock
 
         stock.CodeStock = txtCodeFacture.Text
         Dim exists = Convert.ToBoolean(StockDAL.Reed(Me.stock, "Srlrct_StockCF"))
-        If exists Then
+        If exists = False Then
             MsgBox("code fct deja effectuee")
         End If
 
@@ -217,30 +217,18 @@ Public Class FormStock
 
 
     End Sub
-    ' methode crud
-    ' class  stock pruduct variable
-    ' class  stock pruduct dal   function ''/ cread update delete search selecte 
-    'class  shared function   synthese  قوالب     writh   scaler 
+
     Private Sub InsertIntoStockProduct()
-        Dim query As String = "INSERT INTO Stock_Product(StockID, ProductID, ProductName, Qty, Price, TotalAmount) VALUES (@d2, @d3, @d4, @d5,@d1,@d6)"
-        Using cmd As New SqlCommand(query, sqlcon)
-
-
-            For Each row As DataGridViewRow In DGV.Rows
-                If Not row.IsNewRow Then
-
-
-                    stockProduct.StockID = txtCodeFacture.Text
-                    stockProduct.ProductID = Val(txtCodePt.Text)
+        '  "INSERT INTO Stock_Product(StockID, ProductID, ProductName, Qty, Price, TotalAmount) VALUES (@d2, @d3, @d4, @d5,@d1,@d6)"
+        stockProduct.StockID = txtCodeFacture.Text
+        stockProduct.ProductID = Val(txtCodePt.Text)
                     stockProduct.ProductName = txtNamePt.Text
-                    stockProduct.Qty = Val(txtQty.Text
-                stockProduct.Price = Val(txtPricePerQty.Text)
-                    stockProduct.TotalAmount = Val(txtTotalAmount.Text)
+                    stockProduct.Qty = txtQty.Text
+                    stockProduct.Price = Val(txtPricePerQty.Text)
+        stockProduct.TotalAmount = Val(txtTotalAmount.Text)
+        stockProductDAL.Create(Me.stockProduct)
 
-                    cmd.ExecuteNonQuery()
-                End If
-            Next
-        End Using
+
     End Sub
 
 

@@ -5,6 +5,10 @@ Public Class FormStock
     Dim Tempstock As New TempStock
     Dim StockDAL As New StockDAL
     Dim tempStockDAL As New TempStockDAL
+    Dim SupplierAcc As New SupplierAcc
+    Dim SupplierAccDal As New SupplierAccDAL
+    Dim stockProduct As New StockProduct
+    Dim stockProductDAL As New StockProductDAl
     Dim QTY As Double
     Dim PRIC As Double
     Dim TOTAL As Double
@@ -12,6 +16,7 @@ Public Class FormStock
         InitializeComponent()
         Me.stock = stock
         Me.Tempstock = Tempstock
+        Me.SupplierAcc = SupplierAcc
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -176,7 +181,7 @@ Public Class FormStock
 
         For Each row As DataGridViewRow In DGV.Rows
             With stock
-                .CodeStock = row.Cells(0).Value    'cls =classStock
+                .CodeStock = row.Cells(0).Value
                 .CodeStockvisible = row.Cells(1).Value
                 .InvoiceDate = row.Cells(2).Value
                 .Code_Supplier = row.Cells(3).Value
@@ -193,27 +198,29 @@ Public Class FormStock
 
                 .NOTES = row.Cells(12).Value
             End With
-            StockDAL.Update(Me.stock)
+            StockDAL.Create(Me.stock)
         Next
     End Sub
 
     Private Sub InsertIntoSuppAcc()
 
-        Using cmd As New SqlCommand("Insert_SuppAcc", sqlcon)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add("@Sup_id", SqlDbType.Int).Value = txtCodeSup.Text
-            cmd.Parameters.AddWithValue("@Sup_Name", txtNameSup.Text)
-            cmd.Parameters.AddWithValue("@Detail", txtDate.Value.Date)
-            For i = 0 To DGV.Rows.Count - 1
-                cmd.Parameters.AddWithValue("@inv", "Facture D'achat N° " + DGV.Rows(i).Cells(0).Value)
-            Next
-            cmd.Parameters.AddWithValue("@debit", Val(txtTotalPayment.Text))
-            cmd.Parameters.AddWithValue("@credit", Val(txtGrandTotal.Text))
-            cmd.ExecuteNonQuery()
 
-        End Using
+        SupplierAcc.SuppId = txtCodeSup.Text
+        SupplierAcc.SuppName = txtNameSup.Text
+        SupplierAcc.Detail = txtDate.Value.Date
+        For i = 0 To DGV.Rows.Count - 1
+            SupplierAcc.Inv = "Facture D'achat N° " + DGV.Rows(i).Cells(0).Value
+        Next
+        SupplierAcc.Debit = txtTotalPayment.Text
+        SupplierAcc.Credit = txtGrandTotal.Text
+        SupplierAccDal.Create(Me.SupplierAcc)
+
+
     End Sub
-
+    ' methode crud
+    ' class  stock pruduct variable
+    ' class  stock pruduct dal   function ''/ cread update delete search selecte 
+    'class  shared function   synthese  قوالب     writh   scaler 
     Private Sub InsertIntoStockProduct()
         Dim query As String = "INSERT INTO Stock_Product(StockID, ProductID, ProductName, Qty, Price, TotalAmount) VALUES (@d2, @d3, @d4, @d5,@d1,@d6)"
         Using cmd As New SqlCommand(query, sqlcon)
@@ -223,12 +230,12 @@ Public Class FormStock
                 If Not row.IsNewRow Then
 
 
-                    cmd.Parameters.AddWithValue("@d2", Val(txtCodeFacture.Text))
-                    cmd.Parameters.AddWithValue("@d3", Val(txtCodePt.Text))
-                    cmd.Parameters.AddWithValue("@d4", txtNamePt.Text)
-                    cmd.Parameters.AddWithValue("@d5", Val(txtQty.Text))
-                    cmd.Parameters.AddWithValue("@d1", Val(txtPricePerQty.Text))
-                    cmd.Parameters.AddWithValue("@d6", Val(txtTotalAmount.Text))
+                    stockProduct.StockID = txtCodeFacture.Text
+                    stockProduct.ProductID = Val(txtCodePt.Text)
+                    stockProduct.ProductName = txtNamePt.Text
+                    stockProduct.Qty = Val(txtQty.Text
+                stockProduct.Price = Val(txtPricePerQty.Text)
+                    stockProduct.TotalAmount = Val(txtTotalAmount.Text)
 
                     cmd.ExecuteNonQuery()
                 End If

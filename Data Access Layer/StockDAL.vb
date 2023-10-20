@@ -1,36 +1,23 @@
 ﻿Imports System.Text.Json
 
 Public Class StockDAL
-    '       @Code_fct int,
-    '@Code_Stocktble nvarchar(50),
-    '@InvoiceDate nvarchar(50),
-    '@Code_Supplier int,
-    '@Name_Supplier nvarchar(50),
-    '@Code_Product int,
-    '@Name_Product nvarchar(50),
-    '@Quantity_Pt decimal(18, 2),
-    '@Price_Pt decimal(18,2),
-    '@Total decimal(18,2),  '''''''' total amont
-    '@Notes nvarchar(max),
-    '@Total_Payement decimal(18,2), 'don
-    '@Rest_NonPayement decimal(18,2)
 
 
     Public Function buildArgements(stock As Stock) As Dictionary(Of String, Object)
         Return New Dictionary(Of String, Object) From
    {
-             {"@code_fct", stock.CodeStock}, 'do
-             {"@Code_Stocktble", stock.CodeStockvisible}, 'don
-             {"@InvoiceDate", stock.InvoiceDate}, 'don
-             {"@Code_Supplier", stock.Code_Supplier}, 'don
-             {"@Name_Supplier", stock.Name_Supplier}, 'don
-             {"@Code_Product", stock.Code_Product}, 'don
-             {"@Name_Product", stock.Name_Product},   'don              
-             {"@Quantity_Pt", stock.Quantity_Pt}, 'don
-             {"@Price_Pt", stock.Price_Pt}, 'don
-              {"@TOTALPayement", stock.TOTALPayement}, 'don
+             {"@code_fct", stock.CodeStock},
+             {"@Code_Stocktble", stock.CodeStockvisible},
+             {"@InvoiceDate", stock.InvoiceDate},
+             {"@Code_Supplier", stock.Code_Supplier},
+             {"@Name_Supplier", stock.Name_Supplier},
+             {"@Code_Product", stock.Code_Product},
+             {"@Name_Product", stock.Name_Product},
+             {"@Quantity_Pt", stock.Quantity_Pt},
+             {"@Price_Pt", stock.Price_Pt},
+              {"@TOTALPayement", stock.TOTALPayement},
                {"@Rest_NonPayement", stock.Rest_NonPayement},
-                {"@NOTES", stock.NOTES},  'don
+                {"@NOTES", stock.NOTES},
                 {"@Totalmount", stock.Totalamont}
                 }
     End Function

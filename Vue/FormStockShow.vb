@@ -16,7 +16,7 @@ Public Class FormStockShow
 
             With FormStock
 
-                .txtCodeFacture.Text = row.Cells(0).Value
+                .txtCodestock.Text = row.Cells(0).Value
                 .txtDate.Text = row.Cells(1).Value
                 .txtCodeSup.Text = row.Cells(2).Value
                 .txtNameSup.Text = row.Cells(3).Value.ToString

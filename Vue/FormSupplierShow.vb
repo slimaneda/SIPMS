@@ -5,18 +5,18 @@
     Private Sub FormSupplierShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_searchId.Focus()
 
-        If lbl.Text = "FSP" Then
+        If lbl.Text = "frmSupplier" Then
             Show_DGV(DGV, "Select_Supplier_Vue")
         Else
-            Show_DGV(DGV1, "Select_Supplier")
+            Show_DGV(DGV, "_Stock_Product")
         End If
     End Sub
 
 
-    Private Sub DGV1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV1.CellClick
+    Private Sub DGV1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellClick
         If e.RowIndex < 0 Then Return
 
-        Dim row = DGV1.Rows(e.RowIndex)
+        Dim row = DGV.Rows(e.RowIndex)
 
         Select Case lbl.Text
             Case "FSP"
@@ -43,8 +43,8 @@
 
     Private Sub UpdateFormStock(rowIndex As Integer)
 
-        FormStock.txtCodeSup.Text = DGV1.Rows(rowIndex).Cells(0).Value
-        FormStock.txtNameSup.Text = DGV1.Rows(rowIndex).Cells(1).Value
+        FormStock.txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value
+        FormStock.txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
 
     End Sub
 
@@ -66,7 +66,7 @@
         End With
     End Sub
 
-    Private Sub DGV1_Click(sender As Object, e As EventArgs) Handles DGV1.Click
+    Private Sub DGV1_Click(sender As Object, e As EventArgs) Handles DGV.Click
 
     End Sub
 

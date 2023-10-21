@@ -1,6 +1,6 @@
 ﻿Public Class StockProduct
     Private _StockID As Integer
-    Private _ProductID As Integer
+    Private _ProductID As String
     Private _ProductName As String
 
     Private _Qty As Decimal
@@ -18,8 +18,8 @@
         End Get
     End Property
 
-    Property ProductID As Integer
-        Set(value As Integer)
+    Property ProductID As String
+        Set(value As String)
             _ProductID = value
         End Set
         Get

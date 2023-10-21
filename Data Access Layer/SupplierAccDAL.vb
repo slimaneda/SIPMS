@@ -8,9 +8,10 @@
             {"@Sup_id", SupplierAcc.SuppId},
             {"@Sup_Name", SupplierAcc.SuppName},
             {"@inv", SupplierAcc.Inv},
-            {"@debit", SupplierAcc.Detail},
+            {"@detail", SupplierAcc.Detail},
+            {"@debit", SupplierAcc.Debit},
             {"@credit", SupplierAcc.Credit}
             }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(Precedurename, args)
+        Return SqlConnectionManager.ExecuteWrite(Precedurename, args)
     End Function
 End Class

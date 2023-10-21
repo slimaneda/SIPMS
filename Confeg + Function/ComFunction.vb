@@ -1,12 +1,16 @@
 ﻿Imports System.Data.SqlClient
 
 Module ComFunction
+
     '                         function ALLOW  only Numbre  IN TEXTBOX 
     Public Sub AllowOnlyNumbre(e As KeyPressEventArgs)
         If (Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) And e.KeyChar <> "."c) Then
             e.Handled = True
         End If
     End Sub
+
+
+
 
 
     '                           Numbere Auto index
@@ -64,14 +68,24 @@ Module ComFunction
         sqlcon_Close()
 
     End Sub
-    '                               clear textbox
-    Public Sub ClearTextboxes(control As Control)
+    '                               
+    Public Sub ClearTextboxes(control As Control)           ' Clears all TextBox controls on the form
         For Each clt As Control In control.Controls
 
             If TypeOf clt Is TextBox Then
                 CType(clt, TextBox).Text = String.Empty
             ElseIf clt.HasChildren Then
                 ClearTextboxes(clt)
+            End If
+        Next
+    End Sub
+
+    Public Sub ReadOnlyTxtBox(control As Control, result As Boolean) ' Sets all TextBox controls on the form to read-only
+        For Each clt As Control In control.Controls
+
+            If TypeOf clt Is TextBox Then
+                CType(clt, TextBox).ReadOnly = result
+
             End If
         Next
     End Sub

@@ -22,7 +22,6 @@ Partial Class FormProductShow
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DGV = New DataGridView()
         txt_productname = New TextBox()
         Label3 = New Label()
         txt_Productid = New TextBox()
@@ -30,23 +29,11 @@ Partial Class FormProductShow
         GroupBox1 = New GroupBox()
         GroupBox2 = New GroupBox()
         lbl = New Label()
-        DGV1 = New DataGridView()
-        CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
+        DGV = New DataGridView()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
-        CType(DGV1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' DGV
-        ' 
-        DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV.Location = New Point(12, 114)
-        DGV.Name = "DGV"
-        DGV.RowHeadersVisible = False
-        DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(176, 176)
-        DGV.TabIndex = 13
         ' 
         ' txt_productname
         ' 
@@ -111,41 +98,37 @@ Partial Class FormProductShow
         lbl.TabIndex = 20
         lbl.Text = "s"
         ' 
-        ' DGV1
+        ' DGV
         ' 
-        DGV1.AllowUserToAddRows = False
-        DGV1.AllowUserToDeleteRows = False
-        DGV1.AllowUserToOrderColumns = True
-        DGV1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV1.Location = New Point(205, 104)
-        DGV1.Name = "DGV1"
-        DGV1.ReadOnly = True
-        DGV1.RowTemplate.Height = 25
-        DGV1.Size = New Size(240, 186)
-        DGV1.TabIndex = 21
+        DGV.AllowUserToAddRows = False
+        DGV.AllowUserToDeleteRows = False
+        DGV.AllowUserToOrderColumns = True
+        DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV.Location = New Point(12, 104)
+        DGV.Name = "DGV"
+        DGV.ReadOnly = True
+        DGV.RowTemplate.Height = 25
+        DGV.Size = New Size(433, 186)
+        DGV.TabIndex = 21
         ' 
         ' FormProductShow
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(465, 318)
-        Controls.Add(DGV1)
+        Controls.Add(DGV)
         Controls.Add(lbl)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
-        Controls.Add(DGV)
         Name = "FormProductShow"
-        CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()
-        CType(DGV1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents DGV As DataGridView
     Friend WithEvents txt_productname As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_Productid As TextBox
@@ -153,5 +136,5 @@ Partial Class FormProductShow
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents lbl As Label
-    Friend WithEvents DGV1 As DataGridView
+    Friend WithEvents DGV As DataGridView
 End Class

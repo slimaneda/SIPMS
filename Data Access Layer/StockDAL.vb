@@ -15,33 +15,36 @@ Public Class StockDAL
              {"@Name_Product", stock.Name_Product},
              {"@Quantity_Pt", stock.Quantity_Pt},
              {"@Price_Pt", stock.Price_Pt},
-              {"@TOTALPayement", stock.TOTALPayement},
+              {"@Total_Payement", stock.TOTALPayement},
                {"@Rest_NonPayement", stock.Rest_NonPayement},
                 {"@NOTES", stock.NOTES},
                 {"@Totalmount", stock.Totalamont}
                 }
     End Function
+
+
     Public Function Create(stock As Stock) As Integer
         Const procedureName As String = "_STOCK"
         Dim args As Dictionary(Of String, Object) = buildArgements(stock)
         args.Add("@Type", "insert")
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function Update(stock As Stock) As Integer
         Const procedureName As String = "-Stock"
         Dim args As Dictionary(Of String, Object) = buildArgements(stock)
         args.Add("@Type", "update")
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
-    Public Function Reed(stock As Stock, NumSelect_Procedure As String) As Integer
-
+    Public Function Reed(stock As Stock) As Integer
+        Const procedureName As String = "_Stock_Product"
         Dim args As New Dictionary(Of String, Object) From
        {
-             {"@d1", stock.CodeStock}
+             {"@d1", stock.CodeStock},
+              {"@type", "Select_d1"}
              }
-        Return SqlConnectionManager.ExecuteStoredProcedurescalar(NumSelect_Procedure, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function Delete(stock As Stock) As Integer
@@ -51,6 +54,28 @@ Public Class StockDAL
              {"@d1", stock.CodeStock},
            {"@type", "STOCK"}
              }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
+
+
+
+    Public Function ColumnExists(columnName As String, stock As Stock) As Boolean
+        If String.IsNullOrEmpty(columnName) OrElse String.IsNullOrEmpty(stock.CodeStock) Then
+            Return False
+        End If
+
+        Dim query As String = $"SELECT COUNT(*) FROM Stock WHERE {columnName} = @valueToCheck"
+
+        Dim parameters As New Dictionary(Of String, Object) From {
+            {"@valueToCheck", stock.CodeStock}
+        }
+
+        Dim count As Integer = Convert.ToInt32(SqlConnectionManager.ExecuteScalar(query, parameters))
+        Return count > 0
+    End Function
+
+
+
+
+
 End Class

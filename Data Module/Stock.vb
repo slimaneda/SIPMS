@@ -16,18 +16,19 @@
 
     Private _NOTES As String
     Property CodeStock As Integer
-        Get
-            Return _CodeStock
-        End Get
+
         Set(ByVal value As Integer)
             _CodeStock = value
         End Set
+        Get
+            Return _CodeStock
+        End Get
     End Property
-    Property CodeStockvisible As Integer
+    Property CodeStockvisible As String
         Get
             Return _CodeStockTble
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _CodeStockTble = value
         End Set
     End Property
@@ -60,7 +61,12 @@
             Return _Code_Product
         End Get
         Set(value As Integer)
-            _Code_Product = value
+            If String.IsNullOrEmpty(FormStock.txtCodePt.Text) Then
+                MsgBox("Insert code Product")
+            Else
+                _Code_Product = value
+            End If
+            ' _Code_Product = value
         End Set
     End Property
     Property Name_Product As String

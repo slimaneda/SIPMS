@@ -14,7 +14,7 @@
             {"d5", StockProduct.Price},
             {"d6", StockProduct.TotalAmount}
         }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(proc, agrs)
+        Return SqlConnectionManager.ExecuteWrite(proc, agrs)
     End Function
 
 End Class

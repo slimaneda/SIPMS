@@ -13,13 +13,13 @@
     Public Function create(product As Product) As Integer
         Const procedureName As String = "Insert_Product"
         Dim args As Dictionary(Of String, Object) = buildArgements(product)
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function Update(product As Product) As Integer
         Const procedureName As String = "Update_Product"
         Dim args As Dictionary(Of String, Object) = buildArgements(product)
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function Delete(product As Product) As Integer
@@ -29,6 +29,6 @@
              {"@d1", product.Code},
            {"@type", "Product"}
              }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 End Class

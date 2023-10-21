@@ -8,7 +8,7 @@
             {"Product_ID", tempStock.Code_Product},
             {"Quantity", tempStock.Quantity_Pt}
         }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function Update(tempStock As TempStock) As Integer
@@ -19,7 +19,7 @@
             {"Product_ID", tempStock.Code_Product},
             {"Quantity", tempStock.Quantity_Pt}
         }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function Reed(tempStock As TempStock) As Integer
@@ -29,7 +29,7 @@
             {"TYPE", "SELECT"},
             {"Product_ID", tempStock.Code_Product}
              }
-        Return SqlConnectionManager.ExecuteStoredProcedurescalar(procedureName, args)
+        Return SqlConnectionManager.ExecuteScalar(procedureName, args)
     End Function
 
     Public Function Delete(tempStock As TempStock) As Integer
@@ -39,6 +39,6 @@
              {"TYPE", "DELETE"},
             {"Product_ID", tempStock.Code_Product}
              }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 End Class

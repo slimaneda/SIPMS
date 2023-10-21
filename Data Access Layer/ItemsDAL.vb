@@ -11,7 +11,7 @@
            {"@d3", item.photo}
         }
 
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function Update(item As Item) As Integer
@@ -23,7 +23,7 @@
            {"@d2", item.Name_item} ' & //\\ add photo 
         }
 
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function Delete(item As Item) As Integer
@@ -34,7 +34,7 @@
            {"@d1", item.Code_item},
            {"@type", "items"}
         }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
 

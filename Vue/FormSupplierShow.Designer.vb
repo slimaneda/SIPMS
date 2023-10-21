@@ -30,11 +30,9 @@ Partial Class FormSupplierShow
         txt_search = New TextBox()
         Label2 = New Label()
         lbl = New Label()
-        DGV1 = New DataGridView()
         CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         Panel2.SuspendLayout()
-        CType(DGV1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' DGV
@@ -43,11 +41,11 @@ Partial Class FormSupplierShow
         DGV.AllowUserToDeleteRows = False
         DGV.AllowUserToOrderColumns = True
         DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV.Location = New Point(22, 300)
+        DGV.Location = New Point(22, 148)
         DGV.Name = "DGV"
         DGV.ReadOnly = True
         DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(923, 138)
+        DGV.Size = New Size(923, 290)
         DGV.TabIndex = 12
         ' 
         ' Panel3
@@ -113,25 +111,11 @@ Partial Class FormSupplierShow
         lbl.TabIndex = 16
         lbl.Text = "Label1"
         ' 
-        ' DGV1
-        ' 
-        DGV1.AllowUserToAddRows = False
-        DGV1.AllowUserToDeleteRows = False
-        DGV1.AllowUserToOrderColumns = True
-        DGV1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV1.Location = New Point(22, 156)
-        DGV1.Name = "DGV1"
-        DGV1.ReadOnly = True
-        DGV1.RowTemplate.Height = 25
-        DGV1.Size = New Size(923, 138)
-        DGV1.TabIndex = 17
-        ' 
         ' FormSupplierShow
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(966, 450)
-        Controls.Add(DGV1)
         Controls.Add(lbl)
         Controls.Add(Panel2)
         Controls.Add(Panel3)
@@ -143,7 +127,6 @@ Partial Class FormSupplierShow
         Panel3.PerformLayout()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(DGV1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -156,5 +139,4 @@ Partial Class FormSupplierShow
     Friend WithEvents txt_search As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents lbl As Label
-    Friend WithEvents DGV1 As DataGridView
 End Class

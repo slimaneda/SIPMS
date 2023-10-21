@@ -16,7 +16,7 @@
          {"@state", Customer.State},
           {"@photo", Customer.photo}
         }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function Update(Customer As Customer)
@@ -36,7 +36,7 @@
          {"@state", Customer.State},
           {"@photo", Customer.photo}
         }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
     Public Function delete(Customer As Customer, procedureName As String)
@@ -46,7 +46,7 @@
           {"@d1", Customer.code},
            {"@type", "Customer"}
         }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
 

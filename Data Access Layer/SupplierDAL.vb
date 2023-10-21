@@ -2,47 +2,33 @@
 
 Public Class SupplierDAL
 
+    Private Function PrepareParameters(supplier As Supplier) As Dictionary(Of String, Object)
+        Return New Dictionary(Of String, Object) From {
+            {"@Supplierid", supplier.code},
+            {"@SupplierName", supplier.Name},
+            {"@Gender", supplier.Gender},
+            {"@Adress", supplier.Adress},
+            {"@City", supplier.City},
+            {"@Zip", supplier.Zip},
+            {"@Contact", supplier.contact},
+            {"@Email", supplier.Email},
+            {"@Notes", supplier.Notes},
+            {"@State", supplier.State},
+            {"@Photo", supplier.photo}
+        }
+    End Function
 
-    Public Function Create(Supplier As Supplier)
+    Public Function Create(supplier As Supplier) As Boolean
         Const procedureName As String = "Insert_Supplier"
-
-        Dim args As New Dictionary(Of String, Object) From
-      {
-         {"@Supplierid", Supplier.code},
-         {"@SupplierName", Supplier.Name},
-         {"@Gender", Supplier.Gender},
-         {"@adress", Supplier.Adress},
-         {"@city", Supplier.City},
-         {"@zip", Supplier.Zip},
-         {"@contact", Supplier.contact},
-         {"@email", Supplier.Email},
-         {"@notes", Supplier.Notes},
-         {"@state", Supplier.State},
-          {"@photo", Supplier.photo}
-        }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Dim parameters = PrepareParameters(supplier)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, parameters)
     End Function
 
-    Public Function Update(Supplier As Supplier)
+    Public Function Update(supplier As Supplier) As Boolean
         Const procedureName As String = "Update_Supplier"
-
-        Dim args As New Dictionary(Of String, Object) From
-      {
-         {"@Supplierid", Supplier.code},
-         {"@SupplierName", Supplier.Name},
-         {"@Gender", Supplier.Gender},
-         {"@adress", Supplier.Adress},
-         {"@city", Supplier.City},
-         {"@zip", Supplier.Zip},
-         {"@contact", Supplier.contact},
-         {"@email", Supplier.Email},
-         {"@notes", Supplier.Notes},
-         {"@state", Supplier.State},
-          {"@photo", Supplier.photo}
-        }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Dim parameters = PrepareParameters(supplier)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, parameters)
     End Function
-
     Public Function Delete(Supplier As Supplier)
         Const procedureName As String = "Deletedata"
 
@@ -51,7 +37,7 @@ Public Class SupplierDAL
          {"@d1", Supplier.code},
           {"@type", "Supplier"}
            }
-        Return SqlConnectionManager.ExecuteStoredProcedureWrite(procedureName, args)
+        Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
 

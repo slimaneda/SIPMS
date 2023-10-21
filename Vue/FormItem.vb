@@ -9,6 +9,10 @@ Public Class FormItem
         Me.item = item
     End Sub
 
+    Dim PP As Integer = 5
+
+    REM 
+
     Private Sub FormItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_Codeitem.Text = CODE_GEN("Items", "Code_item") + 1
         ResetForm()

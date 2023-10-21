@@ -2,24 +2,29 @@
     Private Const FPS As String = "FormStock_Product"
     Private Const FB As String = "FB"
     Private Const B As String = "b"
+    Private Const Show_Supplier As String = "FormStock"
 
 
     Private Sub FormProductShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Select Case lbl.Text
             Case FPS, B
-                Show_DGV(DGV1, "Select_Pt")
+                Show_DGV(DGV, "Select_Pt")
             Case FB
                 Show_DGV(DGV, "Select_StockProductSum")
+            Case Show_Supplier
+                Show_DGV(DGV, "Select_Supplier_Vue")
         End Select
     End Sub
 
-    Private Sub DGV1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV1.CellClick
+    Private Sub DGV1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellClick
 
         Select Case lbl.Text
             Case FB
                 SetFormQuotationValues(e.RowIndex)
             Case FPS
                 SetFormStockValues(e.RowIndex)
+            Case Show_Supplier
+                SetFormSupplierValue(e.RowIndex)
             Case B
                 SetFormProductValues(e.RowIndex)
         End Select
@@ -38,10 +43,18 @@
     End Sub
 
     Private Sub SetFormStockValues(rowIndex As Integer)
-        With formStock
-            .txtCodePt.Text = DGV1.Rows(rowIndex).Cells(0).Value
-            .txtNamePt.Text = DGV1.Rows(rowIndex).Cells(1).Value
-            .txtQty.Text = DGV1.Rows(rowIndex).Cells(4).Value
+        With FormStock
+            .txtCodePt.Text = DGV.Rows(rowIndex).Cells(0).Value
+            .txtNamePt.Text = DGV.Rows(rowIndex).Cells(1).Value
+            .txtQty.Text = DGV.Rows(rowIndex).Cells(4).Value
+        End With
+    End Sub
+
+    Private Sub SetFormSupplierValue(rowIndex As Integer)
+        With FormStock
+            .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value
+            .txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
+
         End With
     End Sub
 

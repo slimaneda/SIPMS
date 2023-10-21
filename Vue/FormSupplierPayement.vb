@@ -17,8 +17,8 @@
     End Sub
 
     Private Sub btnShow_click(sender As Object, e As EventArgs) Handles btnShow.Click
-        FormSupplierShow.lbl.Text = "FSP"
-        FormSupplierShow.ShowDialog()
+        FormProductShow.lbl.Text = "formSupplierPayement"
+        FormProductShow.ShowDialog()
     End Sub
 
     Private Sub txtPayment_TextChanged(sender As Object, e As EventArgs) Handles txtPayment.TextChanged
@@ -61,4 +61,6 @@
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         clean()
     End Sub
+
+
 End Class

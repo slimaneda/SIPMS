@@ -3,6 +3,7 @@
     Private Const FB As String = "FB"
     Private Const B As String = "b"
     Private Const Show_Supplier As String = "FormStock"
+    Private Const Show_SupplierPayement As String = "formSupplierPayement"
 
 
     Private Sub FormProductShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -13,12 +14,15 @@
                 Show_DGV(DGV, "Select_StockProductSum")
             Case Show_Supplier
                 Show_DGV(DGV, "Select_Supplier_Vue")
+            Case Show_SupplierPayement
+                Show_DGV(DGV, "Select_Supplier_Vue")
         End Select
     End Sub
 
     Private Sub DGV1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellClick
 
         Select Case lbl.Text
+
             Case FB
                 SetFormQuotationValues(e.RowIndex)
             Case FPS
@@ -27,6 +31,8 @@
                 SetFormSupplierValue(e.RowIndex)
             Case B
                 SetFormProductValues(e.RowIndex)
+            Case Show_SupplierPayement
+                setFormseuppayement(e.RowIndex)
         End Select
 
         lbl.Text = ""
@@ -65,6 +71,13 @@
             .txt_qty.Text = DGV.Rows(rowIndex).Cells(4).Value
         End With
     End Sub
+    Private Sub setFormseuppayement(rowIndex As Integer)
+        With FormSupplierPayement
+            .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value.ToString
+            .txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
+            .txtGrandTotal.Text = DGV.Rows(rowIndex).Cells(4).Value.ToString
 
+        End With
+    End Sub
 
 End Class

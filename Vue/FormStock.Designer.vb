@@ -576,7 +576,7 @@ Partial Class FormStock
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(15, 25)
+        Label3.Location = New Point(13, 25)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
         Label3.RightToLeft = RightToLeft.No
@@ -587,7 +587,7 @@ Partial Class FormStock
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(19, 61)
+        Label2.Location = New Point(13, 61)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.RightToLeft = RightToLeft.No
@@ -598,7 +598,7 @@ Partial Class FormStock
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(19, 88)
+        Label5.Location = New Point(14, 88)
         Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
         Label5.RightToLeft = RightToLeft.No
@@ -609,7 +609,7 @@ Partial Class FormStock
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Location = New Point(15, 118)
+        Label11.Location = New Point(16, 118)
         Label11.Margin = New Padding(4, 0, 4, 0)
         Label11.Name = "Label11"
         Label11.RightToLeft = RightToLeft.No

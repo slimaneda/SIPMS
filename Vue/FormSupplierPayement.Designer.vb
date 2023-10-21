@@ -88,22 +88,24 @@ Partial Class FormSupplierPayement
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(234, 500)
+        btnClose.FlatStyle = FlatStyle.Popup
+        btnClose.Location = New Point(392, 500)
         btnClose.Margin = New Padding(4, 3, 4, 3)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(105, 43)
         btnClose.TabIndex = 7
-        btnClose.Text = "إغلاق"
+        btnClose.Text = "&Close"
         btnClose.UseVisualStyleBackColor = True
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(410, 500)
+        Button1.FlatStyle = FlatStyle.Popup
+        Button1.Location = New Point(208, 500)
         Button1.Margin = New Padding(4, 3, 4, 3)
         Button1.Name = "Button1"
         Button1.Size = New Size(105, 43)
         Button1.TabIndex = 6
-        Button1.Text = "حفظ"
+        Button1.Text = "&Save"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' GroupBox1
@@ -119,15 +121,14 @@ Partial Class FormSupplierPayement
         GroupBox1.Margin = New Padding(4, 3, 4, 3)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(4, 3, 4, 3)
-        GroupBox1.RightToLeft = RightToLeft.Yes
         GroupBox1.Size = New Size(671, 110)
         GroupBox1.TabIndex = 5
         GroupBox1.TabStop = False
-        GroupBox1.Text = "بيانات المورد"
+        GroupBox1.Text = "Detail Supplier "
         ' 
         ' txtNameSup
         ' 
-        txtNameSup.Location = New Point(376, 36)
+        txtNameSup.Location = New Point(103, 66)
         txtNameSup.Margin = New Padding(4, 3, 4, 3)
         txtNameSup.Name = "txtNameSup"
         txtNameSup.ReadOnly = True
@@ -139,7 +140,7 @@ Partial Class FormSupplierPayement
         ' 
         btnShow.BackgroundImageLayout = ImageLayout.None
         btnShow.FlatStyle = FlatStyle.System
-        btnShow.Location = New Point(334, 35)
+        btnShow.Location = New Point(269, 50)
         btnShow.Margin = New Padding(4, 5, 4, 5)
         btnShow.Name = "btnShow"
         btnShow.Size = New Size(34, 24)
@@ -150,17 +151,17 @@ Partial Class FormSupplierPayement
         ' Label31
         ' 
         Label31.AutoSize = True
-        Label31.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label31.Location = New Point(198, 42)
+        Label31.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        Label31.Location = New Point(429, 27)
         Label31.Margin = New Padding(4, 0, 4, 0)
         Label31.Name = "Label31"
-        Label31.Size = New Size(105, 13)
+        Label31.Size = New Size(144, 15)
         Label31.TabIndex = 87
-        Label31.Text = "الرصيد الحالى للمورد :"
+        Label31.Text = "Current balance supplier "
         ' 
         ' txtCodeSup
         ' 
-        txtCodeSup.Location = New Point(376, 70)
+        txtCodeSup.Location = New Point(103, 27)
         txtCodeSup.Margin = New Padding(4, 3, 4, 3)
         txtCodeSup.Name = "txtCodeSup"
         txtCodeSup.ReadOnly = True
@@ -171,27 +172,27 @@ Partial Class FormSupplierPayement
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(524, 74)
+        Label3.Location = New Point(8, 30)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(63, 15)
+        Label3.Size = New Size(87, 15)
         Label3.TabIndex = 2
-        Label3.Text = "رقم المورد :"
+        Label3.Text = "Code Supplier :"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(523, 36)
+        Label2.Location = New Point(8, 69)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(66, 15)
+        Label2.Size = New Size(91, 15)
         Label2.TabIndex = 1
-        Label2.Text = "أسم المورد :"
+        Label2.Text = "Name Supplier :"
         ' 
         ' txtGrandTotal
         ' 
         txtGrandTotal.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        txtGrandTotal.Location = New Point(7, 36)
+        txtGrandTotal.Location = New Point(404, 53)
         txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
         txtGrandTotal.Name = "txtGrandTotal"
         txtGrandTotal.ReadOnly = True
@@ -218,11 +219,10 @@ Partial Class FormSupplierPayement
         GroupBox2.Margin = New Padding(4, 3, 4, 3)
         GroupBox2.Name = "GroupBox2"
         GroupBox2.Padding = New Padding(4, 3, 4, 3)
-        GroupBox2.RightToLeft = RightToLeft.Yes
         GroupBox2.Size = New Size(671, 286)
         GroupBox2.TabIndex = 4
         GroupBox2.TabStop = False
-        GroupBox2.Text = "معلومات الدفع"
+        GroupBox2.Text = "Payment information"
         ' 
         ' btnDelete
         ' 
@@ -232,7 +232,7 @@ Partial Class FormSupplierPayement
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(96, 24)
         btnDelete.TabIndex = 90
-        btnDelete.Text = "مسح"
+        btnDelete.Text = "&Delete"
         btnDelete.UseVisualStyleBackColor = True
         ' 
         ' btnUpdate
@@ -244,7 +244,7 @@ Partial Class FormSupplierPayement
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(96, 24)
         btnUpdate.TabIndex = 89
-        btnUpdate.Text = "تحديث"
+        btnUpdate.Text = "&Update"
         btnUpdate.UseVisualStyleBackColor = True
         ' 
         ' btnRemove
@@ -256,7 +256,7 @@ Partial Class FormSupplierPayement
         btnRemove.Name = "btnRemove"
         btnRemove.Size = New Size(96, 24)
         btnRemove.TabIndex = 88
-        btnRemove.Text = "حذف"
+        btnRemove.Text = "&Supp"
         btnRemove.UseVisualStyleBackColor = True
         ' 
         ' btnAdd
@@ -267,7 +267,7 @@ Partial Class FormSupplierPayement
         btnAdd.Name = "btnAdd"
         btnAdd.Size = New Size(96, 24)
         btnAdd.TabIndex = 87
-        btnAdd.Text = "إضافة"
+        btnAdd.Text = "&Add"
         btnAdd.UseVisualStyleBackColor = True
         ' 
         ' DGV
@@ -277,6 +277,7 @@ Partial Class FormSupplierPayement
         DataGridViewCellStyle1.BackColor = Color.FloralWhite
         DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         DGV.BackgroundColor = Color.White
         DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -287,7 +288,7 @@ Partial Class FormSupplierPayement
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DGV.ColumnHeadersHeight = 24
+        DGV.ColumnHeadersHeight = 27
         DGV.Columns.AddRange(New DataGridViewColumn() {Column8, Column15, Column16})
         DGV.Cursor = Cursors.Hand
         DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
@@ -300,11 +301,11 @@ Partial Class FormSupplierPayement
         DGV.DefaultCellStyle = DataGridViewCellStyle5
         DGV.EnableHeadersVisualStyles = False
         DGV.GridColor = Color.White
-        DGV.Location = New Point(7, 129)
+        DGV.Location = New Point(7, 134)
         DGV.Margin = New Padding(4, 3, 4, 3)
         DGV.Name = "DGV"
         DGV.ReadOnly = True
-        DGV.RightToLeft = RightToLeft.Yes
+        DGV.RightToLeft = RightToLeft.No
         DGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
         DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = Color.CadetBlue
@@ -331,7 +332,7 @@ Partial Class FormSupplierPayement
         ' 
         ' Column8
         ' 
-        Column8.HeaderText = "طريقة الدفع"
+        Column8.HeaderText = "Payement Methode"
         Column8.Name = "Column8"
         Column8.ReadOnly = True
         ' 
@@ -339,7 +340,7 @@ Partial Class FormSupplierPayement
         ' 
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopRight
         Column15.DefaultCellStyle = DataGridViewCellStyle3
-        Column15.HeaderText = "الملبغ المدفوع"
+        Column15.HeaderText = "The amount Paid"
         Column15.Name = "Column15"
         Column15.ReadOnly = True
         ' 
@@ -347,7 +348,7 @@ Partial Class FormSupplierPayement
         ' 
         DataGridViewCellStyle4.Format = "dd/MM/yyyy"
         Column16.DefaultCellStyle = DataGridViewCellStyle4
-        Column16.HeaderText = "تاريخ الدفع"
+        Column16.HeaderText = "Date Payement"
         Column16.Name = "Column16"
         Column16.ReadOnly = True
         ' 
@@ -355,7 +356,7 @@ Partial Class FormSupplierPayement
         ' 
         dtpPaymentDate.CustomFormat = "dd/MM/yyyy"
         dtpPaymentDate.Format = DateTimePickerFormat.Custom
-        dtpPaymentDate.Location = New Point(387, 98)
+        dtpPaymentDate.Location = New Point(119, 97)
         dtpPaymentDate.Margin = New Padding(2)
         dtpPaymentDate.Name = "dtpPaymentDate"
         dtpPaymentDate.RightToLeft = RightToLeft.Yes
@@ -365,12 +366,12 @@ Partial Class FormSupplierPayement
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(523, 97)
+        Label7.Location = New Point(8, 98)
         Label7.Margin = New Padding(4, 0, 4, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(66, 15)
+        Label7.Size = New Size(87, 15)
         Label7.TabIndex = 25
-        Label7.Text = "تاريخ الدفع :"
+        Label7.Text = "Payment Date :"
         ' 
         ' Panel4
         ' 
@@ -380,7 +381,7 @@ Partial Class FormSupplierPayement
         Panel4.Controls.Add(Label35)
         Panel4.Controls.Add(txtPaymentDue)
         Panel4.Controls.Add(txtTotalPayment)
-        Panel4.Location = New Point(7, 22)
+        Panel4.Location = New Point(283, 23)
         Panel4.Margin = New Padding(4, 3, 4, 3)
         Panel4.Name = "Panel4"
         Panel4.RightToLeft = RightToLeft.Yes
@@ -394,9 +395,9 @@ Partial Class FormSupplierPayement
         Label34.Location = New Point(190, 69)
         Label34.Margin = New Padding(4, 0, 4, 0)
         Label34.Name = "Label34"
-        Label34.Size = New Size(105, 13)
+        Label34.Size = New Size(132, 13)
         Label34.TabIndex = 86
-        Label34.Text = "الرصيد الجديد للمورد  :"
+        Label34.Text = "The new supplier balance:"
         ' 
         ' Label35
         ' 
@@ -405,9 +406,9 @@ Partial Class FormSupplierPayement
         Label35.Location = New Point(190, 20)
         Label35.Margin = New Padding(4, 0, 4, 0)
         Label35.Name = "Label35"
-        Label35.Size = New Size(84, 13)
+        Label35.Size = New Size(70, 13)
         Label35.TabIndex = 85
-        Label35.Text = "إجمالى الدفعات :"
+        Label35.Text = "Total Amount"
         ' 
         ' txtPaymentDue
         ' 
@@ -435,10 +436,10 @@ Partial Class FormSupplierPayement
         ' txtPayment
         ' 
         txtPayment.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtPayment.Location = New Point(387, 69)
+        txtPayment.Location = New Point(119, 72)
         txtPayment.Margin = New Padding(4, 3, 4, 3)
         txtPayment.Name = "txtPayment"
-        txtPayment.Size = New Size(128, 20)
+        txtPayment.Size = New Size(129, 20)
         txtPayment.TabIndex = 1
         txtPayment.Text = "0"
         txtPayment.TextAlign = HorizontalAlignment.Center
@@ -447,8 +448,8 @@ Partial Class FormSupplierPayement
         ' 
         cmbPaymentMode.DropDownStyle = ComboBoxStyle.DropDownList
         cmbPaymentMode.FormattingEnabled = True
-        cmbPaymentMode.Items.AddRange(New Object() {"كاش", "شيك"})
-        cmbPaymentMode.Location = New Point(387, 38)
+        cmbPaymentMode.Items.AddRange(New Object() {"Cash", "Check", "Direct Deposit", "Credit Card"})
+        cmbPaymentMode.Location = New Point(121, 43)
         cmbPaymentMode.Margin = New Padding(4, 3, 4, 3)
         cmbPaymentMode.Name = "cmbPaymentMode"
         cmbPaymentMode.Size = New Size(129, 23)
@@ -457,32 +458,33 @@ Partial Class FormSupplierPayement
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Location = New Point(523, 38)
+        Label12.Location = New Point(8, 46)
         Label12.Margin = New Padding(4, 0, 4, 0)
         Label12.Name = "Label12"
-        Label12.Size = New Size(74, 15)
+        Label12.Size = New Size(105, 15)
         Label12.TabIndex = 11
-        Label12.Text = "طريقة الدفع :"
+        Label12.Text = "Payment method :"
         ' 
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Location = New Point(523, 67)
+        Label13.Location = New Point(8, 74)
         Label13.Margin = New Padding(4, 0, 4, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(84, 15)
+        Label13.Size = New Size(103, 15)
         Label13.TabIndex = 22
-        Label13.Text = "المبلغ المدفوع :"
+        Label13.Text = "The amount paid :"
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.DarkSlateGray
         Panel2.BackgroundImageLayout = ImageLayout.Stretch
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(10, 8)
+        Panel2.Dock = DockStyle.Top
+        Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(4, 3, 4, 3)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(687, 72)
+        Panel2.Size = New Size(709, 72)
         Panel2.TabIndex = 0
         ' 
         ' Label1
@@ -494,9 +496,9 @@ Partial Class FormSupplierPayement
         Label1.Location = New Point(251, 18)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(165, 24)
+        Label1.Size = New Size(224, 24)
         Label1.TabIndex = 0
-        Label1.Text = "إضافة دفعات الموردين"
+        Label1.Text = "Add supplier payments"
         ' 
         ' FormSupplierPayement
         ' 
@@ -505,7 +507,7 @@ Partial Class FormSupplierPayement
         BackColor = Color.DarkSlateGray
         ClientSize = New Size(729, 583)
         Controls.Add(Panel1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)
         MaximizeBox = False
         MinimizeBox = False
@@ -532,9 +534,6 @@ Partial Class FormSupplierPayement
     Friend WithEvents btnRemove As Button
     Friend WithEvents btnAdd As Button
     Friend WithEvents DGV As DataGridView
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column15 As DataGridViewTextBoxColumn
-    Friend WithEvents Column16 As DataGridViewTextBoxColumn
     Friend WithEvents dtpPaymentDate As DateTimePicker
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel4 As Panel
@@ -556,4 +555,7 @@ Partial Class FormSupplierPayement
     Friend WithEvents Button1 As Button
     Friend WithEvents btnShow As Button
     Friend WithEvents txtNameSup As TextBox
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column15 As DataGridViewTextBoxColumn
+    Friend WithEvents Column16 As DataGridViewTextBoxColumn
 End Class

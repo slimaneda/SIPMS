@@ -4,8 +4,8 @@
         FormCompany.ShowDialog()
     End Sub
     Sub refeash()
-        ComFunction.Show_DGV(DGV, "Select_SupplierSum")
-        ComFunction.Show_DGV(DGV2, "Select_Supplier_Vue")
+        ComFunction.Show_DGV(DGV2, "Select_SupplierSum")
+        ComFunction.Show_DGV(DGV, "Select_Supplier_Vue")
         ' ComFunction.Show_DGV(DGV3, "SelectViewProduct")
         ComFunction.Show_DGV(DGV3, "Selectstock_Qt")
     End Sub
@@ -61,6 +61,50 @@
     End Sub
 
     Private Sub btn_user_Click(sender As Object, e As EventArgs) Handles btn_user.Click
-        FormCompany.ShowDialog()
+
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub CalculToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CalculToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("Calc.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub NotepadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NotepadToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("Notepad.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub WordpadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WordpadToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("wordpad.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub MsWordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MsWordToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("winword.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub TaslManagerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TaslManagerToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("TaskMgr.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class

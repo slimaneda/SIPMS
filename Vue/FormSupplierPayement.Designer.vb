@@ -532,7 +532,7 @@ Partial Class FormSupplierPayement
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.DarkSlateGray
+        Panel2.BackColor = Color.SteelBlue
         Panel2.BackgroundImageLayout = ImageLayout.Stretch
         Panel2.Controls.Add(Label1)
         Panel2.Dock = DockStyle.Top

@@ -255,7 +255,7 @@ Partial Class FormStockShow
         DataGridViewCellStyle4.BackColor = Color.CadetBlue
         DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle4.SelectionBackColor = Color.SteelBlue
         DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
         DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
@@ -263,7 +263,7 @@ Partial Class FormStockShow
         DGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
         DataGridViewCellStyle5.BackColor = Color.White
         DataGridViewCellStyle5.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle5.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle5.SelectionBackColor = Color.SteelBlue
         DataGridViewCellStyle5.SelectionForeColor = Color.White
         DGV.RowsDefaultCellStyle = DataGridViewCellStyle5
         DGV.RowTemplate.Height = 15
@@ -275,7 +275,7 @@ Partial Class FormStockShow
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.DarkSlateGray
+        Panel2.BackColor = Color.SteelBlue
         Panel2.BackgroundImageLayout = ImageLayout.Stretch
         Panel2.Controls.Add(Label1)
         Panel2.Dock = DockStyle.Top

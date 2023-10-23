@@ -18,7 +18,7 @@ Public Class SqlConnectionManager
         End Using
     End Function
 
-    'End Class
+
 
     Public Shared Function ExecuteScalar(query As String, parameters As Dictionary(Of String, Object)) As Object
         Conexion.conecta()

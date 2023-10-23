@@ -87,6 +87,16 @@ Partial Class FormMain
         TextBox3 = New TextBox()
         ComboBox2 = New ComboBox()
         TabPage3 = New TabPage()
+        GroupBox3 = New GroupBox()
+        Button3 = New Button()
+        Label12 = New Label()
+        Label13 = New Label()
+        DateTimePicker5 = New DateTimePicker()
+        DateTimePicker6 = New DateTimePicker()
+        Label14 = New Label()
+        Label15 = New Label()
+        TextBox6 = New TextBox()
+        ComboBox3 = New ComboBox()
         DGV3 = New DataGridView()
         Panel3 = New Panel()
         Label11 = New Label()
@@ -103,6 +113,7 @@ Partial Class FormMain
         Panel2.SuspendLayout()
         GroupBox2.SuspendLayout()
         TabPage3.SuspendLayout()
+        GroupBox3.SuspendLayout()
         CType(DGV3, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         SuspendLayout()
@@ -118,6 +129,7 @@ Partial Class FormMain
         ' 
         ' btn_user
         ' 
+        btn_user.Enabled = False
         btn_user.Image = CType(resources.GetObject("btn_user.Image"), Image)
         btn_user.ImageAlign = ContentAlignment.TopCenter
         btn_user.ImageScaling = ToolStripItemImageScaling.None
@@ -268,37 +280,37 @@ Partial Class FormMain
         ' CalculToolStripMenuItem
         ' 
         CalculToolStripMenuItem.Name = "CalculToolStripMenuItem"
-        CalculToolStripMenuItem.Size = New Size(143, 22)
+        CalculToolStripMenuItem.Size = New Size(180, 22)
         CalculToolStripMenuItem.Text = "Calculator"
         ' 
         ' NotepadToolStripMenuItem
         ' 
         NotepadToolStripMenuItem.Name = "NotepadToolStripMenuItem"
-        NotepadToolStripMenuItem.Size = New Size(143, 22)
+        NotepadToolStripMenuItem.Size = New Size(180, 22)
         NotepadToolStripMenuItem.Text = "Notepad"
         ' 
         ' WordpadToolStripMenuItem
         ' 
         WordpadToolStripMenuItem.Name = "WordpadToolStripMenuItem"
-        WordpadToolStripMenuItem.Size = New Size(143, 22)
+        WordpadToolStripMenuItem.Size = New Size(180, 22)
         WordpadToolStripMenuItem.Text = "Wordpad"
         ' 
         ' MsWordToolStripMenuItem
         ' 
         MsWordToolStripMenuItem.Name = "MsWordToolStripMenuItem"
-        MsWordToolStripMenuItem.Size = New Size(143, 22)
+        MsWordToolStripMenuItem.Size = New Size(180, 22)
         MsWordToolStripMenuItem.Text = "Ms Word"
         ' 
         ' TaslManagerToolStripMenuItem
         ' 
         TaslManagerToolStripMenuItem.Name = "TaslManagerToolStripMenuItem"
-        TaslManagerToolStripMenuItem.Size = New Size(143, 22)
+        TaslManagerToolStripMenuItem.Size = New Size(180, 22)
         TaslManagerToolStripMenuItem.Text = "Tasl Manager"
         ' 
         ' SystemInfoToolStripMenuItem
         ' 
         SystemInfoToolStripMenuItem.Name = "SystemInfoToolStripMenuItem"
-        SystemInfoToolStripMenuItem.Size = New Size(143, 22)
+        SystemInfoToolStripMenuItem.Size = New Size(180, 22)
         SystemInfoToolStripMenuItem.Text = "System Info"
         ' 
         ' AboutToolStripMenuItem1
@@ -370,7 +382,7 @@ Partial Class FormMain
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(1098, 478)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Customer Account"
+        TabPage1.Text = "Suuplier Account"
         ' 
         ' DGV
         ' 
@@ -402,9 +414,9 @@ Partial Class FormMain
         Label8.AutoSize = True
         Label8.Location = New Point(74, 9)
         Label8.Name = "Label8"
-        Label8.Size = New Size(143, 16)
+        Label8.Size = New Size(135, 16)
         Label8.TabIndex = 2
-        Label8.Text = "Search Name Customer"
+        Label8.Text = "Search Name Supplier"
         ' 
         ' TextBox2
         ' 
@@ -481,18 +493,18 @@ Partial Class FormMain
         Label2.AutoSize = True
         Label2.Location = New Point(8, 48)
         Label2.Name = "Label2"
-        Label2.Size = New Size(95, 16)
+        Label2.Size = New Size(87, 16)
         Label2.TabIndex = 3
-        Label2.Text = "Code Customer"
+        Label2.Text = "Code Supplier"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Location = New Point(6, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(99, 16)
+        Label1.Size = New Size(91, 16)
         Label1.TabIndex = 2
-        Label1.Text = "Name Customer"
+        Label1.Text = "Name Supplier"
         ' 
         ' TextBox1
         ' 
@@ -662,6 +674,7 @@ Partial Class FormMain
         ' TabPage3
         ' 
         TabPage3.BackColor = SystemColors.MenuBar
+        TabPage3.Controls.Add(GroupBox3)
         TabPage3.Controls.Add(DGV3)
         TabPage3.Controls.Add(Panel3)
         TabPage3.Location = New Point(4, 24)
@@ -670,6 +683,102 @@ Partial Class FormMain
         TabPage3.Size = New Size(1098, 478)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Inventory Data"
+        ' 
+        ' GroupBox3
+        ' 
+        GroupBox3.BackColor = Color.Transparent
+        GroupBox3.Controls.Add(Button3)
+        GroupBox3.Controls.Add(Label12)
+        GroupBox3.Controls.Add(Label13)
+        GroupBox3.Controls.Add(DateTimePicker5)
+        GroupBox3.Controls.Add(DateTimePicker6)
+        GroupBox3.Controls.Add(Label14)
+        GroupBox3.Controls.Add(Label15)
+        GroupBox3.Controls.Add(TextBox6)
+        GroupBox3.Controls.Add(ComboBox3)
+        GroupBox3.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        GroupBox3.Location = New Point(16, 7)
+        GroupBox3.Name = "GroupBox3"
+        GroupBox3.RightToLeft = RightToLeft.No
+        GroupBox3.Size = New Size(627, 84)
+        GroupBox3.TabIndex = 13
+        GroupBox3.TabStop = False
+        ' 
+        ' Button3
+        ' 
+        Button3.Location = New Point(532, 27)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(75, 36)
+        Button3.TabIndex = 8
+        Button3.Text = "Search"
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Location = New Point(410, 24)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(31, 16)
+        Label12.TabIndex = 7
+        Label12.Text = "To :"
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Location = New Point(278, 24)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(35, 16)
+        Label13.TabIndex = 6
+        Label13.Text = "For :"
+        ' 
+        ' DateTimePicker5
+        ' 
+        DateTimePicker5.Format = DateTimePickerFormat.Short
+        DateTimePicker5.Location = New Point(410, 43)
+        DateTimePicker5.Name = "DateTimePicker5"
+        DateTimePicker5.Size = New Size(103, 23)
+        DateTimePicker5.TabIndex = 5
+        ' 
+        ' DateTimePicker6
+        ' 
+        DateTimePicker6.Format = DateTimePickerFormat.Short
+        DateTimePicker6.Location = New Point(278, 43)
+        DateTimePicker6.Name = "DateTimePicker6"
+        DateTimePicker6.Size = New Size(103, 23)
+        DateTimePicker6.TabIndex = 4
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Location = New Point(8, 48)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(83, 16)
+        Label14.TabIndex = 3
+        Label14.Text = "Code Product"
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Location = New Point(6, 19)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(87, 16)
+        Label15.TabIndex = 2
+        Label15.Text = "Name Product"
+        ' 
+        ' TextBox6
+        ' 
+        TextBox6.Location = New Point(117, 45)
+        TextBox6.Name = "TextBox6"
+        TextBox6.Size = New Size(134, 23)
+        TextBox6.TabIndex = 1
+        ' 
+        ' ComboBox3
+        ' 
+        ComboBox3.FormattingEnabled = True
+        ComboBox3.Location = New Point(117, 16)
+        ComboBox3.Name = "ComboBox3"
+        ComboBox3.Size = New Size(134, 24)
+        ComboBox3.TabIndex = 0
         ' 
         ' DGV3
         ' 
@@ -690,7 +799,7 @@ Partial Class FormMain
         Panel3.Controls.Add(Label11)
         Panel3.Controls.Add(TextBox5)
         Panel3.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Panel3.Location = New Point(355, 15)
+        Panel3.Location = New Point(679, 23)
         Panel3.Name = "Panel3"
         Panel3.RightToLeft = RightToLeft.No
         Panel3.Size = New Size(299, 68)
@@ -741,6 +850,8 @@ Partial Class FormMain
         GroupBox2.ResumeLayout(False)
         GroupBox2.PerformLayout()
         TabPage3.ResumeLayout(False)
+        GroupBox3.ResumeLayout(False)
+        GroupBox3.PerformLayout()
         CType(DGV3, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
@@ -816,4 +927,14 @@ Partial Class FormMain
     Friend WithEvents RechercherToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents toolStripSeparator6 As ToolStripSeparator
     Friend WithEvents ÀproposdeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents DateTimePicker5 As DateTimePicker
+    Friend WithEvents DateTimePicker6 As DateTimePicker
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents ComboBox3 As ComboBox
 End Class

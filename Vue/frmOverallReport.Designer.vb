@@ -1,8 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmOverallReport
     Inherits System.Windows.Forms.Form
 
-    'Form remplace la méthode Dispose pour nettoyer la liste des composants.
+    'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -14,129 +15,433 @@ Partial Class frmOverallReport
         End Try
     End Sub
 
-    'Requise par le Concepteur Windows Form
+    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
-    'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
-    'Ne la modifiez pas à l'aide de l'éditeur de code.
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New ComponentModel.Container()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Timer1 = New Timer(components)
-        Panel2 = New Panel()
-        Label1 = New Label()
-        txtPayment = New TextBox()
-        cmbPaymentMode = New ComboBox()
-        Label12 = New Label()
-        Label13 = New Label()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Panel1 = New Panel()
+        txtGrandTotal = New TextBox()
+        btnClose = New Button()
+        btnSave = New Button()
+        GroupBox1 = New GroupBox()
+        txtCodSupplier = New TextBox()
+        txtNameSup = New TextBox()
+        btnShow = New Button()
+        Label31 = New Label()
+        txtCodeSup = New TextBox()
+        Label3 = New Label()
+        Label2 = New Label()
+        txtGrandTotaln = New TextBox()
+        GroupBox2 = New GroupBox()
+        btnNew = New Button()
+        btnUpdate = New Button()
+        btnRemove = New Button()
+        btnAdd = New Button()
+        DGV = New DataGridView()
+        Column4 = New DataGridViewTextBoxColumn()
+        Column1 = New DataGridViewTextBoxColumn()
+        Column2 = New DataGridViewTextBoxColumn()
+        Column8 = New DataGridViewTextBoxColumn()
+        Column16 = New DataGridViewTextBoxColumn()
+        Column15 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
+        dtpPaymentDate = New DateTimePicker()
+        Label7 = New Label()
+        Panel4 = New Panel()
         Label34 = New Label()
         Label35 = New Label()
         txtPaymentDue = New TextBox()
         txtTotalPayment = New TextBox()
-        dtpPaymentDate = New DateTimePicker()
-        Label7 = New Label()
-        Panel4 = New Panel()
-        Column16 = New DataGridViewTextBoxColumn()
-        Column15 = New DataGridViewTextBoxColumn()
-        Column8 = New DataGridViewTextBoxColumn()
-        btnListReset1 = New Button()
-        btnListUpdate1 = New Button()
-        btnRemove1 = New Button()
-        btnAdd1 = New Button()
-        GroupBox2 = New GroupBox()
-        DataGridView2 = New DataGridView()
-        Label31 = New Label()
-        TextBox1 = New TextBox()
-        Label3 = New Label()
-        Label2 = New Label()
-        txtGrandTotal = New TextBox()
-        ComboBox1 = New ComboBox()
-        Button2 = New Button()
-        Button1 = New Button()
-        GroupBox1 = New GroupBox()
-        Panel1 = New Panel()
-        Panel2.SuspendLayout()
-        Panel4.SuspendLayout()
-        GroupBox2.SuspendLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
-        GroupBox1.SuspendLayout()
+        txtPayment = New TextBox()
+        cmbPaymentMode = New ComboBox()
+        Label12 = New Label()
+        Label13 = New Label()
+        Panel2 = New Panel()
+        Label1 = New Label()
         Panel1.SuspendLayout()
+        GroupBox1.SuspendLayout()
+        GroupBox2.SuspendLayout()
+        CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
+        Panel4.SuspendLayout()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
-        ' Panel2
+        ' Panel1
         ' 
-        Panel2.BackColor = Color.SteelBlue
-        Panel2.BackgroundImageLayout = ImageLayout.Stretch
-        Panel2.Controls.Add(Label1)
-        Panel2.Dock = DockStyle.Top
-        Panel2.Location = New Point(0, 0)
-        Panel2.Margin = New Padding(4, 3, 4, 3)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(726, 72)
-        Panel2.TabIndex = 0
+        Panel1.BackColor = Color.White
+        Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(txtGrandTotal)
+        Panel1.Controls.Add(btnClose)
+        Panel1.Controls.Add(btnSave)
+        Panel1.Controls.Add(GroupBox1)
+        Panel1.Controls.Add(GroupBox2)
+        Panel1.Controls.Add(Panel2)
+        Panel1.Location = New Point(8, 7)
+        Panel1.Margin = New Padding(4, 3, 4, 3)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(711, 562)
+        Panel1.TabIndex = 2
         ' 
-        ' Label1
+        ' txtGrandTotal
         ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(253, 20)
-        Label1.Margin = New Padding(4, 0, 4, 0)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(149, 24)
-        Label1.TabIndex = 0
-        Label1.Text = "إدخال دفعات العملاء"
+        txtGrandTotal.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txtGrandTotal.Location = New Point(567, 514)
+        txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
+        txtGrandTotal.Name = "txtGrandTotal"
+        txtGrandTotal.ReadOnly = True
+        txtGrandTotal.Size = New Size(128, 29)
+        txtGrandTotal.TabIndex = 91
+        txtGrandTotal.Text = "00"
+        txtGrandTotal.TextAlign = HorizontalAlignment.Center
+        txtGrandTotal.Visible = False
         ' 
-        ' txtPayment
+        ' btnClose
         ' 
-        txtPayment.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtPayment.Location = New Point(387, 69)
-        txtPayment.Margin = New Padding(4, 3, 4, 3)
-        txtPayment.Name = "txtPayment"
-        txtPayment.Size = New Size(128, 20)
-        txtPayment.TabIndex = 1
-        txtPayment.Text = "0"
-        txtPayment.TextAlign = HorizontalAlignment.Center
+        btnClose.FlatStyle = FlatStyle.Popup
+        btnClose.Location = New Point(392, 500)
+        btnClose.Margin = New Padding(4, 3, 4, 3)
+        btnClose.Name = "btnClose"
+        btnClose.Size = New Size(105, 43)
+        btnClose.TabIndex = 7
+        btnClose.Text = "&Close"
+        btnClose.UseVisualStyleBackColor = True
         ' 
-        ' cmbPaymentMode
+        ' btnSave
         ' 
-        cmbPaymentMode.DropDownStyle = ComboBoxStyle.DropDownList
-        cmbPaymentMode.FormattingEnabled = True
-        cmbPaymentMode.Items.AddRange(New Object() {"كاش", "شيك"})
-        cmbPaymentMode.Location = New Point(387, 38)
-        cmbPaymentMode.Margin = New Padding(4, 3, 4, 3)
-        cmbPaymentMode.Name = "cmbPaymentMode"
-        cmbPaymentMode.Size = New Size(129, 23)
-        cmbPaymentMode.TabIndex = 0
+        btnSave.FlatStyle = FlatStyle.Popup
+        btnSave.Location = New Point(208, 500)
+        btnSave.Margin = New Padding(4, 3, 4, 3)
+        btnSave.Name = "btnSave"
+        btnSave.Size = New Size(105, 43)
+        btnSave.TabIndex = 6
+        btnSave.Text = "&Save"
+        btnSave.UseVisualStyleBackColor = True
         ' 
-        ' Label12
+        ' GroupBox1
         ' 
-        Label12.AutoSize = True
-        Label12.Location = New Point(523, 38)
-        Label12.Margin = New Padding(4, 0, 4, 0)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(74, 15)
-        Label12.TabIndex = 11
-        Label12.Text = "طريقة الدفع :"
+        GroupBox1.Controls.Add(txtCodSupplier)
+        GroupBox1.Controls.Add(txtNameSup)
+        GroupBox1.Controls.Add(btnShow)
+        GroupBox1.Controls.Add(Label31)
+        GroupBox1.Controls.Add(txtCodeSup)
+        GroupBox1.Controls.Add(Label3)
+        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(txtGrandTotaln)
+        GroupBox1.Location = New Point(10, 91)
+        GroupBox1.Margin = New Padding(4, 3, 4, 3)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Padding = New Padding(4, 3, 4, 3)
+        GroupBox1.Size = New Size(671, 110)
+        GroupBox1.TabIndex = 5
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Detail Customet "
         ' 
-        ' Label13
+        ' txtCodSupplier
         ' 
-        Label13.AutoSize = True
-        Label13.Location = New Point(523, 67)
-        Label13.Margin = New Padding(4, 0, 4, 0)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(84, 15)
-        Label13.TabIndex = 22
-        Label13.Text = "المبلغ المدفوع :"
+        txtCodSupplier.Location = New Point(251, 25)
+        txtCodSupplier.Margin = New Padding(4, 3, 4, 3)
+        txtCodSupplier.Name = "txtCodSupplier"
+        txtCodSupplier.ReadOnly = True
+        txtCodSupplier.Size = New Size(61, 23)
+        txtCodSupplier.TabIndex = 90
+        txtCodSupplier.TextAlign = HorizontalAlignment.Center
+        txtCodSupplier.Visible = False
+        ' 
+        ' txtNameSup
+        ' 
+        txtNameSup.Location = New Point(103, 66)
+        txtNameSup.Margin = New Padding(4, 3, 4, 3)
+        txtNameSup.Name = "txtNameSup"
+        txtNameSup.ReadOnly = True
+        txtNameSup.Size = New Size(140, 23)
+        txtNameSup.TabIndex = 89
+        txtNameSup.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' btnShow
+        ' 
+        btnShow.BackgroundImageLayout = ImageLayout.None
+        btnShow.FlatStyle = FlatStyle.System
+        btnShow.Location = New Point(269, 50)
+        btnShow.Margin = New Padding(4, 5, 4, 5)
+        btnShow.Name = "btnShow"
+        btnShow.Size = New Size(34, 24)
+        btnShow.TabIndex = 88
+        btnShow.Text = " ..."
+        btnShow.UseVisualStyleBackColor = True
+        ' 
+        ' Label31
+        ' 
+        Label31.AutoSize = True
+        Label31.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Label31.Location = New Point(429, 27)
+        Label31.Margin = New Padding(4, 0, 4, 0)
+        Label31.Name = "Label31"
+        Label31.Size = New Size(153, 15)
+        Label31.TabIndex = 87
+        Label31.Text = "Current balance Customer "
+        ' 
+        ' txtCodeSup
+        ' 
+        txtCodeSup.Location = New Point(103, 27)
+        txtCodeSup.Margin = New Padding(4, 3, 4, 3)
+        txtCodeSup.Name = "txtCodeSup"
+        txtCodeSup.ReadOnly = True
+        txtCodeSup.Size = New Size(140, 23)
+        txtCodeSup.TabIndex = 3
+        txtCodeSup.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(8, 30)
+        Label3.Margin = New Padding(4, 0, 4, 0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(96, 15)
+        Label3.TabIndex = 2
+        Label3.Text = "Code Customer :"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(8, 69)
+        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(100, 15)
+        Label2.TabIndex = 1
+        Label2.Text = "Name Customer :"
+        ' 
+        ' txtGrandTotaln
+        ' 
+        txtGrandTotaln.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txtGrandTotaln.Location = New Point(404, 53)
+        txtGrandTotaln.Margin = New Padding(4, 3, 4, 3)
+        txtGrandTotaln.Name = "txtGrandTotaln"
+        txtGrandTotaln.ReadOnly = True
+        txtGrandTotaln.Size = New Size(184, 29)
+        txtGrandTotaln.TabIndex = 0
+        txtGrandTotaln.Text = "00"
+        txtGrandTotaln.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.Controls.Add(btnNew)
+        GroupBox2.Controls.Add(btnUpdate)
+        GroupBox2.Controls.Add(btnRemove)
+        GroupBox2.Controls.Add(btnAdd)
+        GroupBox2.Controls.Add(DGV)
+        GroupBox2.Controls.Add(dtpPaymentDate)
+        GroupBox2.Controls.Add(Label7)
+        GroupBox2.Controls.Add(Panel4)
+        GroupBox2.Controls.Add(txtPayment)
+        GroupBox2.Controls.Add(cmbPaymentMode)
+        GroupBox2.Controls.Add(Label12)
+        GroupBox2.Controls.Add(Label13)
+        GroupBox2.Location = New Point(10, 208)
+        GroupBox2.Margin = New Padding(4, 3, 4, 3)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Padding = New Padding(4, 3, 4, 3)
+        GroupBox2.Size = New Size(671, 286)
+        GroupBox2.TabIndex = 4
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "Payment information"
+        ' 
+        ' btnNew
+        ' 
+        btnNew.FlatStyle = FlatStyle.Popup
+        btnNew.Location = New Point(519, 143)
+        btnNew.Margin = New Padding(4, 3, 4, 3)
+        btnNew.Name = "btnNew"
+        btnNew.Size = New Size(96, 24)
+        btnNew.TabIndex = 90
+        btnNew.Text = "&New"
+        btnNew.UseVisualStyleBackColor = True
+        ' 
+        ' btnUpdate
+        ' 
+        btnUpdate.Enabled = False
+        btnUpdate.FlatStyle = FlatStyle.Popup
+        btnUpdate.Location = New Point(518, 232)
+        btnUpdate.Margin = New Padding(4, 3, 4, 3)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.Size = New Size(96, 24)
+        btnUpdate.TabIndex = 89
+        btnUpdate.Text = "&Update"
+        btnUpdate.UseVisualStyleBackColor = True
+        ' 
+        ' btnRemove
+        ' 
+        btnRemove.FlatStyle = FlatStyle.Popup
+        btnRemove.Location = New Point(518, 202)
+        btnRemove.Margin = New Padding(4, 3, 4, 3)
+        btnRemove.Name = "btnRemove"
+        btnRemove.Size = New Size(96, 24)
+        btnRemove.TabIndex = 88
+        btnRemove.Text = "&Supp"
+        btnRemove.UseVisualStyleBackColor = True
+        ' 
+        ' btnAdd
+        ' 
+        btnAdd.FlatStyle = FlatStyle.Popup
+        btnAdd.Location = New Point(518, 173)
+        btnAdd.Margin = New Padding(4, 3, 4, 3)
+        btnAdd.Name = "btnAdd"
+        btnAdd.Size = New Size(96, 24)
+        btnAdd.TabIndex = 87
+        btnAdd.Text = "&Add"
+        btnAdd.UseVisualStyleBackColor = True
+        ' 
+        ' DGV
+        ' 
+        DGV.AllowUserToAddRows = False
+        DGV.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = Color.FloralWhite
+        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DGV.BackgroundColor = Color.White
+        DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = Color.CadetBlue
+        DataGridViewCellStyle2.Font = New Font("Tahoma", 8.0F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = Color.LightSteelBlue
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DGV.ColumnHeadersHeight = 35
+        DGV.Columns.AddRange(New DataGridViewColumn() {Column4, Column1, Column2, Column8, Column16, Column15, Column3})
+        DGV.Cursor = Cursors.Hand
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = SystemColors.Window
+        DataGridViewCellStyle5.Font = New Font("Tahoma", 8.0F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
+        DGV.DefaultCellStyle = DataGridViewCellStyle5
+        DGV.EnableHeadersVisualStyles = False
+        DGV.GridColor = Color.White
+        DGV.Location = New Point(7, 134)
+        DGV.Margin = New Padding(4, 3, 4, 3)
+        DGV.Name = "DGV"
+        DGV.ReadOnly = True
+        DGV.RightToLeft = RightToLeft.No
+        DGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = Color.CadetBlue
+        DataGridViewCellStyle6.Font = New Font("Tahoma", 8.0F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle6.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
+        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DGV.RowHeadersVisible = False
+        DGV.RowHeadersWidth = 30
+        DGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle7.BackColor = Color.White
+        DataGridViewCellStyle7.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle7.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle7.SelectionForeColor = Color.White
+        DGV.RowsDefaultCellStyle = DataGridViewCellStyle7
+        DGV.RowTemplate.Height = 18
+        DGV.RowTemplate.Resizable = DataGridViewTriState.False
+        DGV.ScrollBars = ScrollBars.Vertical
+        DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DGV.Size = New Size(504, 127)
+        DGV.TabIndex = 86
+        ' 
+        ' Column4
+        ' 
+        Column4.HeaderText = "Code Cust"
+        Column4.Name = "Column4"
+        Column4.ReadOnly = True
+        ' 
+        ' Column1
+        ' 
+        Column1.HeaderText = "Code Customer"
+        Column1.Name = "Column1"
+        Column1.ReadOnly = True
+        ' 
+        ' Column2
+        ' 
+        Column2.HeaderText = "Name Customer"
+        Column2.Name = "Column2"
+        Column2.ReadOnly = True
+        ' 
+        ' Column8
+        ' 
+        Column8.HeaderText = "Payement Methode"
+        Column8.Name = "Column8"
+        Column8.ReadOnly = True
+        ' 
+        ' Column16
+        ' 
+        DataGridViewCellStyle3.Format = "dd/MM/yyyy"
+        Column16.DefaultCellStyle = DataGridViewCellStyle3
+        Column16.HeaderText = "Date Payement"
+        Column16.Name = "Column16"
+        Column16.ReadOnly = True
+        ' 
+        ' Column15
+        ' 
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopRight
+        Column15.DefaultCellStyle = DataGridViewCellStyle4
+        Column15.HeaderText = "The amount Paid"
+        Column15.Name = "Column15"
+        Column15.ReadOnly = True
+        ' 
+        ' Column3
+        ' 
+        Column3.HeaderText = "Balance"
+        Column3.Name = "Column3"
+        Column3.ReadOnly = True
+        ' 
+        ' dtpPaymentDate
+        ' 
+        dtpPaymentDate.CustomFormat = "dd/MM/yyyy"
+        dtpPaymentDate.Format = DateTimePickerFormat.Custom
+        dtpPaymentDate.Location = New Point(119, 97)
+        dtpPaymentDate.Margin = New Padding(2)
+        dtpPaymentDate.Name = "dtpPaymentDate"
+        dtpPaymentDate.RightToLeft = RightToLeft.Yes
+        dtpPaymentDate.Size = New Size(129, 23)
+        dtpPaymentDate.TabIndex = 2
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(8, 98)
+        Label7.Margin = New Padding(4, 0, 4, 0)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(87, 15)
+        Label7.TabIndex = 25
+        Label7.Text = "Payment Date :"
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.Transparent
+        Panel4.BorderStyle = BorderStyle.FixedSingle
+        Panel4.Controls.Add(Label34)
+        Panel4.Controls.Add(Label35)
+        Panel4.Controls.Add(txtPaymentDue)
+        Panel4.Controls.Add(txtTotalPayment)
+        Panel4.Location = New Point(283, 23)
+        Panel4.Margin = New Padding(4, 3, 4, 3)
+        Panel4.Name = "Panel4"
+        Panel4.RightToLeft = RightToLeft.Yes
+        Panel4.Size = New Size(356, 100)
+        Panel4.TabIndex = 5
         ' 
         ' Label34
         ' 
@@ -145,9 +450,9 @@ Partial Class frmOverallReport
         Label34.Location = New Point(190, 69)
         Label34.Margin = New Padding(4, 0, 4, 0)
         Label34.Name = "Label34"
-        Label34.Size = New Size(106, 13)
+        Label34.Size = New Size(140, 13)
         Label34.TabIndex = 86
-        Label34.Text = "الرصيد الجديد للعميل  :"
+        Label34.Text = "The new Customer balance:"
         ' 
         ' Label35
         ' 
@@ -156,9 +461,9 @@ Partial Class frmOverallReport
         Label35.Location = New Point(190, 20)
         Label35.Margin = New Padding(4, 0, 4, 0)
         Label35.Name = "Label35"
-        Label35.Size = New Size(84, 13)
+        Label35.Size = New Size(70, 13)
         Label35.TabIndex = 85
-        Label35.Text = "إجمالى الدفعات :"
+        Label35.Text = "Total Amount"
         ' 
         ' txtPaymentDue
         ' 
@@ -169,6 +474,7 @@ Partial Class frmOverallReport
         txtPaymentDue.ReadOnly = True
         txtPaymentDue.Size = New Size(156, 20)
         txtPaymentDue.TabIndex = 2
+        txtPaymentDue.Text = "00"
         txtPaymentDue.TextAlign = HorizontalAlignment.Center
         ' 
         ' txtTotalPayment
@@ -182,362 +488,136 @@ Partial Class frmOverallReport
         txtTotalPayment.TabIndex = 1
         txtTotalPayment.TextAlign = HorizontalAlignment.Center
         ' 
-        ' dtpPaymentDate
+        ' txtPayment
         ' 
-        dtpPaymentDate.CustomFormat = "dd/MM/yyyy"
-        dtpPaymentDate.Format = DateTimePickerFormat.Custom
-        dtpPaymentDate.Location = New Point(387, 98)
-        dtpPaymentDate.Margin = New Padding(2)
-        dtpPaymentDate.Name = "dtpPaymentDate"
-        dtpPaymentDate.RightToLeft = RightToLeft.Yes
-        dtpPaymentDate.Size = New Size(129, 23)
-        dtpPaymentDate.TabIndex = 2
+        txtPayment.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        txtPayment.Location = New Point(119, 72)
+        txtPayment.Margin = New Padding(4, 3, 4, 3)
+        txtPayment.Name = "txtPayment"
+        txtPayment.Size = New Size(129, 20)
+        txtPayment.TabIndex = 1
+        txtPayment.Text = "0"
+        txtPayment.TextAlign = HorizontalAlignment.Center
         ' 
-        ' Label7
+        ' cmbPaymentMode
         ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(523, 97)
-        Label7.Margin = New Padding(4, 0, 4, 0)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(66, 15)
-        Label7.TabIndex = 25
-        Label7.Text = "تاريخ الدفع :"
+        cmbPaymentMode.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbPaymentMode.FormattingEnabled = True
+        cmbPaymentMode.Items.AddRange(New Object() {"Cash", "Check", "Direct Deposit", "Credit Card"})
+        cmbPaymentMode.Location = New Point(121, 43)
+        cmbPaymentMode.Margin = New Padding(4, 3, 4, 3)
+        cmbPaymentMode.Name = "cmbPaymentMode"
+        cmbPaymentMode.Size = New Size(129, 23)
+        cmbPaymentMode.TabIndex = 0
         ' 
-        ' Panel4
+        ' Label12
         ' 
-        Panel4.BackColor = Color.Transparent
-        Panel4.BorderStyle = BorderStyle.FixedSingle
-        Panel4.Controls.Add(Label34)
-        Panel4.Controls.Add(Label35)
-        Panel4.Controls.Add(txtPaymentDue)
-        Panel4.Controls.Add(txtTotalPayment)
-        Panel4.Location = New Point(7, 22)
-        Panel4.Margin = New Padding(4, 3, 4, 3)
-        Panel4.Name = "Panel4"
-        Panel4.RightToLeft = RightToLeft.Yes
-        Panel4.Size = New Size(356, 100)
-        Panel4.TabIndex = 5
+        Label12.AutoSize = True
+        Label12.Location = New Point(8, 46)
+        Label12.Margin = New Padding(4, 0, 4, 0)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(105, 15)
+        Label12.TabIndex = 11
+        Label12.Text = "Payment method :"
         ' 
-        ' Column16
+        ' Label13
         ' 
-        DataGridViewCellStyle1.Format = "dd/MM/yyyy"
-        Column16.DefaultCellStyle = DataGridViewCellStyle1
-        Column16.HeaderText = "تاريخ الدفع"
-        Column16.Name = "Column16"
-        Column16.ReadOnly = True
+        Label13.AutoSize = True
+        Label13.Location = New Point(8, 74)
+        Label13.Margin = New Padding(4, 0, 4, 0)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(103, 15)
+        Label13.TabIndex = 22
+        Label13.Text = "The amount paid :"
         ' 
-        ' Column15
+        ' Panel2
         ' 
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopRight
-        Column15.DefaultCellStyle = DataGridViewCellStyle2
-        Column15.HeaderText = "الملبغ المدفوع"
-        Column15.Name = "Column15"
-        Column15.ReadOnly = True
+        Panel2.BackColor = Color.SteelBlue
+        Panel2.BackgroundImageLayout = ImageLayout.Stretch
+        Panel2.Controls.Add(Label1)
+        Panel2.Dock = DockStyle.Top
+        Panel2.Location = New Point(0, 0)
+        Panel2.Margin = New Padding(4, 3, 4, 3)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(709, 72)
+        Panel2.TabIndex = 0
         ' 
-        ' Column8
+        ' Label1
         ' 
-        Column8.HeaderText = "طريقة الدفع"
-        Column8.Name = "Column8"
-        Column8.ReadOnly = True
-        ' 
-        ' btnListReset1
-        ' 
-        btnListReset1.FlatStyle = FlatStyle.Popup
-        btnListReset1.Location = New Point(519, 143)
-        btnListReset1.Margin = New Padding(4, 3, 4, 3)
-        btnListReset1.Name = "btnListReset1"
-        btnListReset1.Size = New Size(96, 24)
-        btnListReset1.TabIndex = 90
-        btnListReset1.Text = "مسح"
-        btnListReset1.UseVisualStyleBackColor = True
-        ' 
-        ' btnListUpdate1
-        ' 
-        btnListUpdate1.Enabled = False
-        btnListUpdate1.FlatStyle = FlatStyle.Popup
-        btnListUpdate1.Location = New Point(518, 232)
-        btnListUpdate1.Margin = New Padding(4, 3, 4, 3)
-        btnListUpdate1.Name = "btnListUpdate1"
-        btnListUpdate1.Size = New Size(96, 24)
-        btnListUpdate1.TabIndex = 89
-        btnListUpdate1.Text = "تحديث"
-        btnListUpdate1.UseVisualStyleBackColor = True
-        ' 
-        ' btnRemove1
-        ' 
-        btnRemove1.Enabled = False
-        btnRemove1.FlatStyle = FlatStyle.Popup
-        btnRemove1.Location = New Point(518, 202)
-        btnRemove1.Margin = New Padding(4, 3, 4, 3)
-        btnRemove1.Name = "btnRemove1"
-        btnRemove1.Size = New Size(96, 24)
-        btnRemove1.TabIndex = 88
-        btnRemove1.Text = "حذف"
-        btnRemove1.UseVisualStyleBackColor = True
-        ' 
-        ' btnAdd1
-        ' 
-        btnAdd1.FlatStyle = FlatStyle.Popup
-        btnAdd1.Location = New Point(518, 173)
-        btnAdd1.Margin = New Padding(4, 3, 4, 3)
-        btnAdd1.Name = "btnAdd1"
-        btnAdd1.Size = New Size(96, 24)
-        btnAdd1.TabIndex = 87
-        btnAdd1.Text = "إضافة"
-        btnAdd1.UseVisualStyleBackColor = True
-        ' 
-        ' GroupBox2
-        ' 
-        GroupBox2.Controls.Add(btnListReset1)
-        GroupBox2.Controls.Add(btnListUpdate1)
-        GroupBox2.Controls.Add(btnRemove1)
-        GroupBox2.Controls.Add(btnAdd1)
-        GroupBox2.Controls.Add(DataGridView2)
-        GroupBox2.Controls.Add(dtpPaymentDate)
-        GroupBox2.Controls.Add(Label7)
-        GroupBox2.Controls.Add(Panel4)
-        GroupBox2.Controls.Add(txtPayment)
-        GroupBox2.Controls.Add(cmbPaymentMode)
-        GroupBox2.Controls.Add(Label12)
-        GroupBox2.Controls.Add(Label13)
-        GroupBox2.Location = New Point(10, 213)
-        GroupBox2.Margin = New Padding(4, 3, 4, 3)
-        GroupBox2.Name = "GroupBox2"
-        GroupBox2.Padding = New Padding(4, 3, 4, 3)
-        GroupBox2.RightToLeft = RightToLeft.Yes
-        GroupBox2.Size = New Size(671, 286)
-        GroupBox2.TabIndex = 8
-        GroupBox2.TabStop = False
-        GroupBox2.Text = "معلومات الدفع"
-        ' 
-        ' DataGridView2
-        ' 
-        DataGridView2.AllowUserToAddRows = False
-        DataGridView2.AllowUserToDeleteRows = False
-        DataGridViewCellStyle3.BackColor = Color.FloralWhite
-        DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
-        DataGridView2.BackgroundColor = Color.White
-        DataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = Color.CadetBlue
-        DataGridViewCellStyle4.Font = New Font("Tahoma", 8.0F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle4.ForeColor = Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = Color.LightSteelBlue
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
-        DataGridView2.ColumnHeadersHeight = 24
-        DataGridView2.Columns.AddRange(New DataGridViewColumn() {Column8, Column15, Column16})
-        DataGridView2.Cursor = Cursors.Hand
-        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = SystemColors.Window
-        DataGridViewCellStyle5.Font = New Font("Tahoma", 8.0F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
-        DataGridView2.DefaultCellStyle = DataGridViewCellStyle5
-        DataGridView2.EnableHeadersVisualStyles = False
-        DataGridView2.GridColor = Color.White
-        DataGridView2.Location = New Point(7, 129)
-        DataGridView2.Margin = New Padding(4, 3, 4, 3)
-        DataGridView2.Name = "DataGridView2"
-        DataGridView2.ReadOnly = True
-        DataGridView2.RightToLeft = RightToLeft.Yes
-        DataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = Color.CadetBlue
-        DataGridViewCellStyle6.Font = New Font("Tahoma", 8.0F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle6.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
-        DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
-        DataGridView2.RowHeadersWidth = 25
-        DataGridView2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle7.BackColor = Color.White
-        DataGridViewCellStyle7.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle7.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle7.SelectionForeColor = Color.White
-        DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle7
-        DataGridView2.RowTemplate.Height = 18
-        DataGridView2.RowTemplate.Resizable = DataGridViewTriState.False
-        DataGridView2.ScrollBars = ScrollBars.Vertical
-        DataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView2.Size = New Size(504, 127)
-        DataGridView2.TabIndex = 86
-        ' 
-        ' Label31
-        ' 
-        Label31.AutoSize = True
-        Label31.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label31.Location = New Point(198, 42)
-        Label31.Margin = New Padding(4, 0, 4, 0)
-        Label31.Name = "Label31"
-        Label31.Size = New Size(106, 13)
-        Label31.TabIndex = 87
-        Label31.Text = "الرصيد الحالى للعميل :"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(376, 70)
-        TextBox1.Margin = New Padding(4, 3, 4, 3)
-        TextBox1.Name = "TextBox1"
-        TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(140, 23)
-        TextBox1.TabIndex = 3
-        TextBox1.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(524, 74)
-        Label3.Margin = New Padding(4, 0, 4, 0)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(66, 15)
-        Label3.TabIndex = 2
-        Label3.Text = "رقم العميل :"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(523, 36)
-        Label2.Margin = New Padding(4, 0, 4, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(69, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "أسم العميل :"
-        ' 
-        ' txtGrandTotal
-        ' 
-        txtGrandTotal.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        txtGrandTotal.Location = New Point(7, 36)
-        txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
-        txtGrandTotal.Name = "txtGrandTotal"
-        txtGrandTotal.ReadOnly = True
-        txtGrandTotal.Size = New Size(184, 29)
-        txtGrandTotal.TabIndex = 0
-        txtGrandTotal.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(376, 32)
-        ComboBox1.Margin = New Padding(4, 3, 4, 3)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(140, 23)
-        ComboBox1.TabIndex = 0
-        ' 
-        ' Button2
-        ' 
-        Button2.Location = New Point(234, 505)
-        Button2.Margin = New Padding(4, 3, 4, 3)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(105, 43)
-        Button2.TabIndex = 11
-        Button2.Text = "إغلاق"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(410, 505)
-        Button1.Margin = New Padding(4, 3, 4, 3)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(105, 43)
-        Button1.TabIndex = 10
-        Button1.Text = "حفظ"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' GroupBox1
-        ' 
-        GroupBox1.Controls.Add(Label31)
-        GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(Label3)
-        GroupBox1.Controls.Add(Label2)
-        GroupBox1.Controls.Add(txtGrandTotal)
-        GroupBox1.Controls.Add(ComboBox1)
-        GroupBox1.Location = New Point(10, 97)
-        GroupBox1.Margin = New Padding(4, 3, 4, 3)
-        GroupBox1.Name = "GroupBox1"
-        GroupBox1.Padding = New Padding(4, 3, 4, 3)
-        GroupBox1.RightToLeft = RightToLeft.Yes
-        GroupBox1.Size = New Size(671, 110)
-        GroupBox1.TabIndex = 9
-        GroupBox1.TabStop = False
-        GroupBox1.Text = "بيانات العميل"
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackColor = Color.White
-        Panel1.BorderStyle = BorderStyle.FixedSingle
-        Panel1.Controls.Add(Button2)
-        Panel1.Controls.Add(Button1)
-        Panel1.Controls.Add(GroupBox1)
-        Panel1.Controls.Add(GroupBox2)
-        Panel1.Controls.Add(Panel2)
-        Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(0, 0)
-        Panel1.Margin = New Padding(4, 3, 4, 3)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(728, 567)
-        Panel1.TabIndex = 3
+        Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.White
+        Label1.Location = New Point(251, 18)
+        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(224, 24)
+        Label1.TabIndex = 0
+        Label1.Text = "Add supplier payments"
         ' 
         ' frmOverallReport
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(728, 567)
+        BackColor = Color.DarkSlateGray
+        ClientSize = New Size(729, 583)
         Controls.Add(Panel1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)
         MaximizeBox = False
         MinimizeBox = False
         Name = "frmOverallReport"
-        ShowIcon = False
-        Text = "form  Overall Report"
-        Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
-        Panel4.ResumeLayout(False)
-        Panel4.PerformLayout()
-        GroupBox2.ResumeLayout(False)
-        GroupBox2.PerformLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
+        StartPosition = FormStartPosition.CenterScreen
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
-        Panel1.ResumeLayout(False)
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
+        CType(DGV, ComponentModel.ISupportInitialize).EndInit()
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents btnNew As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnRemove As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents DGV As DataGridView
+    Friend WithEvents dtpPaymentDate As DateTimePicker
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents txtGrandTotaln As TextBox
+    Friend WithEvents txtPaymentDue As TextBox
+    Friend WithEvents txtTotalPayment As TextBox
     Friend WithEvents txtPayment As TextBox
     Friend WithEvents cmbPaymentMode As ComboBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label35 As Label
-    Friend WithEvents txtPaymentDue As TextBox
-    Friend WithEvents txtTotalPayment As TextBox
-    Friend WithEvents dtpPaymentDate As DateTimePicker
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtCodeSup As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents btnClose As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents btnShow As Button
+    Friend WithEvents txtNameSup As TextBox
+    Friend WithEvents txtCodSupplier As TextBox
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents btnListReset1 As Button
-    Friend WithEvents btnListUpdate1 As Button
-    Friend WithEvents btnRemove1 As Button
-    Friend WithEvents btnAdd1 As Button
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents Label31 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents txtGrandTotal As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Panel1 As Panel
 End Class

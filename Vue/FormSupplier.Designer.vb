@@ -25,6 +25,7 @@ Partial Class FormSupplier
         Label1 = New Label()
         Panel1 = New Panel()
         GroupBox1 = New GroupBox()
+        txt_zip = New TextBox()
         txt_SupplierID = New TextBox()
         Panel5 = New Panel()
         btn_Close = New Button()
@@ -55,7 +56,6 @@ Partial Class FormSupplier
         Label21 = New Label()
         Label22 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
-        txt_zip = New TextBox()
         Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
         Panel5.SuspendLayout()
@@ -114,6 +114,13 @@ Partial Class FormSupplier
         GroupBox1.Size = New Size(551, 454)
         GroupBox1.TabIndex = 14
         GroupBox1.TabStop = False
+        ' 
+        ' txt_zip
+        ' 
+        txt_zip.Location = New Point(127, 221)
+        txt_zip.Name = "txt_zip"
+        txt_zip.Size = New Size(196, 23)
+        txt_zip.TabIndex = 50
         ' 
         ' txt_SupplierID
         ' 
@@ -385,13 +392,6 @@ Partial Class FormSupplier
         ' OpenFileDialog1
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
-        ' 
-        ' txt_zip
-        ' 
-        txt_zip.Location = New Point(127, 221)
-        txt_zip.Name = "txt_zip"
-        txt_zip.Size = New Size(196, 23)
-        txt_zip.TabIndex = 50
         ' 
         ' FormSupplier
         ' 

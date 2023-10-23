@@ -1,6 +1,4 @@
-﻿Imports System.Text.Json
-
-Public Class Product
+﻿Public Class Product
     Private _code As Integer
     Private _name As String
     Private _Notes As String

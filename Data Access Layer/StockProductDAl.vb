@@ -6,7 +6,6 @@
         Const proc As String = "StockProduct"
         Dim agrs As New Dictionary(Of String, Object) From
             {
-            {"@type", "INSERT"},
             {"d1", StockProduct.StockID},
              {"@d2", StockProduct.ProductID},
               {"d3", StockProduct.ProductName},

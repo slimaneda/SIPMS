@@ -1,4 +1,5 @@
 ﻿Public Class FormProductShow
+    Private Comfunction As New ComFunction
     Private Const FPS As String = "FormStock_Product"
     Private Const FB As String = "FB"
     Private Const B As String = "b"
@@ -9,13 +10,13 @@
     Private Sub FormProductShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Select Case lbl.Text
             Case FPS, B
-                Show_DGV(DGV, "Select_Pt")
+                ComFunction.Show_DGV(DGV, "Select_Pt")
             Case FB
-                Show_DGV(DGV, "Select_StockProductSum")
+                Comfunction.Show_DGV(DGV, "Select_StockProductSum")
             Case Show_Supplier
-                Show_DGV(DGV, "Select_Supplier_Vue")
+                ComFunction.Show_DGV(DGV, "Select_Supplier")
             Case Show_SupplierPayement
-                Show_DGV(DGV, "Select_Supplier_Vue")
+                ComFunction.Show_DGV(DGV, "Select_Supplier_Vue")
         End Select
     End Sub
 
@@ -72,10 +73,14 @@
         End With
     End Sub
     Private Sub setFormseuppayement(rowIndex As Integer)
+        Dim inputString As String = DGV.Rows(rowIndex).Cells(0).Value.ToString()
+        Dim onlyNumbers As String = String.Join("", inputString.Where(Function(c) Char.IsDigit(c)))
         With FormSupplierPayement
+            .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value.ToString()
             .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value.ToString
             .txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
-            .txtGrandTotal.Text = DGV.Rows(rowIndex).Cells(4).Value.ToString
+            .txtGrandTotaln.Text = DGV.Rows(rowIndex).Cells(4).Value.ToString
+
 
         End With
     End Sub

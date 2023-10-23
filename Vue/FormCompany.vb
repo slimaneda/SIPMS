@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 
 Public Class FormCompany
-
+    Private Comfunction As ComFunction
     Sub rest()
         For Each clt As Control In Panel2.Controls
             If TypeOf clt Is TextBox Then
@@ -12,7 +12,7 @@ Public Class FormCompany
 
         PictureBox1.Image = My.Resources.Sans_titre
         txt_Companyname.Focus()
-        Show_DGV(DGV1, "Select_Company")
+        Comfunction.Show_DGV(DGV1, "Select_Company")
     End Sub
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()

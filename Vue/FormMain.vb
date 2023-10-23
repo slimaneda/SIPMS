@@ -1,14 +1,18 @@
 ﻿Public Class FormMain
+    Dim ComFunction As New ComFunction
     Private Sub CompanyToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CompanyToolStripMenuItem1.Click
         FormCompany.ShowDialog()
     End Sub
-
+    Sub refeash()
+        ComFunction.Show_DGV(DGV, "Select_SupplierSum")
+        ComFunction.Show_DGV(DGV2, "Select_Supplier_Vue")
+        ' ComFunction.Show_DGV(DGV3, "SelectViewProduct")
+        ComFunction.Show_DGV(DGV3, "Selectstock_Qt")
+    End Sub
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        sqlcon_Open()
-        Show_DGV(DGV, "Select_SupplierSum")
-        Show_DGV(DGV2, "Select_Supplier_Vue")
-        Show_DGV(DGV3, "Select_StockProductSum")
-        sqlcon_Close()
+
+        refeash()
+
     End Sub
 
     Private Sub btn_items_Click(sender As Object, e As EventArgs) Handles btn_items.Click

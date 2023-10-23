@@ -31,25 +31,31 @@ Partial Class FormSupplierPayement
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
+        txtGrandTotal = New TextBox()
         btnClose = New Button()
-        Button1 = New Button()
+        btnSave = New Button()
         GroupBox1 = New GroupBox()
+        txtCodSupplier = New TextBox()
         txtNameSup = New TextBox()
         btnShow = New Button()
         Label31 = New Label()
         txtCodeSup = New TextBox()
         Label3 = New Label()
         Label2 = New Label()
-        txtGrandTotal = New TextBox()
+        txtGrandTotaln = New TextBox()
         GroupBox2 = New GroupBox()
-        btnDelete = New Button()
+        btnNew = New Button()
         btnUpdate = New Button()
         btnRemove = New Button()
         btnAdd = New Button()
         DGV = New DataGridView()
+        Column4 = New DataGridViewTextBoxColumn()
+        Column1 = New DataGridViewTextBoxColumn()
+        Column2 = New DataGridViewTextBoxColumn()
         Column8 = New DataGridViewTextBoxColumn()
-        Column15 = New DataGridViewTextBoxColumn()
         Column16 = New DataGridViewTextBoxColumn()
+        Column15 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
         dtpPaymentDate = New DateTimePicker()
         Label7 = New Label()
         Panel4 = New Panel()
@@ -75,8 +81,9 @@ Partial Class FormSupplierPayement
         ' 
         Panel1.BackColor = Color.White
         Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(txtGrandTotal)
         Panel1.Controls.Add(btnClose)
-        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(btnSave)
         Panel1.Controls.Add(GroupBox1)
         Panel1.Controls.Add(GroupBox2)
         Panel1.Controls.Add(Panel2)
@@ -85,6 +92,18 @@ Partial Class FormSupplierPayement
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(711, 562)
         Panel1.TabIndex = 2
+        ' 
+        ' txtGrandTotal
+        ' 
+        txtGrandTotal.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txtGrandTotal.Location = New Point(521, 514)
+        txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
+        txtGrandTotal.Name = "txtGrandTotal"
+        txtGrandTotal.ReadOnly = True
+        txtGrandTotal.Size = New Size(128, 29)
+        txtGrandTotal.TabIndex = 91
+        txtGrandTotal.Text = "00"
+        txtGrandTotal.TextAlign = HorizontalAlignment.Center
         ' 
         ' btnClose
         ' 
@@ -97,26 +116,27 @@ Partial Class FormSupplierPayement
         btnClose.Text = "&Close"
         btnClose.UseVisualStyleBackColor = True
         ' 
-        ' Button1
+        ' btnSave
         ' 
-        Button1.FlatStyle = FlatStyle.Popup
-        Button1.Location = New Point(208, 500)
-        Button1.Margin = New Padding(4, 3, 4, 3)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(105, 43)
-        Button1.TabIndex = 6
-        Button1.Text = "&Save"
-        Button1.UseVisualStyleBackColor = True
+        btnSave.FlatStyle = FlatStyle.Popup
+        btnSave.Location = New Point(208, 500)
+        btnSave.Margin = New Padding(4, 3, 4, 3)
+        btnSave.Name = "btnSave"
+        btnSave.Size = New Size(105, 43)
+        btnSave.TabIndex = 6
+        btnSave.Text = "&Save"
+        btnSave.UseVisualStyleBackColor = True
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(txtCodSupplier)
         GroupBox1.Controls.Add(txtNameSup)
         GroupBox1.Controls.Add(btnShow)
         GroupBox1.Controls.Add(Label31)
         GroupBox1.Controls.Add(txtCodeSup)
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(Label2)
-        GroupBox1.Controls.Add(txtGrandTotal)
+        GroupBox1.Controls.Add(txtGrandTotaln)
         GroupBox1.Location = New Point(10, 91)
         GroupBox1.Margin = New Padding(4, 3, 4, 3)
         GroupBox1.Name = "GroupBox1"
@@ -125,6 +145,16 @@ Partial Class FormSupplierPayement
         GroupBox1.TabIndex = 5
         GroupBox1.TabStop = False
         GroupBox1.Text = "Detail Supplier "
+        ' 
+        ' txtCodSupplier
+        ' 
+        txtCodSupplier.Location = New Point(251, 25)
+        txtCodSupplier.Margin = New Padding(4, 3, 4, 3)
+        txtCodSupplier.Name = "txtCodSupplier"
+        txtCodSupplier.ReadOnly = True
+        txtCodSupplier.Size = New Size(61, 23)
+        txtCodSupplier.TabIndex = 90
+        txtCodSupplier.TextAlign = HorizontalAlignment.Center
         ' 
         ' txtNameSup
         ' 
@@ -189,21 +219,21 @@ Partial Class FormSupplierPayement
         Label2.TabIndex = 1
         Label2.Text = "Name Supplier :"
         ' 
-        ' txtGrandTotal
+        ' txtGrandTotaln
         ' 
-        txtGrandTotal.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        txtGrandTotal.Location = New Point(404, 53)
-        txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
-        txtGrandTotal.Name = "txtGrandTotal"
-        txtGrandTotal.ReadOnly = True
-        txtGrandTotal.Size = New Size(184, 29)
-        txtGrandTotal.TabIndex = 0
-        txtGrandTotal.Text = "00"
-        txtGrandTotal.TextAlign = HorizontalAlignment.Center
+        txtGrandTotaln.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
+        txtGrandTotaln.Location = New Point(404, 53)
+        txtGrandTotaln.Margin = New Padding(4, 3, 4, 3)
+        txtGrandTotaln.Name = "txtGrandTotaln"
+        txtGrandTotaln.ReadOnly = True
+        txtGrandTotaln.Size = New Size(184, 29)
+        txtGrandTotaln.TabIndex = 0
+        txtGrandTotaln.Text = "00"
+        txtGrandTotaln.TextAlign = HorizontalAlignment.Center
         ' 
         ' GroupBox2
         ' 
-        GroupBox2.Controls.Add(btnDelete)
+        GroupBox2.Controls.Add(btnNew)
         GroupBox2.Controls.Add(btnUpdate)
         GroupBox2.Controls.Add(btnRemove)
         GroupBox2.Controls.Add(btnAdd)
@@ -224,16 +254,16 @@ Partial Class FormSupplierPayement
         GroupBox2.TabStop = False
         GroupBox2.Text = "Payment information"
         ' 
-        ' btnDelete
+        ' btnNew
         ' 
-        btnDelete.FlatStyle = FlatStyle.Popup
-        btnDelete.Location = New Point(519, 143)
-        btnDelete.Margin = New Padding(4, 3, 4, 3)
-        btnDelete.Name = "btnDelete"
-        btnDelete.Size = New Size(96, 24)
-        btnDelete.TabIndex = 90
-        btnDelete.Text = "&Delete"
-        btnDelete.UseVisualStyleBackColor = True
+        btnNew.FlatStyle = FlatStyle.Popup
+        btnNew.Location = New Point(519, 143)
+        btnNew.Margin = New Padding(4, 3, 4, 3)
+        btnNew.Name = "btnNew"
+        btnNew.Size = New Size(96, 24)
+        btnNew.TabIndex = 90
+        btnNew.Text = "&New"
+        btnNew.UseVisualStyleBackColor = True
         ' 
         ' btnUpdate
         ' 
@@ -249,7 +279,6 @@ Partial Class FormSupplierPayement
         ' 
         ' btnRemove
         ' 
-        btnRemove.Enabled = False
         btnRemove.FlatStyle = FlatStyle.Popup
         btnRemove.Location = New Point(518, 202)
         btnRemove.Margin = New Padding(4, 3, 4, 3)
@@ -288,8 +317,8 @@ Partial Class FormSupplierPayement
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DGV.ColumnHeadersHeight = 27
-        DGV.Columns.AddRange(New DataGridViewColumn() {Column8, Column15, Column16})
+        DGV.ColumnHeadersHeight = 35
+        DGV.Columns.AddRange(New DataGridViewColumn() {Column4, Column1, Column2, Column8, Column16, Column15, Column3})
         DGV.Cursor = Cursors.Hand
         DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = SystemColors.Window
@@ -330,27 +359,51 @@ Partial Class FormSupplierPayement
         DGV.Size = New Size(504, 127)
         DGV.TabIndex = 86
         ' 
+        ' Column4
+        ' 
+        Column4.HeaderText = "Code Supp"
+        Column4.Name = "Column4"
+        Column4.ReadOnly = True
+        ' 
+        ' Column1
+        ' 
+        Column1.HeaderText = "Code supplier"
+        Column1.Name = "Column1"
+        Column1.ReadOnly = True
+        ' 
+        ' Column2
+        ' 
+        Column2.HeaderText = "Name Supplier"
+        Column2.Name = "Column2"
+        Column2.ReadOnly = True
+        ' 
         ' Column8
         ' 
         Column8.HeaderText = "Payement Methode"
         Column8.Name = "Column8"
         Column8.ReadOnly = True
         ' 
+        ' Column16
+        ' 
+        DataGridViewCellStyle3.Format = "dd/MM/yyyy"
+        Column16.DefaultCellStyle = DataGridViewCellStyle3
+        Column16.HeaderText = "Date Payement"
+        Column16.Name = "Column16"
+        Column16.ReadOnly = True
+        ' 
         ' Column15
         ' 
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopRight
-        Column15.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopRight
+        Column15.DefaultCellStyle = DataGridViewCellStyle4
         Column15.HeaderText = "The amount Paid"
         Column15.Name = "Column15"
         Column15.ReadOnly = True
         ' 
-        ' Column16
+        ' Column3
         ' 
-        DataGridViewCellStyle4.Format = "dd/MM/yyyy"
-        Column16.DefaultCellStyle = DataGridViewCellStyle4
-        Column16.HeaderText = "Date Payement"
-        Column16.Name = "Column16"
-        Column16.ReadOnly = True
+        Column3.HeaderText = "Balance"
+        Column3.Name = "Column3"
+        Column3.ReadOnly = True
         ' 
         ' dtpPaymentDate
         ' 
@@ -514,6 +567,7 @@ Partial Class FormSupplierPayement
         Name = "FormSupplierPayement"
         StartPosition = FormStartPosition.CenterScreen
         Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         GroupBox2.ResumeLayout(False)
@@ -529,7 +583,7 @@ Partial Class FormSupplierPayement
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnNew As Button
     Friend WithEvents btnUpdate As Button
     Friend WithEvents btnRemove As Button
     Friend WithEvents btnAdd As Button
@@ -540,7 +594,7 @@ Partial Class FormSupplierPayement
     Friend WithEvents Label31 As Label
     Friend WithEvents Label34 As Label
     Friend WithEvents Label35 As Label
-    Friend WithEvents txtGrandTotal As TextBox
+    Friend WithEvents txtGrandTotaln As TextBox
     Friend WithEvents txtPaymentDue As TextBox
     Friend WithEvents txtTotalPayment As TextBox
     Friend WithEvents txtPayment As TextBox
@@ -552,10 +606,16 @@ Partial Class FormSupplierPayement
     Friend WithEvents txtCodeSup As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnClose As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSave As Button
     Friend WithEvents btnShow As Button
     Friend WithEvents txtNameSup As TextBox
+    Friend WithEvents txtCodSupplier As TextBox
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
+    Friend WithEvents Column15 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents txtGrandTotal As TextBox
 End Class

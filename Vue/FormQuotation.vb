@@ -1,4 +1,5 @@
 ﻿Public Class FormQuotation
+    Private Comfunction As New ComFunction
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
     End Sub
@@ -100,7 +101,7 @@
     End Sub
 
     Private Sub txtCostPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQty.KeyPress, txtSellingPrice.KeyPress, txtDiscountPer.KeyPress
-        AllowOnlyNumbre(e)
+        ComFunction.AllowOnlyNumbre(e)
     End Sub
 
 

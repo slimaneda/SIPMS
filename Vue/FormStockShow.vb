@@ -1,7 +1,8 @@
 ﻿Imports System.Data.SqlClient
 Public Class FormStockShow
+    Private Comfunction As New ComFunction
     Private Sub FormStockShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Show_DGV(DGV, "Selecte_Stock")
+        Comfunction.Show_DGV(DGV, "Selecte_Stock")
 
     End Sub
 
@@ -38,12 +39,4 @@ Public Class FormStockShow
 
 
 
-    Private Sub DGV_CellEnte()
-        Using cmd As New SqlCommand(" Select dbo.SuppAcc.* From dbo.SuppAcc", sqlcon)
-            Dim dt As New DataTable
-            Dim da As New SqlDataAdapter(cmd)
-            da.Fill(dt)
-            DGV.DataSource = dt
-        End Using
-    End Sub
 End Class

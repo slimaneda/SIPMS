@@ -2,8 +2,9 @@
 Imports System.IO
 
 Public Class CompanyDAL
+    Inherits Conexion
     Private cmd As New SqlCommand
-    Private dt As New DataTable
+
 
 
     Public Property Name_company As String
@@ -14,10 +15,10 @@ Public Class CompanyDAL
     Public Property ST As String
     Public Property CIN As String
     Sub Save(Num_Procedure As String)
-        sqlcon_Open()
+        Conexion.conecta()
 
         Try
-            Using cmd As New SqlClient.SqlCommand(Num_Procedure, sqlcon)
+            Using cmd As New SqlClient.SqlCommand(Num_Procedure, Conexion.con)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.Add("@Name_Company", SqlDbType.NVarChar, 50).Value = Name_company
                 cmd.Parameters.Add("@Adress", SqlDbType.NVarChar, 50).Value = Adress
@@ -42,7 +43,7 @@ Public Class CompanyDAL
 
 
             Using dt As New DataTable
-                Dim da As New SqlClient.SqlDataAdapter("Select_Company", sqlcon)
+                Dim da As New SqlClient.SqlDataAdapter("Select_Company", Conexion.con)
                 da.Fill(dt)
                 FormCompany.DGV1.DataSource = dt.DefaultView
             End Using
@@ -55,11 +56,11 @@ Public Class CompanyDAL
 
     End Sub
     Public Sub DeleteCompany(proc As String)
-        sqlcon_Open()
+        Conexion.conecta()
 
         Try
 
-            cmd = New SqlCommand(proc, sqlcon)
+            cmd = New SqlCommand(proc, Conexion.con)
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add("@Name_Company", SqlDbType.NVarChar, 50).Value = FormCompany.txt_Companyname.Text
 
@@ -72,7 +73,7 @@ Public Class CompanyDAL
             MsgBox("delete Company .", MessageBoxIcon.Information)
         Catch ex As Exception
             MsgBox(ex.Message, MessageBoxIcon.Error)
-            sqlcon_Close()
+
         End Try
     End Sub
 

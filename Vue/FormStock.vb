@@ -2,6 +2,8 @@
 
 Public Class FormStock
     REM Private fields
+    Private Comfunction As ComFunction
+
     Private stock As Stock
     Private tempStock As TempStock
     Private SupplierAcc As SupplierAcc
@@ -21,6 +23,7 @@ Public Class FormStock
         InitializeComponent()
 
         REM Initialize fields
+        Comfunction = New ComFunction
         stock = New Stock()
         tempStock = New TempStock()
         Me.SupplierAcc = New SupplierAcc
@@ -34,21 +37,36 @@ Public Class FormStock
 
     Private Sub FormPurchasProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         stock.CodeStock = Val(txtCodestock.Text)
-        txtCodestock.Text = CODE_GEN("Stock", "Code_fct") + 1
+        txtCodestock.Text = ComFunction.CODE_GEN("Stock", "Code_fct") + 1
         btnShowSupp.Focus()
     End Sub
 
     Private Sub Clean()
-        ClearTextboxes(GroupBox1)         ' Clears all TextBox controls on the form
-        ClearTextboxes(GroupBox2)
-        ClearTextboxes(Panel4)
-        ReadOnlyTxtBox(GroupBox2, True) ' Sets all TextBox controls on the form to read-only
-        ReadOnlyTxtBox(GroupBox1, True)
+        With ComFunction
+            .ClearTextboxes(GroupBox1)         ' Clears all TextBox controls on the form
+            .ClearTextboxes(GroupBox2)
+            .ClearTextboxes(Panel4)
+            '.ReadOnlyTxtBox(GroupBox2, True) ' Sets all TextBox controls on the form to read-only
+            '.ReadOnlyTxtBox(GroupBox1, True)
+        End With
+
         txtRemarks.Text = ""
     End Sub
 
 
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click    ' button add sans save 
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+
+        If Len(Trim(txtTotalPayment.Text)) = 0 Then
+            MessageBox.Show("Please enter the payment amount.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtTotalPayment.Focus()
+            Exit Sub
+        End If
+
+        If Val(txtTotalPayment.Text) > Val(txtGrandTotal.Text) Then
+            MessageBox.Show("Sorry, the payment amount cannot be greater than the invoice value.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtTotalPayment.Focus()
+            Exit Sub
+        End If
 
         Dim targetRow As DataGridViewRow = DGV.Rows.Cast(Of DataGridViewRow).FirstOrDefault(Function(r) r.Cells(0).Value.ToString() = txtCodestock.Text)
         If targetRow IsNot Nothing Then
@@ -59,23 +77,23 @@ Public Class FormStock
     End Sub
 
     Private Sub Button_SaveClick(sender As Object, e As EventArgs) Handles btnSave.Click   ' button Save 
-        sqlcon_Open()
+
         If ValidateData() Then
-            UpdateOrInsertTempStock()  REM  insert data in tempStock
-            InsertIntoStock()          REM insert data in Stock
-            InsertIntoSuppAcc()        REM insert in SuppAcc
-            InsertIntoStockProduct()   REM insert in StockProduct
-            sqlcon_Close()
             Try
-                MsgBox("saved Successfully", MsgBoxStyle.Information)
+                InsertIntoStock()          REM insert data in Stock
+                InsertIntoSuppAcc()        REM insert in SuppAcc
+                InsertIntoStockProduct()   REM insert in StockProduct
             Catch ex As Exception
 
             End Try
+            ' UpdateOrInsertTempStock()  REM  insert data in tempStock
+
 
             DGV.Rows.Clear()
             Clean()
             FormPurchasProduct_Load(sender, e)
-            Show_DGV(FormMain.DGV2, "Select_SupplierSum")
+            FormMain.refeash()
+            MsgBox("saved Successfully", MsgBoxStyle.Information)
         End If
     End Sub
 
@@ -121,24 +139,27 @@ Public Class FormStock
             Return False
         End If
 
+
         Return True
     End Function
 
-    Private Sub UpdateOrInsertTempStock() ' crude  cree red de ipdate
+    'Private Sub UpdateOrInsertTempStock()
 
-        For Each row As DataGridViewRow In DGV.Rows
-            tempStock.Code_Product = row.Cells(5).Value.ToString
-            tempStock.Quantity_Pt = Val(row.Cells(7).Value)
-        Next
+    '    For Each row As DataGridViewRow In DGV.Rows
+    '        tempStock.Code_Product = Val(row.Cells(5).Value)
+    '        tempStock.Quantity_Pt = Val(row.Cells(7).Value)
 
-        Dim exists = Convert.ToBoolean(tempStockDAL.Reed(Me.tempStock))
-        If exists = True Then
-            tempStockDAL.Update(Me.tempStock)
-        End If
-        If exists = False Then
-            tempStockDAL.Create(Me.tempStock)
-        End If
-    End Sub
+    '    Next
+    '    Dim exists = Convert.ToBoolean(tempStockDAL.Reed(Me.tempStock))
+    '    If exists Then
+
+    '        tempStockDAL.Update(Me.tempStock)
+
+    '    Else
+    '        tempStockDAL.Create(Me.tempStock)
+    '        End If
+
+    'End Sub
 
     Private Sub InsertIntoStock()
 
@@ -147,7 +168,7 @@ Public Class FormStock
                 .CodeStock = row.Cells(0).Value
                 .CodeStockvisible = row.Cells(1).Value
                 .InvoiceDate = row.Cells(2).Value
-                .Code_Supplier = row.Cells(3).Value
+                .Code_Supplier = Val(row.Cells(3).Value)
                 .Name_Supplier = row.Cells(4).Value
 
                 .Code_Product = row.Cells(5).Value
@@ -187,24 +208,39 @@ Public Class FormStock
 
     Private Sub InsertIntoSuppAcc()
 
-        SupplierAcc.SuppId = txtCodeSup.Text
-        SupplierAcc.SuppName = txtNameSup.Text
-        SupplierAcc.Detail = txtDate.Value.Date
-        For i = 0 To DGV.Rows.Count - 1
-            SupplierAcc.Inv = "Facture D'achat N° " + DGV.Rows(i).Cells(0).Value
+        For Each row As DataGridViewRow In DGV.Rows
+
+
+
+            With SupplierAcc
+                .SuppId = Val(row.Cells(3).Value)
+                .SuppName = row.Cells(4).Value
+                .Detail = row.Cells(2).Value
+                .Inv = "Facture D'achat N° " + row.Cells(0).Value
+                .Debit = Val(row.Cells(10).Value)
+                .Credit = Val(row.Cells(9).Value)
+
+            End With
         Next
-        SupplierAcc.Debit = txtTotalPayment.Text
-        SupplierAcc.Credit = txtGrandTotal.Text
-        SupplierAccDAL.Create(Me.SupplierAcc)
+        SupplierAccDAL.Create(Me.SupplierAcc, "Insert_SuppAcc")
+
+
     End Sub
 
+
+
     Private Sub InsertIntoStockProduct()
-        stockProduct.StockID = txtCodestock.Text
-        stockProduct.ProductID = Val(txtCodePt.Text)
-        stockProduct.ProductName = txtNamePt.Text
-        stockProduct.Qty = Val(txtQty.Text)
-        stockProduct.Price = Val(txtPricePerQty.Text)
-        stockProduct.TotalAmount = Val(txtTotalAmount.Text)
+        For Each row As DataGridViewRow In DGV.Rows
+            With stockProduct
+                .StockID = Val(row.Cells(0).Value)
+                .ProductID = row.Cells(5).Value
+                .ProductName = row.Cells(6).Value
+                .Qty = Val(row.Cells(7).Value)
+                .Price = Val(txtPricePerQty.Text)
+                .TotalAmount = Val(row.Cells(9).Value)
+
+            End With
+        Next
         stockProductDAL.Create(Me.stockProduct)
     End Sub
 
@@ -267,13 +303,13 @@ Public Class FormStock
 
 
     Private Sub txtQty_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQty.KeyPress, txtPricePerQty.KeyPress, txtGrandTotal.KeyPress, txtTotalPayment.KeyPress
-        AllowOnlyNumbre(e)
+        Comfunction.AllowOnlyNumbre(e)
     End Sub
 
     Private Sub GroupBox2_DoubleClick(sender As Object, e As EventArgs) Handles GroupBox2.DoubleClick
-        ReadOnlyTxtBox(GroupBox2, False)
+        Comfunction.ReadOnlyTxtBox(GroupBox2, False)
     End Sub
     Private Sub GroupBox1_DoubleClick(sender As Object, e As EventArgs) Handles GroupBox1.DoubleClick
-        ReadOnlyTxtBox(GroupBox1, False)
+        Comfunction.ReadOnlyTxtBox(GroupBox1, False)
     End Sub
 End Class

@@ -42,16 +42,16 @@ Public Class SupplierDAL
 
 
 
-    Sub Search_Name(Proc As String, DGV As DataGridView, Supplier As Supplier)
-        Using cmd As New SqlClient.SqlCommand(Proc, sqlcon)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.Add("@SupplierName", SqlDbType.NVarChar, 50).Value = Supplier.Name
-            cmd.ExecuteNonQuery()
-            Dim dt As New DataTable
-            dt.Clear()
-            Dim da As New SqlClient.SqlDataAdapter(cmd)
-            da.Fill(dt)
-            DGV.DataSource = dt.DefaultView
-        End Using
-    End Sub
+    'Sub Search_Name(Proc As String, DGV As DataGridView, Supplier As Supplier)
+    '    Using cmd As New SqlClient.SqlCommand(Proc, sqlcon)
+    '        cmd.CommandType = CommandType.StoredProcedure
+    '        cmd.Parameters.Add("@SupplierName", SqlDbType.NVarChar, 50).Value = Supplier.Name
+    '        cmd.ExecuteNonQuery()
+    '        Dim dt As New DataTable
+    '        dt.Clear()
+    '        Dim da As New SqlClient.SqlDataAdapter(cmd)
+    '        da.Fill(dt)
+    '        DGV.DataSource = dt.DefaultView
+    '    End Using
+    'End Sub
 End Class

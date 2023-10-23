@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
-Module ComFunction
-
+Class ComFunction
+    Inherits Conexion
     '                         function ALLOW  only Numbre  IN TEXTBOX 
     Public Sub AllowOnlyNumbre(e As KeyPressEventArgs)
         If (Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) And e.KeyChar <> "."c) Then
@@ -16,12 +16,12 @@ Module ComFunction
     '                           Numbere Auto index
     Public Function CODE_GEN(TbL_name, ID_) As Integer
         CODE_GEN = 0
-
+        Conexion.conecta()
 
         Try
             Using dt As New DataTable
                 dt.Clear()
-                Dim da As New SqlDataAdapter("SELECT * FROM " & TbL_name & " ORDER BY " & ID_, sqlcon)
+                Dim da As New SqlDataAdapter("SELECT * FROM " & TbL_name & " ORDER BY " & ID_, Conexion.con)
                 da.Fill(dt)
                 If dt.Rows.Count <> 0 Then
                     Dim I = dt.Rows.Count - 1
@@ -31,19 +31,19 @@ Module ComFunction
         Catch ex As Exception
 
         End Try
-
+        Conexion.desconectar()
 
     End Function
 
     '                            Appearance Data in datagridview 
     Public Sub Show_DGV(datagridview As DataGridView, num_Proc As String)
-        sqlcon_Open()
+        Conexion.conecta()
 
         datagridview.Text = ""
         Try
             Using dt As New DataTable
                 dt.Clear()
-                Dim da As New SqlDataAdapter(num_Proc, sqlcon)
+                Dim da As New SqlDataAdapter(num_Proc, con)
                 da.Fill(dt)
                 datagridview.EndEdit()
                 datagridview.ClearSelection()
@@ -52,20 +52,20 @@ Module ComFunction
 
         Catch ex As Exception
         End Try
-        sqlcon_Close()
+        Conexion.desconectar()
     End Sub
 
     '                              Appearance Data in Combobox 
     Public Sub Show_COMBO(Proc As String, Combo As ComboBox, item As String)
-        sqlcon_Open()
-        Using cmd As New SqlCommand(Proc, sqlcon)
+        Conexion.conecta()
+        Using cmd As New SqlCommand(Proc, Conexion.con)
             Dim dr As SqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
             While dr.Read
                 Combo.Items.Add(dr(item).ToString())
 
             End While
         End Using
-        sqlcon_Close()
+        Conexion.desconectar()
 
     End Sub
     '                               
@@ -89,4 +89,4 @@ Module ComFunction
             End If
         Next
     End Sub
-End Module
+End Class

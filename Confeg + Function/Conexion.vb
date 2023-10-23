@@ -2,11 +2,10 @@
 
 Public Class Conexion
 
-    Protected con As New SqlConnection(My.Settings.Sqlcon1)
+    Public Shared con As New SqlConnection(My.Settings.Sqlcon1)
 
-    Public Function conecta() As Boolean
-
-        If con.State = 1 Then con.Close()
+    Public Shared Function conecta() As Boolean
+        If con.State = ConnectionState.Open Then con.Close()
         Try
             con.Open()
             Return True
@@ -14,10 +13,9 @@ Public Class Conexion
             MsgBox(ex.Message)
         End Try
         Return False
-        End
     End Function
 
-    Public Sub desconectar()
-        If con.State = 1 Then con.Close()
+    Public Shared Sub desconectar()
+        If con.State = ConnectionState.Open Then con.Close()
     End Sub
 End Class

@@ -5,9 +5,10 @@
         Dim args As New Dictionary(Of String, Object) From
         {
         {"TYPE", "INSERT"},
-            {"Product_ID", tempStock.Code_Product},
-            {"Quantity", tempStock.Quantity_Pt}
-        }
+            {"Product_ID", tempStock.Code_Product}
+            }
+        '{"Quantity", tempStock.Quantity_Pt}
+        '}
         Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
@@ -16,7 +17,7 @@
         Dim args As New Dictionary(Of String, Object) From
             {
             {"TYPE", "UPDATE"},
-            {"Product_ID", tempStock.Code_Product},
+             {"Product_ID", tempStock.Code_Product},
             {"Quantity", tempStock.Quantity_Pt}
         }
         Return SqlConnectionManager.ExecuteWrite(procedureName, args)
@@ -29,6 +30,7 @@
             {"TYPE", "SELECT"},
             {"Product_ID", tempStock.Code_Product}
              }
+        '{"Product_ID", tempStock.Code_Product}
         Return SqlConnectionManager.ExecuteScalar(procedureName, args)
     End Function
 

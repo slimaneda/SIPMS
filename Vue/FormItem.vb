@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 
 Public Class FormItem
+    Private Comfunction As New ComFunction
     Private item As New Item
     Private ItemsDAL As New ItemsDAL
 
@@ -14,7 +15,7 @@ Public Class FormItem
     REM 
 
     Private Sub FormItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txt_Codeitem.Text = CODE_GEN("Items", "Code_item") + 1
+        txt_Codeitem.Text = ComFunction.CODE_GEN("Items", "Code_item") + 1
         ResetForm()
     End Sub
 
@@ -22,7 +23,7 @@ Public Class FormItem
         txt_itemname.Text = ""
         PictureBox1.Image = My.Resources.Sans_titre
         txt_Codeitem.Focus()
-        Show_DGV(DGV1, "select_items")
+        ComFunction.Show_DGV(DGV1, "select_items")
     End Sub
 
     Private Sub btnBrows_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
@@ -53,7 +54,7 @@ Public Class FormItem
             ItemsDAL.Create(item)
         Catch ex As Exception
         End Try
-        txt_Codeitem.Text = CODE_GEN("Items", "Code_item") + 1
+        txt_Codeitem.Text = Comfunction.CODE_GEN("Items", "Code_item") + 1
         ResetForm()
     End Sub
 
@@ -66,7 +67,7 @@ Public Class FormItem
         item.Name_item = txt_itemname.Text
 
         ItemsDAL.Update(Me.item)
-        Show_DGV(DGV1, "select_items")
+        ComFunction.Show_DGV(DGV1, "select_items")
     End Sub
 
 
@@ -77,13 +78,13 @@ Public Class FormItem
         End If
         item.Code_item = Val(txt_Codeitem.Text)
         ItemsDAL.Delete(Me.item)
-        Show_DGV(DGV1, "select_items")
+        ComFunction.Show_DGV(DGV1, "select_items")
 
     End Sub
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
         ResetForm()
-        txt_Codeitem.Text = CODE_GEN("Items", "Code_item") + 1
+        txt_Codeitem.Text = ComFunction.CODE_GEN("Items", "Code_item") + 1
     End Sub
 
     Private Sub DGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV1.CellClick

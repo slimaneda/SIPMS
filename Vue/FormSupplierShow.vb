@@ -1,14 +1,14 @@
 ﻿Public Class FormSupplierShow
-
+    Private Comfunction As New ComFunction
 
 
     Private Sub FormSupplierShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_searchId.Focus()
 
         If lbl.Text = "frmSupplier" Then
-            Show_DGV(DGV, "Select_Supplier_Vue")
+            Comfunction.Show_DGV(DGV, "Select_Supplier")
         Else
-            Show_DGV(DGV, "_Stock_Product")
+            Comfunction.Show_DGV(DGV, "_Stock_Product")
         End If
     End Sub
 
@@ -37,7 +37,7 @@
         With FormSupplierPayement
             .txtCodeSup.Text = row.Cells(0).Value
             .txtNameSup.Text = row.Cells(1).Value
-            .txtGrandTotal.Text = row.Cells(4).Value
+            .txtGrandTotaln.Text = row.Cells(4).Value
         End With
     End Sub
 

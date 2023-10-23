@@ -3,6 +3,7 @@
 Public Class FormSupplier
     Private Supplier As New Supplier
     Private SupplierDAL As New SupplierDAL
+    Private Comfunction As New ComFunction
     Sub New()
         InitializeComponent()
         Me.Supplier = Supplier
@@ -28,13 +29,13 @@ Public Class FormSupplier
     End Sub
     Private Sub RestForm()
         txt__SupplierName.Focus()
-        ClearTextboxes(GroupBox1)
+        Comfunction.ClearTextboxes(GroupBox1)
         For Each clm As Control In GroupBox1.Controls
             If TypeOf clm Is MaskedTextBox Then
                 clm.Text = ""
             End If
         Next
-        txt_SupplierID.Text = CODE_GEN("Supplier", "SupplierId") + 1
+        txt_SupplierID.Text = Comfunction.CODE_GEN("Supplier", "SupplierId") + 1
     End Sub
 
     Private Sub FormSupplier_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -52,7 +53,12 @@ Public Class FormSupplier
             Supplier.photo = ms.ToArray()
         End If
         SetCustomerValue()
-        SupplierDAL.Create(Me.Supplier)
+        Try
+            SupplierDAL.Create(Me.Supplier)
+        Catch ex As Exception
+
+        End Try
+
         RestForm()
     End Sub
 
@@ -95,6 +101,10 @@ Public Class FormSupplier
     End Sub
 
     Private Sub text_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_State.KeyPress, txt_Contact.KeyPress, txt_SupplierID.KeyPress
-        AllowOnlyNumbre(e)
+        ComFunction.AllowOnlyNumbre(e)
+    End Sub
+
+    Private Sub btn_Close_Click(sender As Object, e As EventArgs) Handles btn_Close.Click
+        Close()
     End Sub
 End Class

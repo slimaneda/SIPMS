@@ -1,6 +1,7 @@
 ﻿Public Class FormProduct
-    Dim Product As New Product
-    Dim ProductDAL As New ProductDAL
+    Private Comfunction As New ComFunction
+    Private Product As New Product
+    Private ProductDAL As New ProductDAL
     Private Sub GetProductValue()
         With Product
             .Code = Val(txt_Productid.Text)
@@ -12,14 +13,14 @@
     End Sub
 
     Private Sub FormProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txt_Productid.Text = CODE_GEN("Product", "Product_ID") + 1
-        Show_COMBO("select_items", txt_item, "Name Item")
+        txt_Productid.Text = Comfunction.CODE_GEN("Product", "Product_ID") + 1
+        Comfunction.Show_COMBO("select_items", txt_item, "Name Item")
         txt_Productid.Focus()
     End Sub
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
-        ClearTextboxes(Panel2)
-        txt_Productid.Text = CODE_GEN("Product", "Product_ID") + 1
+        Comfunction.ClearTextboxes(Panel2)
+        txt_Productid.Text = Comfunction.CODE_GEN("Product", "Product_ID") + 1
         txt_Productid.Focus()
     End Sub
 
@@ -54,6 +55,6 @@
     End Sub
 
     Private Sub txt_minrecord_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_minrecord.KeyPress, txt_qty.KeyPress
-        AllowOnlyNumbre(e)
+        ComFunction.AllowOnlyNumbre(e)
     End Sub
 End Class

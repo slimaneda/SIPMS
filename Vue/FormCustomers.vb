@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 
 Public Class FormCustomers
+    Private Comfunction As New ComFunction
     Private Customer As New Customer
     Private CustomerDAL As New CustomerDAL
 
@@ -32,7 +33,7 @@ Public Class FormCustomers
 
     Private Sub RestForm()
         txt_CustomerID.Focus()
-        ClearTextboxes(GroupBox1)
+        Comfunction.ClearTextboxes(GroupBox1)
     End Sub
 
     Private Sub btn_Save_Click(sender As Object, e As EventArgs) Handles btn_Save.Click
@@ -43,7 +44,7 @@ Public Class FormCustomers
             Customer.photo = ms.ToArray()
         End If
         CustomerDAL.Create(Me.Customer)
-        txt_CustomerID.Text = CODE_GEN("Customer", "Customer_id") + 1
+        txt_CustomerID.Text = Comfunction.CODE_GEN("Customer", "Customer_id") + 1
     End Sub
 
     Private Sub btn_Update_Click(sender As Object, e As EventArgs) Handles btn_Update.Click
@@ -72,14 +73,14 @@ Public Class FormCustomers
 
 
     Private Sub FormCustomers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txt_CustomerID.Text = CODE_GEN("Customer", "Customer_id") + 1
+        txt_CustomerID.Text = Comfunction.CODE_GEN("Customer", "Customer_id") + 1
 
     End Sub
 
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btn_New.Click
-        ClearTextboxes(GroupBox1)
-        txt_CustomerID.Text = CODE_GEN("Customer", "Customer_id") + 1
+        Comfunction.ClearTextboxes(GroupBox1)
+        txt_CustomerID.Text = Comfunction.CODE_GEN("Customer", "Customer_id") + 1
     End Sub
 
 
@@ -103,7 +104,7 @@ Public Class FormCustomers
     End Sub
 
     Private Sub txt_CustomerID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Zip.KeyPress, txt_CustomerID.KeyPress, txt_Contact.KeyPress
-        AllowOnlyNumbre(e)
+        ComFunction.AllowOnlyNumbre(e)
     End Sub
 
 

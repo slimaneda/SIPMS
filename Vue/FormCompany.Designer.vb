@@ -102,7 +102,7 @@ Partial Class FormCompany
         ' 
         ' btn_browse
         ' 
-        btn_browse.Location = New Point(409, 172)
+        btn_browse.Location = New Point(424, 175)
         btn_browse.Name = "btn_browse"
         btn_browse.Size = New Size(72, 23)
         btn_browse.TabIndex = 15

@@ -23,26 +23,25 @@ Partial Class FormQuotation
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle27 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Label5 = New Label()
         Label51 = New Label()
         Label49 = New Label()
         Label6 = New Label()
         Label25 = New Label()
         Panel1 = New Panel()
-        btnPrint = New Button()
         GroupBox3 = New GroupBox()
         txtContactNo = New TextBox()
         Label9 = New Label()
@@ -177,12 +176,11 @@ Partial Class FormQuotation
         ' 
         Panel1.BackColor = Color.White
         Panel1.BorderStyle = BorderStyle.FixedSingle
-        Panel1.Controls.Add(btnPrint)
         Panel1.Controls.Add(GroupBox3)
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(txtRemarks)
-        Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(DataGridView1)
+        Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(GroupBox5)
         Panel1.Controls.Add(GroupBox4)
         Panel1.Controls.Add(Panel3)
@@ -190,23 +188,8 @@ Partial Class FormQuotation
         Panel1.Location = New Point(8, 8)
         Panel1.Margin = New Padding(4, 3, 4, 3)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1060, 799)
+        Panel1.Size = New Size(1019, 643)
         Panel1.TabIndex = 2
-        ' 
-        ' btnPrint
-        ' 
-        btnPrint.Cursor = Cursors.Hand
-        btnPrint.Enabled = False
-        btnPrint.FlatStyle = FlatStyle.Popup
-        btnPrint.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        btnPrint.Location = New Point(808, 312)
-        btnPrint.Margin = New Padding(4, 3, 4, 3)
-        btnPrint.Name = "btnPrint"
-        btnPrint.Size = New Size(96, 32)
-        btnPrint.TabIndex = 6
-        btnPrint.Text = "&Print"
-        btnPrint.UseVisualStyleBackColor = True
-        btnPrint.Visible = False
         ' 
         ' GroupBox3
         ' 
@@ -217,11 +200,11 @@ Partial Class FormQuotation
         GroupBox3.Controls.Add(Label3)
         GroupBox3.Controls.Add(txtCustomerID)
         GroupBox3.Controls.Add(txtCustomerName)
-        GroupBox3.Location = New Point(305, 86)
+        GroupBox3.Location = New Point(4, 224)
         GroupBox3.Margin = New Padding(4, 3, 4, 3)
         GroupBox3.Name = "GroupBox3"
         GroupBox3.Padding = New Padding(4, 3, 4, 3)
-        GroupBox3.Size = New Size(359, 126)
+        GroupBox3.Size = New Size(359, 139)
         GroupBox3.TabIndex = 1
         GroupBox3.TabStop = False
         GroupBox3.Text = "Customer Details"
@@ -277,7 +260,7 @@ Partial Class FormQuotation
         ' txtCustomerID
         ' 
         txtCustomerID.BackColor = SystemColors.Control
-        txtCustomerID.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtCustomerID.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
         txtCustomerID.Location = New Point(139, 24)
         txtCustomerID.Margin = New Padding(4, 3, 4, 3)
         txtCustomerID.Name = "txtCustomerID"
@@ -297,7 +280,7 @@ Partial Class FormQuotation
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label8.Location = New Point(672, 82)
+        Label8.Location = New Point(10, 372)
         Label8.Margin = New Padding(4, 0, 4, 0)
         Label8.Name = "Label8"
         Label8.Size = New Size(55, 13)
@@ -307,13 +290,13 @@ Partial Class FormQuotation
         ' txtRemarks
         ' 
         txtRemarks.BackColor = Color.White
-        txtRemarks.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        txtRemarks.Location = New Point(675, 100)
+        txtRemarks.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        txtRemarks.Location = New Point(7, 375)
         txtRemarks.Margin = New Padding(4, 3, 4, 3)
         txtRemarks.Multiline = True
         txtRemarks.Name = "txtRemarks"
         txtRemarks.ScrollBars = ScrollBars.Both
-        txtRemarks.Size = New Size(359, 104)
+        txtRemarks.Size = New Size(359, 50)
         txtRemarks.TabIndex = 6
         ' 
         ' Panel4
@@ -322,16 +305,16 @@ Partial Class FormQuotation
         Panel4.BorderStyle = BorderStyle.FixedSingle
         Panel4.Controls.Add(txtGrandTotal)
         Panel4.Controls.Add(Label31)
-        Panel4.Location = New Point(544, 284)
+        Panel4.Location = New Point(374, 372)
         Panel4.Margin = New Padding(4, 3, 4, 3)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(205, 65)
+        Panel4.Size = New Size(205, 56)
         Panel4.TabIndex = 5
         ' 
         ' txtGrandTotal
         ' 
         txtGrandTotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtGrandTotal.Location = New Point(99, 27)
+        txtGrandTotal.Location = New Point(99, 20)
         txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
         txtGrandTotal.Name = "txtGrandTotal"
         txtGrandTotal.ReadOnly = True
@@ -343,7 +326,7 @@ Partial Class FormQuotation
         ' 
         Label31.AutoSize = True
         Label31.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label31.Location = New Point(12, 27)
+        Label31.Location = New Point(12, 20)
         Label31.Margin = New Padding(4, 0, 4, 0)
         Label31.Name = "Label31"
         Label31.Size = New Size(69, 13)
@@ -354,55 +337,56 @@ Partial Class FormQuotation
         ' 
         DataGridView1.AllowUserToAddRows = False
         DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle27.BackColor = Color.FloralWhite
-        DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle1.BackColor = Color.FloralWhite
+        DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle28.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle28.BackColor = Color.CadetBlue
-        DataGridViewCellStyle28.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle28.ForeColor = Color.Black
-        DataGridViewCellStyle28.SelectionBackColor = Color.LightSteelBlue
-        DataGridViewCellStyle28.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle28.WrapMode = DataGridViewTriState.True
-        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = Color.CadetBlue
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = Color.LightSteelBlue
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         DataGridView1.ColumnHeadersHeight = 24
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column12, Column1, Column2, Column3, Column4, Column5, Column6, Column9, Column10, Column11, Column7})
         DataGridView1.Cursor = Cursors.Hand
-        DataGridViewCellStyle37.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle37.BackColor = SystemColors.Window
-        DataGridViewCellStyle37.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle37.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        DataGridViewCellStyle37.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle37.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle37.WrapMode = DataGridViewTriState.False
-        DataGridView1.DefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = SystemColors.Window
+        DataGridViewCellStyle11.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle11.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        DataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.False
+        DataGridView1.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridView1.Dock = DockStyle.Bottom
         DataGridView1.EnableHeadersVisualStyles = False
         DataGridView1.GridColor = Color.White
-        DataGridView1.Location = New Point(10, 503)
+        DataGridView1.Location = New Point(0, 518)
         DataGridView1.Margin = New Padding(4, 3, 4, 3)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle38.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle38.BackColor = Color.CadetBlue
-        DataGridViewCellStyle38.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle38.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle38.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle38.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle38.WrapMode = DataGridViewTriState.True
-        DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = Color.CadetBlue
+        DataGridViewCellStyle12.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle12.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.True
+        DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         DataGridView1.RowHeadersWidth = 25
         DataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle39.BackColor = Color.White
-        DataGridViewCellStyle39.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle39.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle39.SelectionForeColor = Color.White
-        DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle13.BackColor = Color.White
+        DataGridViewCellStyle13.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle13.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle13.SelectionForeColor = Color.White
+        DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle13
         DataGridView1.RowTemplate.Height = 18
         DataGridView1.RowTemplate.Resizable = DataGridViewTriState.False
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView1.Size = New Size(1024, 138)
+        DataGridView1.Size = New Size(1017, 123)
         DataGridView1.TabIndex = 10
         ' 
         ' Column12
@@ -419,64 +403,64 @@ Partial Class FormQuotation
         ' 
         ' Column2
         ' 
-        DataGridViewCellStyle29.Alignment = DataGridViewContentAlignment.TopRight
-        Column2.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopRight
+        Column2.DefaultCellStyle = DataGridViewCellStyle3
         Column2.HeaderText = "Price"
         Column2.Name = "Column2"
         Column2.ReadOnly = True
         ' 
         ' Column3
         ' 
-        DataGridViewCellStyle30.Alignment = DataGridViewContentAlignment.TopRight
-        Column3.DefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopRight
+        Column3.DefaultCellStyle = DataGridViewCellStyle4
         Column3.HeaderText = "Quantity"
         Column3.Name = "Column3"
         Column3.ReadOnly = True
         ' 
         ' Column4
         ' 
-        DataGridViewCellStyle31.Alignment = DataGridViewContentAlignment.TopRight
-        Column4.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.TopRight
+        Column4.DefaultCellStyle = DataGridViewCellStyle5
         Column4.HeaderText = "Amount"
         Column4.Name = "Column4"
         Column4.ReadOnly = True
         ' 
         ' Column5
         ' 
-        DataGridViewCellStyle32.Alignment = DataGridViewContentAlignment.TopRight
-        Column5.DefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.TopRight
+        Column5.DefaultCellStyle = DataGridViewCellStyle6
         Column5.HeaderText = "Discount %"
         Column5.Name = "Column5"
         Column5.ReadOnly = True
         ' 
         ' Column6
         ' 
-        DataGridViewCellStyle33.Alignment = DataGridViewContentAlignment.TopRight
-        Column6.DefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopRight
+        Column6.DefaultCellStyle = DataGridViewCellStyle7
         Column6.HeaderText = "Discount"
         Column6.Name = "Column6"
         Column6.ReadOnly = True
         ' 
         ' Column9
         ' 
-        DataGridViewCellStyle34.Alignment = DataGridViewContentAlignment.TopRight
-        Column9.DefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.TopRight
+        Column9.DefaultCellStyle = DataGridViewCellStyle8
         Column9.HeaderText = "VAT %"
         Column9.Name = "Column9"
         Column9.ReadOnly = True
         ' 
         ' Column10
         ' 
-        DataGridViewCellStyle35.Alignment = DataGridViewContentAlignment.TopRight
-        Column10.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.TopRight
+        Column10.DefaultCellStyle = DataGridViewCellStyle9
         Column10.HeaderText = "VAT Amt"
         Column10.Name = "Column10"
         Column10.ReadOnly = True
         ' 
         ' Column11
         ' 
-        DataGridViewCellStyle36.Alignment = DataGridViewContentAlignment.TopRight
-        Column11.DefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.TopRight
+        Column11.DefaultCellStyle = DataGridViewCellStyle10
         Column11.HeaderText = "Total Amt."
         Column11.Name = "Column11"
         Column11.ReadOnly = True
@@ -520,11 +504,11 @@ Partial Class FormQuotation
         GroupBox5.Controls.Add(Label11)
         GroupBox5.Controls.Add(Label22)
         GroupBox5.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        GroupBox5.Location = New Point(10, 218)
+        GroupBox5.Location = New Point(374, 87)
         GroupBox5.Margin = New Padding(4, 3, 4, 3)
         GroupBox5.Name = "GroupBox5"
         GroupBox5.Padding = New Padding(4, 3, 4, 3)
-        GroupBox5.Size = New Size(514, 279)
+        GroupBox5.Size = New Size(536, 279)
         GroupBox5.TabIndex = 2
         GroupBox5.TabStop = False
         GroupBox5.Text = "Product Details"
@@ -796,11 +780,11 @@ Partial Class FormQuotation
         GroupBox4.Controls.Add(txtQuotationNo)
         GroupBox4.Controls.Add(Label4)
         GroupBox4.Controls.Add(Label5)
-        GroupBox4.Location = New Point(10, 82)
+        GroupBox4.Location = New Point(10, 85)
         GroupBox4.Margin = New Padding(4, 3, 4, 3)
         GroupBox4.Name = "GroupBox4"
         GroupBox4.Padding = New Padding(4, 3, 4, 3)
-        GroupBox4.Size = New Size(287, 130)
+        GroupBox4.Size = New Size(356, 130)
         GroupBox4.TabIndex = 0
         GroupBox4.TabStop = False
         GroupBox4.Text = "Quotation Info"
@@ -843,18 +827,18 @@ Partial Class FormQuotation
         Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(576, 361)
+        Panel3.Location = New Point(231, 457)
         Panel3.Margin = New Padding(4, 3, 4, 3)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(458, 109)
+        Panel3.Size = New Size(645, 55)
         Panel3.TabIndex = 3
         ' 
         ' btnGetData
         ' 
         btnGetData.Cursor = Cursors.Hand
         btnGetData.FlatStyle = FlatStyle.Popup
-        btnGetData.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        btnGetData.Location = New Point(15, 50)
+        btnGetData.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnGetData.Location = New Point(335, 10)
         btnGetData.Margin = New Padding(4, 3, 4, 3)
         btnGetData.Name = "btnGetData"
         btnGetData.Size = New Size(96, 32)
@@ -866,8 +850,8 @@ Partial Class FormQuotation
         ' 
         btnDelete.Cursor = Cursors.Hand
         btnDelete.FlatStyle = FlatStyle.Popup
-        btnDelete.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        btnDelete.Location = New Point(127, 46)
+        btnDelete.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnDelete.Location = New Point(439, 10)
         btnDelete.Margin = New Padding(4, 3, 4, 3)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(96, 32)
@@ -879,8 +863,8 @@ Partial Class FormQuotation
         ' 
         btnClose.Cursor = Cursors.Hand
         btnClose.FlatStyle = FlatStyle.Popup
-        btnClose.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        btnClose.Location = New Point(231, 48)
+        btnClose.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnClose.Location = New Point(543, 10)
         btnClose.Margin = New Padding(4, 3, 4, 3)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(96, 32)
@@ -892,8 +876,8 @@ Partial Class FormQuotation
         ' 
         btnUpdate.Cursor = Cursors.Hand
         btnUpdate.FlatStyle = FlatStyle.Popup
-        btnUpdate.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        btnUpdate.Location = New Point(231, 10)
+        btnUpdate.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnUpdate.Location = New Point(228, 10)
         btnUpdate.Margin = New Padding(4, 3, 4, 3)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(96, 32)
@@ -905,8 +889,8 @@ Partial Class FormQuotation
         ' 
         btnSave.Cursor = Cursors.Hand
         btnSave.FlatStyle = FlatStyle.Popup
-        btnSave.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        btnSave.Location = New Point(124, 10)
+        btnSave.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnSave.Location = New Point(120, 10)
         btnSave.Margin = New Padding(4, 3, 4, 3)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(96, 32)
@@ -918,8 +902,8 @@ Partial Class FormQuotation
         ' 
         btnNew.Cursor = Cursors.Hand
         btnNew.FlatStyle = FlatStyle.Popup
-        btnNew.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
-        btnNew.Location = New Point(15, 9)
+        btnNew.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        btnNew.Location = New Point(10, 9)
         btnNew.Margin = New Padding(4, 3, 4, 3)
         btnNew.Name = "btnNew"
         btnNew.Size = New Size(96, 32)
@@ -932,10 +916,11 @@ Partial Class FormQuotation
         Panel2.BackColor = Color.DarkSlateGray
         Panel2.BackgroundImageLayout = ImageLayout.Stretch
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(10, 8)
+        Panel2.Dock = DockStyle.Top
+        Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(4, 3, 4, 3)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1346, 72)
+        Panel2.Size = New Size(1017, 72)
         Panel2.TabIndex = 0
         ' 
         ' Label1
@@ -953,12 +938,12 @@ Partial Class FormQuotation
         ' 
         ' FormQuotation
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSlateGray
-        ClientSize = New Size(1068, 650)
+        ClientSize = New Size(1027, 650)
         Controls.Add(Panel1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)
         MaximizeBox = False
         MinimizeBox = False
@@ -1016,7 +1001,6 @@ Partial Class FormQuotation
     Friend WithEvents txtVAT As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label22 As Label
-    Friend WithEvents btnPrint As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents Panel4 As Panel

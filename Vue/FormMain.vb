@@ -59,4 +59,8 @@
     Private Sub PurchasBillsuplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PurchasBillsuplierToolStripMenuItem.Click
         FormStock.ShowDialog()
     End Sub
+
+    Private Sub btn_user_Click(sender As Object, e As EventArgs) Handles btn_user.Click
+        FormCompany.ShowDialog()
+    End Sub
 End Class

@@ -104,6 +104,7 @@ Partial Class FormSupplierPayement
         txtGrandTotal.TabIndex = 91
         txtGrandTotal.Text = "00"
         txtGrandTotal.TextAlign = HorizontalAlignment.Center
+        txtGrandTotal.Visible = False
         ' 
         ' btnClose
         ' 
@@ -155,6 +156,7 @@ Partial Class FormSupplierPayement
         txtCodSupplier.Size = New Size(61, 23)
         txtCodSupplier.TabIndex = 90
         txtCodSupplier.TextAlign = HorizontalAlignment.Center
+        txtCodSupplier.Visible = False
         ' 
         ' txtNameSup
         ' 

@@ -1,16 +1,14 @@
-﻿Imports System.Data.SqlClient
-
-Public Class FormStock
+﻿Public Class FormStock
     REM Private fields
     Private Comfunction As ComFunction
 
     Private stock As Stock
-    Private tempStock As TempStock
+
     Private SupplierAcc As SupplierAcc
     Private stockProduct As StockProduct
 
     Private stockDAL As StockDAL
-    Private tempStockDAL As TempStockDAL
+
     Private SupplierAccDAL As SupplierAccDAL
     Private stockProductDAL As StockProductDAl
 
@@ -25,24 +23,24 @@ Public Class FormStock
         REM Initialize fields
         Comfunction = New ComFunction
         stock = New Stock()
-        tempStock = New TempStock()
+
         Me.SupplierAcc = New SupplierAcc
         stockProduct = New StockProduct()
 
         stockDAL = New StockDAL()
-        tempStockDAL = New TempStockDAL()
+
         SupplierAccDAL = New SupplierAccDAL
         stockProductDAL = New StockProductDAl()
     End Sub
 
     Private Sub FormPurchasProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         stock.CodeStock = Val(txtCodestock.Text)
-        txtCodestock.Text = ComFunction.CODE_GEN("Stock", "Code_fct") + 1
+        txtCodestock.Text = Comfunction.CODE_GEN("Stock", "Code_fct") + 1
         btnShowSupp.Focus()
     End Sub
 
     Private Sub Clean()
-        With ComFunction
+        With Comfunction
             .ClearTextboxes(GroupBox1)         ' Clears all TextBox controls on the form
             .ClearTextboxes(GroupBox2)
             .ClearTextboxes(Panel4)
@@ -143,23 +141,7 @@ Public Class FormStock
         Return True
     End Function
 
-    'Private Sub UpdateOrInsertTempStock()
 
-    '    For Each row As DataGridViewRow In DGV.Rows
-    '        tempStock.Code_Product = Val(row.Cells(5).Value)
-    '        tempStock.Quantity_Pt = Val(row.Cells(7).Value)
-
-    '    Next
-    '    Dim exists = Convert.ToBoolean(tempStockDAL.Reed(Me.tempStock))
-    '    If exists Then
-
-    '        tempStockDAL.Update(Me.tempStock)
-
-    '    Else
-    '        tempStockDAL.Create(Me.tempStock)
-    '        End If
-
-    'End Sub
 
     Private Sub InsertIntoStock()
 

@@ -118,7 +118,6 @@ Partial Class FormMain
         ' 
         ' btn_user
         ' 
-        btn_user.Enabled = False
         btn_user.Image = CType(resources.GetObject("btn_user.Image"), Image)
         btn_user.ImageAlign = ContentAlignment.TopCenter
         btn_user.ImageScaling = ToolStripItemImageScaling.None

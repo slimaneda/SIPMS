@@ -22,10 +22,8 @@ Partial Class FormCompany
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Label1 = New Label()
-        DGV1 = New DataGridView()
         Panel2 = New Panel()
         btn_browse = New Button()
         PictureBox1 = New PictureBox()
@@ -52,7 +50,6 @@ Partial Class FormCompany
         btnNew = New Button()
         OpenFileDialog1 = New OpenFileDialog()
         Panel1.SuspendLayout()
-        CType(DGV1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -65,7 +62,7 @@ Partial Class FormCompany
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(815, 63)
+        Panel1.Size = New Size(614, 63)
         Panel1.TabIndex = 0
         ' 
         ' Label1
@@ -73,35 +70,11 @@ Partial Class FormCompany
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(304, 21)
+        Label1.Location = New Point(209, 22)
         Label1.Name = "Label1"
         Label1.Size = New Size(207, 24)
         Label1.TabIndex = 0
         Label1.Text = "Company Information"
-        ' 
-        ' DGV1
-        ' 
-        DGV1.AllowUserToAddRows = False
-        DGV1.AllowUserToDeleteRows = False
-        DGV1.BackgroundColor = SystemColors.Control
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = Color.White
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DGV1.Dock = DockStyle.Bottom
-        DGV1.EnableHeadersVisualStyles = False
-        DGV1.Location = New Point(0, 396)
-        DGV1.Name = "DGV1"
-        DGV1.ReadOnly = True
-        DGV1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DGV1.RowHeadersVisible = False
-        DGV1.RowTemplate.Height = 25
-        DGV1.Size = New Size(815, 281)
-        DGV1.TabIndex = 1
         ' 
         ' Panel2
         ' 
@@ -122,14 +95,14 @@ Partial Class FormCompany
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(txt_Companyname)
         Panel2.Controls.Add(Label2)
-        Panel2.Location = New Point(12, 92)
+        Panel2.Location = New Point(12, 69)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(589, 281)
+        Panel2.Size = New Size(588, 281)
         Panel2.TabIndex = 2
         ' 
         ' btn_browse
         ' 
-        btn_browse.Location = New Point(415, 191)
+        btn_browse.Location = New Point(409, 172)
         btn_browse.Name = "btn_browse"
         btn_browse.Size = New Size(72, 23)
         btn_browse.TabIndex = 15
@@ -140,7 +113,7 @@ Partial Class FormCompany
         ' 
         PictureBox1.BorderStyle = BorderStyle.FixedSingle
         PictureBox1.Image = My.Resources.Resources.Sans_titre
-        PictureBox1.Location = New Point(385, 33)
+        PictureBox1.Location = New Point(379, 14)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(145, 148)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -149,7 +122,7 @@ Partial Class FormCompany
         ' 
         ' txt_CIN
         ' 
-        txt_CIN.Location = New Point(124, 231)
+        txt_CIN.Location = New Point(111, 215)
         txt_CIN.Name = "txt_CIN"
         txt_CIN.Size = New Size(196, 23)
         txt_CIN.TabIndex = 13
@@ -158,7 +131,7 @@ Partial Class FormCompany
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label7.Location = New Point(26, 234)
+        Label7.Location = New Point(13, 218)
         Label7.Name = "Label7"
         Label7.Size = New Size(33, 15)
         Label7.TabIndex = 12
@@ -166,7 +139,7 @@ Partial Class FormCompany
         ' 
         ' txt_STN
         ' 
-        txt_STN.Location = New Point(124, 196)
+        txt_STN.Location = New Point(111, 180)
         txt_STN.Name = "txt_STN"
         txt_STN.Size = New Size(196, 23)
         txt_STN.TabIndex = 11
@@ -175,7 +148,7 @@ Partial Class FormCompany
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label8.Location = New Point(26, 199)
+        Label8.Location = New Point(13, 183)
         Label8.Name = "Label8"
         Label8.Size = New Size(45, 15)
         Label8.TabIndex = 10
@@ -183,7 +156,7 @@ Partial Class FormCompany
         ' 
         ' txt_TIN
         ' 
-        txt_TIN.Location = New Point(124, 163)
+        txt_TIN.Location = New Point(111, 147)
         txt_TIN.Name = "txt_TIN"
         txt_TIN.Size = New Size(196, 23)
         txt_TIN.TabIndex = 9
@@ -192,7 +165,7 @@ Partial Class FormCompany
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label9.Location = New Point(26, 166)
+        Label9.Location = New Point(13, 150)
         Label9.Name = "Label9"
         Label9.Size = New Size(32, 15)
         Label9.TabIndex = 8
@@ -200,7 +173,7 @@ Partial Class FormCompany
         ' 
         ' txt_Email
         ' 
-        txt_Email.Location = New Point(124, 128)
+        txt_Email.Location = New Point(111, 112)
         txt_Email.Name = "txt_Email"
         txt_Email.Size = New Size(196, 23)
         txt_Email.TabIndex = 7
@@ -209,7 +182,7 @@ Partial Class FormCompany
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(26, 131)
+        Label4.Location = New Point(13, 115)
         Label4.Name = "Label4"
         Label4.Size = New Size(63, 15)
         Label4.TabIndex = 6
@@ -217,7 +190,7 @@ Partial Class FormCompany
         ' 
         ' txt_Contact
         ' 
-        txt_Contact.Location = New Point(124, 95)
+        txt_Contact.Location = New Point(111, 79)
         txt_Contact.Name = "txt_Contact"
         txt_Contact.Size = New Size(196, 23)
         txt_Contact.TabIndex = 5
@@ -226,7 +199,7 @@ Partial Class FormCompany
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label5.Location = New Point(26, 98)
+        Label5.Location = New Point(13, 82)
         Label5.Name = "Label5"
         Label5.Size = New Size(71, 15)
         Label5.TabIndex = 4
@@ -234,7 +207,7 @@ Partial Class FormCompany
         ' 
         ' txt_Adress
         ' 
-        txt_Adress.Location = New Point(124, 60)
+        txt_Adress.Location = New Point(111, 44)
         txt_Adress.Name = "txt_Adress"
         txt_Adress.Size = New Size(196, 23)
         txt_Adress.TabIndex = 3
@@ -243,7 +216,7 @@ Partial Class FormCompany
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(26, 63)
+        Label3.Location = New Point(13, 47)
         Label3.Name = "Label3"
         Label3.Size = New Size(50, 15)
         Label3.TabIndex = 2
@@ -251,7 +224,7 @@ Partial Class FormCompany
         ' 
         ' txt_Companyname
         ' 
-        txt_Companyname.Location = New Point(124, 27)
+        txt_Companyname.Location = New Point(111, 11)
         txt_Companyname.Name = "txt_Companyname"
         txt_Companyname.Size = New Size(196, 23)
         txt_Companyname.TabIndex = 1
@@ -260,7 +233,7 @@ Partial Class FormCompany
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(26, 30)
+        Label2.Location = New Point(13, 14)
         Label2.Name = "Label2"
         Label2.Size = New Size(102, 15)
         Label2.TabIndex = 0
@@ -275,14 +248,14 @@ Partial Class FormCompany
         Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(643, 117)
+        Panel3.Location = New Point(16, 356)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(125, 225)
+        Panel3.Size = New Size(584, 56)
         Panel3.TabIndex = 3
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(21, 191)
+        btnClose.Location = New Point(480, 14)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(90, 23)
         btnClose.TabIndex = 21
@@ -291,7 +264,7 @@ Partial Class FormCompany
         ' 
         ' btnShow
         ' 
-        btnShow.Location = New Point(21, 153)
+        btnShow.Location = New Point(384, 14)
         btnShow.Name = "btnShow"
         btnShow.Size = New Size(90, 23)
         btnShow.TabIndex = 20
@@ -300,7 +273,8 @@ Partial Class FormCompany
         ' 
         ' btnDelete
         ' 
-        btnDelete.Location = New Point(21, 119)
+        btnDelete.Enabled = False
+        btnDelete.Location = New Point(288, 14)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(90, 23)
         btnDelete.TabIndex = 19
@@ -309,7 +283,8 @@ Partial Class FormCompany
         ' 
         ' btnUpdate
         ' 
-        btnUpdate.Location = New Point(21, 86)
+        btnUpdate.Enabled = False
+        btnUpdate.Location = New Point(192, 14)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(90, 23)
         btnUpdate.TabIndex = 18
@@ -318,7 +293,8 @@ Partial Class FormCompany
         ' 
         ' btnSave
         ' 
-        btnSave.Location = New Point(21, 48)
+        btnSave.Enabled = False
+        btnSave.Location = New Point(99, 14)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(90, 23)
         btnSave.TabIndex = 17
@@ -327,7 +303,7 @@ Partial Class FormCompany
         ' 
         ' btnNew
         ' 
-        btnNew.Location = New Point(21, 14)
+        btnNew.Location = New Point(3, 14)
         btnNew.Name = "btnNew"
         btnNew.Size = New Size(90, 23)
         btnNew.TabIndex = 16
@@ -343,17 +319,15 @@ Partial Class FormCompany
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(815, 677)
+        ClientSize = New Size(614, 424)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
-        Controls.Add(DGV1)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "FormCompany"
         Text = "FormCompany"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(DGV1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -363,7 +337,6 @@ Partial Class FormCompany
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents DGV1 As DataGridView
     Friend WithEvents Panel2 As Panel
     Friend WithEvents txt_Companyname As TextBox
     Friend WithEvents Label2 As Label

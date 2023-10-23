@@ -5,6 +5,7 @@
     Private Const B As String = "b"
     Private Const Show_Supplier As String = "FormStock"
     Private Const Show_SupplierPayement As String = "formSupplierPayement"
+    Private Const Company = "company"
 
 
     Private Sub FormProductShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -16,7 +17,9 @@
             Case Show_Supplier
                 ComFunction.Show_DGV(DGV, "Select_Supplier")
             Case Show_SupplierPayement
-                ComFunction.Show_DGV(DGV, "Select_Supplier_Vue")
+                Comfunction.Show_DGV(DGV, "Select_Supplier_Vue")
+            Case Company
+                Comfunction.Show_DGV(DGV, "FormProductShow")
         End Select
     End Sub
 

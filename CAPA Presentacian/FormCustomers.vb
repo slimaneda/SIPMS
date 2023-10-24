@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 
 Public Class FormCustomers
-    Private Comfunction As New ComFunction
+    'Private Comfunction As New ComFunction
     Private Customer As New Customer
     Private CustomerDAL As New CustomerDAL
 

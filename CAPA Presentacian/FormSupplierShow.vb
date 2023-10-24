@@ -1,5 +1,5 @@
 ﻿Public Class FormSupplierShow
-    Private Comfunction As New ComFunction
+    'Private Comfunction As New ComFunction
 
 
     Private Sub FormSupplierShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load

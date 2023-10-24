@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 
 Public Class FormCustomerListe
-    Private Comfunction As New Comfunction
+    ' Private Comfunction As New Comfunction
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()

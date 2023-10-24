@@ -2,8 +2,8 @@
 
 Class ComFunction
     Inherits Conexion
-    '                         function ALLOW  only Numbre  IN TEXTBOX 
-    Public Sub AllowOnlyNumbre(e As KeyPressEventArgs)
+    '                          ALLOW  only Numbre  IN ِTEXTBOX 
+    Public Shared Sub AllowOnlyNumbre(e As KeyPressEventArgs)
         If (Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) And e.KeyChar <> "."c) Then
             e.Handled = True
         End If
@@ -13,8 +13,8 @@ Class ComFunction
 
 
 
-    '                           Numbere Auto index
-    Public Function CODE_GEN(TbL_name, ID_) As Integer
+    '                           Auto-increment  +1
+    Public Shared Function CODE_GEN(TbL_name, ID_) As Integer
         CODE_GEN = 0
         Conexion.conecta()
 
@@ -36,7 +36,7 @@ Class ComFunction
     End Function
 
     '                            Appearance Data in datagridview 
-    Public Sub Show_DGV(datagridview As DataGridView, num_Proc As String)
+    Public Shared Sub Show_DGV(datagridview As DataGridView, num_Proc As String)
         Conexion.conecta()
 
         datagridview.Text = ""
@@ -56,7 +56,7 @@ Class ComFunction
     End Sub
 
     '                              Appearance Data in Combobox 
-    Public Sub Show_COMBO(Proc As String, Combo As ComboBox, item As String)
+    Public Shared Sub Show_COMBO(Proc As String, Combo As ComboBox, item As String)
         Conexion.conecta()
         Using cmd As New SqlCommand(Proc, Conexion.con)
             Dim dr As SqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
@@ -68,8 +68,9 @@ Class ComFunction
         Conexion.desconectar()
 
     End Sub
-    '                               
-    Public Sub ClearTextboxes(control As Control)           ' Clears all TextBox controls on the form
+
+    '                                ' Clears all TextBox controls on the form
+    Public Shared Sub ClearTextboxes(control As Control)
         For Each clt As Control In control.Controls
 
             If TypeOf clt Is TextBox Then
@@ -80,7 +81,8 @@ Class ComFunction
         Next
     End Sub
 
-    Public Sub ReadOnlyTxtBox(control As Control, result As Boolean) ' Sets all TextBox controls on the form to read-only
+    '                                   ' Sets all TextBox controls on the form to read-only
+    Public Shared Sub ReadOnlyTxtBox(control As Control, result As Boolean)
         For Each clt As Control In control.Controls
 
             If TypeOf clt Is TextBox Then

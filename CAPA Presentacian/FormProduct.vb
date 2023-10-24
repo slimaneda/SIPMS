@@ -1,5 +1,5 @@
 ﻿Public Class FormProduct
-    Private Comfunction As New ComFunction
+    ' Private Comfunction As New ComFunction
     Private Product As New Product
     Private ProductDAL As New ProductDAL
     Private Sub GetProductValue()

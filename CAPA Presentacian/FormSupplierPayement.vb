@@ -1,5 +1,5 @@
 ﻿Public Class FormSupplierPayement
-    Private Comfunction As New ComFunction
+    ' Private Comfunction As New ComFunction
     Private SupplierAcc As New SupplierAcc
     Private SupplierAccDAL As New SupplierAccDAL
 

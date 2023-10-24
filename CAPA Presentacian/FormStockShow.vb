@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class FormStockShow
-    Private Comfunction As New ComFunction
+    'Private Comfunction As New ComFunction
     Private Sub FormStockShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Comfunction.Show_DGV(DGV, "Selecte_Stock")
 

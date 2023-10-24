@@ -1,5 +1,5 @@
 ﻿Public Class FormProductShow
-    Private Comfunction As New ComFunction
+    ' Private Comfunction As New ComFunction
     Private Const FPS As String = "FormStock_Product"
     Private Const FB As String = "FB"
     Private Const B As String = "b"

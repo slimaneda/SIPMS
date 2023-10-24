@@ -1,6 +1,6 @@
 ﻿Public Class FormStock
     REM Private fields
-    Private Comfunction As ComFunction
+
 
     Private stock As Stock
 
@@ -16,12 +16,12 @@
     Private price As Double
     Private total As Double
 
-    REM Constructor
+
     Public Sub New()
         InitializeComponent()
 
         REM Initialize fields
-        Comfunction = New ComFunction
+        'Comfunction = New ComFunction
         stock = New Stock()
 
         Me.SupplierAcc = New SupplierAcc
@@ -40,13 +40,13 @@
     End Sub
 
     Private Sub Clean()
-        With Comfunction
-            .ClearTextboxes(GroupBox1)         ' Clears all TextBox controls on the form
-            .ClearTextboxes(GroupBox2)
-            .ClearTextboxes(Panel4)
-            '.ReadOnlyTxtBox(GroupBox2, True) ' Sets all TextBox controls on the form to read-only
-            '.ReadOnlyTxtBox(GroupBox1, True)
-        End With
+
+        ComFunction.ClearTextboxes(GroupBox1)         ' Clears all TextBox controls on the form
+        ComFunction.ClearTextboxes(GroupBox2)
+        ComFunction.ClearTextboxes(Panel4)
+        '.ReadOnlyTxtBox(GroupBox2, True) ' Sets all TextBox controls on the form to read-only
+        '.ReadOnlyTxtBox(GroupBox1, True)
+
 
         txtRemarks.Text = ""
     End Sub

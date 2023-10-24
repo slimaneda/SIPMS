@@ -129,7 +129,6 @@ Partial Class FormMain
         ' 
         ' btn_user
         ' 
-        btn_user.Enabled = False
         btn_user.Image = CType(resources.GetObject("btn_user.Image"), Image)
         btn_user.ImageAlign = ContentAlignment.TopCenter
         btn_user.ImageScaling = ToolStripItemImageScaling.None
@@ -280,37 +279,37 @@ Partial Class FormMain
         ' CalculToolStripMenuItem
         ' 
         CalculToolStripMenuItem.Name = "CalculToolStripMenuItem"
-        CalculToolStripMenuItem.Size = New Size(180, 22)
+        CalculToolStripMenuItem.Size = New Size(143, 22)
         CalculToolStripMenuItem.Text = "Calculator"
         ' 
         ' NotepadToolStripMenuItem
         ' 
         NotepadToolStripMenuItem.Name = "NotepadToolStripMenuItem"
-        NotepadToolStripMenuItem.Size = New Size(180, 22)
+        NotepadToolStripMenuItem.Size = New Size(143, 22)
         NotepadToolStripMenuItem.Text = "Notepad"
         ' 
         ' WordpadToolStripMenuItem
         ' 
         WordpadToolStripMenuItem.Name = "WordpadToolStripMenuItem"
-        WordpadToolStripMenuItem.Size = New Size(180, 22)
+        WordpadToolStripMenuItem.Size = New Size(143, 22)
         WordpadToolStripMenuItem.Text = "Wordpad"
         ' 
         ' MsWordToolStripMenuItem
         ' 
         MsWordToolStripMenuItem.Name = "MsWordToolStripMenuItem"
-        MsWordToolStripMenuItem.Size = New Size(180, 22)
+        MsWordToolStripMenuItem.Size = New Size(143, 22)
         MsWordToolStripMenuItem.Text = "Ms Word"
         ' 
         ' TaslManagerToolStripMenuItem
         ' 
         TaslManagerToolStripMenuItem.Name = "TaslManagerToolStripMenuItem"
-        TaslManagerToolStripMenuItem.Size = New Size(180, 22)
+        TaslManagerToolStripMenuItem.Size = New Size(143, 22)
         TaslManagerToolStripMenuItem.Text = "Tasl Manager"
         ' 
         ' SystemInfoToolStripMenuItem
         ' 
         SystemInfoToolStripMenuItem.Name = "SystemInfoToolStripMenuItem"
-        SystemInfoToolStripMenuItem.Size = New Size(180, 22)
+        SystemInfoToolStripMenuItem.Size = New Size(143, 22)
         SystemInfoToolStripMenuItem.Text = "System Info"
         ' 
         ' AboutToolStripMenuItem1

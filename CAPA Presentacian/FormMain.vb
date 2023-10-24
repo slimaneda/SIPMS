@@ -1,5 +1,5 @@
 ﻿Public Class FormMain
-    Dim ComFunction As New ComFunction
+    ' Dim ComFunction As New ComFunction
     Private Sub CompanyToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CompanyToolStripMenuItem1.Click
         FormCompany.ShowDialog()
     End Sub
@@ -61,7 +61,7 @@
     End Sub
 
     Private Sub btn_user_Click(sender As Object, e As EventArgs) Handles btn_user.Click
-
+        FormUser.ShowDialog()
     End Sub
 
     Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click

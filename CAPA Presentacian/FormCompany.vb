@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 
 Public Class FormCompany
-    Private Comfunction As New ComFunction
+    ' Private Comfunction As New ComFunction
     Private CompanyDAL As New CompanyDAL
     Private COMPANY As New Company
 

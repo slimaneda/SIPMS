@@ -93,7 +93,7 @@ Public Class FormCompany
             COMPANY.photo = ms.ToArray()
         End If
 
-        CompanyDAL.Create(COMPANY)
+        CompanyDAL.Insertar(COMPANY)
 
         MsgBox("save don ")
 

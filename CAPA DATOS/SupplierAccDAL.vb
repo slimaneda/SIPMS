@@ -1,7 +1,7 @@
 ﻿Public Class SupplierAccDAL
 
 
-    Public Function Create(SupplierAcc As SupplierAcc, Query As String, Optional includeCredit As Boolean = True) As Integer
+    Public Function Insertar(SupplierAcc As SupplierAcc, Query As String, Optional includeCredit As Boolean = True) As Integer
         Dim args As New Dictionary(Of String, Object) From
         {
             {"@Sup_id", SupplierAcc.SuppId},

@@ -54,7 +54,7 @@ Public Class FormSupplier
         End If
         SetCustomerValue()
         Try
-            SupplierDAL.Create(Me.Supplier)
+            SupplierDAL.Insertar(Me.Supplier)
         Catch ex As Exception
 
         End Try

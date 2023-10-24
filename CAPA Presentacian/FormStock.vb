@@ -165,7 +165,7 @@
                 .NOTES = row.Cells(12).Value
             End With
             Try
-                stockDAL.Create(Me.stock)
+                stockDAL.Insertar(Me.stock)
             Catch ex As Exception
 
             End Try
@@ -204,7 +204,7 @@
 
             End With
         Next
-        SupplierAccDAL.Create(Me.SupplierAcc, "Insert_SuppAcc")
+        SupplierAccDAL.Insertar(Me.SupplierAcc, "Insert_SuppAcc")
 
 
     End Sub
@@ -223,7 +223,7 @@
 
             End With
         Next
-        stockProductDAL.Create(Me.stockProduct)
+        stockProductDAL.Insertar(Me.stockProduct)
     End Sub
 
 

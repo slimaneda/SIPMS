@@ -23,7 +23,7 @@ Public Class StockDAL
     End Function
 
 
-    Public Function Create(stock As Stock) As Integer
+    Public Function Insertar(stock As Stock) As Integer
         Const procedureName As String = "_STOCK"
         Dim args As Dictionary(Of String, Object) = buildArgements(stock)
         args.Add("@Type", "insert")

@@ -27,7 +27,7 @@
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
         GetProductValue()
-        ProductDAL.create(Me.Product)
+        ProductDAL.Insertar(Me.Product)
         MsgBox("insert done")
         btnNew_Click(sender, e)
     End Sub

@@ -51,7 +51,7 @@ Public Class FormItem
         item.Code_item = txt_Codeitem.Text
         item.Name_item = txt_itemname.Text
         Try
-            ItemsDAL.Create(item)
+            ItemsDAL.Insertar(item)
         Catch ex As Exception
         End Try
         txt_Codeitem.Text = Comfunction.CODE_GEN("Items", "Code_item") + 1

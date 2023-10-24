@@ -1,7 +1,7 @@
 ﻿Public Class ItemsDAL
 
 
-    Public Function Create(item As Item) As Integer
+    Public Function Insertar(item As Item) As Integer
         Const procedureName As String = "Insert_Items"
 
         Dim args As New Dictionary(Of String, Object) From

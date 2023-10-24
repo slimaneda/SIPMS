@@ -4,7 +4,7 @@ Imports System.IO
 Public Class CompanyDAL
 
 
-    Public Function Create(company As Company) As Integer
+    Public Function Insertar(company As Company) As Integer
         Const proc As String = "Insert_Company"
         Dim args As New Dictionary(Of String, Object) From
                     {

@@ -1,5 +1,5 @@
 ﻿Public Class CustomerDAL
-    Public Function Create(Customer As Customer)
+    Public Function Insertar(Customer As Customer)
         Const procedureName As String = "Insert_Customer"
 
         Dim args As New Dictionary(Of String, Object) From

@@ -77,7 +77,7 @@
                 .Debit = Val(txtTotalPayment.Text) = r.Cells(5).Value
             End With
         Next
-        SupplierAccDAL.Create(Me.SupplierAcc, "Insert_SuppAccp", False)
+        SupplierAccDAL.Insertar(Me.SupplierAcc, "Insert_SuppAccp", False)
         FormMain.refeash()
         clean()
         MsgBox("save don")

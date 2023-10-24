@@ -18,7 +18,7 @@ Public Class SupplierDAL
         }
     End Function
 
-    Public Function Create(supplier As Supplier) As Boolean
+    Public Function Insertar(supplier As Supplier) As Boolean
         Const procedureName As String = "Insert_Supplier"
         Dim parameters = PrepareParameters(supplier)
         Return SqlConnectionManager.ExecuteWrite(procedureName, parameters)

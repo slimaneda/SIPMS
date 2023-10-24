@@ -43,7 +43,7 @@ Public Class FormCustomers
             PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
             Customer.photo = ms.ToArray()
         End If
-        CustomerDAL.Create(Me.Customer)
+        CustomerDAL.Insertar(Me.Customer)
         txt_CustomerID.Text = Comfunction.CODE_GEN("Customer", "Customer_id") + 1
     End Sub
 

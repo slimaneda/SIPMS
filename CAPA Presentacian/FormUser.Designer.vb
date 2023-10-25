@@ -23,11 +23,6 @@ Partial Class FormUser
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Label1 = New Label()
         Panel2 = New Panel()
@@ -50,7 +45,6 @@ Partial Class FormUser
         CheckBox11 = New CheckBox()
         CheckBox10 = New CheckBox()
         CheckBox9 = New CheckBox()
-        DGV = New DataGridView()
         CheckBox3 = New CheckBox()
         CheckBox6 = New CheckBox()
         TabControl1 = New TabControl()
@@ -60,13 +54,14 @@ Partial Class FormUser
         CheckBox13 = New CheckBox()
         CheckBox14 = New CheckBox()
         CheckBox15 = New CheckBox()
+        DGV = New DataGridView()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
-        CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         TabPage2.SuspendLayout()
+        CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -76,7 +71,7 @@ Partial Class FormUser
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(709, 63)
+        Panel1.Size = New Size(710, 63)
         Panel1.TabIndex = 3
         ' 
         ' Label1
@@ -175,6 +170,7 @@ Partial Class FormUser
         btnUpdate.TabIndex = 18
         btnUpdate.Text = "&Update"
         btnUpdate.UseVisualStyleBackColor = True
+        btnUpdate.Visible = False
         ' 
         ' btnSave
         ' 
@@ -284,63 +280,6 @@ Partial Class FormUser
         CheckBox9.Text = "Purchas bill"
         CheckBox9.UseVisualStyleBackColor = True
         ' 
-        ' DGV
-        ' 
-        DGV.AllowUserToAddRows = False
-        DGV.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = Color.FloralWhite
-        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-        DGV.BackgroundColor = Color.White
-        DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = Color.CadetBlue
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = Color.LightSteelBlue
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DGV.ColumnHeadersHeight = 31
-        DGV.Cursor = Cursors.Hand
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Window
-        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        DGV.DefaultCellStyle = DataGridViewCellStyle3
-        DGV.EnableHeadersVisualStyles = False
-        DGV.GridColor = Color.White
-        DGV.Location = New Point(406, 69)
-        DGV.Margin = New Padding(4, 5, 5, 5)
-        DGV.Name = "DGV"
-        DGV.ReadOnly = True
-        DGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = Color.CadetBlue
-        DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        DGV.RowHeadersVisible = False
-        DGV.RowHeadersWidth = 30
-        DataGridViewCellStyle5.BackColor = Color.White
-        DataGridViewCellStyle5.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle5.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle5.SelectionForeColor = Color.White
-        DGV.RowsDefaultCellStyle = DataGridViewCellStyle5
-        DGV.RowTemplate.Height = 18
-        DGV.RowTemplate.Resizable = DataGridViewTriState.False
-        DGV.ScrollBars = ScrollBars.Vertical
-        DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DGV.Size = New Size(295, 217)
-        DGV.TabIndex = 6
-        ' 
         ' CheckBox3
         ' 
         CheckBox3.AutoSize = True
@@ -446,13 +385,24 @@ Partial Class FormUser
         CheckBox15.Text = "Delete"
         CheckBox15.UseVisualStyleBackColor = True
         ' 
+        ' DGV
+        ' 
+        DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV.Location = New Point(423, 69)
+        DGV.Name = "DGV"
+        DGV.ReadOnly = True
+        DGV.RowTemplate.Height = 25
+        DGV.Size = New Size(263, 217)
+        DGV.TabIndex = 16
+        ' 
         ' FormUser
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(709, 369)
-        Controls.Add(TabControl1)
+        ClientSize = New Size(710, 370)
         Controls.Add(DGV)
+        Controls.Add(TabControl1)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
@@ -463,12 +413,12 @@ Partial Class FormUser
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
-        CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         TabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
         TabPage2.ResumeLayout(False)
         TabPage2.PerformLayout()
+        CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -504,5 +454,6 @@ Partial Class FormUser
     Friend WithEvents CheckBox13 As CheckBox
     Friend WithEvents CheckBox14 As CheckBox
     Friend WithEvents CheckBox15 As CheckBox
+    Friend WithEvents DataGridView As DataGridView
 End Class
 

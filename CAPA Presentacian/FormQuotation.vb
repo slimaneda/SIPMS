@@ -10,8 +10,8 @@
     End Sub
 
     Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
-        FormCustomerListe.lbl.Text = "FB"
-        FormCustomerListe.ShowDialog()
+        FormProductShow.lbl.Text = "QUATATION"
+        FormProductShow.ShowDialog()
     End Sub
     Public Function GrandTotal() As Double
         Dim sum As Double = 0

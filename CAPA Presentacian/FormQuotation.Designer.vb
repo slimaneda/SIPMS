@@ -52,9 +52,6 @@ Partial Class FormQuotation
         txtCustomerName = New TextBox()
         Label8 = New Label()
         txtRemarks = New TextBox()
-        Panel4 = New Panel()
-        txtGrandTotal = New TextBox()
-        Label31 = New Label()
         DataGridView1 = New DataGridView()
         Column12 = New DataGridViewTextBoxColumn()
         Column1 = New DataGridViewTextBoxColumn()
@@ -67,6 +64,9 @@ Partial Class FormQuotation
         Column10 = New DataGridViewTextBoxColumn()
         Column11 = New DataGridViewTextBoxColumn()
         Column7 = New DataGridViewTextBoxColumn()
+        Panel4 = New Panel()
+        txtGrandTotal = New TextBox()
+        Label31 = New Label()
         GroupBox5 = New GroupBox()
         txtMargin = New TextBox()
         txtCostPrice = New TextBox()
@@ -109,8 +109,8 @@ Partial Class FormQuotation
         ToolTip1 = New ToolTip(components)
         Panel1.SuspendLayout()
         GroupBox3.SuspendLayout()
-        Panel4.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel4.SuspendLayout()
         GroupBox5.SuspendLayout()
         GroupBox4.SuspendLayout()
         Panel3.SuspendLayout()
@@ -299,40 +299,6 @@ Partial Class FormQuotation
         txtRemarks.Size = New Size(359, 50)
         txtRemarks.TabIndex = 6
         ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = Color.Transparent
-        Panel4.BorderStyle = BorderStyle.FixedSingle
-        Panel4.Controls.Add(txtGrandTotal)
-        Panel4.Controls.Add(Label31)
-        Panel4.Location = New Point(374, 372)
-        Panel4.Margin = New Padding(4, 3, 4, 3)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(205, 56)
-        Panel4.TabIndex = 5
-        ' 
-        ' txtGrandTotal
-        ' 
-        txtGrandTotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtGrandTotal.Location = New Point(99, 20)
-        txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
-        txtGrandTotal.Name = "txtGrandTotal"
-        txtGrandTotal.ReadOnly = True
-        txtGrandTotal.Size = New Size(93, 20)
-        txtGrandTotal.TabIndex = 0
-        txtGrandTotal.TextAlign = HorizontalAlignment.Right
-        ' 
-        ' Label31
-        ' 
-        Label31.AutoSize = True
-        Label31.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label31.Location = New Point(12, 20)
-        Label31.Margin = New Padding(4, 0, 4, 0)
-        Label31.Name = "Label31"
-        Label31.Size = New Size(69, 13)
-        Label31.TabIndex = 84
-        Label31.Text = "Grand Total :"
-        ' 
         ' DataGridView1
         ' 
         DataGridView1.AllowUserToAddRows = False
@@ -471,6 +437,40 @@ Partial Class FormQuotation
         Column7.Name = "Column7"
         Column7.ReadOnly = True
         Column7.Visible = False
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.Transparent
+        Panel4.BorderStyle = BorderStyle.FixedSingle
+        Panel4.Controls.Add(txtGrandTotal)
+        Panel4.Controls.Add(Label31)
+        Panel4.Location = New Point(374, 372)
+        Panel4.Margin = New Padding(4, 3, 4, 3)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(205, 56)
+        Panel4.TabIndex = 5
+        ' 
+        ' txtGrandTotal
+        ' 
+        txtGrandTotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        txtGrandTotal.Location = New Point(99, 20)
+        txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
+        txtGrandTotal.Name = "txtGrandTotal"
+        txtGrandTotal.ReadOnly = True
+        txtGrandTotal.Size = New Size(93, 20)
+        txtGrandTotal.TabIndex = 0
+        txtGrandTotal.TextAlign = HorizontalAlignment.Right
+        ' 
+        ' Label31
+        ' 
+        Label31.AutoSize = True
+        Label31.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label31.Location = New Point(12, 20)
+        Label31.Margin = New Padding(4, 0, 4, 0)
+        Label31.Name = "Label31"
+        Label31.Size = New Size(69, 13)
+        Label31.TabIndex = 84
+        Label31.Text = "Grand Total :"
         ' 
         ' GroupBox5
         ' 
@@ -713,6 +713,8 @@ Partial Class FormQuotation
         ' 
         ' txtSellingPrice
         ' 
+        txtSellingPrice.BackColor = SystemColors.ControlLightLight
+        txtSellingPrice.Enabled = False
         txtSellingPrice.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
         txtSellingPrice.Location = New Point(135, 88)
         txtSellingPrice.Margin = New Padding(4, 3, 4, 3)
@@ -801,6 +803,8 @@ Partial Class FormQuotation
         ' 
         ' txtQuotationNo
         ' 
+        txtQuotationNo.BackColor = SystemColors.ButtonHighlight
+        txtQuotationNo.Enabled = False
         txtQuotationNo.Location = New Point(139, 22)
         txtQuotationNo.Margin = New Padding(4, 3, 4, 3)
         txtQuotationNo.Name = "txtQuotationNo"
@@ -953,9 +957,9 @@ Partial Class FormQuotation
         Panel1.PerformLayout()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox5.ResumeLayout(False)
         GroupBox5.PerformLayout()
         GroupBox4.ResumeLayout(False)

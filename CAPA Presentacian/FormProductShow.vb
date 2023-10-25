@@ -6,7 +6,7 @@
     Private Const Show_Supplier As String = "FormStock"
     Private Const Show_SupplierPayement As String = "formSupplierPayement"
     Private Const Company = "company"
-
+    Private Const QUATATION As String = "QUATATION"
 
     Private Sub FormProductShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Select Case lbl.Text
@@ -19,7 +19,9 @@
             Case Show_SupplierPayement
                 Comfunction.Show_DGV(DGV, "Select_Supplier_Vue")
             Case Company
-                Comfunction.Show_DGV(DGV, "FormProductShow")
+                ComFunction.Show_DGV(DGV, "FormProductShow")
+            Case QUATATION
+                ComFunction.Show_DGV(DGV, "Select_Customers")
         End Select
     End Sub
 
@@ -37,6 +39,8 @@
                 SetFormProductValues(e.RowIndex)
             Case Show_SupplierPayement
                 setFormseuppayement(e.RowIndex)
+            Case QUATATION
+                setFormQuatationValue(e.RowIndex)
         End Select
 
         lbl.Text = ""
@@ -83,9 +87,18 @@
             .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value.ToString
             .txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
             .txtGrandTotaln.Text = DGV.Rows(rowIndex).Cells(4).Value.ToString
-
-
         End With
+    End Sub
+    Private Sub setFormQuatationValue(RowIndex As Integer)
+
+        With FormQuotation
+            .txtCustomerID.Text = DGV.Rows(RowIndex).Cells(0).Value
+            .txtCustomerName.Text = DGV.Rows(RowIndex).Cells(1).Value.ToString
+            .txtContactNo.Text = DGV.Rows(RowIndex).Cells(7).Value
+        End With
+
+
+
     End Sub
 
 End Class

@@ -42,4 +42,8 @@ Public Class FormUser
         userdal.Delete(user)
         ComFunction.Show_DGV(DGV, "Select_User")
     End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Close()
+    End Sub
 End Class

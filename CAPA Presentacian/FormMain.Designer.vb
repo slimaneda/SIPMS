@@ -31,14 +31,16 @@ Partial Class FormMain
         btn_customer = New ToolStripMenuItem()
         btn_supplier = New ToolStripMenuItem()
         btn_Product = New ToolStripMenuItem()
-        PurchasBillsuplierToolStripMenuItem = New ToolStripMenuItem()
-        SupplierPaymentToolStripMenuItem = New ToolStripMenuItem()
-        PurchasBillToolStripMenuItem = New ToolStripMenuItem()
-        CustomerReceiptToolStripMenuItem = New ToolStripMenuItem()
+        btnPurchas = New ToolStripMenuItem()
+        btnsupplierpayement = New ToolStripMenuItem()
+        btnQuatation = New ToolStripMenuItem()
+        btnreciept = New ToolStripMenuItem()
         ExitToolStripMenuItem1 = New ToolStripMenuItem()
+        ChangeTheAccountToolStripMenuItem = New ToolStripMenuItem()
+        QuitTheProgramToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip2 = New MenuStrip()
         PppppppppToolStripMenuItem = New ToolStripMenuItem()
-        CompanyToolStripMenuItem1 = New ToolStripMenuItem()
+        btncompany = New ToolStripMenuItem()
         ItemsToolStripMenuItem1 = New ToolStripMenuItem()
         ExitToolStripMenuItem = New ToolStripMenuItem()
         ToolsToolStripMenuItem1 = New ToolStripMenuItem()
@@ -120,7 +122,7 @@ Partial Class FormMain
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {btn_user, btn_items, btn_database, btn_customer, btn_supplier, btn_Product, PurchasBillsuplierToolStripMenuItem, SupplierPaymentToolStripMenuItem, PurchasBillToolStripMenuItem, CustomerReceiptToolStripMenuItem, ExitToolStripMenuItem1})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {btn_user, btn_items, btn_database, btn_customer, btn_supplier, btn_Product, btnPurchas, btnsupplierpayement, btnQuatation, btnreciept, ExitToolStripMenuItem1})
         MenuStrip1.Location = New Point(0, 24)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Size = New Size(1106, 73)
@@ -129,6 +131,8 @@ Partial Class FormMain
         ' 
         ' btn_user
         ' 
+        btn_user.Checked = True
+        btn_user.CheckState = CheckState.Checked
         btn_user.Image = CType(resources.GetObject("btn_user.Image"), Image)
         btn_user.ImageAlign = ContentAlignment.TopCenter
         btn_user.ImageScaling = ToolStripItemImageScaling.None
@@ -139,6 +143,8 @@ Partial Class FormMain
         ' 
         ' btn_items
         ' 
+        btn_items.Checked = True
+        btn_items.CheckState = CheckState.Checked
         btn_items.Image = CType(resources.GetObject("btn_items.Image"), Image)
         btn_items.ImageScaling = ToolStripItemImageScaling.None
         btn_items.Name = "btn_items"
@@ -164,6 +170,8 @@ Partial Class FormMain
         ' 
         ' btn_customer
         ' 
+        btn_customer.Checked = True
+        btn_customer.CheckState = CheckState.Checked
         btn_customer.Image = CType(resources.GetObject("btn_customer.Image"), Image)
         btn_customer.ImageScaling = ToolStripItemImageScaling.None
         btn_customer.Name = "btn_customer"
@@ -173,6 +181,8 @@ Partial Class FormMain
         ' 
         ' btn_supplier
         ' 
+        btn_supplier.Checked = True
+        btn_supplier.CheckState = CheckState.Checked
         btn_supplier.Image = CType(resources.GetObject("btn_supplier.Image"), Image)
         btn_supplier.ImageScaling = ToolStripItemImageScaling.None
         btn_supplier.Name = "btn_supplier"
@@ -182,6 +192,8 @@ Partial Class FormMain
         ' 
         ' btn_Product
         ' 
+        btn_Product.Checked = True
+        btn_Product.CheckState = CheckState.Checked
         btn_Product.Image = CType(resources.GetObject("btn_Product.Image"), Image)
         btn_Product.ImageScaling = ToolStripItemImageScaling.None
         btn_Product.Name = "btn_Product"
@@ -189,50 +201,71 @@ Partial Class FormMain
         btn_Product.Text = "Products"
         btn_Product.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
-        ' PurchasBillsuplierToolStripMenuItem
+        ' btnPurchas
         ' 
-        PurchasBillsuplierToolStripMenuItem.Image = CType(resources.GetObject("PurchasBillsuplierToolStripMenuItem.Image"), Image)
-        PurchasBillsuplierToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
-        PurchasBillsuplierToolStripMenuItem.Name = "PurchasBillsuplierToolStripMenuItem"
-        PurchasBillsuplierToolStripMenuItem.Size = New Size(126, 69)
-        PurchasBillsuplierToolStripMenuItem.Text = "Purchas bill (suplier)"
-        PurchasBillsuplierToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
+        btnPurchas.Checked = True
+        btnPurchas.CheckState = CheckState.Checked
+        btnPurchas.Image = CType(resources.GetObject("btnPurchas.Image"), Image)
+        btnPurchas.ImageScaling = ToolStripItemImageScaling.None
+        btnPurchas.Name = "btnPurchas"
+        btnPurchas.Size = New Size(126, 69)
+        btnPurchas.Text = "Purchas bill (suplier)"
+        btnPurchas.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
-        ' SupplierPaymentToolStripMenuItem
+        ' btnsupplierpayement
         ' 
-        SupplierPaymentToolStripMenuItem.Image = CType(resources.GetObject("SupplierPaymentToolStripMenuItem.Image"), Image)
-        SupplierPaymentToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
-        SupplierPaymentToolStripMenuItem.Name = "SupplierPaymentToolStripMenuItem"
-        SupplierPaymentToolStripMenuItem.Size = New Size(112, 69)
-        SupplierPaymentToolStripMenuItem.Text = "Supplier Payment"
-        SupplierPaymentToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
+        btnsupplierpayement.Checked = True
+        btnsupplierpayement.CheckState = CheckState.Checked
+        btnsupplierpayement.Image = CType(resources.GetObject("btnsupplierpayement.Image"), Image)
+        btnsupplierpayement.ImageScaling = ToolStripItemImageScaling.None
+        btnsupplierpayement.Name = "btnsupplierpayement"
+        btnsupplierpayement.Size = New Size(112, 69)
+        btnsupplierpayement.Text = "Supplier Payment"
+        btnsupplierpayement.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
-        ' PurchasBillToolStripMenuItem
+        ' btnQuatation
         ' 
-        PurchasBillToolStripMenuItem.Image = CType(resources.GetObject("PurchasBillToolStripMenuItem.Image"), Image)
-        PurchasBillToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
-        PurchasBillToolStripMenuItem.Name = "PurchasBillToolStripMenuItem"
-        PurchasBillToolStripMenuItem.Size = New Size(80, 69)
-        PurchasBillToolStripMenuItem.Text = "Purchas Bill"
-        PurchasBillToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
+        btnQuatation.Checked = True
+        btnQuatation.CheckState = CheckState.Checked
+        btnQuatation.Image = CType(resources.GetObject("btnQuatation.Image"), Image)
+        btnQuatation.ImageScaling = ToolStripItemImageScaling.None
+        btnQuatation.Name = "btnQuatation"
+        btnQuatation.Size = New Size(80, 69)
+        btnQuatation.Text = "Purchas Bill"
+        btnQuatation.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
-        ' CustomerReceiptToolStripMenuItem
+        ' btnreciept
         ' 
-        CustomerReceiptToolStripMenuItem.Image = CType(resources.GetObject("CustomerReceiptToolStripMenuItem.Image"), Image)
-        CustomerReceiptToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None
-        CustomerReceiptToolStripMenuItem.Name = "CustomerReceiptToolStripMenuItem"
-        CustomerReceiptToolStripMenuItem.Size = New Size(113, 69)
-        CustomerReceiptToolStripMenuItem.Text = "Customer Receipt"
-        CustomerReceiptToolStripMenuItem.TextImageRelation = TextImageRelation.ImageAboveText
+        btnreciept.Checked = True
+        btnreciept.CheckState = CheckState.Checked
+        btnreciept.Image = CType(resources.GetObject("btnreciept.Image"), Image)
+        btnreciept.ImageScaling = ToolStripItemImageScaling.None
+        btnreciept.Name = "btnreciept"
+        btnreciept.Size = New Size(113, 69)
+        btnreciept.Text = "Customer Receipt"
+        btnreciept.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
         ' ExitToolStripMenuItem1
         ' 
+        ExitToolStripMenuItem1.DropDownItems.AddRange(New ToolStripItem() {ChangeTheAccountToolStripMenuItem, QuitTheProgramToolStripMenuItem})
         ExitToolStripMenuItem1.Image = CType(resources.GetObject("ExitToolStripMenuItem1.Image"), Image)
         ExitToolStripMenuItem1.ImageScaling = ToolStripItemImageScaling.None
         ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
         ExitToolStripMenuItem1.Size = New Size(62, 69)
         ExitToolStripMenuItem1.Text = "Exit"
         ExitToolStripMenuItem1.TextImageRelation = TextImageRelation.ImageAboveText
+        ' 
+        ' ChangeTheAccountToolStripMenuItem
+        ' 
+        ChangeTheAccountToolStripMenuItem.Name = "ChangeTheAccountToolStripMenuItem"
+        ChangeTheAccountToolStripMenuItem.Size = New Size(183, 22)
+        ChangeTheAccountToolStripMenuItem.Text = "Change the Account"
+        ' 
+        ' QuitTheProgramToolStripMenuItem
+        ' 
+        QuitTheProgramToolStripMenuItem.Name = "QuitTheProgramToolStripMenuItem"
+        QuitTheProgramToolStripMenuItem.Size = New Size(183, 22)
+        QuitTheProgramToolStripMenuItem.Text = "Quit the Program"
         ' 
         ' MenuStrip2
         ' 
@@ -246,16 +279,17 @@ Partial Class FormMain
         ' 
         ' PppppppppToolStripMenuItem
         ' 
-        PppppppppToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CompanyToolStripMenuItem1, ItemsToolStripMenuItem1, ExitToolStripMenuItem})
+        PppppppppToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {btncompany, ItemsToolStripMenuItem1, ExitToolStripMenuItem})
         PppppppppToolStripMenuItem.Name = "PppppppppToolStripMenuItem"
         PppppppppToolStripMenuItem.Size = New Size(34, 20)
         PppppppppToolStripMenuItem.Text = "Fill"
         ' 
-        ' CompanyToolStripMenuItem1
+        ' btncompany
         ' 
-        CompanyToolStripMenuItem1.Name = "CompanyToolStripMenuItem1"
-        CompanyToolStripMenuItem1.Size = New Size(126, 22)
-        CompanyToolStripMenuItem1.Text = "Company"
+        btncompany.Enabled = False
+        btncompany.Name = "btncompany"
+        btncompany.Size = New Size(126, 22)
+        btncompany.Text = "Company"
         ' 
         ' ItemsToolStripMenuItem1
         ' 
@@ -864,7 +898,7 @@ Partial Class FormMain
     Friend WithEvents btn_database As ToolStripMenuItem
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents PppppppppToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CompanyToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents btncompany As ToolStripMenuItem
     Friend WithEvents ItemsToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolsToolStripMenuItem1 As ToolStripMenuItem
@@ -878,9 +912,9 @@ Partial Class FormMain
     Friend WithEvents btn_customer As ToolStripMenuItem
     Friend WithEvents btn_supplier As ToolStripMenuItem
     Friend WithEvents btn_Product As ToolStripMenuItem
-    Friend WithEvents PurchasBillToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SupplierPaymentToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CustomerReceiptToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnQuatation As ToolStripMenuItem
+    Friend WithEvents btnsupplierpayement As ToolStripMenuItem
+    Friend WithEvents btnreciept As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
@@ -918,7 +952,7 @@ Partial Class FormMain
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label11 As Label
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents PurchasBillsuplierToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnPurchas As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents AideToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContenuToolStripMenuItem As ToolStripMenuItem
@@ -936,4 +970,6 @@ Partial Class FormMain
     Friend WithEvents Label15 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents ChangeTheAccountToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuitTheProgramToolStripMenuItem As ToolStripMenuItem
 End Class

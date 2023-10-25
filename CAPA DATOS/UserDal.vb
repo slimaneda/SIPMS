@@ -1,4 +1,5 @@
-﻿Public Class UserDal
+﻿Imports System.Data.SqlClient
+Public Class UserDal
 
     Public Function insert(user As User) As Integer
         Const proc As String = "insertuser"  ' Name of the stored procedure
@@ -26,11 +27,18 @@
     End Function
 
     Public Function Delete(user As User) As Integer
-        Const proc As String = "DeleteUser"  ' Name of the stored procedure
-        Dim args As New Dictionary(Of String, Object) From
-        {
-            {"@Username", user.Username}
-        }
-        Return SqlConnectionManager.ExecuteWrite(proc, args)
+        Return SqlConnectionManager.ExecuteWrite("DeleteUser", New Dictionary(Of String, Object) From {{"@Username", user.Username}})
     End Function
+
+    Public Function Verify(user As User) As String
+        Const proc As String = "Selectlogin"
+        Dim args As New Dictionary(Of String, Object) From
+            {
+             {"@Username", user.Username},
+            {"@Password", user.Password}
+        }
+
+        Return SqlConnectionManager.DataExists(proc, args)
+    End Function
+
 End Class

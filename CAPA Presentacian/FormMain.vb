@@ -1,6 +1,6 @@
 ﻿Public Class FormMain
     ' Dim ComFunction As New ComFunction
-    Private Sub CompanyToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CompanyToolStripMenuItem1.Click
+    Private Sub CompanyToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles btncompany.Click
         FormCompany.ShowDialog()
     End Sub
     Sub refeash()
@@ -41,22 +41,22 @@
     End Sub
 
     Private Sub ExitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem1.Click
-        End
+
     End Sub
 
-    Private Sub PurchasBillToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PurchasBillToolStripMenuItem.Click
+    Private Sub PurchasBillToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnQuatation.Click
         FormQuotation.ShowDialog()
     End Sub
 
-    Private Sub CustomerReceiptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CustomerReceiptToolStripMenuItem.Click
+    Private Sub CustomerReceiptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnreciept.Click
         frmOverallReport.ShowDialog()
     End Sub
 
-    Private Sub SupplierPaymentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupplierPaymentToolStripMenuItem.Click
+    Private Sub SupplierPaymentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnsupplierpayement.Click
         FormSupplierPayement.ShowDialog()
     End Sub
 
-    Private Sub PurchasBillsuplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PurchasBillsuplierToolStripMenuItem.Click
+    Private Sub PurchasBillsuplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnPurchas.Click
         FormStock.ShowDialog()
     End Sub
 
@@ -106,5 +106,19 @@
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub ChangeTheAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeTheAccountToolStripMenuItem.Click
+        Dim log As New LoginForm1
+        log.ShowDialog()
+        Me.Hide()
+    End Sub
+
+    Private Sub QuitTheProgramToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitTheProgramToolStripMenuItem.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            End
+        End If
     End Sub
 End Class

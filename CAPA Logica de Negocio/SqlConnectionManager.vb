@@ -19,6 +19,20 @@ Public Class SqlConnectionManager
     End Function
 
 
+    Public Shared Function DataExists(procedureName As String, args As Dictionary(Of String, Object)) As Boolean
+        Conexion.conecta()
+
+        Using cmd As New SqlCommand(procedureName, Conexion.con)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            For Each param As KeyValuePair(Of String, Object) In args
+                cmd.Parameters.AddWithValue(param.Key, param.Value)
+            Next
+
+            Dim Result As Object = cmd.ExecuteScalar()
+            Return (Result IsNot Nothing AndAlso Result IsNot DBNull.Value)
+        End Using
+    End Function
 
     Public Shared Function ExecuteScalar(query As String, parameters As Dictionary(Of String, Object)) As Object
         Conexion.conecta()
@@ -34,27 +48,29 @@ Public Class SqlConnectionManager
     End Function
 
     'Reed 
-    Public Shared Function ExecuteStoredProcedureRead(procedureName As String, args As Dictionary(Of String, Object)) As DataTable
-        Dim dt As New DataTable
+    Public Shared Function ExecuteStoredProcedureRead(args As Dictionary(Of String, Object)) As SqlDataReader
         Conexion.conecta()
-        Try
 
-            Using cmd As New SqlCommand(procedureName, Conexion.con)
+        Dim da As SqlDataReader = Nothing ' Move the declaration outside the Using block
+
+        Try
+            Using cmd As New SqlCommand("sellect", Conexion.con)
                 cmd.CommandType = CommandType.StoredProcedure
 
                 For Each param As KeyValuePair(Of String, Object) In args
                     cmd.Parameters.AddWithValue(param.Key, param.Value)
                 Next
-                Dim da As New SqlDataAdapter(cmd)
-                da.Fill(dt)
+
+                da = cmd.ExecuteReader()
             End Using
         Catch ex As Exception
-        Finally
-
+            ' Handle your exception, for example:
+            Throw New Exception("Error executing stored procedure.", ex)
         End Try
 
-        Return dt
+        Return da
     End Function
+
 
 End Class
 

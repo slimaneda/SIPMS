@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Collections.ObjectModel
+Imports System.Data.SqlClient
 Public Class UserDal
 
     Public Function insert(user As User) As Integer
@@ -26,10 +27,22 @@ Public Class UserDal
         Return SqlConnectionManager.ExecuteWrite(proc, args)
     End Function
 
+
+
     Public Function Delete(user As User) As Integer
         Return SqlConnectionManager.ExecuteWrite("DeleteUser", New Dictionary(Of String, Object) From {{"@Username", user.Username}})
     End Function
 
+    Public Function getser(user As User) As DataRow
+        Const proc As String = "SELECT * FROM [dbo].[User] WHERE [Username] = @Username AND [Password] = @Password"
+        Dim args As New Dictionary(Of String, Object) From
+            {
+             {"@Username", user.Username},
+            {"@Password", user.Password}
+        }
+
+        Return SqlConnectionManager.GetUserByUsername(proc, args)
+    End Function
     Public Function Verify(user As User) As String
         Const proc As String = "Selectlogin"
         Dim args As New Dictionary(Of String, Object) From
@@ -40,5 +53,6 @@ Public Class UserDal
 
         Return SqlConnectionManager.DataExists(proc, args)
     End Function
+
 
 End Class

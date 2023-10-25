@@ -109,7 +109,7 @@
     End Sub
 
     Private Sub ChangeTheAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeTheAccountToolStripMenuItem.Click
-        Dim log As New LoginForm1
+        Dim log As New FormLogin
         log.ShowDialog()
         Me.Hide()
     End Sub

@@ -1,4 +1,6 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Collections.ObjectModel
+Imports System.Data.SqlClient
+Imports System.Runtime.Intrinsics
 
 
 Public Class SqlConnectionManager
@@ -18,6 +20,28 @@ Public Class SqlConnectionManager
         End Using
     End Function
 
+    Public Shared Function GetUserByUsername(sql As String, args As Dictionary(Of String, Object)) As DataRow
+        Conexion.conecta()
+
+        Using cmd As New SqlCommand(sql, Conexion.con),
+          Adp As New SqlDataAdapter(cmd),
+          ds As New DataSet()
+
+            For Each param As KeyValuePair(Of String, Object) In args
+                cmd.Parameters.AddWithValue(param.Key, param.Value)
+            Next
+            Adp.Fill(ds)
+
+            If ds.Tables(0).Rows.Count > 0 Then
+                Return ds.Tables(0).Rows(0)
+            Else
+                Return Nothing
+            End If
+        End Using
+    End Function
+
+
+
 
     Public Shared Function DataExists(procedureName As String, args As Dictionary(Of String, Object)) As Boolean
         Conexion.conecta()
@@ -34,6 +58,9 @@ Public Class SqlConnectionManager
         End Using
     End Function
 
+
+
+
     Public Shared Function ExecuteScalar(query As String, parameters As Dictionary(Of String, Object)) As Object
         Conexion.conecta()
         Using cmd As New SqlCommand(query, Conexion.con)
@@ -47,29 +74,10 @@ Public Class SqlConnectionManager
 
     End Function
 
-    'Reed 
-    Public Shared Function ExecuteStoredProcedureRead(args As Dictionary(Of String, Object)) As SqlDataReader
-        Conexion.conecta()
 
-        Dim da As SqlDataReader = Nothing ' Move the declaration outside the Using block
 
-        Try
-            Using cmd As New SqlCommand("sellect", Conexion.con)
-                cmd.CommandType = CommandType.StoredProcedure
 
-                For Each param As KeyValuePair(Of String, Object) In args
-                    cmd.Parameters.AddWithValue(param.Key, param.Value)
-                Next
 
-                da = cmd.ExecuteReader()
-            End Using
-        Catch ex As Exception
-            ' Handle your exception, for example:
-            Throw New Exception("Error executing stored procedure.", ex)
-        End Try
-
-        Return da
-    End Function
 
 
 End Class

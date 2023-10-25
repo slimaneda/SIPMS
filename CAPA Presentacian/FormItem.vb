@@ -100,7 +100,7 @@ Public Class FormItem
 
     Private Sub txt_search_TextChanged(sender As Object, e As EventArgs) Handles txt_search.TextChanged
         item.Name_item = txt_itemname.Text
-        Dim result As Integer = ItemsDAL.Search(Me.item)
+        'Dim result As Integer = ItemsDAL.Search(Me.item)
 
     End Sub
 

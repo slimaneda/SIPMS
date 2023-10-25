@@ -1,10 +1,10 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-<Global.System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1726")> _
-Partial Class LoginForm1
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+<Global.System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1726")>
+Partial Class FormLogin
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -17,7 +17,6 @@ Partial Class LoginForm1
     Friend WithEvents LogoPictureBox As PictureBox
     Friend WithEvents UsernameLabel As Label
     Friend WithEvents PasswordLabel As Label
-    Friend WithEvents TXTUsername As TextBox
     Friend WithEvents TXTPassword As TextBox
     Friend WithEvents OK As Button
     Friend WithEvents Cancel As Button
@@ -28,16 +27,16 @@ Partial Class LoginForm1
     'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
     'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
     'Ne la modifiez pas à l'aide de l'éditeur de code.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(LoginForm1))
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FormLogin))
         LogoPictureBox = New PictureBox()
         UsernameLabel = New Label()
         PasswordLabel = New Label()
-        TXTUsername = New TextBox()
         TXTPassword = New TextBox()
         OK = New Button()
         Cancel = New Button()
+        ComboUser = New ComboBox()
         CType(LogoPictureBox, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -47,6 +46,7 @@ Partial Class LoginForm1
         LogoPictureBox.Location = New Point(0, 0)
         LogoPictureBox.Name = "LogoPictureBox"
         LogoPictureBox.Size = New Size(165, 193)
+        LogoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage
         LogoPictureBox.TabIndex = 0
         LogoPictureBox.TabStop = False
         ' 
@@ -67,13 +67,6 @@ Partial Class LoginForm1
         PasswordLabel.TabIndex = 2
         PasswordLabel.Text = "&Mot de passe"
         PasswordLabel.TextAlign = ContentAlignment.MiddleLeft
-        ' 
-        ' TXTUsername
-        ' 
-        TXTUsername.Location = New Point(174, 44)
-        TXTUsername.Name = "TXTUsername"
-        TXTUsername.Size = New Size(220, 23)
-        TXTUsername.TabIndex = 1
         ' 
         ' TXTPassword
         ' 
@@ -100,30 +93,39 @@ Partial Class LoginForm1
         Cancel.TabIndex = 5
         Cancel.Text = "&Annuler"
         ' 
+        ' ComboUser
+        ' 
+        ComboUser.FormattingEnabled = True
+        ComboUser.Location = New Point(174, 50)
+        ComboUser.Name = "ComboUser"
+        ComboUser.Size = New Size(226, 23)
+        ComboUser.TabIndex = 6
+        ' 
         ' LoginForm1
         ' 
         AcceptButton = OK
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         CancelButton = Cancel
-        ClientSize = New Size(401, 192)
+        ClientSize = New Size(407, 196)
+        Controls.Add(ComboUser)
         Controls.Add(Cancel)
         Controls.Add(OK)
         Controls.Add(TXTPassword)
-        Controls.Add(TXTUsername)
         Controls.Add(PasswordLabel)
         Controls.Add(UsernameLabel)
         Controls.Add(LogoPictureBox)
         FormBorderStyle = FormBorderStyle.FixedDialog
         MaximizeBox = False
         MinimizeBox = False
-        Name = "LoginForm1"
+        Name = "FormLogin"
         SizeGripStyle = SizeGripStyle.Hide
         StartPosition = FormStartPosition.CenterParent
-        Text = "LoginForm1"
+        Text = "Login"
         CType(LogoPictureBox, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
+    Friend WithEvents ComboUser As ComboBox
 End Class

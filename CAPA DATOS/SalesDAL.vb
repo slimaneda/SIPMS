@@ -2,7 +2,7 @@
 
 
 
-    Public Function insert(sales As Sales) As Integer
+    Public Function insertSales(sales As Sales) As Integer
         Const proc As String = "insert_Sales"
         Dim args As New Dictionary(Of String, Object) From
             {
@@ -11,4 +11,5 @@
             }
         Return SqlConnectionManager.ExecuteWrite(proc, args)
     End Function
+
 End Class

@@ -15,5 +15,15 @@
         }
         Return SqlConnectionManager.ExecuteWrite(proc, agrs)
     End Function
+    Public Function Insertars(StockProduct As StockProduct) As Integer
+        Const proc As String = "StockProduct"
+        Dim agrs As New Dictionary(Of String, Object) From
+            {
+             {"@d2", StockProduct.ProductID},
+              {"d3", StockProduct.ProductName},
+               {"d4", StockProduct.Qty}
+        }
+        Return SqlConnectionManager.ExecuteWrite(proc, agrs)
+    End Function
 
 End Class

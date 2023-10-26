@@ -5,7 +5,7 @@
     End Sub
     Sub refeash()
         ComFunction.Show_DGV(DGV2, "Select_SupplierSum")
-        ComFunction.Show_DGV(DGV, "Select_Supplier_Vue")
+        ComFunction.Show_DGV(DGV, "Select_Sales")
         ' ComFunction.Show_DGV(DGV3, "SelectViewProduct")
         ComFunction.Show_DGV(DGV3, "Selectstock_Qt")
     End Sub

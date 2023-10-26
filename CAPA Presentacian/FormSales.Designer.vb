@@ -23,20 +23,27 @@ Partial Class FormSales
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Label5 = New Label()
         Label49 = New Label()
         Label6 = New Label()
         Label25 = New Label()
         Panel1 = New Panel()
+        Panel5 = New Panel()
+        Label12 = New Label()
+        Label34 = New Label()
+        Label35 = New Label()
+        txtGrandtotal = New TextBox()
+        txttotalunpaid = New TextBox()
+        txtTotalPaid = New TextBox()
         GroupBox3 = New GroupBox()
         txtContactNo = New TextBox()
         Label9 = New Label()
@@ -45,11 +52,26 @@ Partial Class FormSales
         Label3 = New Label()
         txtCustomerID = New TextBox()
         txtCustomerName = New TextBox()
+        txtRemarks = New TextBox()
         DGV = New DataGridView()
+        Column8 = New DataGridViewTextBoxColumn()
+        Column13 = New DataGridViewTextBoxColumn()
+        Column14 = New DataGridViewTextBoxColumn()
+        Column15 = New DataGridViewTextBoxColumn()
+        Column16 = New DataGridViewTextBoxColumn()
+        Column12 = New DataGridViewTextBoxColumn()
+        Column1 = New DataGridViewTextBoxColumn()
+        Column2 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
+        Column4 = New DataGridViewTextBoxColumn()
+        Column10 = New DataGridViewTextBoxColumn()
+        Column7 = New DataGridViewTextBoxColumn()
+        Column6 = New DataGridViewTextBoxColumn()
+        Column9 = New DataGridViewTextBoxColumn()
+        Column5 = New DataGridViewTextBoxColumn()
+        Label8 = New Label()
         GroupBox5 = New GroupBox()
         Label7 = New Label()
-        txtRemarks = New TextBox()
-        Label8 = New Label()
         txtAmount = New TextBox()
         txtVAT = New TextBox()
         txtSellingPrice = New TextBox()
@@ -84,36 +106,14 @@ Partial Class FormSales
         Label1 = New Label()
         Timer1 = New Timer(components)
         ToolTip1 = New ToolTip(components)
-        Panel5 = New Panel()
-        Label12 = New Label()
-        Label34 = New Label()
-        Label35 = New Label()
-        txtGrandtotal = New TextBox()
-        txttotalunpaid = New TextBox()
-        txtTotalPaid = New TextBox()
-        Column8 = New DataGridViewTextBoxColumn()
-        Column13 = New DataGridViewTextBoxColumn()
-        Column14 = New DataGridViewTextBoxColumn()
-        Column15 = New DataGridViewTextBoxColumn()
-        Column16 = New DataGridViewTextBoxColumn()
-        Column12 = New DataGridViewTextBoxColumn()
-        Column1 = New DataGridViewTextBoxColumn()
-        Column2 = New DataGridViewTextBoxColumn()
-        Column3 = New DataGridViewTextBoxColumn()
-        Column4 = New DataGridViewTextBoxColumn()
-        Column10 = New DataGridViewTextBoxColumn()
-        Column7 = New DataGridViewTextBoxColumn()
-        Column6 = New DataGridViewTextBoxColumn()
-        Column9 = New DataGridViewTextBoxColumn()
-        Column5 = New DataGridViewTextBoxColumn()
         Panel1.SuspendLayout()
+        Panel5.SuspendLayout()
         GroupBox3.SuspendLayout()
         CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox5.SuspendLayout()
         GroupBox4.SuspendLayout()
         Panel3.SuspendLayout()
         Panel2.SuspendLayout()
-        Panel5.SuspendLayout()
         SuspendLayout()
         ' 
         ' Label5
@@ -178,6 +178,91 @@ Partial Class FormSales
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1019, 643)
         Panel1.TabIndex = 2
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.Transparent
+        Panel5.BorderStyle = BorderStyle.FixedSingle
+        Panel5.Controls.Add(Label12)
+        Panel5.Controls.Add(Label34)
+        Panel5.Controls.Add(Label35)
+        Panel5.Controls.Add(txtGrandtotal)
+        Panel5.Controls.Add(txttotalunpaid)
+        Panel5.Controls.Add(txtTotalPaid)
+        Panel5.Location = New Point(374, 309)
+        Panel5.Margin = New Padding(4, 5, 4, 5)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(578, 87)
+        Panel5.TabIndex = 86
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label12.Location = New Point(39, 21)
+        Label12.Margin = New Padding(4, 0, 4, 0)
+        Label12.Name = "Label12"
+        Label12.RightToLeft = RightToLeft.No
+        Label12.Size = New Size(69, 13)
+        Label12.TabIndex = 87
+        Label12.Text = "Grand Total :"
+        ' 
+        ' Label34
+        ' 
+        Label34.AutoSize = True
+        Label34.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label34.Location = New Point(247, 35)
+        Label34.Margin = New Padding(4, 0, 4, 0)
+        Label34.Name = "Label34"
+        Label34.RightToLeft = RightToLeft.No
+        Label34.Size = New Size(74, 13)
+        Label34.TabIndex = 86
+        Label34.Text = "Total Unpaid :"
+        ' 
+        ' Label35
+        ' 
+        Label35.AutoSize = True
+        Label35.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label35.Location = New Point(41, 53)
+        Label35.Margin = New Padding(4, 0, 4, 0)
+        Label35.Name = "Label35"
+        Label35.RightToLeft = RightToLeft.No
+        Label35.Size = New Size(61, 13)
+        Label35.TabIndex = 85
+        Label35.Text = "Total Paid :"
+        ' 
+        ' txtGrandtotal
+        ' 
+        txtGrandtotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        txtGrandtotal.Location = New Point(134, 18)
+        txtGrandtotal.Margin = New Padding(4, 5, 4, 5)
+        txtGrandtotal.Name = "txtGrandtotal"
+        txtGrandtotal.ReadOnly = True
+        txtGrandtotal.Size = New Size(72, 20)
+        txtGrandtotal.TabIndex = 0
+        txtGrandtotal.TextAlign = HorizontalAlignment.Right
+        ' 
+        ' txttotalunpaid
+        ' 
+        txttotalunpaid.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        txttotalunpaid.Location = New Point(331, 31)
+        txttotalunpaid.Margin = New Padding(4, 5, 4, 5)
+        txttotalunpaid.Name = "txttotalunpaid"
+        txttotalunpaid.ReadOnly = True
+        txttotalunpaid.Size = New Size(72, 20)
+        txttotalunpaid.TabIndex = 2
+        txttotalunpaid.TextAlign = HorizontalAlignment.Right
+        ' 
+        ' txtTotalPaid
+        ' 
+        txtTotalPaid.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        txtTotalPaid.Location = New Point(136, 50)
+        txtTotalPaid.Margin = New Padding(4, 5, 4, 5)
+        txtTotalPaid.Name = "txtTotalPaid"
+        txtTotalPaid.Size = New Size(72, 20)
+        txtTotalPaid.TabIndex = 1
+        txtTotalPaid.Text = "0"
+        txtTotalPaid.TextAlign = HorizontalAlignment.Right
         ' 
         ' GroupBox3
         ' 
@@ -264,34 +349,46 @@ Partial Class FormSales
         txtCustomerName.Size = New Size(206, 23)
         txtCustomerName.TabIndex = 1
         ' 
+        ' txtRemarks
+        ' 
+        txtRemarks.BackColor = Color.White
+        txtRemarks.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        txtRemarks.Location = New Point(150, 309)
+        txtRemarks.Margin = New Padding(4, 3, 4, 3)
+        txtRemarks.Multiline = True
+        txtRemarks.Name = "txtRemarks"
+        txtRemarks.ScrollBars = ScrollBars.Both
+        txtRemarks.Size = New Size(211, 93)
+        txtRemarks.TabIndex = 6
+        ' 
         ' DGV
         ' 
         DGV.AllowUserToAddRows = False
         DGV.AllowUserToDeleteRows = False
-        DataGridViewCellStyle10.BackColor = Color.FloralWhite
-        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.BackColor = Color.FloralWhite
+        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.BackgroundColor = Color.White
         DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.BackColor = Color.CadetBlue
-        DataGridViewCellStyle11.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle11.ForeColor = Color.Black
-        DataGridViewCellStyle11.SelectionBackColor = Color.LightSteelBlue
-        DataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
-        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = Color.CadetBlue
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = Color.LightSteelBlue
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         DGV.ColumnHeadersHeight = 40
         DGV.Columns.AddRange(New DataGridViewColumn() {Column8, Column13, Column14, Column15, Column16, Column12, Column1, Column2, Column3, Column4, Column10, Column7, Column6, Column9, Column5})
         DGV.Cursor = Cursors.Hand
-        DataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = SystemColors.Window
-        DataGridViewCellStyle16.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle16.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        DataGridViewCellStyle16.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle16.WrapMode = DataGridViewTriState.False
-        DGV.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = SystemColors.Window
+        DataGridViewCellStyle7.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle7.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        DataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.False
+        DGV.DefaultCellStyle = DataGridViewCellStyle7
         DGV.Dock = DockStyle.Bottom
         DGV.EnableHeadersVisualStyles = False
         DGV.GridColor = Color.White
@@ -300,26 +397,136 @@ Partial Class FormSales
         DGV.Name = "DGV"
         DGV.ReadOnly = True
         DGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = Color.CadetBlue
-        DataGridViewCellStyle17.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle17.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle17.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = DataGridViewTriState.True
-        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = Color.CadetBlue
+        DataGridViewCellStyle8.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle8.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.True
+        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         DGV.RowHeadersWidth = 25
         DGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle18.BackColor = Color.White
-        DataGridViewCellStyle18.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle18.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle18.SelectionForeColor = Color.White
-        DGV.RowsDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle9.BackColor = Color.White
+        DataGridViewCellStyle9.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle9.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle9.SelectionForeColor = Color.White
+        DGV.RowsDefaultCellStyle = DataGridViewCellStyle9
         DGV.RowTemplate.Height = 18
         DGV.RowTemplate.Resizable = DataGridViewTriState.False
         DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DGV.Size = New Size(1017, 143)
         DGV.TabIndex = 10
+        ' 
+        ' Column8
+        ' 
+        Column8.HeaderText = "Sales Code"
+        Column8.Name = "Column8"
+        Column8.ReadOnly = True
+        ' 
+        ' Column13
+        ' 
+        Column13.HeaderText = "Sales Date"
+        Column13.Name = "Column13"
+        Column13.ReadOnly = True
+        ' 
+        ' Column14
+        ' 
+        Column14.HeaderText = "Customer ID"
+        Column14.Name = "Column14"
+        Column14.ReadOnly = True
+        ' 
+        ' Column15
+        ' 
+        Column15.HeaderText = "Customer Names"
+        Column15.Name = "Column15"
+        Column15.ReadOnly = True
+        ' 
+        ' Column16
+        ' 
+        Column16.HeaderText = "Contact"
+        Column16.Name = "Column16"
+        Column16.ReadOnly = True
+        ' 
+        ' Column12
+        ' 
+        Column12.HeaderText = "Product Code"
+        Column12.Name = "Column12"
+        Column12.ReadOnly = True
+        ' 
+        ' Column1
+        ' 
+        Column1.HeaderText = "Product Name"
+        Column1.Name = "Column1"
+        Column1.ReadOnly = True
+        ' 
+        ' Column2
+        ' 
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopRight
+        Column2.DefaultCellStyle = DataGridViewCellStyle3
+        Column2.HeaderText = "Price"
+        Column2.Name = "Column2"
+        Column2.ReadOnly = True
+        ' 
+        ' Column3
+        ' 
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopRight
+        Column3.DefaultCellStyle = DataGridViewCellStyle4
+        Column3.HeaderText = "Quantity"
+        Column3.Name = "Column3"
+        Column3.ReadOnly = True
+        ' 
+        ' Column4
+        ' 
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.TopRight
+        Column4.DefaultCellStyle = DataGridViewCellStyle5
+        Column4.HeaderText = "Amount"
+        Column4.Name = "Column4"
+        Column4.ReadOnly = True
+        ' 
+        ' Column10
+        ' 
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.TopRight
+        Column10.DefaultCellStyle = DataGridViewCellStyle6
+        Column10.HeaderText = "VAT Amt"
+        Column10.Name = "Column10"
+        Column10.ReadOnly = True
+        ' 
+        ' Column7
+        ' 
+        Column7.HeaderText = "Grand Total"
+        Column7.Name = "Column7"
+        Column7.ReadOnly = True
+        Column7.Visible = False
+        ' 
+        ' Column6
+        ' 
+        Column6.HeaderText = "Total Paid"
+        Column6.Name = "Column6"
+        Column6.ReadOnly = True
+        ' 
+        ' Column9
+        ' 
+        Column9.HeaderText = "Total Unpaid"
+        Column9.Name = "Column9"
+        Column9.ReadOnly = True
+        ' 
+        ' Column5
+        ' 
+        Column5.HeaderText = "Remarks"
+        Column5.Name = "Column5"
+        Column5.ReadOnly = True
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label8.Location = New Point(44, 349)
+        Label8.Margin = New Padding(4, 0, 4, 0)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(55, 13)
+        Label8.TabIndex = 85
+        Label8.Text = "Remarks :"
         ' 
         ' GroupBox5
         ' 
@@ -367,29 +574,6 @@ Partial Class FormSales
         Label7.Size = New Size(55, 13)
         Label7.TabIndex = 338
         Label7.Text = "Taxe Iva :"
-        ' 
-        ' txtRemarks
-        ' 
-        txtRemarks.BackColor = Color.White
-        txtRemarks.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtRemarks.Location = New Point(150, 309)
-        txtRemarks.Margin = New Padding(4, 3, 4, 3)
-        txtRemarks.Multiline = True
-        txtRemarks.Name = "txtRemarks"
-        txtRemarks.ScrollBars = ScrollBars.Both
-        txtRemarks.Size = New Size(211, 93)
-        txtRemarks.TabIndex = 6
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label8.Location = New Point(44, 349)
-        Label8.Margin = New Padding(4, 0, 4, 0)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(55, 13)
-        Label8.TabIndex = 85
-        Label8.Text = "Remarks :"
         ' 
         ' txtAmount
         ' 
@@ -758,190 +942,6 @@ Partial Class FormSales
         Label1.TabIndex = 0
         Label1.Text = "Product Sales"
         ' 
-        ' Panel5
-        ' 
-        Panel5.BackColor = Color.Transparent
-        Panel5.BorderStyle = BorderStyle.FixedSingle
-        Panel5.Controls.Add(Label12)
-        Panel5.Controls.Add(Label34)
-        Panel5.Controls.Add(Label35)
-        Panel5.Controls.Add(txtGrandtotal)
-        Panel5.Controls.Add(txttotalunpaid)
-        Panel5.Controls.Add(txtTotalPaid)
-        Panel5.Location = New Point(374, 309)
-        Panel5.Margin = New Padding(4, 5, 4, 5)
-        Panel5.Name = "Panel5"
-        Panel5.Size = New Size(578, 87)
-        Panel5.TabIndex = 86
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label12.Location = New Point(39, 21)
-        Label12.Margin = New Padding(4, 0, 4, 0)
-        Label12.Name = "Label12"
-        Label12.RightToLeft = RightToLeft.No
-        Label12.Size = New Size(69, 13)
-        Label12.TabIndex = 87
-        Label12.Text = "Grand Total :"
-        ' 
-        ' Label34
-        ' 
-        Label34.AutoSize = True
-        Label34.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label34.Location = New Point(247, 35)
-        Label34.Margin = New Padding(4, 0, 4, 0)
-        Label34.Name = "Label34"
-        Label34.RightToLeft = RightToLeft.No
-        Label34.Size = New Size(74, 13)
-        Label34.TabIndex = 86
-        Label34.Text = "Total Unpaid :"
-        ' 
-        ' Label35
-        ' 
-        Label35.AutoSize = True
-        Label35.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label35.Location = New Point(41, 53)
-        Label35.Margin = New Padding(4, 0, 4, 0)
-        Label35.Name = "Label35"
-        Label35.RightToLeft = RightToLeft.No
-        Label35.Size = New Size(61, 13)
-        Label35.TabIndex = 85
-        Label35.Text = "Total Paid :"
-        ' 
-        ' txtGrandtotal
-        ' 
-        txtGrandtotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtGrandtotal.Location = New Point(134, 18)
-        txtGrandtotal.Margin = New Padding(4, 5, 4, 5)
-        txtGrandtotal.Name = "txtGrandtotal"
-        txtGrandtotal.ReadOnly = True
-        txtGrandtotal.Size = New Size(72, 20)
-        txtGrandtotal.TabIndex = 0
-        txtGrandtotal.TextAlign = HorizontalAlignment.Right
-        ' 
-        ' txttotalunpaid
-        ' 
-        txttotalunpaid.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txttotalunpaid.Location = New Point(331, 31)
-        txttotalunpaid.Margin = New Padding(4, 5, 4, 5)
-        txttotalunpaid.Name = "txttotalunpaid"
-        txttotalunpaid.ReadOnly = True
-        txttotalunpaid.Size = New Size(72, 20)
-        txttotalunpaid.TabIndex = 2
-        txttotalunpaid.TextAlign = HorizontalAlignment.Right
-        ' 
-        ' txtTotalPaid
-        ' 
-        txtTotalPaid.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        txtTotalPaid.Location = New Point(136, 50)
-        txtTotalPaid.Margin = New Padding(4, 5, 4, 5)
-        txtTotalPaid.Name = "txtTotalPaid"
-        txtTotalPaid.Size = New Size(72, 20)
-        txtTotalPaid.TabIndex = 1
-        txtTotalPaid.Text = "0"
-        txtTotalPaid.TextAlign = HorizontalAlignment.Right
-        ' 
-        ' Column8
-        ' 
-        Column8.HeaderText = "Sales Code"
-        Column8.Name = "Column8"
-        Column8.ReadOnly = True
-        ' 
-        ' Column13
-        ' 
-        Column13.HeaderText = "Sales Date"
-        Column13.Name = "Column13"
-        Column13.ReadOnly = True
-        ' 
-        ' Column14
-        ' 
-        Column14.HeaderText = "Customer ID"
-        Column14.Name = "Column14"
-        Column14.ReadOnly = True
-        ' 
-        ' Column15
-        ' 
-        Column15.HeaderText = "Customer Names"
-        Column15.Name = "Column15"
-        Column15.ReadOnly = True
-        ' 
-        ' Column16
-        ' 
-        Column16.HeaderText = "Contact"
-        Column16.Name = "Column16"
-        Column16.ReadOnly = True
-        ' 
-        ' Column12
-        ' 
-        Column12.HeaderText = "Product Code"
-        Column12.Name = "Column12"
-        Column12.ReadOnly = True
-        ' 
-        ' Column1
-        ' 
-        Column1.HeaderText = "Product Name"
-        Column1.Name = "Column1"
-        Column1.ReadOnly = True
-        ' 
-        ' Column2
-        ' 
-        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.TopRight
-        Column2.DefaultCellStyle = DataGridViewCellStyle12
-        Column2.HeaderText = "Price"
-        Column2.Name = "Column2"
-        Column2.ReadOnly = True
-        ' 
-        ' Column3
-        ' 
-        DataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.TopRight
-        Column3.DefaultCellStyle = DataGridViewCellStyle13
-        Column3.HeaderText = "Quantity"
-        Column3.Name = "Column3"
-        Column3.ReadOnly = True
-        ' 
-        ' Column4
-        ' 
-        DataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.TopRight
-        Column4.DefaultCellStyle = DataGridViewCellStyle14
-        Column4.HeaderText = "Amount"
-        Column4.Name = "Column4"
-        Column4.ReadOnly = True
-        ' 
-        ' Column10
-        ' 
-        DataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.TopRight
-        Column10.DefaultCellStyle = DataGridViewCellStyle15
-        Column10.HeaderText = "VAT Amt"
-        Column10.Name = "Column10"
-        Column10.ReadOnly = True
-        ' 
-        ' Column7
-        ' 
-        Column7.HeaderText = "Grand Total"
-        Column7.Name = "Column7"
-        Column7.ReadOnly = True
-        Column7.Visible = False
-        ' 
-        ' Column6
-        ' 
-        Column6.HeaderText = "Total Paid"
-        Column6.Name = "Column6"
-        Column6.ReadOnly = True
-        ' 
-        ' Column9
-        ' 
-        Column9.HeaderText = "Total Unpaid"
-        Column9.Name = "Column9"
-        Column9.ReadOnly = True
-        ' 
-        ' Column5
-        ' 
-        Column5.HeaderText = "Remarks"
-        Column5.Name = "Column5"
-        Column5.ReadOnly = True
-        ' 
         ' FormSales
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -957,6 +957,8 @@ Partial Class FormSales
         StartPosition = FormStartPosition.CenterScreen
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
         CType(DGV, ComponentModel.ISupportInitialize).EndInit()
@@ -967,8 +969,6 @@ Partial Class FormSales
         Panel3.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        Panel5.ResumeLayout(False)
-        Panel5.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents Panel1 As Panel

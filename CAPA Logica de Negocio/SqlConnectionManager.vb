@@ -1,6 +1,4 @@
-﻿Imports System.Collections.ObjectModel
-Imports System.Data.SqlClient
-Imports System.Runtime.Intrinsics
+﻿Imports System.Data.SqlClient
 
 
 Public Class SqlConnectionManager

@@ -98,7 +98,7 @@ Partial Class FormProduct
         ' 
         txt_qty.Location = New Point(124, 96)
         txt_qty.Name = "txt_qty"
-        txt_qty.Size = New Size(83, 23)
+        txt_qty.Size = New Size(196, 23)
         txt_qty.TabIndex = 11
         ' 
         ' Label8
@@ -159,7 +159,7 @@ Partial Class FormProduct
         ' 
         txt_Productid.Location = New Point(124, 27)
         txt_Productid.Name = "txt_Productid"
-        txt_Productid.Size = New Size(118, 23)
+        txt_Productid.Size = New Size(196, 23)
         txt_Productid.TabIndex = 1
         ' 
         ' Label2
@@ -201,7 +201,7 @@ Partial Class FormProduct
         btnShow.Name = "btnShow"
         btnShow.Size = New Size(90, 23)
         btnShow.TabIndex = 20
-        btnShow.Text = "&Show"
+        btnShow.Text = "&Get Data"
         btnShow.UseVisualStyleBackColor = True
         ' 
         ' btnDelete

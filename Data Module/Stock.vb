@@ -61,7 +61,7 @@
             Return _Code_Product
         End Get
         Set(value As Integer)
-            If String.IsNullOrEmpty(FormStock.txtCodePt.Text) Then
+            If String.IsNullOrEmpty(FormInventory.txtCodePt.Text) Then
                 MsgBox("Insert code Product")
             Else
                 _Code_Product = value

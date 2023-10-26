@@ -1,4 +1,4 @@
-﻿Public Class FormStock
+﻿Public Class FormInventory
     REM Private fields
 
 
@@ -21,7 +21,7 @@
         InitializeComponent()
 
         REM Initialize fields
-        'Comfunction = New ComFunction
+
         stock = New Stock()
 
         Me.SupplierAcc = New SupplierAcc
@@ -44,10 +44,6 @@
         ComFunction.ClearTextboxes(GroupBox1)         ' Clears all TextBox controls on the form
         ComFunction.ClearTextboxes(GroupBox2)
         ComFunction.ClearTextboxes(Panel4)
-        '.ReadOnlyTxtBox(GroupBox2, True) ' Sets all TextBox controls on the form to read-only
-        '.ReadOnlyTxtBox(GroupBox1, True)
-
-
         txtRemarks.Text = ""
     End Sub
 
@@ -78,15 +74,13 @@
 
         If ValidateData() Then
             Try
-                InsertIntoStock()          REM insert data in Stock
+                InsertIntoiventory()          REM insert data in Stock
                 InsertIntoSuppAcc()        REM insert in SuppAcc
                 InsertIntoStockProduct()   REM insert in StockProduct
             Catch ex As Exception
 
             End Try
             ' UpdateOrInsertTempStock()  REM  insert data in tempStock
-
-
             DGV.Rows.Clear()
             Clean()
             FormPurchasProduct_Load(sender, e)
@@ -136,14 +130,12 @@
             MsgBox("code product n'est pas insert", MsgBoxStyle.Exclamation)
             Return False
         End If
-
-
         Return True
     End Function
 
 
 
-    Private Sub InsertIntoStock()
+    Private Sub InsertIntoiventory()
 
         For Each row As DataGridViewRow In DGV.Rows
             With stock
@@ -198,7 +190,7 @@
                 .SuppId = Val(row.Cells(3).Value)
                 .SuppName = row.Cells(4).Value
                 .Detail = row.Cells(2).Value
-                .Inv = "Facture D'achat N° " + row.Cells(0).Value
+                .Inv = "Purchase Invoice No. " + row.Cells(0).Value
                 .Debit = Val(row.Cells(10).Value)
                 .Credit = Val(row.Cells(9).Value)
 
@@ -258,20 +250,20 @@
     End Sub
 
     Private Sub ShowProduct_Click(sender As Object, e As EventArgs) Handles btnShowPt.Click
-        FormProductShow.lbl.Text = "FormStock_Product"
-        FormProductShow.ShowDialog()
+        FormGetData.lbl.Text = "FormStock_Product"
+        FormGetData.ShowDialog()
     End Sub
 
     Private Sub ShowSupplier_Click(sender As Object, e As EventArgs) Handles btnShowSupp.Click
-        FormProductShow.lbl.Text = "FormStock"
-        FormProductShow.ShowDialog()
+        FormGetData.lbl.Text = "FormStock"
+        FormGetData.ShowDialog()
     End Sub
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
     End Sub
 
     Private Sub btnGetData_Click(sender As Object, e As EventArgs) Handles btnGetData.Click
-        FormStockShow.ShowDialog()
+        'FormStockShow.ShowDialog()
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click

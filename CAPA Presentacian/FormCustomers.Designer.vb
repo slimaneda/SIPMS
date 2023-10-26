@@ -151,7 +151,7 @@ Partial Class FormCustomers
         btn_Show.Name = "btn_Show"
         btn_Show.Size = New Size(90, 23)
         btn_Show.TabIndex = 20
-        btn_Show.Text = "&Show"
+        btn_Show.Text = "&Get Data"
         btn_Show.UseVisualStyleBackColor = True
         ' 
         ' btn_Delete

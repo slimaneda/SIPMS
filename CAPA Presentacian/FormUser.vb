@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
-
-Public Class FormUser
+﻿Public Class FormUser
     Private user As New User
     Private userdal As New UserDal
 

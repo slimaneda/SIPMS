@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FormStock
+Partial Class FormInventory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -206,7 +206,7 @@ Partial Class FormStock
         ' 
         Label34.AutoSize = True
         Label34.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label34.Location = New Point(246, 38)
+        Label34.Location = New Point(247, 35)
         Label34.Margin = New Padding(4, 0, 4, 0)
         Label34.Name = "Label34"
         Label34.RightToLeft = RightToLeft.No
@@ -288,9 +288,10 @@ Partial Class FormStock
         DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
         DGV.DefaultCellStyle = DataGridViewCellStyle3
+        DGV.Dock = DockStyle.Bottom
         DGV.EnableHeadersVisualStyles = False
         DGV.GridColor = Color.White
-        DGV.Location = New Point(4, 416)
+        DGV.Location = New Point(0, 434)
         DGV.Margin = New Padding(4, 5, 5, 5)
         DGV.Name = "DGV"
         DGV.ReadOnly = True
@@ -314,7 +315,7 @@ Partial Class FormStock
         DGV.RowTemplate.Resizable = DataGridViewTriState.False
         DGV.ScrollBars = ScrollBars.Vertical
         DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DGV.Size = New Size(861, 138)
+        DGV.Size = New Size(890, 238)
         DGV.TabIndex = 5
         ' 
         ' PID
@@ -813,7 +814,7 @@ Partial Class FormStock
         ' 
         ErrorProvider1.ContainerControl = Me
         ' 
-        ' FormStock
+        ' FormInventory
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -824,7 +825,7 @@ Partial Class FormStock
         Margin = New Padding(4, 5, 4, 5)
         MaximizeBox = False
         MinimizeBox = False
-        Name = "FormStock"
+        Name = "FormInventory"
         StartPosition = FormStartPosition.CenterScreen
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()

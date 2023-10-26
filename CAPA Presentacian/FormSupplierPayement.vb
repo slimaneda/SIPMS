@@ -22,8 +22,8 @@
     End Sub
 
     Private Sub btnShow_click(sender As Object, e As EventArgs) Handles btnShow.Click
-        FormProductShow.lbl.Text = "formSupplierPayement"
-        FormProductShow.ShowDialog()
+        FormGetData.lbl.Text = "formSupplierPayement"
+        FormGetData.ShowDialog()
     End Sub
 
 

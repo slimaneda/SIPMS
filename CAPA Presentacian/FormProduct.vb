@@ -46,8 +46,8 @@
     End Sub
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
-        FormProductShow.lbl.Text = "b"
-        FormProductShow.ShowDialog()
+        FormGetData.lbl.Text = "b"
+        FormGetData.ShowDialog()
 
     End Sub
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click

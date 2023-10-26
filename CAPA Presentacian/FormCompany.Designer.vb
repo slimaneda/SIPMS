@@ -268,7 +268,7 @@ Partial Class FormCompany
         btnShow.Name = "btnShow"
         btnShow.Size = New Size(90, 23)
         btnShow.TabIndex = 20
-        btnShow.Text = "&Show"
+        btnShow.Text = "&Get Data"
         btnShow.UseVisualStyleBackColor = True
         ' 
         ' btnDelete

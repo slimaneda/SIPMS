@@ -1,5 +1,3 @@
-Imports System.Data.SqlClient
-
 Public Class FormLogin
 
     Private User As New User

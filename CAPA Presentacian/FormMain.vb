@@ -45,7 +45,7 @@
     End Sub
 
     Private Sub PurchasBillToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnQuatation.Click
-        FormQuotation.ShowDialog()
+        FormSales.ShowDialog()
     End Sub
 
     Private Sub CustomerReceiptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnreciept.Click
@@ -57,7 +57,7 @@
     End Sub
 
     Private Sub PurchasBillsuplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnPurchas.Click
-        FormStock.ShowDialog()
+        FormInventory.ShowDialog()
     End Sub
 
     Private Sub btn_user_Click(sender As Object, e As EventArgs) Handles btn_user.Click

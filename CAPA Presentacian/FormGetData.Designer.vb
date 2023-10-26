@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormProductShow
+Partial Class FormGetData
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
@@ -44,10 +44,12 @@ Partial Class FormProductShow
         DGV.AllowUserToOrderColumns = True
         DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.BorderStyle = BorderStyle.Fixed3D
+        DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
         DGV.ColumnHeadersHeight = 30
         DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DGV.Dock = DockStyle.Fill
         DGV.Location = New Point(0, 0)
+        DGV.MultiSelect = False
         DGV.Name = "DGV"
         DGV.ReadOnly = True
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
@@ -63,14 +65,14 @@ Partial Class FormProductShow
         DGV.Size = New Size(648, 282)
         DGV.TabIndex = 21
         ' 
-        ' FormProductShow
+        ' FormGetData
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(648, 282)
         Controls.Add(DGV)
         Controls.Add(lbl)
-        Name = "FormProductShow"
+        Name = "FormGetData"
         CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

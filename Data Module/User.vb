@@ -1,6 +1,4 @@
-﻿Imports System.Data.SqlClient
-
-Public Class User
+﻿Public Class User
     Public Property Username As String
     Public Property Password As String
     Public Property d1 As Boolean

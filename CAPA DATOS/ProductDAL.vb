@@ -1,10 +1,4 @@
-﻿
-
-Imports System.Data.SqlClient
-
-
-
-Public Class ProductDAL
+﻿Public Class ProductDAL
     Public Function buildArgements(product As Product) As Dictionary(Of String, Object)
         Return New Dictionary(Of String, Object) From
        {

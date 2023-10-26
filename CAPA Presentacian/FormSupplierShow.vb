@@ -43,8 +43,8 @@
 
     Private Sub UpdateFormStock(rowIndex As Integer)
 
-        FormStock.txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value
-        FormStock.txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
+        FormInventory.txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value
+        FormInventory.txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
 
     End Sub
 

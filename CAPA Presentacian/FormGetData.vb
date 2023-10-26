@@ -1,4 +1,4 @@
-﻿Public Class FormProductShow
+﻿Public Class FormGetData
     ' Private Comfunction As New ComFunction
     Private Const FPS As String = "FormStock_Product"
     Private Const FB As String = "FB"
@@ -49,7 +49,7 @@
 
 
     Private Sub SetFormQuotationValues(rowIndex As Integer)
-        With FormQuotation
+        With FormSales
             .txtProductCode.Text = DGV.Rows(rowIndex).Cells(0).Value
             .txtProductName.Text = DGV.Rows(rowIndex).Cells(1).Value
             .txtQty.Text = DGV.Rows(rowIndex).Cells(2).Value
@@ -57,7 +57,7 @@
     End Sub
 
     Private Sub SetFormStockValues(rowIndex As Integer)
-        With FormStock
+        With FormInventory
             .txtCodePt.Text = DGV.Rows(rowIndex).Cells(0).Value
             .txtNamePt.Text = DGV.Rows(rowIndex).Cells(1).Value
             .txtQty.Text = DGV.Rows(rowIndex).Cells(4).Value
@@ -65,7 +65,7 @@
     End Sub
 
     Private Sub SetFormSupplierValue(rowIndex As Integer)
-        With FormStock
+        With FormInventory
             .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value
             .txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
 
@@ -91,7 +91,7 @@
     End Sub
     Private Sub setFormQuatationValue(RowIndex As Integer)
 
-        With FormQuotation
+        With FormSales
             .txtCustomerID.Text = DGV.Rows(RowIndex).Cells(0).Value
             .txtCustomerName.Text = DGV.Rows(RowIndex).Cells(1).Value.ToString
             .txtContactNo.Text = DGV.Rows(RowIndex).Cells(7).Value
@@ -100,5 +100,7 @@
 
 
     End Sub
+
+
 
 End Class

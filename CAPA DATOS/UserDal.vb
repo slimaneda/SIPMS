@@ -1,6 +1,4 @@
-﻿Imports System.Collections.ObjectModel
-Imports System.Data.SqlClient
-Public Class UserDal
+﻿Public Class UserDal
 
     Public Function insert(user As User) As Integer
         Const proc As String = "insertuser"  ' Name of the stored procedure

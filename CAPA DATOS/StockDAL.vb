@@ -1,6 +1,4 @@
-﻿Imports System.Text.Json
-
-Public Class StockDAL
+﻿Public Class StockDAL
 
 
     Public Function buildArgements(stock As Stock) As Dictionary(Of String, Object)

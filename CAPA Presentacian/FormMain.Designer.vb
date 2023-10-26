@@ -208,8 +208,8 @@ Partial Class FormMain
         btnPurchas.Image = CType(resources.GetObject("btnPurchas.Image"), Image)
         btnPurchas.ImageScaling = ToolStripItemImageScaling.None
         btnPurchas.Name = "btnPurchas"
-        btnPurchas.Size = New Size(126, 69)
-        btnPurchas.Text = "Purchas bill (suplier)"
+        btnPurchas.Size = New Size(62, 69)
+        btnPurchas.Text = "Iventory"
         btnPurchas.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
         ' btnsupplierpayement
@@ -230,8 +230,8 @@ Partial Class FormMain
         btnQuatation.Image = CType(resources.GetObject("btnQuatation.Image"), Image)
         btnQuatation.ImageScaling = ToolStripItemImageScaling.None
         btnQuatation.Name = "btnQuatation"
-        btnQuatation.Size = New Size(80, 69)
-        btnQuatation.Text = "Purchas Bill"
+        btnQuatation.Size = New Size(62, 69)
+        btnQuatation.Text = "Sales"
         btnQuatation.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
         ' btnreciept

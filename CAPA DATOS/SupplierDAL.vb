@@ -1,6 +1,4 @@
-﻿Imports System.IO
-
-Public Class SupplierDAL
+﻿Public Class SupplierDAL
 
     Private Function PrepareParameters(supplier As Supplier) As Dictionary(Of String, Object)
         Return New Dictionary(Of String, Object) From {

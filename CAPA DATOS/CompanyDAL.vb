@@ -1,7 +1,4 @@
-﻿Imports System.Data.SqlClient
-Imports System.IO
-
-Public Class CompanyDAL
+﻿Public Class CompanyDAL
 
 
     Public Function Insertar(company As Company) As Integer

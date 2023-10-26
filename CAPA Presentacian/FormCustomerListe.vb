@@ -35,7 +35,7 @@ Public Class FormCustomerListe
         Close()
 
         If e.RowIndex >= 0 AndAlso lbl.Text = "FB" Then
-            With FormQuotation
+            With FormSales
                 .txtCustomerID.Text = DGV.Rows(e.RowIndex).Cells(0).Value
                 .txtCustomerName.Text = DGV.Rows(e.RowIndex).Cells(1).Value.ToString
                 .txtContactNo.Text = DGV.Rows(e.RowIndex).Cells(7).Value

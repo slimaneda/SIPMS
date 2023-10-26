@@ -100,8 +100,8 @@ Public Class FormCompany
     End Sub
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
-        FormProductShow.lbl.Text = "company"
-        FormProductShow.ShowDialog()
+        FormGetData.lbl.Text = "company"
+        FormGetData.ShowDialog()
     End Sub
 
 

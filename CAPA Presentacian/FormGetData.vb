@@ -13,18 +13,23 @@
             Case FPS, B
                 ComFunction.Show_DGV(DGV, "Select_Pt")
             Case FB
-                Comfunction.Show_DGV(DGV, "Select_StockProductSum")
+                ComFunction.Show_DGV(DGV, "GetProductStockSummary")
             Case Show_Supplier
                 ComFunction.Show_DGV(DGV, "Select_Supplier")
             Case Show_SupplierPayement
-                Comfunction.Show_DGV(DGV, "Select_Supplier_Vue")
+                ComFunction.Show_DGV(DGV, "GetSupplierSummary")
             Case Company
                 ComFunction.Show_DGV(DGV, "FormProductShow")
             Case QUATATION
                 ComFunction.Show_DGV(DGV, "Select_Customers")
             Case Receipt
-                ComFunction.Show_DGV(DGV, "Select_Sales")
+                ComFunction.Show_DGV(DGV, "GetCustomerSalesSummary")
         End Select
+    End Sub
+    Sub LoadLatestData()
+
+        ComFunction.Show_DGV(DGV, "GetSupplierSummary")
+
     End Sub
 
     Private Sub DGV1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellClick

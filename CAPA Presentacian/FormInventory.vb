@@ -2,7 +2,7 @@
     REM Private fields
 
 
-    Private stock As Stock
+    Private stock As Iventory
 
     Private SupplierAcc As SupplierAcc
     Private stockProduct As StockProduct
@@ -22,7 +22,7 @@
 
         REM Initialize fields
 
-        stock = New Stock()
+        stock = New Iventory()
 
         Me.SupplierAcc = New SupplierAcc
         stockProduct = New StockProduct()
@@ -84,7 +84,7 @@
             DGV.Rows.Clear()
             Clean()
             FormPurchasProduct_Load(sender, e)
-            FormMain.refeash()
+            FormMain.LoadLatestData()
             MsgBox("saved Successfully", MsgBoxStyle.Information)
         End If
     End Sub

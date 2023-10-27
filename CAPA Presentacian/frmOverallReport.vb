@@ -1,4 +1,6 @@
-﻿Public Class frmOverallReport
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class frmOverallReport
 
     Private _CustomerAccDAL As New CustomerAccDAL
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
@@ -56,7 +58,7 @@
         For Each row As DataGridViewRow In DGV.Rows
             With _CustomerAccDAL
 
-                .CustomerId = CInt(row.Cells(6).Value)
+                .CustomerId = Val(row.Cells(6).Value)
 
                 .CustomerName = row.Cells(1).Value.ToString
                 .Inv = CDate(row.Cells(3).Value)
@@ -69,11 +71,16 @@
         Next
         _CustomerAccDAL.insert(_CustomerAccDAL)
         clean()
-        FormMain.refeash()
+        FormMain.LoadLatestData()
     End Sub
-    'Private Sub txtPayment_TextChanged(sender As Object, e As EventArgs) Handles txtPayment.TextChanged
-    '    Static num2 As Double
-    '    txtTotalPayment.Text = num2
-    '    txtPayment.Text = num2
-    'End Sub
+
+    Private Sub txtCodeCustomers_TextChanged(sender As Object, e As EventArgs) Handles txtCodeCustomers.TextChanged
+        Dim nembreOnly As String = ""
+        For Each ch As Char In txtCodeCustomers.Text
+            If Char.IsDigit(ch) Then
+                nembreOnly &= ch
+            End If
+        Next
+        txtCodCustomer.Text = nembreOnly
+    End Sub
 End Class

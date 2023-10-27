@@ -1,6 +1,6 @@
 ﻿Imports System.IO
 
-Public Class FormItem
+Public Class FormCategories
     Private Comfunction As New ComFunction
     Private item As New Item
     Private ItemsDAL As New ItemsDAL
@@ -10,16 +10,12 @@ Public Class FormItem
         Me.item = item
     End Sub
 
-    Dim PP As Integer = 5
-
-    REM 
-
     Private Sub FormItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_Codeitem.Text = ComFunction.CODE_GEN("Items", "Code_item") + 1
-        ResetForm()
+        clean()
     End Sub
 
-    Private Sub ResetForm()
+    Private Sub clean()
         txt_itemname.Text = ""
         PictureBox1.Image = My.Resources.Sans_titre
         txt_Codeitem.Focus()
@@ -43,19 +39,20 @@ Public Class FormItem
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If PictureBox1.Image IsNot Nothing Then
-            Dim ms As New MemoryStream
-            PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
-            item.photo = ms.ToArray()
-        End If
-        item.Code_item = txt_Codeitem.Text
-        item.Name_item = txt_itemname.Text
         Try
+            If PictureBox1.Image IsNot Nothing Then
+                Dim ms As New MemoryStream
+                PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
+                item.photo = ms.ToArray()
+            End If
+            item.Code_item = txt_Codeitem.Text
+            item.Name_item = txt_itemname.Text
+
             ItemsDAL.Insertar(item)
         Catch ex As Exception
         End Try
-        txt_Codeitem.Text = Comfunction.CODE_GEN("Items", "Code_item") + 1
-        ResetForm()
+        txt_Codeitem.Text = ComFunction.CODE_GEN("Items", "Code_item") + 1
+        clean()
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -83,7 +80,7 @@ Public Class FormItem
     End Sub
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
-        ResetForm()
+        clean()
         txt_Codeitem.Text = ComFunction.CODE_GEN("Items", "Code_item") + 1
     End Sub
 
@@ -97,20 +94,8 @@ Public Class FormItem
 
         End If
     End Sub
-
-    Private Sub txt_search_TextChanged(sender As Object, e As EventArgs) Handles txt_search.TextChanged
-        item.Name_item = txt_itemname.Text
-        'Dim result As Integer = ItemsDAL.Search(Me.item)
-
-    End Sub
-
-
-
-
-
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
     End Sub
-
 
 End Class

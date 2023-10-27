@@ -49,6 +49,7 @@ Partial Class FormCompany
         btnSave = New Button()
         btnNew = New Button()
         OpenFileDialog1 = New OpenFileDialog()
+        Panel4 = New Panel()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -58,6 +59,7 @@ Partial Class FormCompany
         ' Panel1
         ' 
         Panel1.BackColor = Color.SteelBlue
+        Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(Label1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
@@ -314,6 +316,14 @@ Partial Class FormCompany
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.Yellow
+        Panel4.Location = New Point(1, 59)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(613, 10)
+        Panel4.TabIndex = 16
+        ' 
         ' FormCompany
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -362,4 +372,5 @@ Partial Class FormCompany
     Friend WithEvents btnSave As Button
     Friend WithEvents btnNew As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Panel4 As Panel
 End Class

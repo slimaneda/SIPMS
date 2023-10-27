@@ -69,7 +69,7 @@ Partial Class FormCustomers
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(916, 63)
+        Panel1.Size = New Size(806, 63)
         Panel1.TabIndex = 2
         ' 
         ' Label1
@@ -77,7 +77,7 @@ Partial Class FormCustomers
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(363, 18)
+        Label1.Location = New Point(279, 25)
         Label1.Name = "Label1"
         Label1.Size = New Size(188, 24)
         Label1.TabIndex = 0
@@ -111,13 +111,13 @@ Partial Class FormCustomers
         GroupBox1.Controls.Add(Label22)
         GroupBox1.Location = New Point(13, 73)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(881, 320)
+        GroupBox1.Size = New Size(786, 268)
         GroupBox1.TabIndex = 13
         GroupBox1.TabStop = False
         ' 
         ' txt_CustomerID
         ' 
-        txt_CustomerID.Location = New Point(127, 17)
+        txt_CustomerID.Location = New Point(115, 17)
         txt_CustomerID.Name = "txt_CustomerID"
         txt_CustomerID.Size = New Size(196, 23)
         txt_CustomerID.TabIndex = 49
@@ -131,7 +131,7 @@ Partial Class FormCustomers
         Panel5.Controls.Add(btn_Update)
         Panel5.Controls.Add(btn_Save)
         Panel5.Controls.Add(btn_New)
-        Panel5.Location = New Point(62, 237)
+        Panel5.Location = New Point(18, 209)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(755, 52)
         Panel5.TabIndex = 30
@@ -193,7 +193,7 @@ Partial Class FormCustomers
         ' btn_female
         ' 
         btn_female.AutoSize = True
-        btn_female.Location = New Point(193, 184)
+        btn_female.Location = New Point(181, 184)
         btn_female.Name = "btn_female"
         btn_female.Size = New Size(61, 19)
         btn_female.TabIndex = 48
@@ -204,7 +204,7 @@ Partial Class FormCustomers
         ' 
         btn_male.AutoSize = True
         btn_male.Checked = True
-        btn_male.Location = New Point(136, 184)
+        btn_male.Location = New Point(124, 184)
         btn_male.Name = "btn_male"
         btn_male.Size = New Size(51, 19)
         btn_male.TabIndex = 47
@@ -214,7 +214,7 @@ Partial Class FormCustomers
         ' 
         ' txt_Zip
         ' 
-        txt_Zip.Location = New Point(468, 62)
+        txt_Zip.Location = New Point(419, 62)
         txt_Zip.Mask = "00000"
         txt_Zip.Name = "txt_Zip"
         txt_Zip.Size = New Size(196, 23)
@@ -222,17 +222,17 @@ Partial Class FormCustomers
         ' 
         ' txt_Notes
         ' 
-        txt_Notes.Location = New Point(468, 131)
+        txt_Notes.Location = New Point(419, 131)
         txt_Notes.Multiline = True
         txt_Notes.Name = "txt_Notes"
-        txt_Notes.Size = New Size(196, 75)
+        txt_Notes.Size = New Size(196, 67)
         txt_Notes.TabIndex = 45
         ' 
         ' Label13
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label13.Location = New Point(370, 158)
+        Label13.Location = New Point(321, 158)
         Label13.Name = "Label13"
         Label13.Size = New Size(42, 15)
         Label13.TabIndex = 44
@@ -240,7 +240,7 @@ Partial Class FormCustomers
         ' 
         ' txt_Email
         ' 
-        txt_Email.Location = New Point(127, 147)
+        txt_Email.Location = New Point(115, 147)
         txt_Email.Name = "txt_Email"
         txt_Email.Size = New Size(196, 23)
         txt_Email.TabIndex = 43
@@ -249,7 +249,7 @@ Partial Class FormCustomers
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label14.Location = New Point(29, 150)
+        Label14.Location = New Point(17, 150)
         Label14.Name = "Label14"
         Label14.Size = New Size(60, 15)
         Label14.TabIndex = 42
@@ -257,7 +257,7 @@ Partial Class FormCustomers
         ' 
         ' txt_Contact
         ' 
-        txt_Contact.Location = New Point(468, 96)
+        txt_Contact.Location = New Point(419, 96)
         txt_Contact.Name = "txt_Contact"
         txt_Contact.Size = New Size(196, 23)
         txt_Contact.TabIndex = 41
@@ -266,7 +266,7 @@ Partial Class FormCustomers
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label15.Location = New Point(370, 99)
+        Label15.Location = New Point(321, 99)
         Label15.Name = "Label15"
         Label15.Size = New Size(71, 15)
         Label15.TabIndex = 40
@@ -274,7 +274,7 @@ Partial Class FormCustomers
         ' 
         ' btn_Browse
         ' 
-        btn_Browse.Location = New Point(742, 183)
+        btn_Browse.Location = New Point(661, 177)
         btn_Browse.Name = "btn_Browse"
         btn_Browse.Size = New Size(72, 23)
         btn_Browse.TabIndex = 39
@@ -285,7 +285,7 @@ Partial Class FormCustomers
         ' 
         PictureBox1.BorderStyle = BorderStyle.FixedSingle
         PictureBox1.Image = My.Resources.Resources.photo
-        PictureBox1.Location = New Point(709, 25)
+        PictureBox1.Location = New Point(628, 19)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(145, 148)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -296,7 +296,7 @@ Partial Class FormCustomers
         ' 
         Label16.AutoSize = True
         Label16.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label16.Location = New Point(370, 65)
+        Label16.Location = New Point(321, 65)
         Label16.Name = "Label16"
         Label16.Size = New Size(62, 15)
         Label16.TabIndex = 37
@@ -304,7 +304,7 @@ Partial Class FormCustomers
         ' 
         ' txt_State
         ' 
-        txt_State.Location = New Point(127, 115)
+        txt_State.Location = New Point(115, 115)
         txt_State.Name = "txt_State"
         txt_State.Size = New Size(196, 23)
         txt_State.TabIndex = 36
@@ -313,7 +313,7 @@ Partial Class FormCustomers
         ' 
         Label17.AutoSize = True
         Label17.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label17.Location = New Point(29, 118)
+        Label17.Location = New Point(17, 118)
         Label17.Name = "Label17"
         Label17.Size = New Size(41, 15)
         Label17.TabIndex = 35
@@ -321,7 +321,7 @@ Partial Class FormCustomers
         ' 
         ' txt_City
         ' 
-        txt_City.Location = New Point(127, 82)
+        txt_City.Location = New Point(115, 82)
         txt_City.Name = "txt_City"
         txt_City.Size = New Size(196, 23)
         txt_City.TabIndex = 34
@@ -330,7 +330,7 @@ Partial Class FormCustomers
         ' 
         Label18.AutoSize = True
         Label18.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label18.Location = New Point(29, 85)
+        Label18.Location = New Point(17, 85)
         Label18.Name = "Label18"
         Label18.Size = New Size(32, 15)
         Label18.TabIndex = 33
@@ -338,7 +338,7 @@ Partial Class FormCustomers
         ' 
         ' txt_Adress
         ' 
-        txt_Adress.Location = New Point(468, 22)
+        txt_Adress.Location = New Point(419, 22)
         txt_Adress.Name = "txt_Adress"
         txt_Adress.Size = New Size(196, 23)
         txt_Adress.TabIndex = 32
@@ -347,7 +347,7 @@ Partial Class FormCustomers
         ' 
         Label19.AutoSize = True
         Label19.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label19.Location = New Point(370, 25)
+        Label19.Location = New Point(321, 25)
         Label19.Name = "Label19"
         Label19.Size = New Size(50, 15)
         Label19.TabIndex = 31
@@ -357,7 +357,7 @@ Partial Class FormCustomers
         ' 
         Label20.AutoSize = True
         Label20.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label20.Location = New Point(29, 183)
+        Label20.Location = New Point(17, 183)
         Label20.Name = "Label20"
         Label20.Size = New Size(54, 15)
         Label20.TabIndex = 29
@@ -365,7 +365,7 @@ Partial Class FormCustomers
         ' 
         ' txt__CustomerName
         ' 
-        txt__CustomerName.Location = New Point(127, 49)
+        txt__CustomerName.Location = New Point(115, 49)
         txt__CustomerName.Name = "txt__CustomerName"
         txt__CustomerName.Size = New Size(196, 23)
         txt__CustomerName.TabIndex = 28
@@ -374,7 +374,7 @@ Partial Class FormCustomers
         ' 
         Label21.AutoSize = True
         Label21.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label21.Location = New Point(29, 52)
+        Label21.Location = New Point(14, 52)
         Label21.Name = "Label21"
         Label21.Size = New Size(103, 15)
         Label21.TabIndex = 27
@@ -384,7 +384,7 @@ Partial Class FormCustomers
         ' 
         Label22.AutoSize = True
         Label22.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label22.Location = New Point(29, 19)
+        Label22.Location = New Point(17, 19)
         Label22.Name = "Label22"
         Label22.Size = New Size(74, 15)
         Label22.TabIndex = 25
@@ -398,7 +398,7 @@ Partial Class FormCustomers
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(916, 389)
+        ClientSize = New Size(806, 347)
         Controls.Add(GroupBox1)
         Controls.Add(Panel1)
         Name = "FormCustomers"

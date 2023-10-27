@@ -37,6 +37,7 @@ Partial Class FormSales
         Label6 = New Label()
         Label25 = New Label()
         Panel1 = New Panel()
+        TextBox2 = New TextBox()
         Panel5 = New Panel()
         Label12 = New Label()
         Label34 = New Label()
@@ -54,6 +55,22 @@ Partial Class FormSales
         txtCustomerName = New TextBox()
         txtRemarks = New TextBox()
         DGV = New DataGridView()
+        Column8 = New DataGridViewTextBoxColumn()
+        Column13 = New DataGridViewTextBoxColumn()
+        Column14 = New DataGridViewTextBoxColumn()
+        Column15 = New DataGridViewTextBoxColumn()
+        Column16 = New DataGridViewTextBoxColumn()
+        Column12 = New DataGridViewTextBoxColumn()
+        Column1 = New DataGridViewTextBoxColumn()
+        Column2 = New DataGridViewTextBoxColumn()
+        Column3 = New DataGridViewTextBoxColumn()
+        Column4 = New DataGridViewTextBoxColumn()
+        Column10 = New DataGridViewTextBoxColumn()
+        Column7 = New DataGridViewTextBoxColumn()
+        Column6 = New DataGridViewTextBoxColumn()
+        Column9 = New DataGridViewTextBoxColumn()
+        Column5 = New DataGridViewTextBoxColumn()
+        Column11 = New DataGridViewTextBoxColumn()
         Label8 = New Label()
         GroupBox5 = New GroupBox()
         TextBox1 = New TextBox()
@@ -74,7 +91,6 @@ Partial Class FormSales
         txtProductCode = New TextBox()
         txtVATAmount = New TextBox()
         Label58 = New Label()
-        Label10 = New Label()
         Label11 = New Label()
         Label22 = New Label()
         GroupBox4 = New GroupBox()
@@ -92,22 +108,6 @@ Partial Class FormSales
         Label1 = New Label()
         Timer1 = New Timer(components)
         ToolTip1 = New ToolTip(components)
-        Column8 = New DataGridViewTextBoxColumn()
-        Column13 = New DataGridViewTextBoxColumn()
-        Column14 = New DataGridViewTextBoxColumn()
-        Column15 = New DataGridViewTextBoxColumn()
-        Column16 = New DataGridViewTextBoxColumn()
-        Column12 = New DataGridViewTextBoxColumn()
-        Column1 = New DataGridViewTextBoxColumn()
-        Column2 = New DataGridViewTextBoxColumn()
-        Column3 = New DataGridViewTextBoxColumn()
-        Column4 = New DataGridViewTextBoxColumn()
-        Column10 = New DataGridViewTextBoxColumn()
-        Column7 = New DataGridViewTextBoxColumn()
-        Column6 = New DataGridViewTextBoxColumn()
-        Column9 = New DataGridViewTextBoxColumn()
-        Column5 = New DataGridViewTextBoxColumn()
-        Column11 = New DataGridViewTextBoxColumn()
         Panel1.SuspendLayout()
         Panel5.SuspendLayout()
         GroupBox3.SuspendLayout()
@@ -180,6 +180,14 @@ Partial Class FormSales
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1019, 643)
         Panel1.TabIndex = 2
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(292, 113)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(100, 20)
+        TextBox2.TabIndex = 87
+        TextBox2.Visible = False
         ' 
         ' Panel5
         ' 
@@ -420,6 +428,112 @@ Partial Class FormSales
         DGV.Size = New Size(1017, 143)
         DGV.TabIndex = 10
         ' 
+        ' Column8
+        ' 
+        Column8.HeaderText = "Sales Code"
+        Column8.Name = "Column8"
+        Column8.ReadOnly = True
+        ' 
+        ' Column13
+        ' 
+        Column13.HeaderText = "Sales Date"
+        Column13.Name = "Column13"
+        Column13.ReadOnly = True
+        ' 
+        ' Column14
+        ' 
+        Column14.HeaderText = "Customer ID"
+        Column14.Name = "Column14"
+        Column14.ReadOnly = True
+        ' 
+        ' Column15
+        ' 
+        Column15.HeaderText = "Customer Names"
+        Column15.Name = "Column15"
+        Column15.ReadOnly = True
+        ' 
+        ' Column16
+        ' 
+        Column16.HeaderText = "Contact"
+        Column16.Name = "Column16"
+        Column16.ReadOnly = True
+        ' 
+        ' Column12
+        ' 
+        Column12.HeaderText = "Product Code"
+        Column12.Name = "Column12"
+        Column12.ReadOnly = True
+        ' 
+        ' Column1
+        ' 
+        Column1.HeaderText = "Product Name"
+        Column1.Name = "Column1"
+        Column1.ReadOnly = True
+        ' 
+        ' Column2
+        ' 
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopRight
+        Column2.DefaultCellStyle = DataGridViewCellStyle3
+        Column2.HeaderText = "Price"
+        Column2.Name = "Column2"
+        Column2.ReadOnly = True
+        ' 
+        ' Column3
+        ' 
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopRight
+        Column3.DefaultCellStyle = DataGridViewCellStyle4
+        Column3.HeaderText = "Quantity"
+        Column3.Name = "Column3"
+        Column3.ReadOnly = True
+        ' 
+        ' Column4
+        ' 
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.TopRight
+        Column4.DefaultCellStyle = DataGridViewCellStyle5
+        Column4.HeaderText = "Amount"
+        Column4.Name = "Column4"
+        Column4.ReadOnly = True
+        ' 
+        ' Column10
+        ' 
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.TopRight
+        Column10.DefaultCellStyle = DataGridViewCellStyle6
+        Column10.HeaderText = "VAT Amt"
+        Column10.Name = "Column10"
+        Column10.ReadOnly = True
+        ' 
+        ' Column7
+        ' 
+        Column7.HeaderText = "Grand Total"
+        Column7.Name = "Column7"
+        Column7.ReadOnly = True
+        Column7.Visible = False
+        ' 
+        ' Column6
+        ' 
+        Column6.HeaderText = "Total Paid"
+        Column6.Name = "Column6"
+        Column6.ReadOnly = True
+        ' 
+        ' Column9
+        ' 
+        Column9.HeaderText = "Total Unpaid"
+        Column9.Name = "Column9"
+        Column9.ReadOnly = True
+        ' 
+        ' Column5
+        ' 
+        Column5.HeaderText = "Remarks"
+        Column5.Name = "Column5"
+        Column5.ReadOnly = True
+        ' 
+        ' Column11
+        ' 
+        Column11.HeaderText = "textbox1"
+        Column11.Name = "Column11"
+        Column11.ReadOnly = True
+        Column11.Visible = False
+        ' 
         ' Label8
         ' 
         Label8.AutoSize = True
@@ -434,6 +548,7 @@ Partial Class FormSales
         ' GroupBox5
         ' 
         GroupBox5.BackColor = Color.Transparent
+        GroupBox5.Controls.Add(TextBox2)
         GroupBox5.Controls.Add(TextBox1)
         GroupBox5.Controls.Add(Label7)
         GroupBox5.Controls.Add(txtAmount)
@@ -453,7 +568,6 @@ Partial Class FormSales
         GroupBox5.Controls.Add(txtProductCode)
         GroupBox5.Controls.Add(txtVATAmount)
         GroupBox5.Controls.Add(Label58)
-        GroupBox5.Controls.Add(Label10)
         GroupBox5.Controls.Add(Label49)
         GroupBox5.Controls.Add(Label6)
         GroupBox5.Controls.Add(Label11)
@@ -661,17 +775,6 @@ Partial Class FormSales
         Label58.TabIndex = 317
         Label58.Text = "%"
         ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label10.Location = New Point(394, 93)
-        Label10.Margin = New Padding(4, 0, 4, 0)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(26, 13)
-        Label10.TabIndex = 96
-        Label10.Text = "Unit"
-        ' 
         ' Label11
         ' 
         Label11.AutoSize = True
@@ -857,112 +960,6 @@ Partial Class FormSales
         Label1.TabIndex = 0
         Label1.Text = "Product Sales"
         ' 
-        ' Column8
-        ' 
-        Column8.HeaderText = "Sales Code"
-        Column8.Name = "Column8"
-        Column8.ReadOnly = True
-        ' 
-        ' Column13
-        ' 
-        Column13.HeaderText = "Sales Date"
-        Column13.Name = "Column13"
-        Column13.ReadOnly = True
-        ' 
-        ' Column14
-        ' 
-        Column14.HeaderText = "Customer ID"
-        Column14.Name = "Column14"
-        Column14.ReadOnly = True
-        ' 
-        ' Column15
-        ' 
-        Column15.HeaderText = "Customer Names"
-        Column15.Name = "Column15"
-        Column15.ReadOnly = True
-        ' 
-        ' Column16
-        ' 
-        Column16.HeaderText = "Contact"
-        Column16.Name = "Column16"
-        Column16.ReadOnly = True
-        ' 
-        ' Column12
-        ' 
-        Column12.HeaderText = "Product Code"
-        Column12.Name = "Column12"
-        Column12.ReadOnly = True
-        ' 
-        ' Column1
-        ' 
-        Column1.HeaderText = "Product Name"
-        Column1.Name = "Column1"
-        Column1.ReadOnly = True
-        ' 
-        ' Column2
-        ' 
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopRight
-        Column2.DefaultCellStyle = DataGridViewCellStyle3
-        Column2.HeaderText = "Price"
-        Column2.Name = "Column2"
-        Column2.ReadOnly = True
-        ' 
-        ' Column3
-        ' 
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopRight
-        Column3.DefaultCellStyle = DataGridViewCellStyle4
-        Column3.HeaderText = "Quantity"
-        Column3.Name = "Column3"
-        Column3.ReadOnly = True
-        ' 
-        ' Column4
-        ' 
-        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.TopRight
-        Column4.DefaultCellStyle = DataGridViewCellStyle5
-        Column4.HeaderText = "Amount"
-        Column4.Name = "Column4"
-        Column4.ReadOnly = True
-        ' 
-        ' Column10
-        ' 
-        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.TopRight
-        Column10.DefaultCellStyle = DataGridViewCellStyle6
-        Column10.HeaderText = "VAT Amt"
-        Column10.Name = "Column10"
-        Column10.ReadOnly = True
-        ' 
-        ' Column7
-        ' 
-        Column7.HeaderText = "Grand Total"
-        Column7.Name = "Column7"
-        Column7.ReadOnly = True
-        Column7.Visible = False
-        ' 
-        ' Column6
-        ' 
-        Column6.HeaderText = "Total Paid"
-        Column6.Name = "Column6"
-        Column6.ReadOnly = True
-        ' 
-        ' Column9
-        ' 
-        Column9.HeaderText = "Total Unpaid"
-        Column9.Name = "Column9"
-        Column9.ReadOnly = True
-        ' 
-        ' Column5
-        ' 
-        Column5.HeaderText = "Remarks"
-        Column5.Name = "Column5"
-        Column5.ReadOnly = True
-        ' 
-        ' Column11
-        ' 
-        Column11.HeaderText = "textbox1"
-        Column11.Name = "Column11"
-        Column11.ReadOnly = True
-        Column11.Visible = False
-        ' 
         ' FormSales
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -1019,7 +1016,6 @@ Partial Class FormSales
     Friend WithEvents txtProductCode As TextBox
     Friend WithEvents txtVATAmount As TextBox
     Friend WithEvents Label58 As Label
-    Friend WithEvents Label10 As Label
     Friend WithEvents txtVAT As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label22 As Label
@@ -1069,4 +1065,5 @@ Partial Class FormSales
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox2 As TextBox
 End Class

@@ -103,6 +103,8 @@ Partial Class FormMain
         Panel3 = New Panel()
         Label11 = New Label()
         TextBox5 = New TextBox()
+        Panel4 = New Panel()
+        Label16 = New Label()
         MenuStrip1.SuspendLayout()
         MenuStrip2.SuspendLayout()
         TabControl1.SuspendLayout()
@@ -118,6 +120,7 @@ Partial Class FormMain
         GroupBox3.SuspendLayout()
         CType(DGV3, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
+        Panel4.SuspendLayout()
         SuspendLayout()
         ' 
         ' MenuStrip1
@@ -148,8 +151,8 @@ Partial Class FormMain
         btn_items.Image = CType(resources.GetObject("btn_items.Image"), Image)
         btn_items.ImageScaling = ToolStripItemImageScaling.None
         btn_items.Name = "btn_items"
-        btn_items.Size = New Size(62, 69)
-        btn_items.Text = "Items"
+        btn_items.Size = New Size(75, 69)
+        btn_items.Text = "Categories"
         btn_items.TextImageRelation = TextImageRelation.ImageAboveText
         ' 
         ' btn_database
@@ -854,11 +857,30 @@ Partial Class FormMain
         TextBox5.Size = New Size(214, 23)
         TextBox5.TabIndex = 1
         ' 
+        ' Panel4
+        ' 
+        Panel4.Controls.Add(Label16)
+        Panel4.Dock = DockStyle.Bottom
+        Panel4.Location = New Point(0, 602)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(1106, 46)
+        Panel4.TabIndex = 4
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Location = New Point(33, 20)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(1006, 15)
+        Label16.TabIndex = 0
+        Label16.Text = """All rights reserved for the 'SIPMS' application. Designed and developed by GREDAN TTC. Any use or copying without prior permission is considered a violation of intellectual property rights."""
+        ' 
         ' FormMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1106, 614)
+        ClientSize = New Size(1106, 648)
+        Controls.Add(Panel4)
         Controls.Add(TabControl1)
         Controls.Add(MenuStrip1)
         Controls.Add(MenuStrip2)
@@ -888,6 +910,8 @@ Partial Class FormMain
         CType(DGV3, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -972,4 +996,6 @@ Partial Class FormMain
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents ChangeTheAccountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuitTheProgramToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label16 As Label
 End Class

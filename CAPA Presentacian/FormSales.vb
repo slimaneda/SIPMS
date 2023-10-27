@@ -17,7 +17,7 @@
             .Cells(5).Value = txtProductCode.Text
             .Cells(6).Value = txtProductName.Text
             .Cells(7).Value = txtSellingPrice.Text
-            .Cells(8).Value = CDbl(txtQty.Text)
+            .Cells(8).Value = (txtQty.Text)
             .Cells(9).Value = CDbl(txtAmount.Text)
             .Cells(10).Value = CDbl(txtVATAmount.Text)
             .Cells(11).Value = CDbl(txtGrandtotal.Text)
@@ -30,7 +30,7 @@
     End Sub
 
     Private Sub addRow()
-        DGV.Rows.Add(txtCodesales.Text, dtpsales.Text, txtCustomerID.Text, txtCustomerName.Text, txtContactNo.Text, txtProductCode.Text, txtProductName.Text, txtSellingPrice.Text, txtQty.Text, txtAmount.Text, txtVATAmount.Text, txtGrandtotal.Text, txtTotalPaid.Text, txttotalunpaid.Text, txtRemarks.Text, TextBox1.Text)
+        DGV.Rows.Add(txtCodesales.Text, dtpsales.Text, txtCustomerID.Text, txtCustomerName.Text, txtContactNo.Text, txtProductCode.Text, txtProductName.Text, txtSellingPrice.Text, TextBox2.Text, txtAmount.Text, txtVATAmount.Text, txtGrandtotal.Text, txtTotalPaid.Text, txttotalunpaid.Text, txtRemarks.Text, TextBox1.Text)
         Dim currentCode = Val(txtCodesales.Text)
         txtCodesales.Text = (currentCode + 1).ToString
     End Sub
@@ -38,7 +38,13 @@
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
         If txtProductCode.Text = "" Then
-            MessageBox.Show("Please retrieve product code", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Please retrieve product code ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtProductCode.Focus()
+            Exit Sub
+        End If
+
+        If txtCustomerID.Text = "" Then
+            MessageBox.Show("Please retrieve Customer id ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtProductCode.Focus()
             Exit Sub
         End If
@@ -47,11 +53,7 @@
             txtQty.Focus()
             Exit Sub
         End If
-        If txtQty.Text = 0 Then
-            MessageBox.Show("Quantity can not be zero", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            txtQty.Focus()
-            Exit Sub
-        End If
+
 
         Dim targetRow As DataGridViewRow = DGV.Rows.Cast(Of DataGridViewRow).FirstOrDefault(Function(r) r.Cells(0).Value.ToString() = txtCodesales.Text)
         If targetRow IsNot Nothing Then
@@ -65,7 +67,6 @@
         If ValidateData() Then
 
             Insertintosales()
-            ' InsertIntoInvontory()          REM insert data in sales
             InsertIntoCustAcc()            REM insert in CustAcc
             InsertIntoInvontoryProduct()   REM insert in StockProduct
 
@@ -74,7 +75,7 @@
             DGV.Rows.Clear()
             ' Clean()
 
-            FormMain.refeash()
+            FormMain.LoadLatestData()
             MsgBox("saved Successfully", MsgBoxStyle.Information)
         End If
     End Sub
@@ -82,7 +83,7 @@
         For Each row As DataGridViewRow In DGV.Rows
             With _CustomerAccDAL
 
-                .CustomerId = CInt(row.Cells(2).Value)
+                .CustomerId = row.Cells(2).Value.ToString
 
                 .CustomerName = row.Cells(3).Value.ToString
                 .Inv = CDate(row.Cells(1).Value)
@@ -140,6 +141,15 @@
     End Sub
 
     Private Sub txtQty_TextChanged(sender As Object, e As EventArgs) Handles txtQty.TextChanged, txtSellingPrice.TextChanged, txtVAT.TextChanged
+        Dim nembreOnly As String = ""
+        For Each ch As Char In txtQty.Text
+            If Char.IsDigit(ch) Then
+                nembreOnly &= ch
+            End If
+        Next
+        TextBox2.Text = nembreOnly
+
+
         Compute()
     End Sub
 
@@ -153,6 +163,7 @@
             MsgBox("click for button Add ", MsgBoxStyle.Exclamation)
             Return False
         End If
+
         If String.IsNullOrEmpty(txtProductCode.Text) Then
             MsgBox("code product n'est pas insert", MsgBoxStyle.Exclamation)
             Return False
@@ -197,5 +208,9 @@
             End If
         Next
         TextBox1.Text = nembreOnly
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
     End Sub
 End Class

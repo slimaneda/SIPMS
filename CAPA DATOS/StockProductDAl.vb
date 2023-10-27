@@ -1,7 +1,6 @@
 ﻿Public Class StockProductDAl
 
 
-    ' add 
     Public Function Insertar(StockProduct As StockProduct) As Integer
         Const proc As String = "StockProduct"
         Dim agrs As New Dictionary(Of String, Object) From

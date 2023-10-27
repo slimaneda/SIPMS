@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormUser
+Partial Class formSetting
     Inherits System.Windows.Forms.Form
 
 
@@ -33,7 +33,6 @@ Partial Class FormUser
         Panel3 = New Panel()
         btnClose = New Button()
         btnDelete = New Button()
-        btnUpdate = New Button()
         btnSave = New Button()
         btnNew = New Button()
         CheckBox1 = New CheckBox()
@@ -55,6 +54,8 @@ Partial Class FormUser
         CheckBox14 = New CheckBox()
         CheckBox15 = New CheckBox()
         DGV = New DataGridView()
+        btnUpdate = New Button()
+        Panel4 = New Panel()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -71,7 +72,7 @@ Partial Class FormUser
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(710, 63)
+        Panel1.Size = New Size(636, 63)
         Panel1.TabIndex = 3
         ' 
         ' Label1
@@ -79,11 +80,11 @@ Partial Class FormUser
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(304, 22)
+        Label1.Location = New Point(271, 23)
         Label1.Name = "Label1"
-        Label1.Size = New Size(56, 24)
+        Label1.Size = New Size(138, 24)
         Label1.TabIndex = 0
-        Label1.Text = "login"
+        Label1.Text = "User authority"
         ' 
         ' Panel2
         ' 
@@ -136,17 +137,16 @@ Partial Class FormUser
         Panel3.BorderStyle = BorderStyle.FixedSingle
         Panel3.Controls.Add(btnClose)
         Panel3.Controls.Add(btnDelete)
-        Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(12, 308)
+        Panel3.Location = New Point(75, 308)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(689, 55)
+        Panel3.Size = New Size(467, 55)
         Panel3.TabIndex = 5
         ' 
         ' btnClose
         ' 
-        btnClose.Location = New Point(534, 14)
+        btnClose.Location = New Point(361, 14)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(90, 23)
         btnClose.TabIndex = 21
@@ -155,26 +155,16 @@ Partial Class FormUser
         ' 
         ' btnDelete
         ' 
-        btnDelete.Location = New Point(400, 14)
+        btnDelete.Location = New Point(247, 14)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(90, 23)
         btnDelete.TabIndex = 19
         btnDelete.Text = "&Delete"
         btnDelete.UseVisualStyleBackColor = True
         ' 
-        ' btnUpdate
-        ' 
-        btnUpdate.Location = New Point(277, 14)
-        btnUpdate.Name = "btnUpdate"
-        btnUpdate.Size = New Size(90, 23)
-        btnUpdate.TabIndex = 18
-        btnUpdate.Text = "&Update"
-        btnUpdate.UseVisualStyleBackColor = True
-        btnUpdate.Visible = False
-        ' 
         ' btnSave
         ' 
-        btnSave.Location = New Point(164, 14)
+        btnSave.Location = New Point(128, 14)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(90, 23)
         btnSave.TabIndex = 17
@@ -183,7 +173,7 @@ Partial Class FormUser
         ' 
         ' btnNew
         ' 
-        btnNew.Location = New Point(47, 14)
+        btnNew.Location = New Point(12, 14)
         btnNew.Name = "btnNew"
         btnNew.Size = New Size(90, 23)
         btnNew.TabIndex = 16
@@ -388,26 +378,47 @@ Partial Class FormUser
         ' DGV
         ' 
         DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV.BackgroundColor = SystemColors.Control
         DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV.Location = New Point(423, 69)
+        DGV.Location = New Point(409, 69)
         DGV.Name = "DGV"
         DGV.ReadOnly = True
         DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(263, 217)
+        DGV.Size = New Size(215, 217)
         DGV.TabIndex = 16
         ' 
-        ' FormUser
+        ' btnUpdate
+        ' 
+        btnUpdate.Location = New Point(613, 308)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.Size = New Size(10, 50)
+        btnUpdate.TabIndex = 17
+        btnUpdate.UseVisualStyleBackColor = True
+        btnUpdate.Visible = False
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.Yellow
+        Panel4.Location = New Point(-16, 63)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(702, 4)
+        Panel4.TabIndex = 18
+        ' 
+        ' formSetting
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(710, 370)
+        ClientSize = New Size(636, 370)
+        Controls.Add(Panel4)
+        Controls.Add(btnUpdate)
         Controls.Add(DGV)
         Controls.Add(TabControl1)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Name = "FormUser"
-        Text = "Form User"
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "formSetting"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
@@ -432,7 +443,6 @@ Partial Class FormUser
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnClose As Button
     Friend WithEvents btnDelete As Button
-    Friend WithEvents btnUpdate As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents btnNew As Button
     Friend WithEvents CheckBox11 As CheckBox
@@ -455,5 +465,7 @@ Partial Class FormUser
     Friend WithEvents CheckBox14 As CheckBox
     Friend WithEvents CheckBox15 As CheckBox
     Friend WithEvents DataGridView As DataGridView
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents Panel4 As Panel
 End Class
 

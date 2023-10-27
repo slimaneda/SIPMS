@@ -1,4 +1,4 @@
-﻿Public Class Stock
+﻿Public Class Iventory
     Private _CodeStock As Integer
     Private _CodeStockTble As String
     Private _InvoiceDate As String

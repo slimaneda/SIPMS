@@ -1,4 +1,4 @@
-﻿Public Class FormUser
+﻿Public Class formSetting
     Private user As New User
     Private userdal As New UserDal
 

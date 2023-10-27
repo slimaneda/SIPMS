@@ -32,7 +32,7 @@ Public Class FormLogin
                     .btnsupplierpayement.Enabled = dr!d10
                     .btnQuatation.Enabled = dr!d11
                 End With
-                With FormUser
+                With formSetting
                     .btnNew.Enabled = dr!d12
                     .btnSave.Enabled = dr!d13
                     .btnUpdate.Enabled = dr!d14

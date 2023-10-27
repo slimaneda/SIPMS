@@ -156,7 +156,6 @@ Partial Class frmOverallReport
         txtCodCustomer.Size = New Size(61, 23)
         txtCodCustomer.TabIndex = 90
         txtCodCustomer.TextAlign = HorizontalAlignment.Center
-        txtCodCustomer.Visible = False
         ' 
         ' txtNameCustomer
         ' 

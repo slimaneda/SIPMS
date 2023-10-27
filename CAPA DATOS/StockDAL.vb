@@ -1,7 +1,7 @@
 ﻿Public Class StockDAL
 
 
-    Public Function buildArgements(stock As Stock) As Dictionary(Of String, Object)
+    Public Function buildArgements(stock As Iventory) As Dictionary(Of String, Object)
         Return New Dictionary(Of String, Object) From
    {
              {"@code_fct", stock.CodeStock},
@@ -21,21 +21,21 @@
     End Function
 
 
-    Public Function Insertar(stock As Stock) As Integer
+    Public Function Insertar(stock As Iventory) As Integer
         Const procedureName As String = "_STOCK"
         Dim args As Dictionary(Of String, Object) = buildArgements(stock)
         args.Add("@Type", "insert")
         Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
-    Public Function Update(stock As Stock) As Integer
+    Public Function Update(stock As Iventory) As Integer
         Const procedureName As String = "-Stock"
         Dim args As Dictionary(Of String, Object) = buildArgements(stock)
         args.Add("@Type", "update")
         Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
-    Public Function Reed(stock As Stock) As Integer
+    Public Function Reed(stock As Iventory) As Integer
         Const procedureName As String = "_Stock_Product"
         Dim args As New Dictionary(Of String, Object) From
        {
@@ -45,7 +45,7 @@
         Return SqlConnectionManager.ExecuteWrite(procedureName, args)
     End Function
 
-    Public Function Delete(stock As Stock) As Integer
+    Public Function Delete(stock As Iventory) As Integer
         Const procedureName As String = "Deletedata"
         Dim args As New Dictionary(Of String, Object) From
        {
@@ -57,7 +57,7 @@
 
 
 
-    Public Function ColumnExists(columnName As String, stock As Stock) As Boolean
+    Public Function ColumnExists(columnName As String, stock As Iventory) As Boolean
         If String.IsNullOrEmpty(columnName) OrElse String.IsNullOrEmpty(stock.CodeStock) Then
             Return False
         End If

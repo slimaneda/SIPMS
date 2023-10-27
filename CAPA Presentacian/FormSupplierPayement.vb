@@ -68,21 +68,32 @@
             Exit Sub
         End If
 
-        For Each r As DataGridViewRow In Me.DGV.Rows
-            With SupplierAcc
-                .SuppId = Val(r.Cells(0).Value)
-                .SuppName = r.Cells(2).Value
-                .Inv = r.Cells(3).Value
-                .Detail = r.Cells(4).Value
-                .Debit = Val(txtTotalPayment.Text) = r.Cells(5).Value
-            End With
-        Next
-        SupplierAccDAL.Insertar(Me.SupplierAcc, "Insert_SuppAccp", False)
-        FormMain.refeash()
+
+        InsertIntoSuppAcc()
+        FormMain.LoadLatestData()
         clean()
         MsgBox("save don")
     End Sub
+    Private Sub InsertIntoSuppAcc()
 
+        For Each row As DataGridViewRow In DGV.Rows
+
+
+
+            With SupplierAcc
+                .SuppId = Val(row.Cells(0).Value)
+                .SuppName = row.Cells(2).Value
+                .Detail = row.Cells(4).Value
+                .Inv = "Payement Invoice No. " + row.Cells(0).Value + " Par " + row.Cells(3).Value
+                .Debit = Val(row.Cells(5).Value)
+                .Credit = 0
+
+            End With
+        Next
+        SupplierAccDAL.Insertar(Me.SupplierAcc, "Insert_SuppAcc")
+
+
+    End Sub
     Private Sub txtCodeSup_TextChanged(sender As Object, e As EventArgs) Handles txtCodeSup.TextChanged
         Dim nembreOnly As String = ""
         For Each ch As Char In txtCodeSup.Text

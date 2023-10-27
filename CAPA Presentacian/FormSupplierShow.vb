@@ -37,7 +37,7 @@
         With FormSupplierPayement
             .txtCodeSup.Text = row.Cells(0).Value
             .txtNameSup.Text = row.Cells(1).Value
-            .txtGrandTotaln.Text = row.Cells(4).Value
+            .txtbalance.Text = row.Cells(4).Value
         End With
     End Sub
 

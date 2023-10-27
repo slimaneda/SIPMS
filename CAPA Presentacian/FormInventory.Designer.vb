@@ -125,15 +125,15 @@ Partial Class FormInventory
         Panel5.BorderStyle = BorderStyle.FixedSingle
         Panel5.Controls.Add(btnAdd)
         Panel5.Controls.Add(btnRemove)
-        Panel5.Location = New Point(366, 356)
+        Panel5.Location = New Point(379, 343)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(200, 52)
+        Panel5.Size = New Size(187, 54)
         Panel5.TabIndex = 312
         ' 
         ' btnAdd
         ' 
         btnAdd.FlatStyle = FlatStyle.Popup
-        btnAdd.Location = New Point(113, 13)
+        btnAdd.Location = New Point(11, 17)
         btnAdd.Margin = New Padding(4, 5, 4, 5)
         btnAdd.Name = "btnAdd"
         btnAdd.Size = New Size(63, 24)
@@ -144,7 +144,7 @@ Partial Class FormInventory
         ' btnRemove
         ' 
         btnRemove.FlatStyle = FlatStyle.Popup
-        btnRemove.Location = New Point(29, 13)
+        btnRemove.Location = New Point(106, 17)
         btnRemove.Margin = New Padding(4, 5, 4, 5)
         btnRemove.Name = "btnRemove"
         btnRemove.Size = New Size(63, 24)
@@ -291,7 +291,7 @@ Partial Class FormInventory
         DGV.Dock = DockStyle.Bottom
         DGV.EnableHeadersVisualStyles = False
         DGV.GridColor = Color.White
-        DGV.Location = New Point(0, 434)
+        DGV.Location = New Point(0, 405)
         DGV.Margin = New Padding(4, 5, 5, 5)
         DGV.Name = "DGV"
         DGV.ReadOnly = True
@@ -315,7 +315,7 @@ Partial Class FormInventory
         DGV.RowTemplate.Resizable = DataGridViewTriState.False
         DGV.ScrollBars = ScrollBars.Vertical
         DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DGV.Size = New Size(890, 238)
+        DGV.Size = New Size(890, 210)
         DGV.TabIndex = 5
         ' 
         ' PID
@@ -682,10 +682,11 @@ Partial Class FormInventory
         Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(134, 573)
+        Panel3.Dock = DockStyle.Bottom
+        Panel3.Location = New Point(0, 615)
         Panel3.Margin = New Padding(4, 5, 4, 5)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(659, 57)
+        Panel3.Size = New Size(890, 57)
         Panel3.TabIndex = 2
         ' 
         ' btnDelete
@@ -693,7 +694,7 @@ Partial Class FormInventory
         btnDelete.Cursor = Cursors.Hand
         btnDelete.FlatStyle = FlatStyle.Popup
         btnDelete.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnDelete.Location = New Point(327, 10)
+        btnDelete.Location = New Point(450, 9)
         btnDelete.Margin = New Padding(4, 5, 4, 5)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(96, 32)
@@ -706,7 +707,7 @@ Partial Class FormInventory
         btnGetData.Cursor = Cursors.Hand
         btnGetData.FlatStyle = FlatStyle.Popup
         btnGetData.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnGetData.Location = New Point(435, 10)
+        btnGetData.Location = New Point(558, 9)
         btnGetData.Margin = New Padding(4, 5, 4, 5)
         btnGetData.Name = "btnGetData"
         btnGetData.Size = New Size(96, 32)
@@ -719,7 +720,7 @@ Partial Class FormInventory
         btnClose.Cursor = Cursors.Hand
         btnClose.FlatStyle = FlatStyle.Popup
         btnClose.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnClose.Location = New Point(539, 10)
+        btnClose.Location = New Point(662, 9)
         btnClose.Margin = New Padding(4, 5, 4, 5)
         btnClose.Name = "btnClose"
         btnClose.Size = New Size(96, 32)
@@ -734,7 +735,7 @@ Partial Class FormInventory
         btnUpdate.Enabled = False
         btnUpdate.FlatStyle = FlatStyle.Popup
         btnUpdate.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnUpdate.Location = New Point(223, 10)
+        btnUpdate.Location = New Point(346, 9)
         btnUpdate.Margin = New Padding(4, 5, 4, 5)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(96, 32)
@@ -747,7 +748,7 @@ Partial Class FormInventory
         btnSave.Cursor = Cursors.Hand
         btnSave.FlatStyle = FlatStyle.Popup
         btnSave.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnSave.Location = New Point(119, 10)
+        btnSave.Location = New Point(242, 9)
         btnSave.Margin = New Padding(4, 5, 4, 5)
         btnSave.Name = "btnSave"
         btnSave.Size = New Size(96, 32)
@@ -760,7 +761,7 @@ Partial Class FormInventory
         btnNew.Cursor = Cursors.Hand
         btnNew.FlatStyle = FlatStyle.Popup
         btnNew.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        btnNew.Location = New Point(15, 10)
+        btnNew.Location = New Point(138, 9)
         btnNew.Margin = New Padding(4, 5, 4, 5)
         btnNew.Name = "btnNew"
         btnNew.Size = New Size(96, 32)

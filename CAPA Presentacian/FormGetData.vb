@@ -90,7 +90,7 @@
             .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value.ToString()
             .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value.ToString
             .txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
-            .txtGrandTotaln.Text = DGV.Rows(rowIndex).Cells(4).Value.ToString
+            .txtbalance.Text = DGV.Rows(rowIndex).Cells(4).Value.ToString
         End With
     End Sub
     Private Sub setFormQuatationValue(RowIndex As Integer)

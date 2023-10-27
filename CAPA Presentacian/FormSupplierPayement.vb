@@ -45,7 +45,7 @@
         End Try
         Return sum
     End Function
-    Private Sub txtPaymentDue_KeyDown(sender As Object, e As KeyPressEventArgs) Handles txtPayment.KeyPress, txtPaymentDue.KeyPress, txtGrandTotaln.KeyPress
+    Private Sub txtPaymentDue_KeyDown(sender As Object, e As KeyPressEventArgs) Handles txtPayment.KeyPress, txtPaymentDue.KeyPress, txtbalance.KeyPress
         ' Comfunction.AllowOnlyNumbre(e)
     End Sub
 
@@ -95,9 +95,9 @@
 
 
 
-    Private Sub txtGrandTotal_TextChanged(sender As Object, e As EventArgs) Handles txtGrandTotaln.TextChanged
+    Private Sub txtGrandTotal_TextChanged(sender As Object, e As EventArgs) Handles txtbalance.TextChanged
         Dim numberOnly As String = ""
-        For Each ch As Char In txtGrandTotaln.Text
+        For Each ch As Char In txtbalance.Text
             If Char.IsDigit(ch) Or ch = "."c Then
                 numberOnly &= ch
             End If
@@ -111,4 +111,11 @@
             DGV.Rows.Remove(row)
         Next
     End Sub
+
+    Private Sub txtTotalPayment_TextChanged(sender As Object, e As EventArgs) Handles txtTotalPayment.TextChanged
+
+    End Sub
+
+
+
 End Class

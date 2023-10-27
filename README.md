@@ -1,7 +1,6 @@
 # SIPMS (Application in progress )
 
-Sales Invontory and Purchase Management System (SIPMS)
-A Sales, Inventory, and Purchase Management System, used in conjunction with SQL Server databases, is a software application designed to streamline and automate the processes of tracking and managing sales transactions, monitoring inventory levels, and handling purchasing activities within a business. It leverages SQL Server data management capabilities to efficiently store, retrieve, and manipulate data related to sales orders, inventory control, purchase orders, and related tasks, ultimately improving operational efficiency and decision-making.
+"SIPMS (Sales Inventory and Purchase Management System) is a software solution integrated with SQL Server databases. It automates sales, inventory, and purchasing processes, leveraging SQL Server's capabilities for efficient data management, enhancing operational efficiency and informed decision-making."
 
 #
 ![page1](https://github.com/slimaneda/SIPMS/assets/72896629/4086e945-9407-41bc-91e4-d7173724d0ca)

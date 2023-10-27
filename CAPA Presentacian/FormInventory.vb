@@ -281,9 +281,9 @@
     End Sub
 
     Private Sub GroupBox2_DoubleClick(sender As Object, e As EventArgs) Handles GroupBox2.DoubleClick
-        Comfunction.ReadOnlyTxtBox(GroupBox2, False)
+        ' Comfunction.ReadOnlyTxtBox(GroupBox2, False)
     End Sub
     Private Sub GroupBox1_DoubleClick(sender As Object, e As EventArgs) Handles GroupBox1.DoubleClick
-        Comfunction.ReadOnlyTxtBox(GroupBox1, False)
+        ' Comfunction.ReadOnlyTxtBox(GroupBox1, False)
     End Sub
 End Class

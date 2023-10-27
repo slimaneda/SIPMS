@@ -1,12 +1,13 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Public Class FormSales
+    'logica 
+    Private _sales As New Sales
+    Private _Product As New Product
+    Private _StockProduct As New StockProduct
+    'Data Access Layer (DAL) DATOS
+    Private _salesDAL As New SalesDAL
+    Private _CustomerAccDAL As New CustomerAccDAL
+    Private _StockProductDAl As New StockProductDAl
 
-Public Class FormSales
-
-    Private sales As New Sales
-    Private salesDAL As New SalesDAL
-    Private CustomerAccDAL As New CustomerAccDAL
-    Private Product As New Product
-    Private ProductDAL As New ProductDAL
     Private Sub Updatrow(ByRef _Row As DataGridViewRow)
         With _Row
             .Cells(1).Value = dtpsales.Text
@@ -24,11 +25,12 @@ Public Class FormSales
             .Cells(13).Value = CDbl(txttotalunpaid.Text)
 
             .Cells(14).Value = txtRemarks.Text
+            .Cells(15).Value = TextBox1.Text
         End With
     End Sub
 
     Private Sub addRow()
-        DGV.Rows.Add(txtCodesales.Text, dtpsales.Text, txtCustomerID.Text, txtCustomerName.Text, txtContactNo.Text, txtProductCode.Text, txtProductName.Text, txtSellingPrice.Text, txtQty.Text, txtAmount.Text, txtVATAmount.Text, txtGrandtotal.Text, txtTotalPaid.Text, txttotalunpaid.Text, txtRemarks.Text)
+        DGV.Rows.Add(txtCodesales.Text, dtpsales.Text, txtCustomerID.Text, txtCustomerName.Text, txtContactNo.Text, txtProductCode.Text, txtProductName.Text, txtSellingPrice.Text, txtQty.Text, txtAmount.Text, txtVATAmount.Text, txtGrandtotal.Text, txtTotalPaid.Text, txttotalunpaid.Text, txtRemarks.Text, TextBox1.Text)
         Dim currentCode = Val(txtCodesales.Text)
         txtCodesales.Text = (currentCode + 1).ToString
     End Sub
@@ -61,29 +63,28 @@ Public Class FormSales
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
         If ValidateData() Then
-            REM    Try
+
             Insertintosales()
-            ' InsertIntoInvontory()          REM insert data in Stock
-            InsertIntoCustAcc()            REM insert in SuppAcc
+            ' InsertIntoInvontory()          REM insert data in sales
+            InsertIntoCustAcc()            REM insert in CustAcc
             InsertIntoInvontoryProduct()   REM insert in StockProduct
 
-            REM  Catch ex As Exception
-            REM End Try
-            ' UpdateOrInsertTempStock()  REM  insert data in tempStock
+
+
             DGV.Rows.Clear()
             ' Clean()
-            ' FormPurchasProduct_Load(sender, e)
+
             FormMain.refeash()
             MsgBox("saved Successfully", MsgBoxStyle.Information)
         End If
     End Sub
     Private Sub InsertIntoCustAcc()
         For Each row As DataGridViewRow In DGV.Rows
-            With CustomerAccDAL
+            With _CustomerAccDAL
 
-                .CustomerId = row.Cells(2).Value
+                .CustomerId = CInt(row.Cells(2).Value)
 
-                .CustomerName = row.Cells(3).Value
+                .CustomerName = row.Cells(3).Value.ToString
                 .Inv = CDate(row.Cells(1).Value)
                 .Detail = "Sales Invoice No." + row.Cells(0).Value
                 .Debit = CDbl(row.Cells(11).Value)
@@ -92,26 +93,26 @@ Public Class FormSales
             End With
 
         Next
-        CustomerAccDAL.insert(CustomerAccDAL)
+        _CustomerAccDAL.insert(_CustomerAccDAL)
     End Sub
     Private Sub InsertIntoInvontoryProduct()
         For Each row As DataGridViewRow In DGV.Rows
 
-            With Product
-                .Code = row.Cells(5).Value
-                .Name = row.Cells(6).Value
-                .Quantity = row.Cells(8).Value
+            With _StockProduct
+                .ProductID = row.Cells(15).Value
+                .ProductName = row.Cells(6).Value.ToString
+                .Qty = -row.Cells(8).Value
             End With
         Next
-
+        _StockProductDAl.Insertars(_StockProduct)
     End Sub
 
 
     Private Sub Insertintosales()
         For Each row As DataGridViewRow In DGV.Rows
-            sales.SaleCode = row.Cells(0).Value
+            _sales.SaleCode = row.Cells(0).Value
         Next
-        salesDAL.insertSales(sales)
+        _salesDAL.insertSales(_sales)
     End Sub
     Private Sub Compute()
 
@@ -138,7 +139,7 @@ Public Class FormSales
         txttotalunpaid.Text = num4.ToString
     End Sub
 
-    Private Sub txtQty_TextChanged(sender As Object, e As EventArgs) Handles txtQty.TextChanged, txtSellingPrice.TextChanged, txtVAT.TextChanged, txtTotalPaid.TextChanged
+    Private Sub txtQty_TextChanged(sender As Object, e As EventArgs) Handles txtQty.TextChanged, txtSellingPrice.TextChanged, txtVAT.TextChanged
         Compute()
     End Sub
 
@@ -188,7 +189,13 @@ Public Class FormSales
         txtCodesales.Text = ComFunction.CODE_GEN("Sales", "Sales_Code") + 1
     End Sub
 
-    Private Sub txtTotalPaid_TextChanged(sender As Object, e As EventArgs) Handles txtTotalPaid.TextChanged
-
+    Private Sub txtProductCode_TextChanged(sender As Object, e As EventArgs) Handles txtProductCode.TextChanged
+        Dim nembreOnly As String = ""
+        For Each ch As Char In txtProductCode.Text
+            If Char.IsDigit(ch) Then
+                nembreOnly &= ch
+            End If
+        Next
+        TextBox1.Text = nembreOnly
     End Sub
 End Class

@@ -415,7 +415,7 @@ Partial Class FormMain
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(1098, 478)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Suuplier Account"
+        TabPage1.Text = "Customers Account"
         ' 
         ' DGV
         ' 
@@ -447,9 +447,9 @@ Partial Class FormMain
         Label8.AutoSize = True
         Label8.Location = New Point(74, 9)
         Label8.Name = "Label8"
-        Label8.Size = New Size(135, 16)
+        Label8.Size = New Size(143, 16)
         Label8.TabIndex = 2
-        Label8.Text = "Search Name Supplier"
+        Label8.Text = "Search Name Customer"
         ' 
         ' TextBox2
         ' 
@@ -526,18 +526,18 @@ Partial Class FormMain
         Label2.AutoSize = True
         Label2.Location = New Point(8, 48)
         Label2.Name = "Label2"
-        Label2.Size = New Size(87, 16)
+        Label2.Size = New Size(95, 16)
         Label2.TabIndex = 3
-        Label2.Text = "Code Supplier"
+        Label2.Text = "Code Customer"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Location = New Point(6, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(91, 16)
+        Label1.Size = New Size(99, 16)
         Label1.TabIndex = 2
-        Label1.Text = "Name Supplier"
+        Label1.Text = "Name Customer"
         ' 
         ' TextBox1
         ' 
@@ -556,7 +556,7 @@ Partial Class FormMain
         ' 
         ' TabPage2
         ' 
-        TabPage2.BackColor = Color.WhiteSmoke
+        TabPage2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         TabPage2.Controls.Add(DGV2)
         TabPage2.Controls.Add(Panel2)
         TabPage2.Controls.Add(GroupBox2)
@@ -706,7 +706,7 @@ Partial Class FormMain
         ' 
         ' TabPage3
         ' 
-        TabPage3.BackColor = SystemColors.MenuBar
+        TabPage3.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         TabPage3.Controls.Add(GroupBox3)
         TabPage3.Controls.Add(DGV3)
         TabPage3.Controls.Add(Panel3)

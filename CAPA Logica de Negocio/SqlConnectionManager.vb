@@ -56,28 +56,28 @@ Public Class SqlConnectionManager
         End Using
     End Function
 
-    Public Shared Function ExecuteRead(procedureName As String, args As Dictionary(Of String, Object)) As String
-        Conexion.conecta()
+    'Public Shared Function ExecuteRead(procedureName As String, args As Dictionary(Of String, Object)) As String
+    '    Conexion.conecta()
 
-        Using cmd As New SqlCommand(procedureName, Conexion.con)
-            cmd.CommandType = CommandType.StoredProcedure
+    '    Using cmd As New SqlCommand(procedureName, Conexion.con)
+    '        cmd.CommandType = CommandType.StoredProcedure
 
-            For Each param As KeyValuePair(Of String, Object) In args
-                cmd.Parameters.AddWithValue(param.Key, param.Value)
-            Next
+    '        For Each param As KeyValuePair(Of String, Object) In args
+    '            cmd.Parameters.AddWithValue(param.Key, param.Value)
+    '        Next
 
-            Using reader As SqlDataReader = cmd.ExecuteReader()
-                Dim result As New StringBuilder()
+    '        Using reader As SqlDataReader = cmd.ExecuteReader()
+    '            Dim result As New StringBuilder()
 
-                While reader.Read()
-                    ' هنا نقوم بقراءة القيمة من العمود الأول فقط، يمكنك تعديله حسب الحاجة
-                    result.AppendLine(reader(0).ToString())
-                End While
+    '            While reader.Read()
+    '                ' هنا نقوم بقراءة القيمة من العمود الأول فقط، يمكنك تعديله حسب الحاجة
+    '                result.AppendLine(reader(0).ToString())
+    '            End While
 
-                Return result.ToString()
-            End Using
-        End Using
-    End Function
+    '            Return result.ToString()
+    '        End Using
+    '    End Using
+    'End Function
 
 
 

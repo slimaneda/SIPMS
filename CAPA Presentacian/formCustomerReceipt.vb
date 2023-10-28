@@ -34,7 +34,7 @@ Public Class formCustomerReceipt
         j = Math.Round(j, 2)
         txtTotalPayment.Text = j
 
-        DGV.Rows.Add(txtCodeCustomers.Text, txtNameCustomer.Text, cmbPaymentMode.Text, dtpPaymentDate.Text, txtPayment.Text, Val(txtBalance.Text) - Val(txtTotalPayment.Text), txtGrandTotal.Text)
+        DGV.Rows.Add(txtCodCustomer.Text, txtNameCustomer.Text, cmbPaymentMode.Text, dtpPaymentDate.Text, txtPayment.Text, Val(txtBalance.Text) - Val(txtTotalPayment.Text), txtGrandTotal.Text)
         compte()
     End Sub
     Private Sub clean()
@@ -58,7 +58,7 @@ Public Class formCustomerReceipt
         For Each row As DataGridViewRow In DGV.Rows
             With _CustomerAccDAL
 
-                .CustomerId = Val(row.Cells(6).Value)
+                .CustomerId = row.Cells(0).Value
 
                 .CustomerName = row.Cells(1).Value.ToString
                 .Inv = CDate(row.Cells(3).Value)

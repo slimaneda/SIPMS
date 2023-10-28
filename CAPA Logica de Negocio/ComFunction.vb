@@ -86,4 +86,16 @@ Class ComFunction
             End If
         Next
     End Sub
+    ' search valuer in textbox 
+    Public Shared Sub search(dgv As DataGridView, searchValue As String, columnIndex As Integer)
+
+        For Each row As DataGridViewRow In dgv.Rows
+            Dim cell As DataGridViewCell = row.Cells(columnIndex)
+            If cell.Value IsNot Nothing AndAlso cell.Value.ToString().Contains(searchValue) Then
+                dgv.CurrentCell = cell
+                Return
+            End If
+        Next
+
+    End Sub
 End Class

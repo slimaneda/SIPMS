@@ -81,8 +81,9 @@
                 .Credit = 0
 
             End With
+
+            SupplierAccDAL.Insertar(Me.SupplierAcc, "Insert_SuppAcc")
         Next
-        SupplierAccDAL.Insertar(Me.SupplierAcc, "Insert_SuppAcc")
     End Sub
 
     Private Sub txtCodeSup_TextChanged(sender As Object, e As EventArgs) Handles txtCodeSup.TextChanged
@@ -91,8 +92,9 @@
             If Char.IsDigit(ch) Then
                 nembreOnly &= ch
             End If
+
+            txtCodSupplier.Text = nembreOnly
         Next
-        txtCodSupplier.Text = nembreOnly
     End Sub
 
 

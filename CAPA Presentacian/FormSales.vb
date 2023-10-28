@@ -93,8 +93,9 @@
                 .Balance = CDbl(row.Cells(11).Value - row.Cells(12).Value)
             End With
 
+
+            _CustomerAccDAL.insert(_CustomerAccDAL)
         Next
-        _CustomerAccDAL.insert(_CustomerAccDAL)
     End Sub
     Private Sub InsertIntoInvontoryProduct()
         For Each row As DataGridViewRow In DGV.Rows
@@ -104,16 +105,18 @@
                 .ProductName = row.Cells(6).Value.ToString
                 .Qty = -Val(row.Cells(8).Value)
             End With
+
+            _StockProductDAl.Insertars(_StockProduct)
         Next
-        _StockProductDAl.Insertars(_StockProduct)
     End Sub
 
 
     Private Sub Insertintosales()
         For Each row As DataGridViewRow In DGV.Rows
             _sales.SaleCode = row.Cells(0).Value
+
+            _salesDAL.insertSales(_sales)
         Next
-        _salesDAL.insertSales(_sales)
     End Sub
     Private Sub Compute()
 

@@ -195,9 +195,9 @@
                 .Credit = Val(row.Cells(9).Value)
 
             End With
-        Next
-        SupplierAccDAL.Insertar(Me.SupplierAcc, "Insert_SuppAcc")
 
+            SupplierAccDAL.Insertar(Me.SupplierAcc, "Insert_SuppAcc")
+        Next
 
     End Sub
 
@@ -214,8 +214,9 @@
                 .TotalAmount = Val(row.Cells(9).Value)
 
             End With
+
+            stockProductDAL.Insertar(Me.stockProduct)
         Next
-        stockProductDAL.Insertar(Me.stockProduct)
     End Sub
 
 
@@ -235,6 +236,7 @@
             End If
         Next
         txtCodestock.Text = nembreOnly
+
     End Sub
 
 

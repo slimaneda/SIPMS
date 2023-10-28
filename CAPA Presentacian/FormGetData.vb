@@ -115,4 +115,18 @@
     End Sub
 
 
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
+        For Each row As DataGridViewRow In DGV.Rows
+            For Each cell As DataGridViewCell In row.Cells
+                If cell.Value IsNot Nothing AndAlso cell.Value.ToString().Contains(txtseach.Text) Then
+                    DGV.CurrentCell = cell
+                    DGV.Rows(cell.RowIndex).Selected = True
+                    Return
+                End If
+            Next
+        Next
+
+    End Sub
+
+
 End Class

@@ -113,11 +113,35 @@
         About.ShowDialog()
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
+    Private Sub btnSearchcustomer_Click(sender As Object, e As EventArgs) Handles btnsearchcustomer.Click
+        If txtnamecustomer.Text = String.Empty Then
+            ComFunction.search(DGV, txtcodecustomer.Text, 0)
+            Exit Sub
+        End If
+        If txtcodecustomer.Text = String.Empty Then
+            ComFunction.search(DGV, txtnamecustomer.Text, 1)
+            Exit Sub
+        End If
+    End Sub
+    Private Sub btnSearchSupplier_Click(sender As Object, e As EventArgs)
+        If txtnamesupplier.Text = String.Empty Then
+            ComFunction.search(DGV, txtcodesupplier.Text, 0)
+            Exit Sub
+        End If
+        If txtcodesupplier.Text = String.Empty Then
+            ComFunction.search(DGV, txtnamesupplier.Text, 1)
+            Exit Sub
+        End If
+    End Sub
+    Private Sub btnSearchproduct_Click(sender As Object, e As EventArgs)
+        If txtname.Text = String.Empty Then
+            ComFunction.search(DGV, txtcode.Text, 0)
+            Exit Sub
+        End If
+        If txtcode.Text = String.Empty Then
+            ComFunction.search(DGV, txtname.Text, 1)
+            Exit Sub
+        End If
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
-
-    End Sub
 End Class

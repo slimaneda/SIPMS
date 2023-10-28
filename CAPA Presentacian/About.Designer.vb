@@ -127,7 +127,7 @@ Partial Class About
         LabelCompanyName.Name = "LabelCompanyName"
         LabelCompanyName.Size = New Size(414, 20)
         LabelCompanyName.TabIndex = 0
-        LabelCompanyName.Text = "Nom de la société : GREDAN TTC"
+        LabelCompanyName.Text = "Nom de la société : SLIMANE DANY +212682689610"
         LabelCompanyName.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' TextBoxDescription
@@ -170,7 +170,7 @@ Partial Class About
         Padding = New Padding(10)
         ShowInTaskbar = False
         StartPosition = FormStartPosition.CenterParent
-        Text = "AboutBox1"
+        Text = "About"
         TableLayoutPanel.ResumeLayout(False)
         TableLayoutPanel.PerformLayout()
         CType(LogoPictureBox, ComponentModel.ISupportInitialize).EndInit()

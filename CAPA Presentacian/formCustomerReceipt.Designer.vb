@@ -69,6 +69,7 @@ Partial Class formCustomerReceipt
         Label13 = New Label()
         Panel2 = New Panel()
         Label1 = New Label()
+        Panel6 = New Panel()
         Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
@@ -157,6 +158,7 @@ Partial Class formCustomerReceipt
         txtCodCustomer.Size = New Size(61, 23)
         txtCodCustomer.TabIndex = 90
         txtCodCustomer.TextAlign = HorizontalAlignment.Center
+        txtCodCustomer.Visible = False
         ' 
         ' txtNameCustomer
         ' 
@@ -325,7 +327,7 @@ Partial Class formCustomerReceipt
         DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = SystemColors.Window
         DataGridViewCellStyle5.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle5.ForeColor = Color.FromArgb(64, 64, 64)
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
@@ -556,18 +558,27 @@ Partial Class formCustomerReceipt
         Label1.TabIndex = 0
         Label1.Text = "Customer Receipt"
         ' 
-        ' frmOverallReport
+        ' Panel6
+        ' 
+        Panel6.BackColor = Color.Yellow
+        Panel6.Location = New Point(1, 69)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(697, 4)
+        Panel6.TabIndex = 22
+        ' 
+        ' formCustomerReceipt
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSlateGray
         ClientSize = New Size(698, 551)
+        Controls.Add(Panel6)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)
         MaximizeBox = False
         MinimizeBox = False
-        Name = "frmOverallReport"
+        Name = "formCustomerReceipt"
         StartPosition = FormStartPosition.CenterScreen
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -621,4 +632,5 @@ Partial Class formCustomerReceipt
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Panel6 As Panel
 End Class

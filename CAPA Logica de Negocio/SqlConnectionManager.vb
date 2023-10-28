@@ -81,18 +81,18 @@ Public Class SqlConnectionManager
 
 
 
-    'Public Shared Function ExecuteScalar(query As String, parameters As Dictionary(Of String, Object)) As Object
-    '    Conexion.conecta()
-    '    Using cmd As New SqlCommand(query, Conexion.con)
-    '        cmd.CommandType = CommandType.StoredProcedure
-    '        For Each param In parameters
-    '            cmd.Parameters.AddWithValue(param.Key, param.Value)
-    '        Next
+    Public Shared Function ExecuteScalar(query As String, parameters As Dictionary(Of String, Object)) As Object
+        Conexion.conecta()
+        Using cmd As New SqlCommand(query, Conexion.con)
+            cmd.CommandType = CommandType.StoredProcedure
+            For Each param In parameters
+                cmd.Parameters.AddWithValue(param.Key, param.Value)
+            Next
 
-    '        Return cmd.ExecuteScalar()
-    '    End Using
+            Return cmd.ExecuteScalar()
+        End Using
 
-    'End Function
+    End Function
 
 
 

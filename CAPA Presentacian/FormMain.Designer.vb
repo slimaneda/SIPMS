@@ -60,49 +60,34 @@ Partial Class FormMain
         TabControl1 = New TabControl()
         TabPage1 = New TabPage()
         DGV = New DataGridView()
-        Panel1 = New Panel()
-        Label8 = New Label()
-        TextBox2 = New TextBox()
         GroupBox1 = New GroupBox()
-        Button1 = New Button()
-        Label4 = New Label()
-        Label3 = New Label()
-        DateTimePicker2 = New DateTimePicker()
-        DateTimePicker1 = New DateTimePicker()
-        Label2 = New Label()
+        Panel1 = New Panel()
         Label1 = New Label()
-        TextBox1 = New TextBox()
-        ComboBox1 = New ComboBox()
+        txtnamecustomer = New TextBox()
+        Panel5 = New Panel()
+        Label3 = New Label()
+        txtcodecustomer = New TextBox()
+        btnsearchcustomer = New Button()
         TabPage2 = New TabPage()
-        DGV2 = New DataGridView()
-        Panel2 = New Panel()
-        Label10 = New Label()
-        TextBox4 = New TextBox()
         GroupBox2 = New GroupBox()
-        Button2 = New Button()
-        Label5 = New Label()
-        Label6 = New Label()
-        DateTimePicker3 = New DateTimePicker()
-        DateTimePicker4 = New DateTimePicker()
-        Label7 = New Label()
-        Label9 = New Label()
-        TextBox3 = New TextBox()
-        ComboBox2 = New ComboBox()
+        Panel2 = New Panel()
+        Label2 = New Label()
+        txtnamesupplier = New TextBox()
+        Panel6 = New Panel()
+        Label4 = New Label()
+        txtcodesupplier = New TextBox()
+        btnsearchsupplier = New Button()
+        DGV2 = New DataGridView()
         TabPage3 = New TabPage()
         GroupBox3 = New GroupBox()
-        Button3 = New Button()
-        Label12 = New Label()
-        Label13 = New Label()
-        DateTimePicker5 = New DateTimePicker()
-        DateTimePicker6 = New DateTimePicker()
-        Label14 = New Label()
-        Label15 = New Label()
-        TextBox6 = New TextBox()
-        ComboBox3 = New ComboBox()
-        DGV3 = New DataGridView()
         Panel3 = New Panel()
-        Label11 = New Label()
-        TextBox5 = New TextBox()
+        Label5 = New Label()
+        txtname = New TextBox()
+        Panel7 = New Panel()
+        Label6 = New Label()
+        txtcode = New TextBox()
+        btnsearch = New Button()
+        DGV3 = New DataGridView()
         Panel4 = New Panel()
         Label16 = New Label()
         MenuStrip1.SuspendLayout()
@@ -110,16 +95,19 @@ Partial Class FormMain
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
+        Panel1.SuspendLayout()
+        Panel5.SuspendLayout()
         TabPage2.SuspendLayout()
-        CType(DGV2, ComponentModel.ISupportInitialize).BeginInit()
-        Panel2.SuspendLayout()
         GroupBox2.SuspendLayout()
+        Panel2.SuspendLayout()
+        Panel6.SuspendLayout()
+        CType(DGV2, ComponentModel.ISupportInitialize).BeginInit()
         TabPage3.SuspendLayout()
         GroupBox3.SuspendLayout()
-        CType(DGV3, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
+        Panel7.SuspendLayout()
+        CType(DGV3, ComponentModel.ISupportInitialize).BeginInit()
         Panel4.SuspendLayout()
         SuspendLayout()
         ' 
@@ -408,9 +396,8 @@ Partial Class FormMain
         ' 
         ' TabPage1
         ' 
-        TabPage1.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        TabPage1.BackColor = Color.LightGray
         TabPage1.Controls.Add(DGV)
-        TabPage1.Controls.Add(Panel1)
         TabPage1.Controls.Add(GroupBox1)
         TabPage1.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
         TabPage1.Location = New Point(4, 24)
@@ -426,143 +413,97 @@ Partial Class FormMain
         DGV.AllowUserToDeleteRows = False
         DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV.Location = New Point(16, 115)
+        DGV.Location = New Point(16, 74)
         DGV.Name = "DGV"
         DGV.ReadOnly = True
         DGV.RightToLeft = RightToLeft.No
         DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(1055, 346)
+        DGV.Size = New Size(1055, 387)
         DGV.TabIndex = 10
-        ' 
-        ' Panel1
-        ' 
-        Panel1.Controls.Add(Label8)
-        Panel1.Controls.Add(TextBox2)
-        Panel1.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Panel1.Location = New Point(706, 18)
-        Panel1.Name = "Panel1"
-        Panel1.RightToLeft = RightToLeft.No
-        Panel1.Size = New Size(299, 68)
-        Panel1.TabIndex = 9
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Location = New Point(74, 9)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(143, 16)
-        Label8.TabIndex = 2
-        Label8.Text = "Search Name Customer"
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Location = New Point(53, 34)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(214, 23)
-        TextBox2.TabIndex = 1
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.BackColor = Color.Transparent
-        GroupBox1.Controls.Add(Button1)
-        GroupBox1.Controls.Add(Label4)
-        GroupBox1.Controls.Add(Label3)
-        GroupBox1.Controls.Add(DateTimePicker2)
-        GroupBox1.Controls.Add(DateTimePicker1)
-        GroupBox1.Controls.Add(Label2)
-        GroupBox1.Controls.Add(Label1)
-        GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(ComboBox1)
+        GroupBox1.BackColor = Color.LightGray
+        GroupBox1.Controls.Add(Panel1)
+        GroupBox1.Controls.Add(Panel5)
+        GroupBox1.Controls.Add(btnsearchcustomer)
+        GroupBox1.Dock = DockStyle.Top
         GroupBox1.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        GroupBox1.Location = New Point(14, 6)
+        GroupBox1.Location = New Point(3, 3)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.RightToLeft = RightToLeft.No
-        GroupBox1.Size = New Size(627, 84)
+        GroupBox1.Size = New Size(1092, 65)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         ' 
-        ' Button1
+        ' Panel1
         ' 
-        Button1.Location = New Point(532, 27)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 36)
-        Button1.TabIndex = 8
-        Button1.Text = "Search"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(410, 24)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(31, 16)
-        Label4.TabIndex = 7
-        Label4.Text = "To :"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(278, 24)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(35, 16)
-        Label3.TabIndex = 6
-        Label3.Text = "For :"
-        ' 
-        ' DateTimePicker2
-        ' 
-        DateTimePicker2.Format = DateTimePickerFormat.Short
-        DateTimePicker2.Location = New Point(410, 43)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(103, 23)
-        DateTimePicker2.TabIndex = 5
-        ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.Format = DateTimePickerFormat.Short
-        DateTimePicker1.Location = New Point(278, 43)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(103, 23)
-        DateTimePicker1.TabIndex = 4
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(8, 48)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(95, 16)
-        Label2.TabIndex = 3
-        Label2.Text = "Code Customer"
+        Panel1.Controls.Add(Label1)
+        Panel1.Controls.Add(txtnamecustomer)
+        Panel1.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Panel1.Location = New Point(444, 18)
+        Panel1.Name = "Panel1"
+        Panel1.RightToLeft = RightToLeft.No
+        Panel1.Size = New Size(286, 34)
+        Panel1.TabIndex = 11
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(6, 19)
+        Label1.Location = New Point(15, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(99, 16)
+        Label1.Size = New Size(156, 16)
         Label1.TabIndex = 2
-        Label1.Text = "Name Customer"
+        Label1.Text = "Search Name  Customer :"
         ' 
-        ' TextBox1
+        ' txtnamecustomer
         ' 
-        TextBox1.Location = New Point(117, 45)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(134, 23)
-        TextBox1.TabIndex = 1
+        txtnamecustomer.Location = New Point(183, 6)
+        txtnamecustomer.Name = "txtnamecustomer"
+        txtnamecustomer.Size = New Size(86, 23)
+        txtnamecustomer.TabIndex = 1
         ' 
-        ' ComboBox1
+        ' Panel5
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(117, 16)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(134, 24)
-        ComboBox1.TabIndex = 0
+        Panel5.Controls.Add(Label3)
+        Panel5.Controls.Add(txtcodecustomer)
+        Panel5.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Panel5.Location = New Point(113, 18)
+        Panel5.Name = "Panel5"
+        Panel5.RightToLeft = RightToLeft.No
+        Panel5.Size = New Size(286, 34)
+        Panel5.TabIndex = 10
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(13, 9)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(152, 16)
+        Label3.TabIndex = 2
+        Label3.Text = "Search Code  Customer :"
+        ' 
+        ' txtcodecustomer
+        ' 
+        txtcodecustomer.Location = New Point(183, 6)
+        txtcodecustomer.Name = "txtcodecustomer"
+        txtcodecustomer.Size = New Size(86, 23)
+        txtcodecustomer.TabIndex = 1
+        ' 
+        ' btnsearchcustomer
+        ' 
+        btnsearchcustomer.Location = New Point(863, 16)
+        btnsearchcustomer.Name = "btnsearchcustomer"
+        btnsearchcustomer.Size = New Size(75, 36)
+        btnsearchcustomer.TabIndex = 8
+        btnsearchcustomer.Text = "Search"
+        btnsearchcustomer.UseVisualStyleBackColor = True
         ' 
         ' TabPage2
         ' 
-        TabPage2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        TabPage2.Controls.Add(DGV2)
-        TabPage2.Controls.Add(Panel2)
+        TabPage2.BackColor = Color.Gainsboro
         TabPage2.Controls.Add(GroupBox2)
+        TabPage2.Controls.Add(DGV2)
         TabPage2.Location = New Point(4, 24)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
@@ -570,149 +511,103 @@ Partial Class FormMain
         TabPage2.TabIndex = 1
         TabPage2.Text = "Supplier Accuount"
         ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.BackColor = Color.LightGray
+        GroupBox2.Controls.Add(Panel2)
+        GroupBox2.Controls.Add(Panel6)
+        GroupBox2.Controls.Add(btnsearchsupplier)
+        GroupBox2.Dock = DockStyle.Top
+        GroupBox2.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        GroupBox2.Location = New Point(3, 3)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.RightToLeft = RightToLeft.No
+        GroupBox2.Size = New Size(1092, 65)
+        GroupBox2.TabIndex = 12
+        GroupBox2.TabStop = False
+        ' 
+        ' Panel2
+        ' 
+        Panel2.Controls.Add(Label2)
+        Panel2.Controls.Add(txtnamesupplier)
+        Panel2.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Panel2.Location = New Point(444, 18)
+        Panel2.Name = "Panel2"
+        Panel2.RightToLeft = RightToLeft.No
+        Panel2.Size = New Size(286, 34)
+        Panel2.TabIndex = 11
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(15, 9)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(144, 16)
+        Label2.TabIndex = 2
+        Label2.Text = "Search Name Supplier :"
+        ' 
+        ' txtnamesupplier
+        ' 
+        txtnamesupplier.Location = New Point(183, 6)
+        txtnamesupplier.Name = "txtnamesupplier"
+        txtnamesupplier.Size = New Size(86, 23)
+        txtnamesupplier.TabIndex = 1
+        ' 
+        ' Panel6
+        ' 
+        Panel6.Controls.Add(Label4)
+        Panel6.Controls.Add(txtcodesupplier)
+        Panel6.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Panel6.Location = New Point(113, 18)
+        Panel6.Name = "Panel6"
+        Panel6.RightToLeft = RightToLeft.No
+        Panel6.Size = New Size(286, 34)
+        Panel6.TabIndex = 10
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(13, 9)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(144, 16)
+        Label4.TabIndex = 2
+        Label4.Text = "Search Code  Supplier :"
+        ' 
+        ' txtcodesupplier
+        ' 
+        txtcodesupplier.Location = New Point(183, 6)
+        txtcodesupplier.Name = "txtcodesupplier"
+        txtcodesupplier.Size = New Size(86, 23)
+        txtcodesupplier.TabIndex = 1
+        ' 
+        ' btnsearchsupplier
+        ' 
+        btnsearchsupplier.Location = New Point(863, 16)
+        btnsearchsupplier.Name = "btnsearchsupplier"
+        btnsearchsupplier.Size = New Size(75, 36)
+        btnsearchsupplier.TabIndex = 8
+        btnsearchsupplier.Text = "Search"
+        btnsearchsupplier.UseVisualStyleBackColor = True
+        ' 
         ' DGV2
         ' 
         DGV2.AllowUserToAddRows = False
         DGV2.AllowUserToDeleteRows = False
         DGV2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV2.Location = New Point(16, 115)
+        DGV2.Location = New Point(16, 74)
         DGV2.Name = "DGV2"
         DGV2.ReadOnly = True
         DGV2.RightToLeft = RightToLeft.No
         DGV2.RowTemplate.Height = 25
-        DGV2.Size = New Size(1055, 346)
+        DGV2.Size = New Size(1055, 387)
         DGV2.TabIndex = 11
-        ' 
-        ' Panel2
-        ' 
-        Panel2.Controls.Add(Label10)
-        Panel2.Controls.Add(TextBox4)
-        Panel2.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Panel2.Location = New Point(706, 18)
-        Panel2.Name = "Panel2"
-        Panel2.RightToLeft = RightToLeft.No
-        Panel2.Size = New Size(299, 68)
-        Panel2.TabIndex = 10
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Location = New Point(74, 9)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(135, 16)
-        Label10.TabIndex = 2
-        Label10.Text = "Search Name Supplier"
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.Location = New Point(53, 34)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(214, 23)
-        TextBox4.TabIndex = 1
-        ' 
-        ' GroupBox2
-        ' 
-        GroupBox2.BackColor = Color.Transparent
-        GroupBox2.Controls.Add(Button2)
-        GroupBox2.Controls.Add(Label5)
-        GroupBox2.Controls.Add(Label6)
-        GroupBox2.Controls.Add(DateTimePicker3)
-        GroupBox2.Controls.Add(DateTimePicker4)
-        GroupBox2.Controls.Add(Label7)
-        GroupBox2.Controls.Add(Label9)
-        GroupBox2.Controls.Add(TextBox3)
-        GroupBox2.Controls.Add(ComboBox2)
-        GroupBox2.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        GroupBox2.Location = New Point(14, 6)
-        GroupBox2.Name = "GroupBox2"
-        GroupBox2.RightToLeft = RightToLeft.No
-        GroupBox2.Size = New Size(627, 84)
-        GroupBox2.TabIndex = 1
-        GroupBox2.TabStop = False
-        ' 
-        ' Button2
-        ' 
-        Button2.Location = New Point(532, 27)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(75, 36)
-        Button2.TabIndex = 8
-        Button2.Text = "Search"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(410, 24)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(31, 16)
-        Label5.TabIndex = 7
-        Label5.Text = "To :"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(278, 24)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(35, 16)
-        Label6.TabIndex = 6
-        Label6.Text = "For :"
-        ' 
-        ' DateTimePicker3
-        ' 
-        DateTimePicker3.Format = DateTimePickerFormat.Short
-        DateTimePicker3.Location = New Point(410, 43)
-        DateTimePicker3.Name = "DateTimePicker3"
-        DateTimePicker3.Size = New Size(103, 23)
-        DateTimePicker3.TabIndex = 5
-        ' 
-        ' DateTimePicker4
-        ' 
-        DateTimePicker4.Format = DateTimePickerFormat.Short
-        DateTimePicker4.Location = New Point(278, 43)
-        DateTimePicker4.Name = "DateTimePicker4"
-        DateTimePicker4.Size = New Size(103, 23)
-        DateTimePicker4.TabIndex = 4
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(8, 48)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(87, 16)
-        Label7.TabIndex = 3
-        Label7.Text = "Code Supplier"
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Location = New Point(6, 19)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(91, 16)
-        Label9.TabIndex = 2
-        Label9.Text = "Name Supplier"
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.Location = New Point(117, 45)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(134, 23)
-        TextBox3.TabIndex = 1
-        ' 
-        ' ComboBox2
-        ' 
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Location = New Point(117, 16)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(134, 24)
-        ComboBox2.TabIndex = 0
         ' 
         ' TabPage3
         ' 
-        TabPage3.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        TabPage3.BackColor = Color.LightGray
         TabPage3.Controls.Add(GroupBox3)
         TabPage3.Controls.Add(DGV3)
-        TabPage3.Controls.Add(Panel3)
         TabPage3.Location = New Point(4, 24)
         TabPage3.Name = "TabPage3"
         TabPage3.Padding = New Padding(3)
@@ -722,99 +617,81 @@ Partial Class FormMain
         ' 
         ' GroupBox3
         ' 
-        GroupBox3.BackColor = Color.Transparent
-        GroupBox3.Controls.Add(Button3)
-        GroupBox3.Controls.Add(Label12)
-        GroupBox3.Controls.Add(Label13)
-        GroupBox3.Controls.Add(DateTimePicker5)
-        GroupBox3.Controls.Add(DateTimePicker6)
-        GroupBox3.Controls.Add(Label14)
-        GroupBox3.Controls.Add(Label15)
-        GroupBox3.Controls.Add(TextBox6)
-        GroupBox3.Controls.Add(ComboBox3)
+        GroupBox3.BackColor = Color.LightGray
+        GroupBox3.Controls.Add(Panel3)
+        GroupBox3.Controls.Add(Panel7)
+        GroupBox3.Controls.Add(btnsearch)
+        GroupBox3.Dock = DockStyle.Top
         GroupBox3.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        GroupBox3.Location = New Point(16, 7)
+        GroupBox3.Location = New Point(3, 3)
         GroupBox3.Name = "GroupBox3"
         GroupBox3.RightToLeft = RightToLeft.No
-        GroupBox3.Size = New Size(627, 84)
+        GroupBox3.Size = New Size(1092, 65)
         GroupBox3.TabIndex = 13
         GroupBox3.TabStop = False
         ' 
-        ' Button3
+        ' Panel3
         ' 
-        Button3.Location = New Point(532, 27)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(75, 36)
-        Button3.TabIndex = 8
-        Button3.Text = "Search"
-        Button3.UseVisualStyleBackColor = True
+        Panel3.Controls.Add(Label5)
+        Panel3.Controls.Add(txtname)
+        Panel3.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Panel3.Location = New Point(444, 18)
+        Panel3.Name = "Panel3"
+        Panel3.RightToLeft = RightToLeft.No
+        Panel3.Size = New Size(286, 34)
+        Panel3.TabIndex = 11
         ' 
-        ' Label12
+        ' Label5
         ' 
-        Label12.AutoSize = True
-        Label12.Location = New Point(410, 24)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(31, 16)
-        Label12.TabIndex = 7
-        Label12.Text = "To :"
+        Label5.AutoSize = True
+        Label5.Location = New Point(15, 9)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(144, 16)
+        Label5.TabIndex = 2
+        Label5.Text = "Search Name  Product :"
         ' 
-        ' Label13
+        ' txtname
         ' 
-        Label13.AutoSize = True
-        Label13.Location = New Point(278, 24)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(35, 16)
-        Label13.TabIndex = 6
-        Label13.Text = "For :"
+        txtname.Location = New Point(183, 6)
+        txtname.Name = "txtname"
+        txtname.Size = New Size(86, 23)
+        txtname.TabIndex = 1
         ' 
-        ' DateTimePicker5
+        ' Panel7
         ' 
-        DateTimePicker5.Format = DateTimePickerFormat.Short
-        DateTimePicker5.Location = New Point(410, 43)
-        DateTimePicker5.Name = "DateTimePicker5"
-        DateTimePicker5.Size = New Size(103, 23)
-        DateTimePicker5.TabIndex = 5
+        Panel7.Controls.Add(Label6)
+        Panel7.Controls.Add(txtcode)
+        Panel7.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Panel7.Location = New Point(113, 18)
+        Panel7.Name = "Panel7"
+        Panel7.RightToLeft = RightToLeft.No
+        Panel7.Size = New Size(286, 34)
+        Panel7.TabIndex = 10
         ' 
-        ' DateTimePicker6
+        ' Label6
         ' 
-        DateTimePicker6.Format = DateTimePickerFormat.Short
-        DateTimePicker6.Location = New Point(278, 43)
-        DateTimePicker6.Name = "DateTimePicker6"
-        DateTimePicker6.Size = New Size(103, 23)
-        DateTimePicker6.TabIndex = 4
+        Label6.AutoSize = True
+        Label6.Location = New Point(13, 9)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(140, 16)
+        Label6.TabIndex = 2
+        Label6.Text = "Search Code  Product :"
         ' 
-        ' Label14
+        ' txtcode
         ' 
-        Label14.AutoSize = True
-        Label14.Location = New Point(8, 48)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(83, 16)
-        Label14.TabIndex = 3
-        Label14.Text = "Code Product"
+        txtcode.Location = New Point(183, 6)
+        txtcode.Name = "txtcode"
+        txtcode.Size = New Size(86, 23)
+        txtcode.TabIndex = 1
         ' 
-        ' Label15
+        ' btnsearch
         ' 
-        Label15.AutoSize = True
-        Label15.Location = New Point(6, 19)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(87, 16)
-        Label15.TabIndex = 2
-        Label15.Text = "Name Product"
-        ' 
-        ' TextBox6
-        ' 
-        TextBox6.Location = New Point(117, 45)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(134, 23)
-        TextBox6.TabIndex = 1
-        ' 
-        ' ComboBox3
-        ' 
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(117, 16)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(134, 24)
-        ComboBox3.TabIndex = 0
+        btnsearch.Location = New Point(863, 16)
+        btnsearch.Name = "btnsearch"
+        btnsearch.Size = New Size(75, 36)
+        btnsearch.TabIndex = 8
+        btnsearch.Text = "Search"
+        btnsearch.UseVisualStyleBackColor = True
         ' 
         ' DGV3
         ' 
@@ -823,39 +700,12 @@ Partial Class FormMain
         DGV3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DGV3.EnableHeadersVisualStyles = False
-        DGV3.Location = New Point(16, 115)
+        DGV3.Location = New Point(16, 74)
         DGV3.Name = "DGV3"
         DGV3.ReadOnly = True
         DGV3.RightToLeft = RightToLeft.No
-        DGV3.Size = New Size(1055, 346)
+        DGV3.Size = New Size(1055, 387)
         DGV3.TabIndex = 12
-        ' 
-        ' Panel3
-        ' 
-        Panel3.Controls.Add(Label11)
-        Panel3.Controls.Add(TextBox5)
-        Panel3.Font = New Font("Tahoma", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Panel3.Location = New Point(679, 23)
-        Panel3.Name = "Panel3"
-        Panel3.RightToLeft = RightToLeft.No
-        Panel3.Size = New Size(299, 68)
-        Panel3.TabIndex = 11
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Location = New Point(114, 9)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(94, 16)
-        Label11.TabIndex = 2
-        Label11.Text = "Search Product"
-        ' 
-        ' TextBox5
-        ' 
-        TextBox5.Location = New Point(53, 34)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(214, 23)
-        TextBox5.TabIndex = 1
         ' 
         ' Panel4
         ' 
@@ -871,9 +721,9 @@ Partial Class FormMain
         Label16.AutoSize = True
         Label16.Location = New Point(33, 20)
         Label16.Name = "Label16"
-        Label16.Size = New Size(1006, 15)
+        Label16.Size = New Size(1022, 15)
         Label16.TabIndex = 0
-        Label16.Text = """All rights reserved for the 'SIPMS' application. Designed and developed by GREDAN TTC. Any use or copying without prior permission is considered a violation of intellectual property rights."""
+        Label16.Text = """All rights reserved for the 'SIPMS' application. Designed and developed by SLIMANE DANY. Any use or copying without prior permission is considered a violation of intellectual property rights."""
         ' 
         ' FormMain
         ' 
@@ -895,22 +745,25 @@ Partial Class FormMain
         TabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         CType(DGV, ComponentModel.ISupportInitialize).EndInit()
+        GroupBox1.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        GroupBox1.ResumeLayout(False)
-        GroupBox1.PerformLayout()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
         TabPage2.ResumeLayout(False)
-        CType(DGV2, ComponentModel.ISupportInitialize).EndInit()
+        GroupBox2.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        GroupBox2.ResumeLayout(False)
-        GroupBox2.PerformLayout()
+        Panel6.ResumeLayout(False)
+        Panel6.PerformLayout()
+        CType(DGV2, ComponentModel.ISupportInitialize).EndInit()
         TabPage3.ResumeLayout(False)
         GroupBox3.ResumeLayout(False)
-        GroupBox3.PerformLayout()
-        CType(DGV3, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
+        Panel7.ResumeLayout(False)
+        Panel7.PerformLayout()
+        CType(DGV3, ComponentModel.ISupportInitialize).EndInit()
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         ResumeLayout(False)
@@ -946,37 +799,10 @@ Partial Class FormMain
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents DGV As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents DateTimePicker3 As DateTimePicker
-    Friend WithEvents DateTimePicker4 As DateTimePicker
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents btnsearchcustomer As Button
     Friend WithEvents DGV2 As DataGridView
     Friend WithEvents DGV3 As DataGridView
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents btnPurchas As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents AideToolStripMenuItem As ToolStripMenuItem
@@ -985,18 +811,30 @@ Partial Class FormMain
     Friend WithEvents RechercherToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents toolStripSeparator6 As ToolStripSeparator
     Friend WithEvents ÀproposdeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents DateTimePicker5 As DateTimePicker
-    Friend WithEvents DateTimePicker6 As DateTimePicker
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents ChangeTheAccountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuitTheProgramToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label16 As Label
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtcodecustomer As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtnamecustomer As TextBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtnamesupplier As TextBox
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtcodesupplier As TextBox
+    Friend WithEvents btnsearchsupplier As Button
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtname As TextBox
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtcode As TextBox
+    Friend WithEvents btnsearch As Button
 End Class

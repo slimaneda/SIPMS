@@ -23,13 +23,13 @@ Partial Class FormSupplierPayement
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         txtGrandTotal = New TextBox()
         btnClose = New Button()
@@ -69,6 +69,7 @@ Partial Class FormSupplierPayement
         Label13 = New Label()
         Panel2 = New Panel()
         Label1 = New Label()
+        Panel3 = New Panel()
         Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
@@ -87,10 +88,11 @@ Partial Class FormSupplierPayement
         Panel1.Controls.Add(GroupBox1)
         Panel1.Controls.Add(GroupBox2)
         Panel1.Controls.Add(Panel2)
-        Panel1.Location = New Point(8, 7)
+        Panel1.Dock = DockStyle.Fill
+        Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(4, 3, 4, 3)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(711, 562)
+        Panel1.Size = New Size(695, 557)
         Panel1.TabIndex = 2
         ' 
         ' txtGrandTotal
@@ -149,7 +151,7 @@ Partial Class FormSupplierPayement
         ' 
         ' txtCodSupplier
         ' 
-        txtCodSupplier.Location = New Point(251, 25)
+        txtCodSupplier.Location = New Point(311, 52)
         txtCodSupplier.Margin = New Padding(4, 3, 4, 3)
         txtCodSupplier.Name = "txtCodSupplier"
         txtCodSupplier.ReadOnly = True
@@ -172,7 +174,7 @@ Partial Class FormSupplierPayement
         ' 
         btnShow.BackgroundImageLayout = ImageLayout.None
         btnShow.FlatStyle = FlatStyle.System
-        btnShow.Location = New Point(269, 50)
+        btnShow.Location = New Point(262, 48)
         btnShow.Margin = New Padding(4, 5, 4, 5)
         btnShow.Name = "btnShow"
         btnShow.Size = New Size(34, 24)
@@ -183,13 +185,13 @@ Partial Class FormSupplierPayement
         ' Label31
         ' 
         Label31.AutoSize = True
-        Label31.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label31.Location = New Point(429, 27)
+        Label31.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        Label31.Location = New Point(413, 27)
         Label31.Margin = New Padding(4, 0, 4, 0)
         Label31.Name = "Label31"
-        Label31.Size = New Size(144, 15)
+        Label31.Size = New Size(171, 15)
         Label31.TabIndex = 87
-        Label31.Text = "Current balance supplier "
+        Label31.Text = "Current balance Supplier "
         ' 
         ' txtCodeSup
         ' 
@@ -305,31 +307,31 @@ Partial Class FormSupplierPayement
         ' 
         DGV.AllowUserToAddRows = False
         DGV.AllowUserToDeleteRows = False
-        DataGridViewCellStyle8.BackColor = Color.FloralWhite
-        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle1.BackColor = Color.FloralWhite
+        DGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         DGV.BackgroundColor = Color.White
         DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = Color.CadetBlue
-        DataGridViewCellStyle9.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle9.ForeColor = Color.Black
-        DataGridViewCellStyle9.SelectionBackColor = Color.LightSteelBlue
-        DataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.True
-        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = Color.CadetBlue
+        DataGridViewCellStyle2.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = Color.LightSteelBlue
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         DGV.ColumnHeadersHeight = 35
         DGV.Columns.AddRange(New DataGridViewColumn() {Column4, Column1, Column2, Column8, Column16, Column15, Column3})
         DGV.Cursor = Cursors.Hand
-        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = SystemColors.Window
-        DataGridViewCellStyle12.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle12.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        DataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.False
-        DGV.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = SystemColors.Window
+        DataGridViewCellStyle5.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
+        DGV.DefaultCellStyle = DataGridViewCellStyle5
         DGV.EnableHeadersVisualStyles = False
         DGV.GridColor = Color.White
         DGV.Location = New Point(7, 134)
@@ -338,22 +340,22 @@ Partial Class FormSupplierPayement
         DGV.ReadOnly = True
         DGV.RightToLeft = RightToLeft.No
         DGV.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
-        DataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = Color.CadetBlue
-        DataGridViewCellStyle13.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle13.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle13.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = DataGridViewTriState.True
-        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = Color.CadetBlue
+        DataGridViewCellStyle6.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle6.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
+        DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         DGV.RowHeadersVisible = False
         DGV.RowHeadersWidth = 30
         DGV.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle14.BackColor = Color.White
-        DataGridViewCellStyle14.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle14.SelectionBackColor = Color.DarkSlateGray
-        DataGridViewCellStyle14.SelectionForeColor = Color.White
-        DGV.RowsDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle7.BackColor = Color.White
+        DataGridViewCellStyle7.Font = New Font("Tahoma", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle7.SelectionBackColor = Color.DarkSlateGray
+        DataGridViewCellStyle7.SelectionForeColor = Color.White
+        DGV.RowsDefaultCellStyle = DataGridViewCellStyle7
         DGV.RowTemplate.Height = 18
         DGV.RowTemplate.Resizable = DataGridViewTriState.False
         DGV.ScrollBars = ScrollBars.Vertical
@@ -387,16 +389,16 @@ Partial Class FormSupplierPayement
         ' 
         ' Column16
         ' 
-        DataGridViewCellStyle10.Format = "dd/MM/yyyy"
-        Column16.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle3.Format = "dd/MM/yyyy"
+        Column16.DefaultCellStyle = DataGridViewCellStyle3
         Column16.HeaderText = "Date Payement"
         Column16.Name = "Column16"
         Column16.ReadOnly = True
         ' 
         ' Column15
         ' 
-        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.TopRight
-        Column15.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopRight
+        Column15.DefaultCellStyle = DataGridViewCellStyle4
         Column15.HeaderText = "The amount Paid"
         Column15.Name = "Column15"
         Column15.ReadOnly = True
@@ -539,7 +541,7 @@ Partial Class FormSupplierPayement
         Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(4, 3, 4, 3)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(709, 72)
+        Panel2.Size = New Size(693, 72)
         Panel2.TabIndex = 0
         ' 
         ' Label1
@@ -555,12 +557,21 @@ Partial Class FormSupplierPayement
         Label1.TabIndex = 0
         Label1.Text = "Add supplier payments"
         ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.Yellow
+        Panel3.Location = New Point(-7, 69)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(708, 4)
+        Panel3.TabIndex = 21
+        ' 
         ' FormSupplierPayement
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSlateGray
-        ClientSize = New Size(729, 583)
+        ClientSize = New Size(695, 557)
+        Controls.Add(Panel3)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)
@@ -620,4 +631,5 @@ Partial Class FormSupplierPayement
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents txtGrandTotal As TextBox
+    Friend WithEvents Panel3 As Panel
 End Class

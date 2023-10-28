@@ -23,6 +23,7 @@ Partial Class FormCompany
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Panel4 = New Panel()
         Label1 = New Label()
         Panel2 = New Panel()
         btn_browse = New Button()
@@ -49,7 +50,6 @@ Partial Class FormCompany
         btnSave = New Button()
         btnNew = New Button()
         OpenFileDialog1 = New OpenFileDialog()
-        Panel4 = New Panel()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +66,14 @@ Partial Class FormCompany
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(614, 63)
         Panel1.TabIndex = 0
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.Yellow
+        Panel4.Location = New Point(1, 59)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(613, 10)
+        Panel4.TabIndex = 16
         ' 
         ' Label1
         ' 
@@ -99,7 +107,7 @@ Partial Class FormCompany
         Panel2.Controls.Add(Label2)
         Panel2.Location = New Point(12, 69)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(588, 281)
+        Panel2.Size = New Size(588, 253)
         Panel2.TabIndex = 2
         ' 
         ' btn_browse
@@ -250,7 +258,7 @@ Partial Class FormCompany
         Panel3.Controls.Add(btnUpdate)
         Panel3.Controls.Add(btnSave)
         Panel3.Controls.Add(btnNew)
-        Panel3.Location = New Point(16, 356)
+        Panel3.Location = New Point(16, 330)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(584, 56)
         Panel3.TabIndex = 3
@@ -316,26 +324,20 @@ Partial Class FormCompany
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
-        ' Panel4
-        ' 
-        Panel4.BackColor = Color.Yellow
-        Panel4.Location = New Point(1, 59)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(613, 10)
-        Panel4.TabIndex = 16
-        ' 
         ' FormCompany
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Control
-        ClientSize = New Size(614, 424)
+        ClientSize = New Size(614, 393)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "FormCompany"
-        Text = "FormCompany"
+        Text = "Company"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)

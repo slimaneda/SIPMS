@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 
 Public Class FormCategories
-    Private Comfunction As New ComFunction
     Private item As New Item
     Private ItemsDAL As New ItemsDAL
 
@@ -40,11 +39,16 @@ Public Class FormCategories
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
+            If txt_itemname.Text = String.Empty Then
+                MessageBox.Show("Please add name item ", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Exit Sub
+            End If
             If PictureBox1.Image IsNot Nothing Then
                 Dim ms As New MemoryStream
                 PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
                 item.photo = ms.ToArray()
             End If
+
             item.Code_item = txt_Codeitem.Text
             item.Name_item = txt_itemname.Text
 
@@ -60,6 +64,11 @@ Public Class FormCategories
             MessageBox.Show("Please enter Code item", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
+
+        Dim ms As New MemoryStream
+        PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
+            item.photo = ms.ToArray()
+
         item.Code_item = txt_Codeitem.Text
         item.Name_item = txt_itemname.Text
 

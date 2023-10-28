@@ -37,7 +37,7 @@ Partial Class FormSales
         Label6 = New Label()
         Label25 = New Label()
         Panel1 = New Panel()
-        TextBox2 = New TextBox()
+        Panel4 = New Panel()
         Panel5 = New Panel()
         Label12 = New Label()
         Label34 = New Label()
@@ -73,6 +73,7 @@ Partial Class FormSales
         Column11 = New DataGridViewTextBoxColumn()
         Label8 = New Label()
         GroupBox5 = New GroupBox()
+        TextBox2 = New TextBox()
         TextBox1 = New TextBox()
         Label7 = New Label()
         txtAmount = New TextBox()
@@ -166,6 +167,7 @@ Partial Class FormSales
         ' 
         Panel1.BackColor = Color.White
         Panel1.BorderStyle = BorderStyle.FixedSingle
+        Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(Panel5)
         Panel1.Controls.Add(GroupBox3)
         Panel1.Controls.Add(txtRemarks)
@@ -175,19 +177,19 @@ Partial Class FormSales
         Panel1.Controls.Add(GroupBox4)
         Panel1.Controls.Add(Panel3)
         Panel1.Controls.Add(Panel2)
-        Panel1.Location = New Point(11, 8)
+        Panel1.Location = New Point(1, 0)
         Panel1.Margin = New Padding(4, 3, 4, 3)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1019, 643)
+        Panel1.Size = New Size(1029, 651)
         Panel1.TabIndex = 2
         ' 
-        ' TextBox2
+        ' Panel4
         ' 
-        TextBox2.Location = New Point(292, 113)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(100, 20)
-        TextBox2.TabIndex = 87
-        TextBox2.Visible = False
+        Panel4.BackColor = Color.Yellow
+        Panel4.Location = New Point(0, 68)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(1028, 4)
+        Panel4.TabIndex = 87
         ' 
         ' Panel5
         ' 
@@ -208,12 +210,12 @@ Partial Class FormSales
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label12.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point)
         Label12.Location = New Point(39, 21)
         Label12.Margin = New Padding(4, 0, 4, 0)
         Label12.Name = "Label12"
         Label12.RightToLeft = RightToLeft.No
-        Label12.Size = New Size(69, 13)
+        Label12.Size = New Size(82, 13)
         Label12.TabIndex = 87
         Label12.Text = "Grand Total :"
         ' 
@@ -243,7 +245,7 @@ Partial Class FormSales
         ' 
         ' txtGrandtotal
         ' 
-        txtGrandtotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
+        txtGrandtotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point)
         txtGrandtotal.Location = New Point(134, 18)
         txtGrandtotal.Margin = New Padding(4, 5, 4, 5)
         txtGrandtotal.Name = "txtGrandtotal"
@@ -363,12 +365,12 @@ Partial Class FormSales
         ' 
         txtRemarks.BackColor = Color.White
         txtRemarks.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        txtRemarks.Location = New Point(150, 309)
+        txtRemarks.Location = New Point(107, 309)
         txtRemarks.Margin = New Padding(4, 3, 4, 3)
         txtRemarks.Multiline = True
         txtRemarks.Name = "txtRemarks"
         txtRemarks.ScrollBars = ScrollBars.Both
-        txtRemarks.Size = New Size(211, 93)
+        txtRemarks.Size = New Size(254, 93)
         txtRemarks.TabIndex = 6
         ' 
         ' DGV
@@ -402,7 +404,7 @@ Partial Class FormSales
         DGV.Dock = DockStyle.Bottom
         DGV.EnableHeadersVisualStyles = False
         DGV.GridColor = Color.White
-        DGV.Location = New Point(0, 498)
+        DGV.Location = New Point(0, 506)
         DGV.Margin = New Padding(4, 3, 4, 3)
         DGV.Name = "DGV"
         DGV.ReadOnly = True
@@ -425,7 +427,7 @@ Partial Class FormSales
         DGV.RowTemplate.Height = 18
         DGV.RowTemplate.Resizable = DataGridViewTriState.False
         DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DGV.Size = New Size(1017, 143)
+        DGV.Size = New Size(1027, 143)
         DGV.TabIndex = 10
         ' 
         ' Column8
@@ -581,6 +583,13 @@ Partial Class FormSales
         GroupBox5.TabIndex = 2
         GroupBox5.TabStop = False
         GroupBox5.Text = "Product Details"
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(292, 113)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(100, 20)
+        TextBox2.TabIndex = 87
         ' 
         ' TextBox1
         ' 
@@ -937,14 +946,14 @@ Partial Class FormSales
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.DarkSlateGray
+        Panel2.BackColor = Color.SteelBlue
         Panel2.BackgroundImageLayout = ImageLayout.Stretch
         Panel2.Controls.Add(Label1)
         Panel2.Dock = DockStyle.Top
         Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(4, 3, 4, 3)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1017, 72)
+        Panel2.Size = New Size(1027, 72)
         Panel2.TabIndex = 0
         ' 
         ' Label1
@@ -964,7 +973,7 @@ Partial Class FormSales
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.DarkSlateGray
+        BackColor = Color.SteelBlue
         ClientSize = New Size(1027, 650)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.FixedSingle
@@ -1066,4 +1075,5 @@ Partial Class FormSales
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Panel4 As Panel
 End Class

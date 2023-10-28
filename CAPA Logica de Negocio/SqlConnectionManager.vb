@@ -13,7 +13,7 @@ Public Class SqlConnectionManager
             For Each param As KeyValuePair(Of String, Object) In args
                 cmd.Parameters.AddWithValue(param.Key, param.Value)
             Next
-            Dim Result As Integer = cmd.ExecuteNonQuery()
+            Dim Result As Integer = cmd.ExecuteNonQuery()   ' insert delete update search
             Return Result
         End Using
     End Function
@@ -41,7 +41,7 @@ Public Class SqlConnectionManager
 
 
 
-    Public Shared Function DataExists(procedureName As String, args As Dictionary(Of String, Object)) As Boolean
+    Public Shared Function DataExists(procedureName As String, args As Dictionary(Of String, Object)) As Boolean 'true 
         Conexion.conecta()
 
         Using cmd As New SqlCommand(procedureName, Conexion.con)
@@ -56,21 +56,43 @@ Public Class SqlConnectionManager
         End Using
     End Function
 
-
-
-
-    Public Shared Function ExecuteScalar(query As String, parameters As Dictionary(Of String, Object)) As Object
+    Public Shared Function ExecuteRead(procedureName As String, args As Dictionary(Of String, Object)) As String
         Conexion.conecta()
-        Using cmd As New SqlCommand(query, Conexion.con)
+
+        Using cmd As New SqlCommand(procedureName, Conexion.con)
             cmd.CommandType = CommandType.StoredProcedure
-            For Each param In parameters
+
+            For Each param As KeyValuePair(Of String, Object) In args
                 cmd.Parameters.AddWithValue(param.Key, param.Value)
             Next
 
-            Return cmd.ExecuteScalar()
-        End Using
+            Using reader As SqlDataReader = cmd.ExecuteReader()
+                Dim result As New StringBuilder()
 
+                While reader.Read()
+                    ' هنا نقوم بقراءة القيمة من العمود الأول فقط، يمكنك تعديله حسب الحاجة
+                    result.AppendLine(reader(0).ToString())
+                End While
+
+                Return result.ToString()
+            End Using
+        End Using
     End Function
+
+
+
+    'Public Shared Function ExecuteScalar(query As String, parameters As Dictionary(Of String, Object)) As Object
+    '    Conexion.conecta()
+    '    Using cmd As New SqlCommand(query, Conexion.con)
+    '        cmd.CommandType = CommandType.StoredProcedure
+    '        For Each param In parameters
+    '            cmd.Parameters.AddWithValue(param.Key, param.Value)
+    '        Next
+
+    '        Return cmd.ExecuteScalar()
+    '    End Using
+
+    'End Function
 
 
 

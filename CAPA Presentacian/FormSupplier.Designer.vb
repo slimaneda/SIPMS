@@ -56,6 +56,7 @@ Partial Class FormSupplier
         Label21 = New Label()
         Label22 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
+        Panel3 = New Panel()
         Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
         Panel5.SuspendLayout()
@@ -393,15 +394,26 @@ Partial Class FormSupplier
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.Yellow
+        Panel3.Location = New Point(0, 59)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(583, 4)
+        Panel3.TabIndex = 21
+        ' 
         ' FormSupplier
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(580, 531)
+        Controls.Add(Panel3)
         Controls.Add(GroupBox1)
         Controls.Add(Panel1)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "FormSupplier"
-        Text = "FormSupplier"
+        Text = "Supplier"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         GroupBox1.ResumeLayout(False)
@@ -444,4 +456,5 @@ Partial Class FormSupplier
     Friend WithEvents Label22 As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents txt_zip As TextBox
+    Friend WithEvents Panel3 As Panel
 End Class

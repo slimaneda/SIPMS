@@ -1,6 +1,6 @@
 ﻿
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmOverallReport
+Partial Class formCustomerReceipt
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -87,16 +87,17 @@ Partial Class frmOverallReport
         Panel1.Controls.Add(GroupBox1)
         Panel1.Controls.Add(GroupBox2)
         Panel1.Controls.Add(Panel2)
-        Panel1.Location = New Point(8, 7)
+        Panel1.Dock = DockStyle.Fill
+        Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(4, 3, 4, 3)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(711, 562)
+        Panel1.Size = New Size(698, 551)
         Panel1.TabIndex = 2
         ' 
         ' txtGrandTotal
         ' 
         txtGrandTotal.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        txtGrandTotal.Location = New Point(567, 514)
+        txtGrandTotal.Location = New Point(553, 504)
         txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
         txtGrandTotal.Name = "txtGrandTotal"
         txtGrandTotal.ReadOnly = True
@@ -324,7 +325,7 @@ Partial Class frmOverallReport
         DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = SystemColors.Window
         DataGridViewCellStyle5.Font = New Font("Tahoma", 8F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(64, 64, 64)
         DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
@@ -539,7 +540,7 @@ Partial Class frmOverallReport
         Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(4, 3, 4, 3)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(709, 72)
+        Panel2.Size = New Size(696, 72)
         Panel2.TabIndex = 0
         ' 
         ' Label1
@@ -560,7 +561,7 @@ Partial Class frmOverallReport
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSlateGray
-        ClientSize = New Size(729, 583)
+        ClientSize = New Size(698, 551)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)

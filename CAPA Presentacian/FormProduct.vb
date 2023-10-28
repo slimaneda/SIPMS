@@ -46,7 +46,7 @@
     End Sub
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
-        FormGetData.lbl.Text = "b"
+        FormGetData.lbl.Text = "F_Product"
         FormGetData.ShowDialog()
 
     End Sub

@@ -4,11 +4,8 @@
     Private SupplierAccDAL As New SupplierAccDAL
 
     Public Sub clean()
-
-        Comfunction.ClearTextboxes(GroupBox1)
-        Comfunction.ClearTextboxes(GroupBox2)
-
-
+        ComFunction.ClearTextboxes(GroupBox1)
+        ComFunction.ClearTextboxes(GroupBox2)
     End Sub
 
     Private Sub Button_Close_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -16,9 +13,7 @@
     End Sub
 
     Private Sub FormSupplierPayement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         txtGrandTotal.Text = Val(txtPaymentDue.Text)
-
     End Sub
 
     Private Sub btnShow_click(sender As Object, e As EventArgs) Handles btnShow.Click
@@ -26,18 +21,17 @@
         FormGetData.ShowDialog()
     End Sub
 
-
-
     Sub Calcul()
         Dim i As Double = 0
         i = Val(txtGrandTotal.Text) - Val(txtTotalPayment.Text)
         i = Math.Round(i, 2)
         txtPaymentDue.Text = i
     End Sub
+
     Public Function TotalPayment() As Double
         Dim sum As Double = 0
         Try
-            For Each r As DataGridViewRow In Me.DGV.Rows
+            For Each r As DataGridViewRow In Me.DGV.Rows 'Add whenever the Add button is pressed
                 sum = sum + r.Cells(5).Value
             Next
         Catch ex As Exception
@@ -67,12 +61,10 @@
             MessageBox.Show("Please click the save button before proceeding.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
-
-
         InsertIntoSuppAcc()
         FormMain.LoadLatestData()
         clean()
-        MsgBox("save don")
+        MsgBox("Registration successful")
     End Sub
     Private Sub InsertIntoSuppAcc()
 
@@ -91,9 +83,8 @@
             End With
         Next
         SupplierAccDAL.Insertar(Me.SupplierAcc, "Insert_SuppAcc")
-
-
     End Sub
+
     Private Sub txtCodeSup_TextChanged(sender As Object, e As EventArgs) Handles txtCodeSup.TextChanged
         Dim nembreOnly As String = ""
         For Each ch As Char In txtCodeSup.Text
@@ -117,16 +108,8 @@
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
-
         For Each row As DataGridViewRow In DGV.SelectedRows
             DGV.Rows.Remove(row)
         Next
     End Sub
-
-    Private Sub txtTotalPayment_TextChanged(sender As Object, e As EventArgs) Handles txtTotalPayment.TextChanged
-
-    End Sub
-
-
-
 End Class

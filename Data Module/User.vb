@@ -4,7 +4,7 @@
     Public Property d1 As Boolean
     Public Property d2 As Boolean
     Public Property d3 As Boolean
-    Public Property d4 As Boolean
+    Public Property d4 As Boolean  'true false
     Public Property d5 As Boolean
     Public Property d6 As Boolean
     Public Property d7 As Boolean

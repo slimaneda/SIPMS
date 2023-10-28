@@ -23,19 +23,10 @@ Partial Class FormCustomerListe
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        Label1 = New Label()
-        Panel4 = New Panel()
-        TextBox1 = New TextBox()
-        Label4 = New Label()
-        Panel2 = New Panel()
-        TextBox2 = New TextBox()
-        Label2 = New Label()
-        btnClose = New Button()
-        DGV = New DataGridView()
         lbl = New Label()
+        Label1 = New Label()
+        DGV = New DataGridView()
         Panel1.SuspendLayout()
-        Panel4.SuspendLayout()
-        Panel2.SuspendLayout()
         CType(DGV, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -47,8 +38,17 @@ Partial Class FormCustomerListe
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(996, 63)
+        Panel1.Size = New Size(908, 63)
         Panel1.TabIndex = 3
+        ' 
+        ' lbl
+        ' 
+        lbl.AutoSize = True
+        lbl.Location = New Point(24, 9)
+        lbl.Name = "lbl"
+        lbl.Size = New Size(0, 15)
+        lbl.TabIndex = 24
+        lbl.Visible = False
         ' 
         ' Label1
         ' 
@@ -61,69 +61,6 @@ Partial Class FormCustomerListe
         Label1.TabIndex = 0
         Label1.Text = "List of  Customers"
         ' 
-        ' Panel4
-        ' 
-        Panel4.BorderStyle = BorderStyle.FixedSingle
-        Panel4.Controls.Add(TextBox1)
-        Panel4.Controls.Add(Label4)
-        Panel4.Location = New Point(12, 69)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(226, 61)
-        Panel4.TabIndex = 6
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(11, 24)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(196, 23)
-        TextBox1.TabIndex = 2
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(58, 3)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(89, 15)
-        Label4.TabIndex = 1
-        Label4.Text = "Search Name :"
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BorderStyle = BorderStyle.FixedSingle
-        Panel2.Controls.Add(TextBox2)
-        Panel2.Controls.Add(Label2)
-        Panel2.Location = New Point(282, 69)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(226, 61)
-        Panel2.TabIndex = 7
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Location = New Point(11, 24)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(196, 23)
-        TextBox2.TabIndex = 2
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(58, 3)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(96, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "Search Contact :"
-        ' 
-        ' btnClose
-        ' 
-        btnClose.Location = New Point(894, 93)
-        btnClose.Name = "btnClose"
-        btnClose.Size = New Size(90, 37)
-        btnClose.TabIndex = 22
-        btnClose.Text = "&Close"
-        btnClose.UseVisualStyleBackColor = True
-        ' 
         ' DGV
         ' 
         DGV.AllowUserToAddRows = False
@@ -131,54 +68,33 @@ Partial Class FormCustomerListe
         DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DGV.Dock = DockStyle.Bottom
-        DGV.Location = New Point(0, 161)
+        DGV.Location = New Point(0, 0)
         DGV.Name = "DGV"
         DGV.ReadOnly = True
         DGV.RowHeadersVisible = False
         DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(996, 271)
+        DGV.Size = New Size(908, 338)
         DGV.TabIndex = 23
-        ' 
-        ' lbl
-        ' 
-        lbl.AutoSize = True
-        lbl.Location = New Point(24, 9)
-        lbl.Name = "lbl"
-        lbl.Size = New Size(0, 15)
-        lbl.TabIndex = 24
-        lbl.Visible = False
         ' 
         ' FormCustomerListe
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(996, 432)
+        ClientSize = New Size(908, 338)
         Controls.Add(DGV)
-        Controls.Add(btnClose)
-        Controls.Add(Panel2)
-        Controls.Add(Panel4)
         Controls.Add(Panel1)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "FormCustomerListe"
-        Text = "FormCustomerListe"
+        Text = "Customer Liste"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        Panel4.ResumeLayout(False)
-        Panel4.PerformLayout()
-        Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
         CType(DGV, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents btnClose As Button
     Friend WithEvents DGV As DataGridView
     Friend WithEvents lbl As Label
 End Class

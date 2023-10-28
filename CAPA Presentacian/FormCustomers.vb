@@ -1,14 +1,9 @@
 ﻿Imports System.IO
 
 Public Class FormCustomers
-    'Private Comfunction As New ComFunction
+
     Private Customer As New Customer
     Private CustomerDAL As New CustomerDAL
-
-    'Public Sub New(ByVal Customer As Customer)
-    '    InitializeComponent()
-    '    Me.Customer = Customer
-    'End Sub
 
     Private Sub SetCustomerValue()
         With Customer

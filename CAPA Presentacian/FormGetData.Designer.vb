@@ -45,10 +45,9 @@ Partial Class FormGetData
         DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV.BorderStyle = BorderStyle.Fixed3D
         DGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DGV.ColumnHeadersHeight = 30
+        DGV.ColumnHeadersHeight = 40
         DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DGV.Dock = DockStyle.Fill
-        DGV.Location = New Point(0, 0)
+        DGV.Location = New Point(0, 5)
         DGV.MultiSelect = False
         DGV.Name = "DGV"
         DGV.ReadOnly = True
@@ -60,9 +59,8 @@ Partial Class FormGetData
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
         DGV.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
-        DGV.RowHeadersVisible = False
         DGV.RowTemplate.Height = 25
-        DGV.Size = New Size(648, 282)
+        DGV.Size = New Size(648, 277)
         DGV.TabIndex = 21
         ' 
         ' FormGetData

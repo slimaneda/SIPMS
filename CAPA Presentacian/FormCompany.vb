@@ -1,12 +1,11 @@
 ﻿Imports System.IO
 
 Public Class FormCompany
-    ' Private Comfunction As New ComFunction
     Private CompanyDAL As New CompanyDAL
     Private COMPANY As New Company
 
     Sub clear()
-        Comfunction.ClearTextboxes(Panel2)
+        ComFunction.ClearTextboxes(Panel2)
         PictureBox1.Image = My.Resources.Sans_titre
         txt_Companyname.Focus()
         ' Comfunction.Show_DGV(DGV1, "Select_Company")
@@ -28,18 +27,7 @@ Public Class FormCompany
 
     End Sub
     Private Cls As New CompanyDAL
-    'Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-    '    Cls.Name_company = txt_Companyname.Text
-    '    Cls.Adress = txt_Adress.Text
-    '    Cls.Contact = txt_Contact.Text
-    '    Cls.Email = txt_Email.Text
-    '    Cls.TIN = txt_TIN.Text
-    '    Cls.ST = txt_STN.Text
-    '    Cls.CIN = txt_CIN.Text
 
-    '    Cls.Save("Insert_Company")
-
-    'End Sub
 
     Private Sub btn_browse_click(sender As Object, e As EventArgs) Handles btn_browse.Click
         Try
@@ -100,30 +88,8 @@ Public Class FormCompany
     End Sub
 
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
-        FormGetData.lbl.Text = "company"
+        FormGetData.lbl.Text = "F_Company"
         FormGetData.ShowDialog()
     End Sub
-
-
-
-    'Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV1.CellClick
-    '    If e.RowIndex >= 0 Then
-
-
-    '        txt_Companyname.Text = DGV1.Rows(e.RowIndex).Cells(0).Value.ToString()
-    '        txt_Adress.Text = DGV1.Rows(e.RowIndex).Cells(1).Value.ToString()
-    '        txt_Contact.Text = DGV1.Rows(e.RowIndex).Cells(2).Value.ToString()
-    '        txt_Email.Text = DGV1.Rows(e.RowIndex).Cells(3).Value.ToString()
-    '        txt_TIN.Text = DGV1.Rows(e.RowIndex).Cells(4).Value.ToString()
-    '        txt_STN.Text = DGV1.Rows(e.RowIndex).Cells(5).Value.ToString()
-    '        txt_CIN.Text = DGV1.Rows(e.RowIndex).Cells(6).Value.ToString()
-
-    '        Dim data As Byte() = DirectCast(DGV1.Rows(e.RowIndex).Cells(7).Value, Byte())
-    '        Dim ms As New MemoryStream(data)
-    '        Me.PictureBox1.Image = Image.FromStream(ms)
-
-    '    End If
-    'End Sub
-
 
 End Class

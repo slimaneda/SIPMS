@@ -42,6 +42,7 @@ Partial Class FormProduct
         btnUpdate = New Button()
         btnSave = New Button()
         btnNew = New Button()
+        Panel4 = New Panel()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -240,16 +241,27 @@ Partial Class FormProduct
         btnNew.Text = "&New"
         btnNew.UseVisualStyleBackColor = True
         ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.Yellow
+        Panel4.Location = New Point(2, 59)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(708, 4)
+        Panel4.TabIndex = 21
+        ' 
         ' FormProduct
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(713, 288)
+        Controls.Add(Panel4)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "FormProduct"
-        Text = "FormProduct"
+        Text = "Product"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
@@ -278,4 +290,5 @@ Partial Class FormProduct
     Friend WithEvents btnUpdate As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents btnNew As Button
+    Friend WithEvents Panel4 As Panel
 End Class

@@ -255,7 +255,7 @@
     End Sub
 
     Private Sub ShowSupplier_Click(sender As Object, e As EventArgs) Handles btnShowSupp.Click
-        FormGetData.lbl.Text = "FormStock"
+        FormGetData.lbl.Text = "Formiventoy"
         FormGetData.ShowDialog()
     End Sub
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click

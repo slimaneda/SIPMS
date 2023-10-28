@@ -1,20 +1,21 @@
 ﻿Public Class FormGetData
     ' Private Comfunction As New ComFunction
-    Private Const FPS As String = "FormStock_Product"
-    Private Const FB As String = "FB"
-    Private Const B As String = "b"
-    Private Const Show_Supplier As String = "FormStock"
+    Private Const F_StockProduct As String = "FormStock_Product"
+    Private Const F_Sales As String = "F_Sales"
+    Private Const F_Product As String = "F_Product"
+    Private Const f_Iventory As String = "Formiventoy"
     Private Const Show_SupplierPayement As String = "formSupplierPayement"
-    Private Const Company = "company"
+    Private Const Company = "F_Company"
     Private Const QUATATION As String = "QUATATION"
     Private Const Receipt As String = "Receipt"
+
     Private Sub FormProductShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Select Case lbl.Text
-            Case FPS, B
+            Case F_Product, F_StockProduct
                 ComFunction.Show_DGV(DGV, "Select_Pt")
-            Case FB
+            Case F_Sales, F_StockProduct
                 ComFunction.Show_DGV(DGV, "GetProductStockSummary")
-            Case Show_Supplier
+            Case f_Iventory
                 ComFunction.Show_DGV(DGV, "Select_Supplier")
             Case Show_SupplierPayement
                 ComFunction.Show_DGV(DGV, "GetSupplierSummary")
@@ -36,13 +37,13 @@
 
         Select Case lbl.Text
 
-            Case FB
+            Case F_Sales
                 SetFormQuotationValues(e.RowIndex)
-            Case FPS
+            Case F_StockProduct
                 SetFormStockValues(e.RowIndex)
-            Case Show_Supplier
+            Case f_Iventory
                 SetFormSupplierValue(e.RowIndex)
-            Case B
+            Case F_Product
                 SetFormProductValues(e.RowIndex)
             Case Show_SupplierPayement
                 setFormseuppayement(e.RowIndex)
@@ -92,10 +93,9 @@
         Dim inputString As String = DGV.Rows(rowIndex).Cells(0).Value.ToString()
         Dim onlyNumbers As String = String.Join("", inputString.Where(Function(c) Char.IsDigit(c)))
         With FormSupplierPayement
-            .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value.ToString()
             .txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value.ToString
             .txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
-            .txtbalance.Text = DGV.Rows(rowIndex).Cells(4).Value.ToString
+            .txtbalance.Text = DGV.Rows(rowIndex).Cells(4).Value
         End With
     End Sub
     Private Sub setFormQuatationValue(RowIndex As Integer)
@@ -107,7 +107,7 @@
         End With
     End Sub
     Private Sub setFormReceiptValue(RowIndex As Integer)
-        With frmOverallReport
+        With formCustomerReceipt
             .txtCodeCustomers.Text = DGV.Rows(RowIndex).Cells(0).Value.ToString
             .txtNameCustomer.Text = DGV.Rows(RowIndex).Cells(1).Value.ToString
             .txtBalance.Text = DGV.Rows(RowIndex).Cells(4).Value

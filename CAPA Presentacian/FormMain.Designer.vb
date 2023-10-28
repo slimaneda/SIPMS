@@ -885,6 +885,7 @@ Partial Class FormMain
         Controls.Add(MenuStrip1)
         Controls.Add(MenuStrip2)
         MainMenuStrip = MenuStrip1
+        MaximizeBox = False
         Name = "FormMain"
         Text = "Sales Invontory and Purchase Management System (SIPMS)"
         MenuStrip1.ResumeLayout(False)

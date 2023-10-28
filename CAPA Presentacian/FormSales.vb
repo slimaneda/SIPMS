@@ -102,7 +102,7 @@
             With _StockProduct
                 .ProductID = row.Cells(15).Value
                 .ProductName = row.Cells(6).Value.ToString
-                .Qty = -row.Cells(8).Value
+                .Qty = -Val(row.Cells(8).Value)
             End With
         Next
         _StockProductDAl.Insertars(_StockProduct)
@@ -143,7 +143,7 @@
     Private Sub txtQty_TextChanged(sender As Object, e As EventArgs) Handles txtQty.TextChanged, txtSellingPrice.TextChanged, txtVAT.TextChanged
         Dim nembreOnly As String = ""
         For Each ch As Char In txtQty.Text
-            If Char.IsDigit(ch) Then
+            If Char.IsDigit(ch) Or ch = "." Then
                 nembreOnly &= ch
             End If
         Next
@@ -176,7 +176,7 @@
     End Sub
 
     Private Sub btnSelectionInv_Click(sender As Object, e As EventArgs) Handles btnSelectionInv.Click
-        FormGetData.lbl.Text = "FB"
+        FormGetData.lbl.Text = "F_Sales"
         FormGetData.ShowDialog()
     End Sub
 
@@ -210,7 +210,5 @@
         TextBox1.Text = nembreOnly
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
-
-    End Sub
+    
 End Class

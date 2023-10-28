@@ -1,6 +1,6 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
-Public Class frmOverallReport
+Public Class formCustomerReceipt
 
     Private _CustomerAccDAL As New CustomerAccDAL
     Private Sub btnShow_Click(sender As Object, e As EventArgs) Handles btnShow.Click
@@ -82,5 +82,9 @@ Public Class frmOverallReport
             End If
         Next
         txtCodCustomer.Text = nembreOnly
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Close()
     End Sub
 End Class

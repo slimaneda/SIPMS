@@ -1,4 +1,6 @@
 ﻿Public Class FormMain
+    Private customer As New Customer
+    Private _customerdal As New CustomerDAL
     Private Sub CompanyToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles btncompany.Click
         FormCompany.ShowDialog()
     End Sub
@@ -38,7 +40,7 @@
     End Sub
 
     Private Sub CustomerReceiptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnreciept.Click
-        frmOverallReport.ShowDialog()
+        formCustomerReceipt.ShowDialog()
     End Sub
 
     Private Sub SupplierPaymentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles btnsupplierpayement.Click
@@ -109,5 +111,13 @@
 
     Private Sub AboutToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem1.Click
         About.ShowDialog()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
     End Sub
 End Class

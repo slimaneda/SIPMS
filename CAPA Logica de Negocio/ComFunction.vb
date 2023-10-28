@@ -9,10 +9,6 @@ Class ComFunction
         End If
     End Sub
 
-
-
-
-
     '                           Auto-increment  +1
     Public Shared Function CODE_GEN(TbL_name, ID_) As Integer
         CODE_GEN = 0
@@ -38,7 +34,6 @@ Class ComFunction
     '                            Appearance Data in datagridview 
     Public Shared Sub Show_DGV(datagridview As DataGridView, num_Proc As String)
         Conexion.conecta()
-
         datagridview.Text = ""
         Try
             Using dt As New DataTable

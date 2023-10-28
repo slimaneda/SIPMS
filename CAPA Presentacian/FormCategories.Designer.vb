@@ -22,7 +22,7 @@ Partial Class FormCategories
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel3 = New Panel()
         btnClose = New Button()
         btnDelete = New Button()
@@ -112,23 +112,23 @@ Partial Class FormCategories
         DGV1.AllowUserToDeleteRows = False
         DGV1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV1.BackgroundColor = SystemColors.Control
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = Color.White
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.GradientInactiveCaption
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGV1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         DGV1.EnableHeadersVisualStyles = False
-        DGV1.Location = New Point(16, 236)
+        DGV1.Location = New Point(12, 236)
         DGV1.Name = "DGV1"
         DGV1.ReadOnly = True
         DGV1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
         DGV1.RowHeadersVisible = False
         DGV1.RowTemplate.Height = 25
         DGV1.ScrollBars = ScrollBars.Vertical
-        DGV1.Size = New Size(340, 161)
+        DGV1.Size = New Size(344, 161)
         DGV1.TabIndex = 2
         ' 
         ' Panel2
@@ -227,9 +227,9 @@ Partial Class FormCategories
         ' Panel4
         ' 
         Panel4.BackColor = Color.Yellow
-        Panel4.Location = New Point(-43, 63)
+        Panel4.Location = New Point(-43, 62)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(702, 4)
+        Panel4.Size = New Size(535, 4)
         Panel4.TabIndex = 19
         ' 
         ' FormCategories

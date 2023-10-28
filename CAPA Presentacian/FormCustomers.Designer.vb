@@ -56,6 +56,7 @@ Partial Class FormCustomers
         Label21 = New Label()
         Label22 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
+        Panel3 = New Panel()
         Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
         Panel5.SuspendLayout()
@@ -394,15 +395,26 @@ Partial Class FormCustomers
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.Yellow
+        Panel3.Location = New Point(1, 60)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(807, 4)
+        Panel3.TabIndex = 21
+        ' 
         ' FormCustomers
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(806, 347)
+        Controls.Add(Panel3)
         Controls.Add(GroupBox1)
         Controls.Add(Panel1)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "FormCustomers"
-        Text = "FormCustomers"
+        Text = "Customers"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         GroupBox1.ResumeLayout(False)
@@ -449,4 +461,5 @@ Partial Class FormCustomers
     Friend WithEvents txt_CustomerID As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Panel3 As Panel
 End Class

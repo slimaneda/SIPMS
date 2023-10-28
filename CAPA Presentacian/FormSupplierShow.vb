@@ -1,23 +1,18 @@
 ﻿Public Class FormSupplierShow
-    'Private Comfunction As New ComFunction
+
 
 
     Private Sub FormSupplierShow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txt_searchId.Focus()
-
         If lbl.Text = "frmSupplier" Then
-            Comfunction.Show_DGV(DGV, "Select_Supplier")
+            ComFunction.Show_DGV(DGV, "Select_Supplier")
         Else
-            Comfunction.Show_DGV(DGV, "_Stock_Product")
+            ComFunction.Show_DGV(DGV, "_Stock_Product")
         End If
     End Sub
 
-
     Private Sub DGV1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellClick
         If e.RowIndex < 0 Then Return
-
         Dim row = DGV.Rows(e.RowIndex)
-
         Select Case lbl.Text
             Case "FSP"
                 UpdateFormSupplierPayment(row)
@@ -28,7 +23,6 @@
             Case Else
                 ' Handle other cases if necessary
         End Select
-
         lbl.Text = ""
         Close()
     End Sub
@@ -42,10 +36,8 @@
     End Sub
 
     Private Sub UpdateFormStock(rowIndex As Integer)
-
         FormInventory.txtCodeSup.Text = DGV.Rows(rowIndex).Cells(0).Value
         FormInventory.txtNameSup.Text = DGV.Rows(rowIndex).Cells(1).Value
-
     End Sub
 
     Private Sub UpdateFormSupplier(row As DataGridViewRow)
@@ -60,14 +52,8 @@
             .txt_Email.Text = row.Cells(8).Value
             .txt_Notes.Text = row.Cells(9).Value
             ' .PictureBox1.Image = row.Cells(10).Value
-
             If row.Cells(2).Value = "Femal" Then .btn_female.Checked = True
             If row.Cells(2).Value = "Male" Then .btn_male.Checked = True
         End With
     End Sub
-
-    Private Sub DGV1_Click(sender As Object, e As EventArgs) Handles DGV.Click
-
-    End Sub
-
 End Class

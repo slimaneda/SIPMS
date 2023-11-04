@@ -70,6 +70,7 @@ Partial Class FormSupplierPayement
         Panel2 = New Panel()
         Label1 = New Label()
         Panel3 = New Panel()
+        TextBox1 = New TextBox()
         Panel1.SuspendLayout()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
@@ -132,6 +133,7 @@ Partial Class FormSupplierPayement
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(TextBox1)
         GroupBox1.Controls.Add(txtCodSupplier)
         GroupBox1.Controls.Add(txtNameSup)
         GroupBox1.Controls.Add(btnShow)
@@ -368,6 +370,7 @@ Partial Class FormSupplierPayement
         Column4.HeaderText = "Code Supp"
         Column4.Name = "Column4"
         Column4.ReadOnly = True
+        Column4.Visible = False
         ' 
         ' Column1
         ' 
@@ -565,6 +568,13 @@ Partial Class FormSupplierPayement
         Panel3.Size = New Size(708, 4)
         Panel3.TabIndex = 21
         ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(265, 87)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(100, 23)
+        TextBox1.TabIndex = 91
+        ' 
         ' FormSupplierPayement
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -623,6 +633,8 @@ Partial Class FormSupplierPayement
     Friend WithEvents btnShow As Button
     Friend WithEvents txtNameSup As TextBox
     Friend WithEvents txtCodSupplier As TextBox
+    Friend WithEvents txtGrandTotal As TextBox
+    Friend WithEvents Panel3 As Panel
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -630,6 +642,5 @@ Partial Class FormSupplierPayement
     Friend WithEvents Column16 As DataGridViewTextBoxColumn
     Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents txtGrandTotal As TextBox
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents TextBox1 As TextBox
 End Class

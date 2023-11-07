@@ -84,7 +84,9 @@
         clean()
         MsgBox("Registration successful")
     End Sub
+#Disable Warning BC40003 ' Le membre masque un membre surchargeable déclaré dans le type de base
     Private Sub Update()
+#Enable Warning BC40003 ' Le membre masque un membre surchargeable déclaré dans le type de base
         Dim codSupplier = Val(txtCodSupplier.Text)
         For Each row As DataGridViewRow In DGV.Rows
             row.Cells(5).Value = txtTotalPayment.Text

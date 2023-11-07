@@ -67,7 +67,7 @@ Public Class FormCategories
 
         Dim ms As New MemoryStream
         PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
-            item.photo = ms.ToArray()
+        item.photo = ms.ToArray()
 
         item.Code_item = txt_Codeitem.Text
         item.Name_item = txt_itemname.Text

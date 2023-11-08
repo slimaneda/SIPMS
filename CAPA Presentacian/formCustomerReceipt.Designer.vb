@@ -98,7 +98,7 @@ Partial Class formCustomerReceipt
         ' txtGrandTotal
         ' 
         txtGrandTotal.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        txtGrandTotal.Location = New Point(553, 504)
+        txtGrandTotal.Location = New Point(529, 504)
         txtGrandTotal.Margin = New Padding(4, 3, 4, 3)
         txtGrandTotal.Name = "txtGrandTotal"
         txtGrandTotal.ReadOnly = True
